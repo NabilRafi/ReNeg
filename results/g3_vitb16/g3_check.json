@@ -1,0 +1,17 @@
+{
+ "reneg_device": "cuda",
+ "results": {
+  "cuda": {
+   "fpr95": 52.122,
+   "auroc": 89.109,
+   "img_per_s": 2611.7,
+   "minutes": 0.6
+  },
+  "cpu": {
+   "fpr95": 52.122,
+   "auroc": 89.109,
+   "img_per_s": 1783.3,
+   "minutes": 0.5
+  }
+ }
+}

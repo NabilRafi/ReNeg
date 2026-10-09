@@ -1,0 +1,7 @@
+ReNeg-TANL frac 0.0                      full   near  51.06 far  14.11 (TANL 59.77 / 17.01) | ssb_h 57.05 ninco 45.08 inatu  0.42 textu 12.99 openi 28.91
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+ReNeg-TANL frac 0.0 [Four-OOD]           full   near    nan far   0.40 (TANL nan / 0.48) | inatu  0.40 sun  5.80 place 25.31 textu 18.56
+ReNeg-TANL frac 0.0                      blind  near  52.97 far  13.91 (TANL 59.77 / 17.01) | ssb_h 59.66 ninco 46.27 inatu  0.43 textu 12.53 openi 28.78

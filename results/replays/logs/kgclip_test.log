@@ -1,0 +1,24 @@
+kg_clip omega 0.25 frac 0.0              full   near  49.92 far  11.14 (TANL 57.01 / 11.35) | ninco 49.92 textu 11.14
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+kg_clip omega 0.25 frac 0.0 [Four-OOD]   full   near    nan far    nan (TANL nan / nan) | sun  4.19 place 22.05
+kg_clip omega 0.25 frac 0.1              full   near  47.68 far  11.34 (TANL 57.01 / 11.35) | ninco 47.68 textu 11.34
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+kg_clip omega 0.25 frac 0.1 [Four-OOD]   full   near    nan far    nan (TANL nan / nan) | sun  4.39 place 23.13
+kg_clip omega 0.5 frac 0.0               full   near  47.63 far  14.22 (TANL 57.01 / 11.35) | ninco 47.63 textu 14.22
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+kg_clip omega 0.5 frac 0.0 [Four-OOD]    full   near    nan far    nan (TANL nan / nan) | sun  7.82 place 24.34
+kg_clip omega 0.5 frac 0.1               full   near  46.39 far  14.80 (TANL 57.01 / 11.35) | ninco 46.39 textu 14.80
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+kg_clip omega 0.5 frac 0.1 [Four-OOD]    full   near    nan far    nan (TANL nan / nan) | sun  8.53 place 25.90

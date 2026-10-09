@@ -1,0 +1,239 @@
+06:05:34 | INFO | [download] benchmark_imglist: attempt 1/4 from https://drive.google.com/uc?id=1XKzBdWCqg3vPoj-D32YixJyJJ0hL63gP
+06:06:05 | INFO | [download] benchmark_imglist: attempt 2/4 from https://drive.google.com/uc?id=1XKzBdWCqg3vPoj-D32YixJyJJ0hL63gP
+06:07:05 | INFO | [download] benchmark_imglist: attempt 3/4 from https://drive.google.com/uc?id=1XKzBdWCqg3vPoj-D32YixJyJJ0hL63gP
+06:08:36 | INFO | [download] benchmark_imglist: attempt 4/4 from https://drive.google.com/uc?id=1XKzBdWCqg3vPoj-D32YixJyJJ0hL63gP
+06:08:37 | ERROR | OpenOOD image lists unavailable (GUIDE.md §5)
+Traceback (most recent call last):
+  File "/tmp/ipykernel_58/3124680643.py", line 4, in <cell line: 0>
+    imglist_dir = obtain_imglist_dir(ctx.dirs.scratch, ctx.input_roots, logger=log)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/openood.py", line 149, in obtain_imglist_dir
+    z = gdown_zip("benchmark_imglist", os.path.join(scratch, "zips"), logger=logger)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/openood.py", line 72, in gdown_zip
+    raise DownloadError(
+oodlab.data.openood.DownloadError: Could not download benchmark_imglist from Google Drive (FileURLRetrievalError: Failed to retrieve file url:
+
+	Too many users have viewed or downloaded this file recently. Please
+	try accessing the file again later. If the file you are trying to
+	access is particularly large or is shared with many people, it may
+	take up to 24 hours to be able to view or download the file. If you
+	still can't access a file after 24 hours, contact your domain
+	administrator.
+
+You may still be able to access the file from the browser:
+
+	https://drive.google.com/uc?id=1XKzBdWCqg3vPoj-D32YixJyJJ0hL63gP
+
+but Gdown can't. Please check connections and permissions.).
+Fix: open https://drive.google.com/uc?id=1XKzBdWCqg3vPoj-D32YixJyJJ0hL63gP in your browser, download benchmark_imglist.zip, upload it to a private Kaggle dataset (e.g. 'openood-raw-zips'), attach it, and re-run - the code picks zips up from inputs.
+06:08:37 | INFO | [imagenet] /kaggle/input/competitions/imagenet-object-localization-challenge (flat layout)
+06:09:55 | INFO | [encode] imagenet_val_all: 5120/50000 images  67 img/s  ~11.2 min left
+06:11:00 | INFO | [encode] imagenet_val_all: 10000/50000 images  71 img/s  ~9.4 min left
+06:11:00 | INFO | [encode] imagenet_val_all: shard 1/5 saved (10000 images, 141s)
+06:12:13 | INFO | [encode] imagenet_val_all: 15120/50000 images  70 img/s  ~8.3 min left
+06:13:17 | INFO | [encode] imagenet_val_all: 20000/50000 images  73 img/s  ~6.9 min left
+06:13:18 | INFO | [encode] imagenet_val_all: shard 2/5 saved (10000 images, 138s)
+06:14:31 | INFO | [encode] imagenet_val_all: 25120/50000 images  70 img/s  ~6.0 min left
+06:15:35 | INFO | [encode] imagenet_val_all: 30000/50000 images  73 img/s  ~4.6 min left
+06:15:35 | INFO | [encode] imagenet_val_all: shard 3/5 saved (10000 images, 138s)
+06:16:49 | INFO | [encode] imagenet_val_all: 35120/50000 images  70 img/s  ~3.6 min left
+06:17:53 | INFO | [encode] imagenet_val_all: 40000/50000 images  73 img/s  ~2.3 min left
+06:17:53 | INFO | [encode] imagenet_val_all: shard 4/5 saved (10000 images, 137s)
+06:19:06 | INFO | [encode] imagenet_val_all: 45120/50000 images  70 img/s  ~1.2 min left
+06:20:10 | INFO | [encode] imagenet_val_all: 50000/50000 images  73 img/s  ~0.0 min left
+06:20:10 | INFO | [encode] imagenet_val_all: shard 5/5 saved (10000 images, 137s)
+06:20:11 | INFO | [encode] imagenet_val_all: 50000 features saved -> /kaggle/working/cache/vit-l-14/images/imagenet_val_all.npz
+06:20:11 | INFO | [imagenet_val_all] encoded (17.4 min since start)
+06:20:11 | ERROR | [imagenet_test] FAILED
+Traceback (most recent call last):
+  File "/tmp/ipykernel_58/3124680643.py", line 23, in <cell line: 0>
+    man = build_manifest(name, ctx.input_roots, ctx.dirs.scratch, imglist_dir, logger=log,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/registry.py", line 75, in build_manifest
+    raise ValueError(f"{name} needs the OpenOOD image lists")
+ValueError: imagenet_test needs the OpenOOD image lists
+06:20:11 | INFO | [imagenet_test] FAILED: ValueError: imagenet_test needs the OpenOOD image lists (17.4 min since start)
+06:20:11 | ERROR | [imagenet_val] FAILED
+Traceback (most recent call last):
+  File "/tmp/ipykernel_58/3124680643.py", line 23, in <cell line: 0>
+    man = build_manifest(name, ctx.input_roots, ctx.dirs.scratch, imglist_dir, logger=log,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/registry.py", line 75, in build_manifest
+    raise ValueError(f"{name} needs the OpenOOD image lists")
+ValueError: imagenet_val needs the OpenOOD image lists
+06:20:11 | INFO | [imagenet_val] FAILED: ValueError: imagenet_val needs the OpenOOD image lists (17.4 min since start)
+06:20:11 | ERROR | [ninco] FAILED
+Traceback (most recent call last):
+  File "/tmp/ipykernel_58/3124680643.py", line 23, in <cell line: 0>
+    man = build_manifest(name, ctx.input_roots, ctx.dirs.scratch, imglist_dir, logger=log,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/registry.py", line 81, in build_manifest
+    raise FileNotFoundError(f"{name} needs the OpenOOD list {spec.imglist} (image lists not available)")
+FileNotFoundError: ninco needs the OpenOOD list test_ninco.txt (image lists not available)
+06:20:11 | INFO | [ninco] FAILED: FileNotFoundError: ninco needs the OpenOOD list test_ninco.txt (image lists not available) (17.4 min since start)
+06:20:11 | INFO | [download] texture: attempt 1/4 from https://drive.google.com/uc?id=1OSz1m3hHfVWbRdmMwKbUzoU8Hg9UKcam
+06:20:41 | INFO | [download] texture: attempt 2/4 from https://drive.google.com/uc?id=1OSz1m3hHfVWbRdmMwKbUzoU8Hg9UKcam
+06:21:42 | INFO | [download] texture: attempt 3/4 from https://drive.google.com/uc?id=1OSz1m3hHfVWbRdmMwKbUzoU8Hg9UKcam
+06:23:13 | INFO | [download] texture: attempt 4/4 from https://drive.google.com/uc?id=1OSz1m3hHfVWbRdmMwKbUzoU8Hg9UKcam
+06:23:13 | ERROR | [textures_all] FAILED
+Traceback (most recent call last):
+  File "/tmp/ipykernel_58/3124680643.py", line 23, in <cell line: 0>
+    man = build_manifest(name, ctx.input_roots, ctx.dirs.scratch, imglist_dir, logger=log,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/registry.py", line 82, in build_manifest
+    ddir = obtain_dataset_dir(spec.drive_key, scratch, input_roots, logger=logger, allow_download=allow_download)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/openood.py", line 119, in obtain_dataset_dir
+    z = gdown_zip(key, os.path.join(scratch, "zips"), logger=logger)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/openood.py", line 72, in gdown_zip
+    raise DownloadError(
+oodlab.data.openood.DownloadError: Could not download texture from Google Drive (FileURLRetrievalError: Failed to retrieve file url:
+
+	Too many users have viewed or downloaded this file recently. Please
+	try accessing the file again later. If the file you are trying to
+	access is particularly large or is shared with many people, it may
+	take up to 24 hours to be able to view or download the file. If you
+	still can't access a file after 24 hours, contact your domain
+	administrator.
+
+You may still be able to access the file from the browser:
+
+	https://drive.google.com/uc?id=1OSz1m3hHfVWbRdmMwKbUzoU8Hg9UKcam
+
+but Gdown can't. Please check connections and permissions.).
+Fix: open https://drive.google.com/uc?id=1OSz1m3hHfVWbRdmMwKbUzoU8Hg9UKcam in your browser, download texture.zip, upload it to a private Kaggle dataset (e.g. 'openood-raw-zips'), attach it, and re-run - the code picks zips up from inputs.
+06:23:13 | INFO | [textures_all] FAILED: DownloadError: Could not download texture from Google Drive (FileURLRetrievalError: Failed to retrieve file url:
+
+	Too many users have viewed or downloaded this file (20.5 min since start)
+06:23:13 | ERROR | [textures] FAILED
+Traceback (most recent call last):
+  File "/tmp/ipykernel_58/3124680643.py", line 23, in <cell line: 0>
+    man = build_manifest(name, ctx.input_roots, ctx.dirs.scratch, imglist_dir, logger=log,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/registry.py", line 81, in build_manifest
+    raise FileNotFoundError(f"{name} needs the OpenOOD list {spec.imglist} (image lists not available)")
+FileNotFoundError: textures needs the OpenOOD list test_textures.txt (image lists not available)
+06:23:13 | INFO | [textures] FAILED: FileNotFoundError: textures needs the OpenOOD list test_textures.txt (image lists not available) (20.5 min since start)
+06:23:13 | ERROR | [inaturalist] FAILED
+Traceback (most recent call last):
+  File "/tmp/ipykernel_58/3124680643.py", line 23, in <cell line: 0>
+    man = build_manifest(name, ctx.input_roots, ctx.dirs.scratch, imglist_dir, logger=log,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/registry.py", line 81, in build_manifest
+    raise FileNotFoundError(f"{name} needs the OpenOOD list {spec.imglist} (image lists not available)")
+FileNotFoundError: inaturalist needs the OpenOOD list test_inaturalist.txt (image lists not available)
+06:23:13 | INFO | [inaturalist] FAILED: FileNotFoundError: inaturalist needs the OpenOOD list test_inaturalist.txt (image lists not available) (20.5 min since start)
+06:23:13 | INFO | [download] sun: attempt 1/4 from https://drive.google.com/uc?id=1ISK0STxWzWmg-_uUr4RQ8GSLFW7TZiKp
+06:23:44 | INFO | [download] sun: attempt 2/4 from https://drive.google.com/uc?id=1ISK0STxWzWmg-_uUr4RQ8GSLFW7TZiKp
+06:24:45 | INFO | [download] sun: attempt 3/4 from https://drive.google.com/uc?id=1ISK0STxWzWmg-_uUr4RQ8GSLFW7TZiKp
+06:26:16 | INFO | [download] sun: attempt 4/4 from https://drive.google.com/uc?id=1ISK0STxWzWmg-_uUr4RQ8GSLFW7TZiKp
+06:26:17 | ERROR | [sun] FAILED
+Traceback (most recent call last):
+  File "/tmp/ipykernel_58/3124680643.py", line 23, in <cell line: 0>
+    man = build_manifest(name, ctx.input_roots, ctx.dirs.scratch, imglist_dir, logger=log,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/registry.py", line 82, in build_manifest
+    ddir = obtain_dataset_dir(spec.drive_key, scratch, input_roots, logger=logger, allow_download=allow_download)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/openood.py", line 119, in obtain_dataset_dir
+    z = gdown_zip(key, os.path.join(scratch, "zips"), logger=logger)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/openood.py", line 72, in gdown_zip
+    raise DownloadError(
+oodlab.data.openood.DownloadError: Could not download sun from Google Drive (FileURLRetrievalError: Failed to retrieve file url:
+
+	Too many users have viewed or downloaded this file recently. Please
+	try accessing the file again later. If the file you are trying to
+	access is particularly large or is shared with many people, it may
+	take up to 24 hours to be able to view or download the file. If you
+	still can't access a file after 24 hours, contact your domain
+	administrator.
+
+You may still be able to access the file from the browser:
+
+	https://drive.google.com/uc?id=1ISK0STxWzWmg-_uUr4RQ8GSLFW7TZiKp
+
+but Gdown can't. Please check connections and permissions.).
+Fix: open https://drive.google.com/uc?id=1ISK0STxWzWmg-_uUr4RQ8GSLFW7TZiKp in your browser, download sun.zip, upload it to a private Kaggle dataset (e.g. 'openood-raw-zips'), attach it, and re-run - the code picks zips up from inputs.
+06:26:17 | INFO | [sun] FAILED: DownloadError: Could not download sun from Google Drive (FileURLRetrievalError: Failed to retrieve file url:
+
+	Too many users have viewed or downloaded this file rec (23.5 min since start)
+06:26:17 | INFO | [download] places: attempt 1/4 from https://drive.google.com/uc?id=1fZ8TbPC4JGqUCm-VtvrmkYxqRNp2PoB3
+06:26:47 | INFO | [download] places: attempt 2/4 from https://drive.google.com/uc?id=1fZ8TbPC4JGqUCm-VtvrmkYxqRNp2PoB3
+06:27:48 | INFO | [download] places: attempt 3/4 from https://drive.google.com/uc?id=1fZ8TbPC4JGqUCm-VtvrmkYxqRNp2PoB3
+06:29:19 | INFO | [download] places: attempt 4/4 from https://drive.google.com/uc?id=1fZ8TbPC4JGqUCm-VtvrmkYxqRNp2PoB3
+06:29:20 | ERROR | [places] FAILED
+Traceback (most recent call last):
+  File "/tmp/ipykernel_58/3124680643.py", line 23, in <cell line: 0>
+    man = build_manifest(name, ctx.input_roots, ctx.dirs.scratch, imglist_dir, logger=log,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/registry.py", line 82, in build_manifest
+    ddir = obtain_dataset_dir(spec.drive_key, scratch, input_roots, logger=logger, allow_download=allow_download)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/openood.py", line 119, in obtain_dataset_dir
+    z = gdown_zip(key, os.path.join(scratch, "zips"), logger=logger)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/openood.py", line 72, in gdown_zip
+    raise DownloadError(
+oodlab.data.openood.DownloadError: Could not download places from Google Drive (FileURLRetrievalError: Failed to retrieve file url:
+
+	Too many users have viewed or downloaded this file recently. Please
+	try accessing the file again later. If the file you are trying to
+	access is particularly large or is shared with many people, it may
+	take up to 24 hours to be able to view or download the file. If you
+	still can't access a file after 24 hours, contact your domain
+	administrator.
+
+You may still be able to access the file from the browser:
+
+	https://drive.google.com/uc?id=1fZ8TbPC4JGqUCm-VtvrmkYxqRNp2PoB3
+
+but Gdown can't. Please check connections and permissions.).
+Fix: open https://drive.google.com/uc?id=1fZ8TbPC4JGqUCm-VtvrmkYxqRNp2PoB3 in your browser, download places.zip, upload it to a private Kaggle dataset (e.g. 'openood-raw-zips'), attach it, and re-run - the code picks zips up from inputs.
+06:29:20 | INFO | [places] FAILED: DownloadError: Could not download places from Google Drive (FileURLRetrievalError: Failed to retrieve file url:
+
+	Too many users have viewed or downloaded this file  (26.6 min since start)
+06:29:20 | ERROR | [openimage_o] FAILED
+Traceback (most recent call last):
+  File "/tmp/ipykernel_58/3124680643.py", line 23, in <cell line: 0>
+    man = build_manifest(name, ctx.input_roots, ctx.dirs.scratch, imglist_dir, logger=log,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/registry.py", line 81, in build_manifest
+    raise FileNotFoundError(f"{name} needs the OpenOOD list {spec.imglist} (image lists not available)")
+FileNotFoundError: openimage_o needs the OpenOOD list test_openimage_o.txt (image lists not available)
+06:29:20 | INFO | [openimage_o] FAILED: FileNotFoundError: openimage_o needs the OpenOOD list test_openimage_o.txt (image lists not available) (26.6 min since start)
+06:29:20 | ERROR | [openimage_o_val] FAILED
+Traceback (most recent call last):
+  File "/tmp/ipykernel_58/3124680643.py", line 23, in <cell line: 0>
+    man = build_manifest(name, ctx.input_roots, ctx.dirs.scratch, imglist_dir, logger=log,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/registry.py", line 81, in build_manifest
+    raise FileNotFoundError(f"{name} needs the OpenOOD list {spec.imglist} (image lists not available)")
+FileNotFoundError: openimage_o_val needs the OpenOOD list val_openimage_o.txt (image lists not available)
+06:29:20 | INFO | [openimage_o_val] FAILED: FileNotFoundError: openimage_o_val needs the OpenOOD list val_openimage_o.txt (image lists not available) (26.6 min since start)
+06:29:20 | ERROR | [ssb_hard] FAILED
+Traceback (most recent call last):
+  File "/tmp/ipykernel_58/3124680643.py", line 23, in <cell line: 0>
+    man = build_manifest(name, ctx.input_roots, ctx.dirs.scratch, imglist_dir, logger=log,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/input/datasets/<user>/oodlab-code/oodlab_code/oodlab/data/registry.py", line 81, in build_manifest
+    raise FileNotFoundError(f"{name} needs the OpenOOD list {spec.imglist} (image lists not available)")
+FileNotFoundError: ssb_hard needs the OpenOOD list test_ssb_hard.txt (image lists not available)
+06:29:20 | INFO | [ssb_hard] FAILED: FileNotFoundError: ssb_hard needs the OpenOOD list test_ssb_hard.txt (image lists not available) (26.6 min since start)
+
+=== build status ===
+set	status	images	expected	min
+0	imagenet_val_all	encoded	50000.0	50000.0	11.6
+1	imagenet_test	FAILED: ValueError: imagenet_test needs the Op...	NaN	NaN	0.0
+2	imagenet_val	FAILED: ValueError: imagenet_val needs the Ope...	NaN	NaN	0.0
+3	ninco	FAILED: FileNotFoundError: ninco needs the Ope...	NaN	NaN	0.0
+4	textures_all	FAILED: DownloadError: Could not download text...	NaN	NaN	3.0
+5	textures	FAILED: FileNotFoundError: textures needs the ...	NaN	NaN	0.0
+6	inaturalist	FAILED: FileNotFoundError: inaturalist needs t...	NaN	NaN	0.0
+7	sun	FAILED: DownloadError: Could not download sun ...	NaN	NaN	3.1
+8	places	FAILED: DownloadError: Could not download plac...	NaN	NaN	3.0
+9	openimage_o	FAILED: FileNotFoundError: openimage_o needs t...	NaN	NaN	0.0
+10	openimage_o_val	FAILED: FileNotFoundError: openimage_o_val nee...	NaN	NaN	0.0
+11	ssb_hard	FAILED: FileNotFoundErr

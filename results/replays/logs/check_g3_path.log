@@ -1,0 +1,4 @@
+[tanl/tanl] openood_v15:ninco seed=0  FPR95 56.93  AUROC 84.99  ACC 66.72  (128.4 img/s)
+Runner TANL ninco seed 0: 56.93 (trace replay 57.01)
+[reneg_tanl/balanced] openood_v15:ninco seed=0  FPR95 50.99  AUROC 88.92  ACC 66.72  (103.0 img/s)
+Runner ReNeg balanced full ninco seed 0: 50.99 (trace replay 51.01)

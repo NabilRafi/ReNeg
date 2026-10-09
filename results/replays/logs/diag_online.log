@@ -1,0 +1,6 @@
+v2 = v1 check (no impute, n_min 3, softmax admission)      full   near  55.91 far  20.19 | ssb_h 64.05 ninco 47.77 inatu  4.00 textu 31.28 openi 25.29
+  + admission theta 1.1                                    full   near  65.22 far  24.91 | ssb_h 72.32 ninco 58.12 inatu  3.52 textu 33.36 openi 37.84
+  oracle admission (true ID only)                          full   near  44.22 far  11.73 | ssb_h 53.92 ninco 34.52 inatu  0.60 textu 14.31 openi 20.29
+  warm start half-A, then online                           full   near  47.00 far  14.06 | ssb_h 56.36 ninco 37.65 inatu  1.02 textu 21.33 openi 19.84
+  warm start half-A, frozen                                full   near  43.66 far  10.96 | ssb_h 52.89 ninco 34.42 inatu  0.44 textu 13.09 openi 19.35
+  n_min 1                                                  full   near  54.44 far  18.12 | ssb_h 62.73 ninco 46.14 inatu  2.20 textu 29.24 openi 22.93

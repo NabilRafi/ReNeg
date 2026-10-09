@@ -1,0 +1,3 @@
+{"name": "ReNeg-TANL default", "pool": "full", "near": 41.91, "far": NaN, "tanl_near": 57.01, "tanl_far": NaN, "rows": [{"set": "ninco", "FPR95": 41.91, "AUROC": 90.17, "TANL_FPR95": 57.01, "TANL_AUROC": 84.99}]}
+{"name": "ReNeg-TANL default", "pool": "blind", "near": 47.54, "far": NaN, "tanl_near": 57.01, "tanl_far": NaN, "rows": [{"set": "ninco", "FPR95": 47.54, "AUROC": 89.12, "TANL_FPR95": 57.01, "TANL_AUROC": 84.99}]}
+{"name": "ReNeg-TANL text only", "pool": "full", "near": 45.81, "far": NaN, "tanl_near": 57.01, "tanl_far": NaN, "rows": [{"set": "ninco", "FPR95": 45.81, "AUROC": 88.68, "TANL_FPR95": 57.01, "TANL_AUROC": 84.99}]}

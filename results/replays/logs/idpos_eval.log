@@ -1,0 +1,135 @@
+balanced agreed blind s0 inaturalist: ood+ 0.23 | id+ 0.39
+max agreed blind s0 inaturalist: ood+ 0.26 | id+ 0.53
+safe agreed blind s0 inaturalist: ood+ 0.31 | id+ 0.45
+max agreed blind, 5-shot s0 inaturalist: ood+ 0.16 | id+ 0.50
+balanced agreed blind, 5-shot s0 inaturalist: ood+ 0.17 | id+ 0.40
+balanced agreed blind s0 sun: ood+ 3.53 | id+ 3.44
+max agreed blind s0 sun: ood+ 4.25 | id+ 4.35
+safe agreed blind s0 sun: ood+ 3.41 | id+ 3.37
+max agreed blind, 5-shot s0 sun: ood+ 3.87 | id+ 4.07
+balanced agreed blind, 5-shot s0 sun: ood+ 3.36 | id+ 3.14
+balanced agreed blind s0 places: ood+ 21.18 | id+ 15.54
+max agreed blind s0 places: ood+ 23.95 | id+ 15.93
+safe agreed blind s0 places: ood+ 20.67 | id+ 16.43
+max agreed blind, 5-shot s0 places: ood+ 22.91 | id+ 14.93
+balanced agreed blind, 5-shot s0 places: ood+ 20.80 | id+ 14.78
+balanced agreed blind s0 textures_all: ood+ 14.21 | id+ 12.13
+max agreed blind s0 textures_all: ood+ 14.55 | id+ 11.79
+safe agreed blind s0 textures_all: ood+ 15.45 | id+ 15.39
+max agreed blind, 5-shot s0 textures_all: ood+ 11.81 | id+ 9.77
+balanced agreed blind, 5-shot s0 textures_all: ood+ 13.11 | id+ 10.76
+balanced agreed blind s0 ssb_hard: ood+ 62.31 | id+ 48.73
+max agreed blind s0 ssb_hard: ood+ 59.86 | id+ 50.71
+safe agreed blind s0 ssb_hard: ood+ 62.36 | id+ 48.95
+max agreed blind, 5-shot s0 ssb_hard: ood+ 57.70 | id+ 45.44
+balanced agreed blind, 5-shot s0 ssb_hard: ood+ 62.05 | id+ 45.59
+balanced agreed blind s0 ninco: ood+ 51.77 | id+ 42.66
+max agreed blind s0 ninco: ood+ 46.46 | id+ 44.97
+safe agreed blind s0 ninco: ood+ 55.10 | id+ 44.82
+max agreed blind, 5-shot s0 ninco: ood+ 43.33 | id+ 36.32
+balanced agreed blind, 5-shot s0 ninco: ood+ 50.23 | id+ 37.05
+balanced agreed blind s0 inaturalist: ood+ 0.18 | id+ 0.42
+max agreed blind s0 inaturalist: ood+ 0.24 | id+ 0.44
+safe agreed blind s0 inaturalist: ood+ 0.25 | id+ 0.41
+max agreed blind, 5-shot s0 inaturalist: ood+ 0.15 | id+ 0.42
+balanced agreed blind, 5-shot s0 inaturalist: ood+ 0.15 | id+ 0.37
+balanced agreed blind s0 textures: ood+ 9.17 | id+ 9.46
+max agreed blind s0 textures: ood+ 9.68 | id+ 9.46
+safe agreed blind s0 textures: ood+ 11.38 | id+ 12.15
+max agreed blind, 5-shot s0 textures: ood+ 7.78 | id+ 7.29
+balanced agreed blind, 5-shot s0 textures: ood+ 8.18 | id+ 7.85
+balanced agreed blind s0 openimage_o: ood+ 34.33 | id+ 26.86
+max agreed blind s0 openimage_o: ood+ 28.67 | id+ 26.73
+safe agreed blind s0 openimage_o: ood+ 37.73 | id+ 31.39
+max agreed blind, 5-shot s0 openimage_o: ood+ 26.60 | id+ 23.44
+balanced agreed blind, 5-shot s0 openimage_o: ood+ 34.63 | id+ 25.82
+balanced agreed blind s1 inaturalist: ood+ 0.23 | id+ 0.38
+max agreed blind s1 inaturalist: ood+ 0.27 | id+ 0.49
+safe agreed blind s1 inaturalist: ood+ 0.29 | id+ 0.39
+max agreed blind, 5-shot s1 inaturalist: ood+ 0.15 | id+ 0.48
+balanced agreed blind, 5-shot s1 inaturalist: ood+ 0.14 | id+ 0.39
+balanced agreed blind s1 sun: ood+ 3.38 | id+ 3.39
+max agreed blind s1 sun: ood+ 3.88 | id+ 4.10
+safe agreed blind s1 sun: ood+ 3.40 | id+ 3.27
+max agreed blind, 5-shot s1 sun: ood+ 3.88 | id+ 4.00
+balanced agreed blind, 5-shot s1 sun: ood+ 3.37 | id+ 3.32
+balanced agreed blind s1 places: ood+ 21.37 | id+ 15.20
+max agreed blind s1 places: ood+ 24.25 | id+ 15.68
+safe agreed blind s1 places: ood+ 21.40 | id+ 15.98
+max agreed blind, 5-shot s1 places: ood+ 23.63 | id+ 14.76
+balanced agreed blind, 5-shot s1 places: ood+ 20.64 | id+ 14.75
+balanced agreed blind s1 textures_all: ood+ 13.37 | id+ 12.09
+max agreed blind s1 textures_all: ood+ 14.41 | id+ 12.52
+safe agreed blind s1 textures_all: ood+ 14.52 | id+ 15.18
+max agreed blind, 5-shot s1 textures_all: ood+ 11.40 | id+ 9.79
+balanced agreed blind, 5-shot s1 textures_all: ood+ 12.81 | id+ 10.41
+balanced agreed blind s1 ssb_hard: ood+ 62.26 | id+ 48.45
+max agreed blind s1 ssb_hard: ood+ 59.52 | id+ 50.21
+safe agreed blind s1 ssb_hard: ood+ 62.35 | id+ 48.43
+max agreed blind, 5-shot s1 ssb_hard: ood+ 57.56 | id+ 44.89
+balanced agreed blind, 5-shot s1 ssb_hard: ood+ 61.98 | id+ 45.20
+balanced agreed blind s1 ninco: ood+ 51.06 | id+ 40.79
+max agreed blind s1 ninco: ood+ 46.22 | id+ 43.12
+safe agreed blind s1 ninco: ood+ 54.32 | id+ 43.56
+max agreed blind, 5-shot s1 ninco: ood+ 42.53 | id+ 35.62
+balanced agreed blind, 5-shot s1 ninco: ood+ 49.69 | id+ 36.25
+balanced agreed blind s1 inaturalist: ood+ 0.18 | id+ 0.40
+max agreed blind s1 inaturalist: ood+ 0.25 | id+ 0.46
+safe agreed blind s1 inaturalist: ood+ 0.26 | id+ 0.44
+max agreed blind, 5-shot s1 inaturalist: ood+ 0.15 | id+ 0.38
+balanced agreed blind, 5-shot s1 inaturalist: ood+ 0.14 | id+ 0.36
+balanced agreed blind s1 textures: ood+ 9.31 | id+ 9.26
+max agreed blind s1 textures: ood+ 9.49 | id+ 9.75
+safe agreed blind s1 textures: ood+ 11.32 | id+ 12.21
+max agreed blind, 5-shot s1 textures: ood+ 7.76 | id+ 7.07
+balanced agreed blind, 5-shot s1 textures: ood+ 8.46 | id+ 7.83
+balanced agreed blind s1 openimage_o: ood+ 33.86 | id+ 27.31
+max agreed blind s1 openimage_o: ood+ 28.20 | id+ 27.09
+safe agreed blind s1 openimage_o: ood+ 37.26 | id+ 32.17
+max agreed blind, 5-shot s1 openimage_o: ood+ 27.02 | id+ 23.95
+balanced agreed blind, 5-shot s1 openimage_o: ood+ 34.04 | id+ 26.57
+balanced agreed blind s2 inaturalist: ood+ 0.17 | id+ 0.37
+max agreed blind s2 inaturalist: ood+ 0.23 | id+ 0.49
+safe agreed blind s2 inaturalist: ood+ 0.25 | id+ 0.40
+max agreed blind, 5-shot s2 inaturalist: ood+ 0.16 | id+ 0.45
+balanced agreed blind, 5-shot s2 inaturalist: ood+ 0.15 | id+ 0.36
+balanced agreed blind s2 sun: ood+ 3.36 | id+ 3.54
+max agreed blind s2 sun: ood+ 3.92 | id+ 4.04
+safe agreed blind s2 sun: ood+ 3.60 | id+ 3.51
+max agreed blind, 5-shot s2 sun: ood+ 3.80 | id+ 4.06
+balanced agreed blind, 5-shot s2 sun: ood+ 3.27 | id+ 3.41
+balanced agreed blind s2 places: ood+ 21.66 | id+ 15.55
+max agreed blind s2 places: ood+ 24.24 | id+ 16.23
+safe agreed blind s2 places: ood+ 21.65 | id+ 16.73
+max agreed blind, 5-shot s2 places: ood+ 23.98 | id+ 15.08
+balanced agreed blind, 5-shot s2 places: ood+ 20.89 | id+ 15.11
+balanced agreed blind s2 textures_all: ood+ 12.76 | id+ 11.77
+max agreed blind s2 textures_all: ood+ 13.49 | id+ 11.77
+safe agreed blind s2 textures_all: ood+ 14.55 | id+ 15.27
+max agreed blind, 5-shot s2 textures_all: ood+ 11.49 | id+ 9.89
+balanced agreed blind, 5-shot s2 textures_all: ood+ 11.91 | id+ 10.62
+balanced agreed blind s2 ssb_hard: ood+ 62.39 | id+ 49.01
+max agreed blind s2 ssb_hard: ood+ 59.34 | id+ 50.79
+safe agreed blind s2 ssb_hard: ood+ 62.60 | id+ 48.44
+max agreed blind, 5-shot s2 ssb_hard: ood+ 56.80 | id+ 45.14
+balanced agreed blind, 5-shot s2 ssb_hard: ood+ 62.20 | id+ 45.28
+balanced agreed blind s2 ninco: ood+ 50.24 | id+ 41.98
+max agreed blind s2 ninco: ood+ 46.59 | id+ 44.36
+safe agreed blind s2 ninco: ood+ 52.99 | id+ 44.24
+max agreed blind, 5-shot s2 ninco: ood+ 42.62 | id+ 35.84
+balanced agreed blind, 5-shot s2 ninco: ood+ 48.98 | id+ 36.52
+balanced agreed blind s2 inaturalist: ood+ 0.24 | id+ 0.39
+max agreed blind s2 inaturalist: ood+ 0.28 | id+ 0.46
+safe agreed blind s2 inaturalist: ood+ 0.32 | id+ 0.47
+max agreed blind, 5-shot s2 inaturalist: ood+ 0.13 | id+ 0.50
+balanced agreed blind, 5-shot s2 inaturalist: ood+ 0.13 | id+ 0.37
+balanced agreed blind s2 textures: ood+ 9.58 | id+ 9.65
+max agreed blind s2 textures: ood+ 9.15 | id+ 9.59
+safe agreed blind s2 textures: ood+ 11.25 | id+ 12.46
+max agreed blind, 5-shot s2 textures: ood+ 7.63 | id+ 7.11
+balanced agreed blind, 5-shot s2 textures: ood+ 8.40 | id+ 7.60
+balanced agreed blind s2 openimage_o: ood+ 34.20 | id+ 26.69
+max agreed blind s2 openimage_o: ood+ 28.22 | id+ 26.44
+safe agreed blind s2 openimage_o: ood+ 37.18 | id+ 31.55
+max agreed blind, 5-shot s2 openimage_o: ood+ 26.72 | id+ 23.71
+balanced agreed blind, 5-shot s2 openimage_o: ood+ 34.49 | id+ 26.13

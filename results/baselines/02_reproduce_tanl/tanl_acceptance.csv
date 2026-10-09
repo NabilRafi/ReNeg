@@ -1,0 +1,13 @@
+method,config,protocol,key,ours_fpr95,target,tolerance,delta,status
+tanl,paper/fp32,four_ood,mean:four,9.89,9.81,1.0,0.08,PASS
+tanl,paper/fp16,four_ood,mean:four,9.88,9.81,1.0,0.07,PASS
+tanl,official_sh/fp32,four_ood,mean:four,10.75,9.81,1.0,0.94,PASS
+tanl,official_sh/fp16,four_ood,mean:four,10.77,9.81,1.0,0.96,PASS
+tanl,paper/fp32,openood_v15,mean:near,60.05,60.06,1.5,-0.01,PASS
+tanl,paper/fp16,openood_v15,mean:near,60.07,60.06,1.5,0.01,PASS
+tanl,official_sh/fp32,openood_v15,mean:near,60.61,60.06,1.5,0.55,PASS
+tanl,official_sh/fp16,openood_v15,mean:near,60.7,60.06,1.5,0.64,PASS
+tanl,paper/fp32,openood_v15,mean:far,16.98,17.21,1.5,-0.23,PASS
+tanl,paper/fp16,openood_v15,mean:far,17.04,17.21,1.5,-0.17,PASS
+tanl,official_sh/fp32,openood_v15,mean:far,17.53,17.21,1.5,0.32,PASS
+tanl,official_sh/fp16,openood_v15,mean:far,17.62,17.21,1.5,0.41,PASS

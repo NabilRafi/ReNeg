@@ -1,0 +1,10 @@
+# ViT-L/14 set-up check (notebook D1): NegLabel and MCM against their published ViT-L/14 numbers
+# (Four-OOD FPR95, ID positive: NegLabel 24.81, MCM 38.17), and TANL with the released script's settings.
+backbone: ViT-L/14
+protocols: [four_ood]
+seeds: [0]
+runs:
+  - {label: mcm, method: mcm}
+  - {label: neglabel, method: neglabel}
+  - {label: tanl, method: tanl}
+  - {label: tanl_official_sh, method: tanl_official_sh}

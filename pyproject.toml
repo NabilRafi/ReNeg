@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reneg"
+version = "0.3.0"
+description = "ReNeg: knowledge-graph negative labels grounded in the test stream for test-time OOD detection with CLIP, with oodlab (TANL, AdaNeg, NegLabel, MCM) and a TINS re-implementation on cached features"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Mohammad Nabil Ferdous" }]
+keywords = ["out-of-distribution detection", "CLIP", "test-time adaptation", "negative labels", "knowledge graph", "WordNet"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=1.13",
+    "torchvision",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "Pillow",
+    "matplotlib",
+    "regex",
+    "tqdm",
+    "packaging",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+clip = ["ftfy"]
+data = ["gdown>=4.7", "nltk"]
+generative = ["diffusers>=0.27", "transformers", "accelerate"]
+notebooks = ["nbformat", "nbclient", "ipykernel", "kaggle"]
+test = ["pytest", "nbformat", "nbclient", "ipykernel"]
+all = ["ftfy", "gdown>=4.7", "nltk", "diffusers>=0.27", "transformers", "accelerate", "nbformat", "nbclient",
+       "ipykernel", "kaggle", "pytest"]
+
+[project.urls]
+Repository = "https://github.com/NabilRafi/ReNeg"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["oodlab*", "reneg*"]
+
+[tool.setuptools.package-data]
+oodlab = ["resources/*.json", "resources/neglabel_txtfiles/*.txt", "_vendor/clip/*.gz", "_vendor/clip/*.txt"]
+reneg = ["resources/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

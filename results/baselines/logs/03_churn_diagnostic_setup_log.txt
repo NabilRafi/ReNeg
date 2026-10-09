@@ -1,0 +1,101 @@
+/kaggle/working
+
+==============================================================
+  STAGE 1: repository
+==============================================================
+[OK] cloned
+
+==============================================================
+  STAGE 2: repo fixes
+==============================================================
+[OK] launch script -> tanl.yml
+[OK] postprocessor name -> actneg
+[OK] pdb breakpoint disabled
+[OK] dead ipdb import removed
+
+==============================================================
+  STAGE 3: churn instrumentation
+==============================================================
+[OK] tracker from /kaggle/working/churn_tracker.py
+[OK] hook inserted
+[OK] attach inserted
+[OK] compiles: openood/postprocessors/activated_neg_postprocessor.py
+[OK] compiles: openood/pipelines/test_ood_pipeline.py
+
+==============================================================
+  STAGE 4: datasets
+==============================================================
+downloading benchmark_imglist ...
+Downloading...
+From (original): https://drive.google.com/uc?id=1XKzBdWCqg3vPoj-D32YixJyJJ0hL63gP
+From (redirected): https://drive.google.com/uc?id=1XKzBdWCqg3vPoj-D32YixJyJJ0hL63gP&confirm=t&uuid=874933c6-bc3a-4cfa-8976-d18921e4791f
+To: /kaggle/working/OpenOOD-VLM/data/benchmark_imglist_legacy_without_imagenet-es.zip
+100%|███████████████████████████████████████| 27.7M/27.7M [00:00<00:00, 105MB/s]
+   unzipping benchmark_imglist_legacy_without_imagenet-es.zip (28 MB)
+[OK] benchmark_imglist
+downloading inaturalist ...
+Downloading...
+From (original): https://drive.google.com/uc?id=1zfLfMvoUD0CUlKNnkk7LgxZZBnTBipdj
+From (redirected): https://drive.google.com/uc?id=1zfLfMvoUD0CUlKNnkk7LgxZZBnTBipdj&confirm=t&uuid=ff5efe7c-ac1b-4376-bb92-2a47d99b28ab
+To: /kaggle/working/OpenOOD-VLM/data/images_largescale/inaturalist/inaturalist.zip
+100%|██████████████████████████████████████| 3.95G/3.95G [01:39<00:00, 39.7MB/s]
+   unzipping inaturalist.zip (3952 MB)
+[OK] inaturalist
+downloading sun ...
+Downloading...
+From (original): https://drive.google.com/uc?id=1ISK0STxWzWmg-_uUr4RQ8GSLFW7TZiKp
+From (redirected): https://drive.google.com/uc?id=1ISK0STxWzWmg-_uUr4RQ8GSLFW7TZiKp&confirm=t&uuid=79a3b44d-93ca-43ea-b9f1-e2ba47df3dad
+To: /kaggle/working/OpenOOD-VLM/data/images_largescale/sun/sun.zip
+100%|██████████████████████████████████████| 3.85G/3.85G [02:06<00:00, 30.5MB/s]
+   unzipping sun.zip (3853 MB)
+[OK] sun
+downloading places ...
+Downloading...
+From (original): https://drive.google.com/uc?id=1fZ8TbPC4JGqUCm-VtvrmkYxqRNp2PoB3
+From (redirected): https://drive.google.com/uc?id=1fZ8TbPC4JGqUCm-VtvrmkYxqRNp2PoB3&confirm=t&uuid=ae85933e-d56e-49a7-ba82-712e5ea3c535
+To: /kaggle/working/OpenOOD-VLM/data/images_largescale/places/places.zip
+100%|█████████████████████████████████████████| 688M/688M [00:04<00:00, 163MB/s]
+   unzipping places.zip (688 MB)
+[OK] places
+downloading texture ...
+Downloading...
+From (original): https://drive.google.com/uc?id=1OSz1m3hHfVWbRdmMwKbUzoU8Hg9UKcam
+From (redirected): https://drive.google.com/uc?id=1OSz1m3hHfVWbRdmMwKbUzoU8Hg9UKcam&confirm=t&uuid=85c22571-1cc7-4594-8cd0-0b310bc062b6
+To: /kaggle/working/OpenOOD-VLM/data/images_classic/texture/texture.zip
+100%|████████████████████████████████████████| 626M/626M [00:11<00:00, 54.8MB/s]
+   unzipping texture.zip (626 MB)
+[OK] texture
+
+==============================================================
+  STAGE 5: imagenet
+==============================================================
+[OK] /kaggle/input/competitions/imagenet-object-localization-challenge/ILSVRC/Data/CLS-LOC
+[OK] ID list test_imagenet.txt (prefix imagenet_1k, synsets=False)
+[OK] data/images_largescale/imagenet_1k -> /kaggle/input/competitions/imagenet-object-localization-challenge/ILSVRC/Data/CLS-LOC
+
+==============================================================
+  STAGE 6: generate sun / places / dtd lists
+==============================================================
+[OK] test_sun.txt: 10000 images (prefix 'sun/images/')
+[OK] test_places.txt: 10000 images (prefix 'places/images/')
+[OK] test_dtd.txt: 5640 images (prefix 'dtd/')
+
+==============================================================
+  STAGE 7: preflight
+==============================================================
+[FIX] test_imagenet_all.txt <- test_imagenet.txt
+[OK]   test_imagenet_all.txt       45,000
+[OK]   val_imagenet.txt             5,000
+[OK]   train_imagenet.txt         1,281,167
+[OK]   test_inaturalist.txt        10,000
+[OK]   test_sun.txt                10,000
+[OK]   test_places.txt             10,000
+[OK]   test_dtd.txt                 5,640
+[FAIL] test_ninco.txt             0/5
+       wanted: data/images_largescale/ninco/epithelantha_micromeris/epithelantha_micromeris_075_25230993.jpeg
+[FAIL] test_ssb_hard.txt          0/5
+       wanted: data/images_largescale/ssb_hard/n11622368/n11622368_1063.JPEG
+
+==============================================================
+  FAILED: stage_preflight
+==============================================================

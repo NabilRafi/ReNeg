@@ -1,0 +1,124 @@
+
+===== cell 1/7  22:26:46  # ── Colab set-up (the same cell in every ReNeg notebook) ─────────────────────────────
+oodlab 0.2.1 | reneg 0.2.11 | project folder <project>\ReNeg
+
+===== cell 2/7  22:26:46  from oodlab.session import start, finish, ensure_packages
+22:26:49 | INFO |       notebook: P4_tins_probe
+22:26:49 | INFO |         oodlab: 0.2.1
+22:26:49 | INFO |      code_hash: 9bb078512088
+22:26:49 | INFO |         device: cuda
+22:26:49 | INFO |          smoke: False
+22:26:49 | INFO |      on_kaggle: False
+22:26:49 | INFO |        started: 2026-10-04 22:26:49
+22:26:49 | INFO |         python: 3.12.10
+22:26:49 | INFO |       platform: Windows-11-10.0.26200-SP0
+22:26:49 | INFO |      cpu_count: 6
+22:26:49 | INFO |          torch: 2.5.1+cu121
+22:26:49 | INFO | cuda_available: True
+22:26:49 | INFO |            gpu: NVIDIA GeForce RTX 4060
+22:26:49 | INFO |     gpu_mem_GB: 8.6
+22:26:49 | INFO |          regex: True
+22:26:50 | INFO | [cache] using <project>\local_runs\oodlab_home\working\cache\vit-b-16: ['imagenet_test', 'imagenet_val', 'imagenet_val_all', 'inaturalist', 'ninco', 'openimage_o', 'openimage_o_val', 'places', 'ssb_hard', 'sun', 'textures', 'textures_all']
+device: cuda | protocols: ['openood_v15', 'four_ood'] | real CLIP text encoder: True
+
+===== cell 3/7  22:26:54  static_path = os.path.join(OUT, "tins_static.pt")
+5000 labelled ID images, 1000 classes (min 5 per class); zero-shot accuracy on them 67.3% (about 70% means the labels line up)
+labelled images found inside Four-OOD's 50k ID set: 5002 (expect about 5,000)
+static negatives: 58101 nouns / 11453 adjectives -> 46508 / 4057 pass the separation test -> 1840 nouns + 160 adjectives
+built in 0.8 min
+2000 static negatives, e.g. ['polydactyl', 'cumulous', 'trifid', 'undefeated', 'gibbous', 'legendary', 'wheaten', 'noctilucent']
+
+===== cell 4/7  22:27:42  def make_tins():
+22:31:24 | INFO | [tins/tins_5shot] openood_v15:ninco seed=0  FPR95 68.36  AUROC 80.96  ACC 66.80  (230.8 img/s)
+openood_v15 ninco s0: FPR95 68.36 (ID-positive 58.14), AUROC 80.96, 5156 images inverted, 3.7 min
+NINCO: 42.3 ms per inverted image, 5.8% of ID images inverted, 43.6% of OOD images
+estimate for everything: at most 5.2 hours (1.7 h per stream order)
+
+===== cell 5/7  22:31:24  if REAL:
+22:37:59 | INFO | [tins/tins_5shot] openood_v15:ssb_hard seed=0  FPR95 64.38  AUROC 84.14  ACC 66.80  (238.2 img/s)
+openood_v15 ssb_hard s0: FPR95 64.38 (ID-positive 54.00), AUROC 84.14, 29524 images inverted, 6.6 min
+22:41:52 | INFO | [tins/tins_5shot] openood_v15:inaturalist seed=0  FPR95 0.20  AUROC 99.92  ACC 66.80  (236.2 img/s)
+openood_v15 inaturalist s0: FPR95 0.20 (ID-positive 0.19), AUROC 99.92, 11445 images inverted, 3.9 min
+22:45:27 | INFO | [tins/tins_5shot] openood_v15:textures seed=0  FPR95 9.98  AUROC 98.24  ACC 66.80  (233.3 img/s)
+openood_v15 textures s0: FPR95 9.98 (ID-positive 7.38), AUROC 98.24, 7505 images inverted, 3.6 min
+22:49:46 | INFO | [tins/tins_5shot] openood_v15:openimage_o seed=0  FPR95 36.24  AUROC 93.37  ACC 66.80  (235.1 img/s)
+openood_v15 openimage_o s0: FPR95 36.24 (ID-positive 27.95), AUROC 93.37, 14071 images inverted, 4.3 min
+22:53:40 | INFO | [tins/tins_5shot] four_ood:inaturalist seed=0  FPR95 0.19  AUROC 99.92  ACC 66.84  (257.1 img/s)
+four_ood inaturalist s0: FPR95 0.19 (ID-positive 0.19), AUROC 99.92, 11623 images inverted, 3.9 min
+22:57:36 | INFO | [tins/tins_5shot] four_ood:sun seed=0  FPR95 4.93  AUROC 99.04  ACC 66.84  (254.6 img/s)
+four_ood sun s0: FPR95 4.93 (ID-positive 4.89), AUROC 99.04, 12983 images inverted, 3.9 min
+23:01:51 | INFO | [tins/tins_5shot] four_ood:places seed=0  FPR95 16.11  AUROC 96.89  ACC 66.84  (235.5 img/s)
+four_ood places s0: FPR95 16.11 (ID-positive 14.56), AUROC 96.89, 11226 images inverted, 4.3 min
+23:05:28 | INFO | [tins/tins_5shot] four_ood:textures_all seed=0  FPR95 7.59  AUROC 98.55  ACC 66.84  (255.9 img/s)
+four_ood textures_all s0: FPR95 7.59 (ID-positive 7.50), AUROC 98.55, 8303 images inverted, 3.6 min
+23:11:28 | INFO | [tins/tins_5shot] openood_v15:ssb_hard seed=1  FPR95 65.42  AUROC 83.79  ACC 66.80  (261.7 img/s)
+openood_v15 ssb_hard s1: FPR95 65.42 (ID-positive 53.96), AUROC 83.79, 29113 images inverted, 6.0 min
+23:14:47 | INFO | [tins/tins_5shot] openood_v15:ninco seed=1  FPR95 69.62  AUROC 79.90  ACC 66.80  (255.6 img/s)
+openood_v15 ninco s1: FPR95 69.62 (ID-positive 59.67), AUROC 79.90, 5192 images inverted, 3.3 min
+23:18:20 | INFO | [tins/tins_5shot] openood_v15:inaturalist seed=1  FPR95 0.20  AUROC 99.92  ACC 66.80  (258.9 img/s)
+openood_v15 inaturalist s1: FPR95 0.20 (ID-positive 0.16), AUROC 99.92, 11477 images inverted, 3.5 min
+23:21:35 | INFO | [tins/tins_5shot] openood_v15:textures seed=1  FPR95 6.47  AUROC 98.60  ACC 66.80  (257.3 img/s)
+openood_v15 textures s1: FPR95 6.47 (ID-positive 6.26), AUROC 98.60, 7620 images inverted, 3.3 min
+23:25:30 | INFO | [tins/tins_5shot] openood_v15:openimage_o seed=1  FPR95 37.78  AUROC 93.17  ACC 66.80  (259.0 img/s)
+openood_v15 openimage_o s1: FPR95 37.78 (ID-positive 28.26), AUROC 93.17, 14012 images inverted, 3.9 min
+23:29:25 | INFO | [tins/tins_5shot] four_ood:inaturalist seed=1  FPR95 0.18  AUROC 99.92  ACC 66.84  (256.1 img/s)
+four_ood inaturalist s1: FPR95 0.18 (ID-positive 0.17), AUROC 99.92, 11593 images inverted, 3.9 min
+23:33:21 | INFO | [tins/tins_5shot] four_ood:sun seed=1  FPR95 5.04  AUROC 99.06  ACC 66.84  (254.0 img/s)
+four_ood sun s1: FPR95 5.04 (ID-positive 5.06), AUROC 99.06, 12966 images inverted, 3.9 min
+23:37:09 | INFO | [tins/tins_5shot] four_ood:places seed=1  FPR95 15.83  AUROC 97.00  ACC 66.84  (263.7 img/s)
+four_ood places s1: FPR95 15.83 (ID-positive 14.05), AUROC 97.00, 11341 images inverted, 3.8 min
+23:40:42 | INFO | [tins/tins_5shot] four_ood:textures_all seed=1  FPR95 7.99  AUROC 98.30  ACC 66.84  (261.3 img/s)
+four_ood textures_all s1: FPR95 7.99 (ID-positive 7.15), AUROC 98.30, 8222 images inverted, 3.6 min
+23:46:44 | INFO | [tins/tins_5shot] openood_v15:ssb_hard seed=2  FPR95 64.23  AUROC 84.57  ACC 66.80  (259.8 img/s)
+openood_v15 ssb_hard s2: FPR95 64.23 (ID-positive 52.49), AUROC 84.57, 30499 images inverted, 6.0 min
+23:49:59 | INFO | [tins/tins_5shot] openood_v15:ninco seed=2  FPR95 67.82  AUROC 79.81  ACC 66.80  (260.7 img/s)
+openood_v15 ninco s2: FPR95 67.82 (ID-positive 61.52), AUROC 79.81, 4802 images inverted, 3.3 min
+23:53:27 | INFO | [tins/tins_5shot] openood_v15:inaturalist seed=2  FPR95 0.21  AUROC 99.91  ACC 66.80  (264.3 img/s)
+openood_v15 inaturalist s2: FPR95 0.21 (ID-positive 0.23), AUROC 99.91, 11452 images inverted, 3.5 min
+23:56:38 | INFO | [tins/tins_5shot] openood_v15:textures seed=2  FPR95 8.27  AUROC 98.41  ACC 66.80  (262.9 img/s)
+openood_v15 textures s2: FPR95 8.27 (ID-positive 7.21), AUROC 98.41, 7521 images inverted, 3.2 min
+00:00:28 | INFO | [tins/tins_5shot] openood_v15:openimage_o seed=2  FPR95 37.43  AUROC 93.20  ACC 66.80  (264.7 img/s)
+openood_v15 openimage_o s2: FPR95 37.43 (ID-positive 28.48), AUROC 93.20, 14195 images inverted, 3.8 min
+00:04:16 | INFO | [tins/tins_5shot] four_ood:inaturalist seed=2  FPR95 0.20  AUROC 99.92  ACC 66.84  (263.6 img/s)
+four_ood inaturalist s2: FPR95 0.20 (ID-positive 0.23), AUROC 99.92, 11605 images inverted, 3.8 min
+00:08:02 | INFO | [tins/tins_5shot] four_ood:sun seed=2  FPR95 5.15  AUROC 99.02  ACC 66.84  (266.0 img/s)
+four_ood sun s2: FPR95 5.15 (ID-positive 5.11), AUROC 99.02, 12825 images inverted, 3.8 min
+00:11:49 | INFO | [tins/tins_5shot] four_ood:places seed=2  FPR95 16.18  AUROC 96.89  ACC 66.84  (265.0 img/s)
+four_ood places s2: FPR95 16.18 (ID-positive 14.12), AUROC 96.89, 11283 images inverted, 3.8 min
+00:15:22 | INFO | [tins/tins_5shot] four_ood:textures_all seed=2  FPR95 9.64  AUROC 98.23  ACC 66.84  (261.1 img/s)
+four_ood textures_all s2: FPR95 9.64 (ID-positive 8.48), AUROC 98.23, 8171 images inverted, 3.6 min
+
+===== cell 6/7  00:15:22  def TRACES():
+                           fpr95       fpr95_idpos        auroc      
+                            mean   std        mean   std   mean   std
+protocol     dataset                                                 
+four_ood     inaturalist    0.19  0.01        0.20  0.03  99.92  0.00
+             places        16.04  0.18       14.24  0.28  96.93  0.06
+             sun            5.04  0.11        5.02  0.12  99.04  0.02
+             textures_all   8.41  1.09        7.71  0.69  98.36  0.17
+four_ood_45k inaturalist    0.19  0.01        0.20  0.03  99.92  0.00
+             places        16.09  0.16       14.35  0.27  96.91  0.06
+             sun            5.07  0.09        5.07  0.10  99.03  0.02
+             textures_all   8.44  1.05        7.75  0.65  98.35  0.17
+openood_v15  inaturalist    0.20  0.01        0.19  0.04  99.92  0.01
+             ninco         68.60  0.92       59.78  1.70  80.22  0.64
+             openimage_o   37.15  0.81       28.23  0.27  93.25  0.11
+             ssb_hard      64.68  0.65       53.48  0.86  84.17  0.39
+             textures       8.24  1.76        6.95  0.60  98.42  0.18
+openood_v15 ['ssb_hard', 'ninco']: FPR95 66.64 | ID-positive 56.63 | AUROC 82.20
+openood_v15 ['inaturalist', 'textures', 'openimage_o']: FPR95 15.20 | ID-positive 11.79 | AUROC 97.19
+four_ood ['inaturalist', 'sun', 'places', 'textures_all']: FPR95 7.42 | ID-positive 6.79 | AUROC 98.56
+four_ood_45k ['inaturalist', 'sun', 'places', 'textures_all']: FPR95 7.45 | ID-positive 6.84 | AUROC 98.55
+
+attach these files to the chat:
+   <project>\ReNeg/transfers/p4_tins\tins_runs.csv (0.0 MB)
+   <project>\ReNeg/transfers/p4_tins\tins_summary.csv (0.0 MB)
+   <project>\ReNeg/transfers/p4_tins\shot_mask.npy (0.1 MB)
+   <project>\ReNeg/transfers/p4_tins\tins_traces_1.zip (16.4 MB)
+00:15:24 | INFO | done in 108.6 min - outputs in <project>\local_runs\oodlab_home\working\results\P4_tins_probe
+
+===== cell 7/7  00:15:24  try:
+Not on Colab: nothing to flush.
+
+===== ALL CELLS DONE  00:15:24
+exit 0

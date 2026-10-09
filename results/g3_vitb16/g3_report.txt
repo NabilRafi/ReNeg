@@ -1,0 +1,112 @@
+
+================ b16: 228 rows, seeds [np.int64(0), np.int64(1), np.int64(2)]
+
+-- near
+                    method  near ood+  near id+  near AUROC           near ood+ d             near id+ d
+                      tanl      60.05     53.47       84.53                   NaN                    NaN
+      reneg_balanced_blind      56.57     44.91       87.12   -3.49 [-4.36,-2.83]    -8.56 [-8.66,-8.44]
+reneg_balanced_blind_5shot      55.86     41.01       87.95   -4.20 [-5.02,-3.56] -12.46 [-12.69,-12.09]
+       reneg_balanced_full      56.39     44.31       87.33   -3.66 [-4.57,-3.09]    -9.16 [-9.25,-9.01]
+           reneg_max_blind      52.76     47.10       87.26   -7.29 [-7.81,-6.88]    -6.37 [-6.44,-6.31]
+     reneg_max_blind_5shot      50.01     40.48       88.96 -10.05 [-11.02,-9.50] -12.99 [-13.10,-12.78]
+            reneg_max_full      51.18     46.44       87.75   -8.87 [-9.58,-8.36]    -7.03 [-7.12,-6.92]
+          reneg_safe_blind      58.50     46.27       86.37   -1.55 [-2.14,-1.19]    -7.20 [-7.40,-7.01]
+
+-- far
+                    method  far ood+  far id+  far AUROC          far ood+ d           far id+ d
+                      tanl     16.98    16.98      96.23                 NaN                 NaN
+      reneg_balanced_blind     14.66    12.27      97.19 -2.31 [-2.47,-2.11] -4.71 [-4.81,-4.64]
+reneg_balanced_blind_5shot     14.36    11.44      97.36 -2.62 [-2.76,-2.47] -5.54 [-5.68,-5.45]
+       reneg_balanced_full     14.72    12.22      97.19 -2.26 [-2.46,-2.09] -4.76 [-4.82,-4.70]
+           reneg_max_blind     12.73    12.22      97.41 -4.24 [-4.45,-4.05] -4.76 [-4.85,-4.69]
+     reneg_max_blind_5shot     11.48    10.41      97.79 -5.50 [-5.56,-5.42] -6.57 [-6.63,-6.48]
+            reneg_max_full     12.81    12.19      97.41 -4.17 [-4.37,-3.97] -4.79 [-4.84,-4.75]
+          reneg_safe_blind     16.43    14.80      96.69 -0.55 [-0.61,-0.50] -2.18 [-2.28,-2.06]
+
+-- Four-OOD
+              method  Four-OOD ood+  Four-OOD id+  Four-OOD AUROC     Four-OOD ood+ d      Four-OOD id+ d
+                tanl           9.89          9.27           97.82                 NaN                 NaN
+reneg_balanced_blind           9.61          7.79           98.10 -0.28 [-0.51,-0.11] -1.47 [-1.63,-1.25]
+ reneg_balanced_full           9.68          7.82           98.09 -0.21 [-0.44,-0.06] -1.45 [-1.63,-1.17]
+     reneg_max_blind          10.56          8.12           97.90 +0.67 [+0.37,+0.82] -1.15 [-1.32,-0.84]
+      reneg_max_full          10.65          8.16           97.90 +0.76 [+0.52,+0.90] -1.10 [-1.28,-0.81]
+    reneg_safe_blind           9.96          8.80           97.99 +0.07 [-0.03,+0.18] -0.47 [-0.55,-0.38]
+
+-- Four-OOD 45k
+                    method  Four-OOD 45k ood+  Four-OOD 45k id+  Four-OOD 45k AUROC Four-OOD 45k ood+ d  Four-OOD 45k id+ d
+                      tanl               9.49              8.78               97.90                 NaN                 NaN
+reneg_balanced_blind_5shot               8.63              6.90               98.41 -0.86 [-1.15,-0.67] -1.88 [-1.93,-1.82]
+     reneg_max_blind_5shot               9.24              7.00               98.27 -0.25 [-0.55,-0.04] -1.78 [-1.79,-1.78]
+
+-- per set, OOD-positive FPR95 (mean of orders)
+                    method  4:inaturalist  4:places  4:sun  4:textures_all  45:inaturalist  45:places  45:sun  45:textures_all  inaturalist  ninco  openimage_o  ssb_hard  textures
+                      tanl           0.47     21.36   3.74           14.00            0.47      21.09    3.71            12.68         0.47  57.60        39.09     62.51     11.38
+      reneg_balanced_blind           0.23     21.54   3.39           13.30             NaN        NaN     NaN              NaN         0.22  50.97        34.44     62.16      9.34
+reneg_balanced_blind_5shot            NaN       NaN    NaN             NaN            0.14      20.54    3.15            10.68         0.15  49.80        34.60     61.92      8.33
+       reneg_balanced_full           0.23     21.65   3.43           13.41             NaN        NaN     NaN              NaN         0.22  50.82        34.43     61.97      9.50
+           reneg_max_blind           0.27     24.36   4.00           13.61             NaN        NaN     NaN              NaN         0.26  46.02        28.38     59.51      9.55
+     reneg_max_blind_5shot            NaN       NaN    NaN             NaN            0.14      23.10    3.76             9.95         0.15  42.73        26.74     57.29      7.54
+            reneg_max_full           0.27     24.52   4.02           13.80             NaN        NaN     NaN              NaN         0.27  45.44        28.47     56.92      9.69
+          reneg_safe_blind           0.30     21.40   3.48           14.65             NaN        NaN     NaN              NaN         0.29  54.64        37.65     62.37     11.36
+
+-- per set, ID-positive FPR95 (mean of orders)
+                    method  4:inaturalist  4:places  4:sun  4:textures_all  45:inaturalist  45:places  45:sun  45:textures_all  inaturalist  ninco  openimage_o  ssb_hard  textures
+                      tanl           0.45     17.29   3.47           15.86            0.47      16.81    3.41            14.44         0.47  54.87        37.10     52.07     13.37
+      reneg_balanced_blind           0.37     15.37   3.39           12.04             NaN        NaN     NaN              NaN         0.38  41.40        27.11     48.41      9.31
+reneg_balanced_blind_5shot            NaN       NaN    NaN             NaN            0.38      14.35    3.21             9.66         0.37  36.79        26.27     45.22      7.69
+       reneg_balanced_full           0.37     15.47   3.41           12.03             NaN        NaN     NaN              NaN         0.39  41.30        26.96     47.32      9.32
+           reneg_max_blind           0.49     15.78   4.19           12.00             NaN        NaN     NaN              NaN         0.47  43.98        26.82     50.21      9.37
+     reneg_max_blind_5shot            NaN       NaN    NaN             NaN            0.44      14.57    4.03             8.95         0.42  35.92        23.75     45.04      7.05
+            reneg_max_full           0.50     15.89   4.20           12.06             NaN        NaN     NaN              NaN         0.47  43.99        26.73     48.89      9.37
+          reneg_safe_blind           0.42     16.22   3.35           15.21             NaN        NaN     NaN              NaN         0.44  44.20        31.85     48.34     12.11
+
+-- sets where the method is worse than TANL (mean of orders, OOD+ / ID+)
+reneg_balanced_blind         four_ood:places:ood+ +0.18
+reneg_balanced_blind_5shot   none
+reneg_balanced_full          four_ood:places:ood+ +0.29
+reneg_max_blind              openood_v15:inaturalist:id+ +0.01; four_ood:inaturalist:id+ +0.04; four_ood:sun:ood+ +0.26; four_ood:sun:id+ +0.72; four_ood:places:ood+ +3.00
+reneg_max_blind_5shot        four_ood_45k:sun:ood+ +0.05; four_ood_45k:sun:id+ +0.62; four_ood_45k:places:ood+ +2.01
+reneg_max_full               openood_v15:inaturalist:id+ +0.00; four_ood:inaturalist:id+ +0.05; four_ood:sun:ood+ +0.29; four_ood:sun:id+ +0.73; four_ood:places:ood+ +3.16
+reneg_safe_blind             four_ood:places:ood+ +0.04; four_ood:textures_all:ood+ +0.65
+
+================ l14: 81 rows, seeds [np.int64(0), np.int64(1), np.int64(2)]
+
+-- near
+              method  near ood+  near id+  near AUROC         near ood+ d             near id+ d
+                tanl      54.71     46.82       87.27                 NaN                    NaN
+reneg_balanced_blind      51.52     37.02       89.57 -3.20 [-3.58,-2.69]   -9.81 [-10.20,-9.42]
+ reneg_balanced_full      50.96     35.82       89.88 -3.75 [-3.93,-3.46] -11.01 [-11.39,-10.49]
+
+-- far
+              method  far ood+  far id+  far AUROC          far ood+ d           far id+ d
+                tanl     16.87    17.53      96.35                 NaN                 NaN
+reneg_balanced_blind     14.06    12.17      97.31 -2.81 [-3.06,-2.61] -5.35 [-5.42,-5.30]
+ reneg_balanced_full     14.10    12.17      97.31 -2.77 [-2.99,-2.62] -5.36 [-5.43,-5.28]
+
+-- Four-OOD
+              method  Four-OOD ood+  Four-OOD id+  Four-OOD AUROC     Four-OOD ood+ d      Four-OOD id+ d
+                tanl          14.79         13.04           97.01                 NaN                 NaN
+reneg_balanced_blind          13.50          9.09           97.59 -1.29 [-1.46,-1.16] -3.94 [-4.15,-3.61]
+ reneg_balanced_full          13.49          9.09           97.58 -1.30 [-1.41,-1.23] -3.95 [-4.15,-3.61]
+
+-- per set, OOD-positive FPR95 (mean of orders)
+              method  4:inaturalist  4:places  4:sun  4:textures_all  inaturalist  ninco  openimage_o  ssb_hard  textures
+                tanl           0.37     25.47   5.67           27.65         0.35  46.85        33.07     62.58     17.18
+reneg_balanced_blind           0.19     24.28   3.77           25.77         0.18  40.83        28.42     62.20     13.57
+ reneg_balanced_full           0.19     24.25   3.80           25.72         0.18  39.84        28.40     62.09     13.71
+
+-- per set, ID-positive FPR95 (mean of orders)
+              method  4:inaturalist  4:places  4:sun  4:textures_all  inaturalist  ninco  openimage_o  ssb_hard  textures
+                tanl           0.42     24.14   6.00           21.58         0.41  45.26        34.96     48.38     17.21
+reneg_balanced_blind           0.27     17.63   3.83           14.65         0.26  30.70        25.61     43.33     10.65
+ reneg_balanced_full           0.28     17.68   3.78           14.62         0.26  30.18        25.59     41.45     10.65
+
+-- sets where the method is worse than TANL (mean of orders, OOD+ / ID+)
+reneg_balanced_blind         none
+reneg_balanced_full          none
+
+================ G3 (GPU, fp16) vs local replay (int8), per set and order
+tanl                     n=27  |diff| OOD+ mean 0.20 max 0.77  ID+ mean 0.19 max 0.82
+reneg_balanced_blind     n=27  |diff| OOD+ mean 0.17 max 0.67  ID+ mean 0.23 max 2.01
+reneg_max_blind          n=27  |diff| OOD+ mean 0.18 max 0.92  ID+ mean 0.26 max 1.70
+reneg_safe_blind         n=27  |diff| OOD+ mean 0.17 max 0.76  ID+ mean 0.19 max 1.02

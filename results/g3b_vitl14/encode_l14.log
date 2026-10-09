@@ -1,0 +1,34 @@
+device: cuda NVIDIA GeForce RTX 4060
+[encode] _check_textures: shard 1/1 saved (512 images, 23s)
+[encode] _check_textures: 512 features saved -> <project>\local_runs\_check_cache\vit-b-16\images\_check_textures.npz
+[check] ViT-B/16 local vs Kaggle cache, 512 Textures images: cosine min 0.99906  mean 1.00001
+[encode] textures: 2560/5160 images  54 img/s  ~0.8 min left
+[encode] textures: 5120/5160 images  62 img/s  ~0.0 min left
+[encode] textures: shard 1/1 saved (5160 images, 87s)
+[encode] textures: 5160 features saved -> <project>\oodlab_working\cache\vit-l-14\images\textures.npz
+[encode] textures: 5160 x 768 done
+[encode] textures_all: 2560/5640 images  53 img/s  ~1.0 min left
+[encode] textures_all: 5120/5640 images  61 img/s  ~0.1 min left
+[encode] textures_all: shard 1/1 saved (5640 images, 92s)
+[encode] textures_all: 5640 features saved -> <project>\oodlab_working\cache\vit-l-14\images\textures_all.npz
+[encode] textures_all: 5640 x 768 done
+[encode] openimage_o: 2560/15869 images  53 img/s  ~4.2 min left
+[encode] openimage_o: 5120/15869 images  61 img/s  ~2.9 min left
+[encode] openimage_o: 7680/15869 images  65 img/s  ~2.1 min left
+[encode] openimage_o: shard 1/2 saved (10000 images, 152s)
+[encode] openimage_o: 12560/15869 images  53 img/s  ~1.0 min left
+[encode] openimage_o: 15120/15869 images  61 img/s  ~0.2 min left
+[encode] openimage_o: shard 2/2 saved (5869 images, 95s)
+[encode] openimage_o: 15869 features saved -> <project>\oodlab_working\cache\vit-l-14\images\openimage_o.npz
+[encode] openimage_o: 15869 x 768 done
+[encode] openimage_o_val: shard 1/1 saved (1763 images, 38s)
+[encode] openimage_o_val: 1763 features saved -> <project>\oodlab_working\cache\vit-l-14\images\openimage_o_val.npz
+[encode] openimage_o_val: 1763 x 768 done
+[encode] inaturalist: 2560/10000 images  50 img/s  ~2.5 min left
+[encode] inaturalist: 5120/10000 images  59 img/s  ~1.4 min left
+[encode] inaturalist: 7680/10000 images  63 img/s  ~0.6 min left
+[encode] inaturalist: shard 1/1 saved (10000 images, 155s)
+[encode] inaturalist: 10000 features saved -> <project>\oodlab_working\cache\vit-l-14\images\inaturalist.npz
+[encode] inaturalist: 10000 x 768 done
+ViT-L/14 cache now has: ['imagenet_test', 'imagenet_val', 'imagenet_val_all', 'inaturalist', 'ninco', 'openimage_o', 'openimage_o_val', 'places', 'ssb_hard', 'sun', 'textures', 'textures_all']
+exit 0

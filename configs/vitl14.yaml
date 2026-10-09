@@ -1,0 +1,9 @@
+# Second backbone: ReNeg on TANL with CLIP ViT-L/14 (224 px), three stream orders.
+# Colab equivalent: notebooks/4_evaluation/G3b_final_eval_vitl14.ipynb. Official results: results/g3b_vitl14/.
+backbone: ViT-L/14
+protocols: [openood_v15, four_ood]
+seeds: [0, 1, 2]
+runs:
+  - {label: tanl, method: tanl}
+  - {label: reneg_balanced_blind, method: reneg_tanl, mode: balanced, pool: blind}
+  - {label: reneg_balanced_full, method: reneg_tanl, mode: balanced, pool: full}

@@ -1,0 +1,143 @@
+{
+ "quality": {
+  "ninco": {
+   "n": 64,
+   "cos(gen,real)": 0.8587549924850464,
+   "cos(realA,realB)": 0.994600236415863,
+   "cos(text,real)": 0.3115963637828827,
+   "top1 gen->real": 59.375,
+   "top1 text->real": 78.125,
+   "top1 realA->realB": 100.0,
+   "gen: own - best other": 0.025241252034902573
+  },
+  "ssb_hard": {
+   "n": 300,
+   "cos(gen,real)": 0.8704414963722229,
+   "cos(realA,realB)": 0.9875288009643555,
+   "cos(text,real)": 0.322280615568161,
+   "top1 gen->real": 44.333333333333336,
+   "top1 text->real": 60.0,
+   "top1 realA->realB": 91.66666666666666,
+   "gen: own - best other": -0.01837589405477047
+  },
+  "imagenet": {
+   "n": 50,
+   "zero-shot acc of generated images": 94.5,
+   "zero-shot acc of real test images": 66.71333333333334,
+   "cos(gen,real)": 0.8909127712249756,
+   "cos(text,real)": 0.332976758480072,
+   "top1 gen->real (1000 classes)": 68.0,
+   "top1 text->real (1000 classes)": 92.0
+  }
+ },
+ "stream": [
+  {
+   "set": "ninco",
+   "arm": "NegLabel form (reference)",
+   "FPR95": 61.65,
+   "AUROC": 77.55
+  },
+  {
+   "set": "ninco",
+   "arm": "text only: pool names, no image side",
+   "FPR95": 56.53,
+   "AUROC": 82.81
+  },
+  {
+   "set": "ninco",
+   "arm": "text-seeded evidence (stream only)",
+   "FPR95": 44.91,
+   "AUROC": 90.19
+  },
+  {
+   "set": "ninco",
+   "arm": "perfect map (real centroid, w=1)",
+   "FPR95": 30.17,
+   "AUROC": 93.7
+  },
+  {
+   "set": "ninco",
+   "arm": "generated prototype (w=1)",
+   "FPR95": 41.81,
+   "AUROC": 90.9
+  },
+  {
+   "set": "ninco",
+   "arm": "perfect map (real centroid, w=4)",
+   "FPR95": 25.23,
+   "AUROC": 94.64
+  },
+  {
+   "set": "ninco",
+   "arm": "generated prototype (w=4)",
+   "FPR95": 43.27,
+   "AUROC": 90.45
+  },
+  {
+   "set": "ninco",
+   "arm": "perfect map (real centroid, w=16)",
+   "FPR95": 23.45,
+   "AUROC": 95.13
+  },
+  {
+   "set": "ninco",
+   "arm": "generated prototype (w=16)",
+   "FPR95": 45.84,
+   "AUROC": 89.05
+  },
+  {
+   "set": "ninco",
+   "arm": "perfect map, static (no stream update)",
+   "FPR95": 22.64,
+   "AUROC": 95.3
+  },
+  {
+   "set": "ninco",
+   "arm": "generated, static (no stream update)",
+   "FPR95": 51.57,
+   "AUROC": 85.45
+  },
+  {
+   "set": "ssb_hard",
+   "arm": "NegLabel form (reference)",
+   "FPR95": 76.13,
+   "AUROC": 72.87
+  },
+  {
+   "set": "ssb_hard",
+   "arm": "text only: pool names, no image side",
+   "FPR95": 57.92,
+   "AUROC": 81.81
+  },
+  {
+   "set": "ssb_hard",
+   "arm": "text-seeded evidence (stream only)",
+   "FPR95": 45.86,
+   "AUROC": 88.24
+  },
+  {
+   "set": "ssb_hard",
+   "arm": "perfect map (real centroid, w=4)",
+   "FPR95": 31.76,
+   "AUROC": 91.98
+  },
+  {
+   "set": "ssb_hard",
+   "arm": "generated prototype (w=4)",
+   "FPR95": 41.34,
+   "AUROC": 88.89
+  },
+  {
+   "set": "ssb_hard",
+   "arm": "perfect map, static (no stream update)",
+   "FPR95": 31.36,
+   "AUROC": 92.26
+  },
+  {
+   "set": "ssb_hard",
+   "arm": "generated, static (no stream update)",
+   "FPR95": 48.36,
+   "AUROC": 84.83
+  }
+ ]
+}

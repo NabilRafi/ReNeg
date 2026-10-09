@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Data, caches and run outputs (never commit features or images)
+/oodlab_work/
+/workspace/
+/data/
+/cache/
+*.npz
+*.pt
+*.pth
+!results/**/*.npz
+/runs/
+/exports/
+/outputs/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

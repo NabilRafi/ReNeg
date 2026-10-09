@@ -1,0 +1,15 @@
+# Main table (paper Table 1) and the few-shot rows: ReNeg on TANL, CLIP ViT-B/16, three stream orders.
+# Colab equivalent: notebooks/4_evaluation/G3_final_eval.ipynb. Official results: results/g3_vitb16/.
+backbone: ViT-B/16
+protocols: [openood_v15, four_ood]
+seeds: [0, 1, 2]
+runs:
+  - {label: tanl, method: tanl, protocols: [openood_v15, four_ood, four_ood_45k]}
+  - {label: reneg_balanced_blind, method: reneg_tanl, mode: balanced, pool: blind}     # main
+  - {label: reneg_balanced_full, method: reneg_tanl, mode: balanced, pool: full}
+  - {label: reneg_max_blind, method: reneg_tanl, mode: max, pool: blind}
+  - {label: reneg_max_full, method: reneg_tanl, mode: max, pool: full}
+  - {label: reneg_safe_blind, method: reneg_tanl, mode: safe, pool: blind}
+  # few-shot setting: 5 labelled ImageNet images per class (OpenOOD's ID-val split); Four-OOD on the other 45k
+  - {label: reneg_balanced_blind_5shot, method: reneg_tanl, mode: balanced, pool: blind, few_shot: true}
+  - {label: reneg_max_blind_5shot, method: reneg_tanl, mode: max, pool: blind, few_shot: true}

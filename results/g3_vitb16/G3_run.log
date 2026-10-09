@@ -1,0 +1,308 @@
+
+===== cell 1/8  09:45:24  # ── Colab set-up (the same cell in every ReNeg notebook) ─────────────────────────────
+reneg code updated 0.2.8 -> 0.2.10 from uploads/ReNeg_Colab_bundle.zip
+oodlab 0.2.1 | reneg 0.2.10 | project folder <project>\ReNeg
+
+===== cell 2/8  09:45:25  from oodlab.session import start, finish, ensure_packages
+09:45:30 | INFO |       notebook: G3_final_eval
+09:45:30 | INFO |         oodlab: 0.2.1
+09:45:30 | INFO |      code_hash: 9bb078512088
+09:45:30 | INFO |         device: cuda
+09:45:30 | INFO |          smoke: False
+09:45:30 | INFO |      on_kaggle: False
+09:45:30 | INFO |        started: 2026-10-04 09:45:30
+09:45:30 | INFO |         python: 3.12.10
+09:45:30 | INFO |       platform: Windows-11-10.0.26200-SP0
+09:45:30 | INFO |      cpu_count: 6
+09:45:30 | INFO |          torch: 2.5.1+cu121
+09:45:30 | INFO | cuda_available: True
+09:45:30 | INFO |            gpu: NVIDIA GeForce RTX 4060
+09:45:30 | INFO |     gpu_mem_GB: 8.6
+09:45:30 | INFO |          regex: True
+09:45:42 | INFO | [cache] using <project>\local_runs\oodlab_home\working\cache\vit-b-16: ['imagenet_test', 'imagenet_val', 'imagenet_val_all', 'inaturalist', 'ninco', 'openimage_o', 'openimage_o_val', 'places', 'ssb_hard', 'sun', 'textures', 'textures_all']
+ViT-B/16 | device: cuda | sets: ['imagenet_test', 'imagenet_val', 'imagenet_val_all', 'inaturalist', 'ninco', 'openimage_o', 'openimage_o_val', 'places', 'ssb_hard', 'sun', 'textures', 'textures_all'] | protocols: ['openood_v15', 'four_ood']
+
+===== cell 3/8  09:45:45  kg = load_kg_pool()["pool"]
+14526 KG names; 13878 in the blind pool; (14526, 512)
+
+===== cell 4/8  09:45:49  RENEG_DEVICE = ctx.device
+09:46:27 | INFO | [reneg_tanl/check_cuda] openood_v15:ninco seed=0  FPR95 52.12  AUROC 89.11  ACC 66.80  (2611.7 img/s)
+cuda {'fpr95': 52.122, 'auroc': 89.109, 'img_per_s': 2611.7, 'minutes': 0.6}
+09:46:56 | INFO | [reneg_tanl/check_cpu] openood_v15:ninco seed=0  FPR95 52.12  AUROC 89.11  ACC 66.80  (1783.3 img/s)
+cpu {'fpr95': 52.122, 'auroc': 89.109, 'img_per_s': 1783.3, 'minutes': 0.5}
+ReNeg runs on: cuda (GPU and CPU agree)
+estimate: 6 methods x 3 orders x 546,548 images at about 2612 img/s = 1.0 hours at most
+
+===== cell 5/8  09:47:01  done = pd.read_csv(runs_path) if os.path.isfile(runs_path) else pd.DataFrame()
+09:48:27 | INFO | [tanl/tanl] openood_v15:ssb_hard seed=0  FPR95 62.74  AUROC 83.96  ACC 66.80  (1108.7 img/s)
+09:49:57 | INFO | [tanl/tanl] openood_v15:ssb_hard seed=1  FPR95 62.14  AUROC 84.14  ACC 66.80  (1048.0 img/s)
+09:50:37 | INFO | [tanl/tanl] openood_v15:ssb_hard seed=2  FPR95 62.63  AUROC 84.17  ACC 66.80  (2358.0 img/s)
+09:51:42 | INFO | [tanl/tanl] openood_v15:ninco seed=0  FPR95 57.70  AUROC 85.06  ACC 66.80  (787.0 img/s)
+09:52:46 | INFO | [tanl/tanl] openood_v15:ninco seed=1  FPR95 57.19  AUROC 84.95  ACC 66.80  (798.9 img/s)
+09:53:16 | INFO | [tanl/tanl] openood_v15:ninco seed=2  FPR95 57.92  AUROC 84.90  ACC 66.80  (1682.1 img/s)
+09:54:22 | INFO | [tanl/tanl] openood_v15:inaturalist seed=0  FPR95 0.47  AUROC 99.83  ACC 66.80  (840.0 img/s)
+09:55:00 | INFO | [tanl/tanl] openood_v15:inaturalist seed=1  FPR95 0.45  AUROC 99.84  ACC 66.80  (1460.8 img/s)
+09:55:32 | INFO | [tanl/tanl] openood_v15:inaturalist seed=2  FPR95 0.48  AUROC 99.83  ACC 66.80  (1739.8 img/s)
+09:56:36 | INFO | [tanl/tanl] openood_v15:textures seed=0  FPR95 11.34  AUROC 97.30  ACC 66.80  (785.7 img/s)
+09:57:36 | INFO | [tanl/tanl] openood_v15:textures seed=1  FPR95 11.44  AUROC 97.29  ACC 66.80  (844.5 img/s)
+09:57:54 | INFO | [tanl/tanl] openood_v15:textures seed=2  FPR95 11.35  AUROC 97.30  ACC 66.80  (2826.3 img/s)
+09:58:15 | INFO | [tanl/tanl] openood_v15:openimage_o seed=0  FPR95 39.10  AUROC 91.56  ACC 66.80  (2830.6 img/s)
+09:58:55 | INFO | [tanl/tanl] openood_v15:openimage_o seed=1  FPR95 39.30  AUROC 91.57  ACC 66.80  (1520.2 img/s)
+09:59:27 | INFO | [tanl/tanl] openood_v15:openimage_o seed=2  FPR95 38.88  AUROC 91.55  ACC 66.80  (1921.3 img/s)
+tanl openood_v15: 12.4 min
+09:59:57 | INFO | [tanl/tanl] four_ood:inaturalist seed=0  FPR95 0.50  AUROC 99.83  ACC 66.85  (2062.8 img/s)
+10:00:29 | INFO | [tanl/tanl] four_ood:inaturalist seed=1  FPR95 0.45  AUROC 99.84  ACC 66.85  (1895.1 img/s)
+10:01:00 | INFO | [tanl/tanl] four_ood:inaturalist seed=2  FPR95 0.47  AUROC 99.84  ACC 66.85  (1904.4 img/s)
+10:01:33 | INFO | [tanl/tanl] four_ood:sun seed=0  FPR95 3.60  AUROC 98.99  ACC 66.85  (1874.3 img/s)
+10:02:04 | INFO | [tanl/tanl] four_ood:sun seed=1  FPR95 3.77  AUROC 99.00  ACC 66.85  (1930.7 img/s)
+10:02:36 | INFO | [tanl/tanl] four_ood:sun seed=2  FPR95 3.84  AUROC 98.99  ACC 66.85  (1852.9 img/s)
+10:03:09 | INFO | [tanl/tanl] four_ood:places seed=0  FPR95 21.32  AUROC 95.67  ACC 66.85  (1843.2 img/s)
+10:03:41 | INFO | [tanl/tanl] four_ood:places seed=1  FPR95 21.18  AUROC 95.77  ACC 66.85  (1912.0 img/s)
+10:04:10 | INFO | [tanl/tanl] four_ood:places seed=2  FPR95 21.58  AUROC 95.60  ACC 66.85  (2073.7 img/s)
+10:04:37 | INFO | [tanl/tanl] four_ood:textures_all seed=0  FPR95 14.59  AUROC 96.68  ACC 66.85  (2060.2 img/s)
+10:05:04 | INFO | [tanl/tanl] four_ood:textures_all seed=1  FPR95 13.44  AUROC 96.84  ACC 66.85  (2063.2 img/s)
+10:05:31 | INFO | [tanl/tanl] four_ood:textures_all seed=2  FPR95 13.97  AUROC 96.77  ACC 66.85  (2060.5 img/s)
+tanl four_ood: 6.1 min
+10:06:21 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:ssb_hard seed=0  FPR95 62.34  AUROC 85.07  ACC 66.80  (1900.6 img/s)
+10:07:10 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:ssb_hard seed=1  FPR95 61.93  AUROC 85.20  ACC 66.80  (1938.2 img/s)
+10:08:00 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:ssb_hard seed=2  FPR95 62.22  AUROC 85.29  ACC 66.80  (1902.2 img/s)
+10:08:26 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:ninco seed=0  FPR95 52.44  AUROC 88.97  ACC 66.80  (1904.7 img/s)
+10:08:53 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:ninco seed=1  FPR95 50.87  AUROC 89.02  ACC 66.80  (1943.0 img/s)
+10:09:19 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:ninco seed=2  FPR95 49.61  AUROC 89.16  ACC 66.80  (1945.5 img/s)
+10:09:48 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:inaturalist seed=0  FPR95 0.20  AUROC 99.89  ACC 66.80  (1935.6 img/s)
+10:10:16 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:inaturalist seed=1  FPR95 0.19  AUROC 99.89  ACC 66.80  (1938.2 img/s)
+10:10:45 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:inaturalist seed=2  FPR95 0.26  AUROC 99.89  ACC 66.80  (1922.7 img/s)
+10:11:11 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:textures seed=0  FPR95 9.03  AUROC 98.03  ACC 66.80  (1935.4 img/s)
+10:11:37 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:textures seed=1  FPR95 9.29  AUROC 97.98  ACC 66.80  (1919.7 img/s)
+10:12:03 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:textures seed=2  FPR95 9.70  AUROC 97.94  ACC 66.80  (1940.5 img/s)
+10:12:35 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:openimage_o seed=0  FPR95 34.58  AUROC 93.71  ACC 66.80  (1932.9 img/s)
+10:13:07 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:openimage_o seed=1  FPR95 34.30  AUROC 93.64  ACC 66.80  (1921.5 img/s)
+10:13:39 | INFO | [reneg_tanl/reneg_balanced_blind] openood_v15:openimage_o seed=2  FPR95 34.42  AUROC 93.72  ACC 66.80  (1929.9 img/s)
+reneg_balanced_blind openood_v15: 8.1 min
+10:14:11 | INFO | [reneg_tanl/reneg_balanced_blind] four_ood:inaturalist seed=0  FPR95 0.26  AUROC 99.89  ACC 66.85  (1843.6 img/s)
+10:14:43 | INFO | [reneg_tanl/reneg_balanced_blind] four_ood:inaturalist seed=1  FPR95 0.23  AUROC 99.89  ACC 66.85  (1902.6 img/s)
+10:15:14 | INFO | [reneg_tanl/reneg_balanced_blind] four_ood:inaturalist seed=2  FPR95 0.21  AUROC 99.89  ACC 66.85  (1972.8 img/s)
+10:15:45 | INFO | [reneg_tanl/reneg_balanced_blind] four_ood:sun seed=0  FPR95 3.43  AUROC 99.05  ACC 66.85  (1905.2 img/s)
+10:16:17 | INFO | [reneg_tanl/reneg_balanced_blind] four_ood:sun seed=1  FPR95 3.36  AUROC 99.06  ACC 66.85  (1916.1 img/s)
+10:16:47 | INFO | [reneg_tanl/reneg_balanced_blind] four_ood:sun seed=2  FPR95 3.37  AUROC 99.11  ACC 66.85  (1987.5 img/s)
+10:17:18 | INFO | [reneg_tanl/reneg_balanced_blind] four_ood:places seed=0  FPR95 21.17  AUROC 96.01  ACC 66.85  (1987.8 img/s)
+10:17:48 | INFO | [reneg_tanl/reneg_balanced_blind] four_ood:places seed=1  FPR95 21.64  AUROC 96.07  ACC 66.85  (1994.1 img/s)
+10:18:18 | INFO | [reneg_tanl/reneg_balanced_blind] four_ood:places seed=2  FPR95 21.81  AUROC 96.01  ACC 66.85  (1975.0 img/s)
+10:18:47 | INFO | [reneg_tanl/reneg_balanced_blind] four_ood:textures_all seed=0  FPR95 14.31  AUROC 97.34  ACC 66.85  (1969.0 img/s)
+10:19:15 | INFO | [reneg_tanl/reneg_balanced_blind] four_ood:textures_all seed=1  FPR95 13.15  AUROC 97.40  ACC 66.85  (1970.9 img/s)
+10:19:44 | INFO | [reneg_tanl/reneg_balanced_blind] four_ood:textures_all seed=2  FPR95 12.44  AUROC 97.44  ACC 66.85  (1959.2 img/s)
+reneg_balanced_blind four_ood: 6.1 min
+10:20:34 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:ssb_hard seed=0  FPR95 62.14  AUROC 85.40  ACC 66.80  (1891.4 img/s)
+10:21:21 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:ssb_hard seed=1  FPR95 61.84  AUROC 85.49  ACC 66.80  (1981.1 img/s)
+10:22:11 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:ssb_hard seed=2  FPR95 61.94  AUROC 85.60  ACC 66.80  (1903.9 img/s)
+10:22:37 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:ninco seed=0  FPR95 52.12  AUROC 89.11  ACC 66.80  (1984.2 img/s)
+10:23:03 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:ninco seed=1  FPR95 50.86  AUROC 89.13  ACC 66.80  (1973.1 img/s)
+10:23:29 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:ninco seed=2  FPR95 49.48  AUROC 89.27  ACC 66.80  (1973.7 img/s)
+10:23:57 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:inaturalist seed=0  FPR95 0.20  AUROC 99.89  ACC 66.80  (1980.0 img/s)
+10:24:25 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:inaturalist seed=1  FPR95 0.19  AUROC 99.89  ACC 66.80  (1982.6 img/s)
+10:24:53 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:inaturalist seed=2  FPR95 0.26  AUROC 99.88  ACC 66.80  (1961.6 img/s)
+10:25:18 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:textures seed=0  FPR95 9.35  AUROC 98.01  ACC 66.80  (1983.1 img/s)
+10:25:44 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:textures seed=1  FPR95 9.41  AUROC 97.98  ACC 66.80  (1979.0 img/s)
+10:26:09 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:textures seed=2  FPR95 9.75  AUROC 97.93  ACC 66.80  (1991.8 img/s)
+10:26:40 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:openimage_o seed=0  FPR95 34.68  AUROC 93.73  ACC 66.80  (1959.0 img/s)
+10:27:11 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:openimage_o seed=1  FPR95 34.20  AUROC 93.66  ACC 66.80  (1962.0 img/s)
+10:27:43 | INFO | [reneg_tanl/reneg_balanced_full] openood_v15:openimage_o seed=2  FPR95 34.42  AUROC 93.72  ACC 66.80  (1962.1 img/s)
+reneg_balanced_full openood_v15: 8.0 min
+10:28:17 | INFO | [reneg_tanl/reneg_balanced_full] four_ood:inaturalist seed=0  FPR95 0.25  AUROC 99.89  ACC 66.85  (1774.3 img/s)
+10:28:47 | INFO | [reneg_tanl/reneg_balanced_full] four_ood:inaturalist seed=1  FPR95 0.24  AUROC 99.89  ACC 66.85  (1964.4 img/s)
+10:29:18 | INFO | [reneg_tanl/reneg_balanced_full] four_ood:inaturalist seed=2  FPR95 0.21  AUROC 99.89  ACC 66.85  (1966.4 img/s)
+10:29:49 | INFO | [reneg_tanl/reneg_balanced_full] four_ood:sun seed=0  FPR95 3.47  AUROC 99.05  ACC 66.85  (1979.0 img/s)
+10:30:19 | INFO | [reneg_tanl/reneg_balanced_full] four_ood:sun seed=1  FPR95 3.39  AUROC 99.05  ACC 66.85  (1980.2 img/s)
+10:30:50 | INFO | [reneg_tanl/reneg_balanced_full] four_ood:sun seed=2  FPR95 3.42  AUROC 99.09  ACC 66.85  (1978.4 img/s)
+10:31:20 | INFO | [reneg_tanl/reneg_balanced_full] four_ood:places seed=0  FPR95 21.36  AUROC 95.99  ACC 66.85  (1984.2 img/s)
+10:31:50 | INFO | [reneg_tanl/reneg_balanced_full] four_ood:places seed=1  FPR95 21.72  AUROC 96.05  ACC 66.85  (1990.6 img/s)
+10:32:21 | INFO | [reneg_tanl/reneg_balanced_full] four_ood:places seed=2  FPR95 21.87  AUROC 95.98  ACC 66.85  (1985.6 img/s)
+10:32:49 | INFO | [reneg_tanl/reneg_balanced_full] four_ood:textures_all seed=0  FPR95 14.37  AUROC 97.33  ACC 66.85  (1982.1 img/s)
+10:33:17 | INFO | [reneg_tanl/reneg_balanced_full] four_ood:textures_all seed=1  FPR95 13.25  AUROC 97.39  ACC 66.85  (1978.0 img/s)
+10:33:45 | INFO | [reneg_tanl/reneg_balanced_full] four_ood:textures_all seed=2  FPR95 12.61  AUROC 97.43  ACC 66.85  (1976.9 img/s)
+reneg_balanced_full four_ood: 6.0 min
+10:34:35 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:ssb_hard seed=0  FPR95 59.89  AUROC 85.11  ACC 66.80  (1924.2 img/s)
+10:35:23 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:ssb_hard seed=1  FPR95 59.36  AUROC 85.29  ACC 66.80  (1976.0 img/s)
+10:36:11 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:ssb_hard seed=2  FPR95 59.27  AUROC 85.29  ACC 66.80  (1938.4 img/s)
+10:36:37 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:ninco seed=0  FPR95 46.18  AUROC 89.33  ACC 66.80  (1994.6 img/s)
+10:37:03 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:ninco seed=1  FPR95 46.22  AUROC 89.18  ACC 66.80  (1970.8 img/s)
+10:37:29 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:ninco seed=2  FPR95 45.67  AUROC 89.35  ACC 66.80  (1984.1 img/s)
+10:37:56 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:inaturalist seed=0  FPR95 0.26  AUROC 99.87  ACC 66.80  (1989.1 img/s)
+10:38:25 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:inaturalist seed=1  FPR95 0.24  AUROC 99.87  ACC 66.80  (1959.2 img/s)
+10:38:53 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:inaturalist seed=2  FPR95 0.29  AUROC 99.86  ACC 66.80  (1978.1 img/s)
+10:39:18 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:textures seed=0  FPR95 9.72  AUROC 97.87  ACC 66.80  (1991.5 img/s)
+10:39:43 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:textures seed=1  FPR95 9.46  AUROC 97.84  ACC 66.80  (1975.7 img/s)
+10:40:09 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:textures seed=2  FPR95 9.47  AUROC 97.79  ACC 66.80  (1994.0 img/s)
+10:40:40 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:openimage_o seed=0  FPR95 28.78  AUROC 94.51  ACC 66.80  (1980.3 img/s)
+10:41:11 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:openimage_o seed=1  FPR95 28.15  AUROC 94.51  ACC 66.80  (1982.6 img/s)
+10:41:42 | INFO | [reneg_tanl/reneg_max_blind] openood_v15:openimage_o seed=2  FPR95 28.23  AUROC 94.54  ACC 66.80  (1973.1 img/s)
+reneg_max_blind openood_v15: 7.9 min
+10:42:09 | INFO | [reneg_tanl/reneg_max_blind] four_ood:inaturalist seed=0  FPR95 0.28  AUROC 99.87  ACC 66.85  (2213.2 img/s)
+10:42:27 | INFO | [reneg_tanl/reneg_max_blind] four_ood:inaturalist seed=1  FPR95 0.28  AUROC 99.87  ACC 66.85  (3290.6 img/s)
+10:42:46 | INFO | [reneg_tanl/reneg_max_blind] four_ood:inaturalist seed=2  FPR95 0.25  AUROC 99.87  ACC 66.85  (3316.8 img/s)
+10:43:04 | INFO | [reneg_tanl/reneg_max_blind] four_ood:sun seed=0  FPR95 4.19  AUROC 98.79  ACC 66.85  (3316.9 img/s)
+10:43:22 | INFO | [reneg_tanl/reneg_max_blind] four_ood:sun seed=1  FPR95 3.92  AUROC 98.80  ACC 66.85  (3321.2 img/s)
+10:43:40 | INFO | [reneg_tanl/reneg_max_blind] four_ood:sun seed=2  FPR95 3.88  AUROC 98.86  ACC 66.85  (3314.0 img/s)
+10:43:58 | INFO | [reneg_tanl/reneg_max_blind] four_ood:places seed=0  FPR95 24.46  AUROC 95.70  ACC 66.85  (3301.9 img/s)
+10:44:17 | INFO | [reneg_tanl/reneg_max_blind] four_ood:places seed=1  FPR95 24.09  AUROC 95.76  ACC 66.85  (3307.3 img/s)
+10:44:35 | INFO | [reneg_tanl/reneg_max_blind] four_ood:places seed=2  FPR95 24.53  AUROC 95.66  ACC 66.85  (3304.7 img/s)
+10:44:52 | INFO | [reneg_tanl/reneg_max_blind] four_ood:textures_all seed=0  FPR95 14.36  AUROC 97.15  ACC 66.85  (3312.0 img/s)
+10:45:09 | INFO | [reneg_tanl/reneg_max_blind] four_ood:textures_all seed=1  FPR95 13.81  AUROC 97.21  ACC 66.85  (3306.6 img/s)
+10:45:26 | INFO | [reneg_tanl/reneg_max_blind] four_ood:textures_all seed=2  FPR95 12.66  AUROC 97.29  ACC 66.85  (3325.0 img/s)
+reneg_max_blind four_ood: 3.7 min
+10:45:56 | INFO | [reneg_tanl/reneg_max_full] openood_v15:ssb_hard seed=0  FPR95 57.28  AUROC 85.96  ACC 66.80  (3164.3 img/s)
+10:46:24 | INFO | [reneg_tanl/reneg_max_full] openood_v15:ssb_hard seed=1  FPR95 56.77  AUROC 86.10  ACC 66.80  (3314.4 img/s)
+10:46:53 | INFO | [reneg_tanl/reneg_max_full] openood_v15:ssb_hard seed=2  FPR95 56.70  AUROC 86.11  ACC 66.80  (3319.8 img/s)
+10:47:08 | INFO | [reneg_tanl/reneg_max_full] openood_v15:ninco seed=0  FPR95 45.78  AUROC 89.51  ACC 66.80  (3316.7 img/s)
+10:47:23 | INFO | [reneg_tanl/reneg_max_full] openood_v15:ninco seed=1  FPR95 45.85  AUROC 89.35  ACC 66.80  (3331.5 img/s)
+10:47:39 | INFO | [reneg_tanl/reneg_max_full] openood_v15:ninco seed=2  FPR95 44.69  AUROC 89.46  ACC 66.80  (3292.9 img/s)
+10:47:56 | INFO | [reneg_tanl/reneg_max_full] openood_v15:inaturalist seed=0  FPR95 0.26  AUROC 99.87  ACC 66.80  (3326.5 img/s)
+10:48:12 | INFO | [reneg_tanl/reneg_max_full] openood_v15:inaturalist seed=1  FPR95 0.24  AUROC 99.87  ACC 66.80  (3322.9 img/s)
+10:48:29 | INFO | [reneg_tanl/reneg_max_full] openood_v15:inaturalist seed=2  FPR95 0.30  AUROC 99.86  ACC 66.80  (3332.2 img/s)
+10:48:44 | INFO | [reneg_tanl/reneg_max_full] openood_v15:textures seed=0  FPR95 9.89  AUROC 97.86  ACC 66.80  (3323.6 img/s)
+10:48:59 | INFO | [reneg_tanl/reneg_max_full] openood_v15:textures seed=1  FPR95 9.56  AUROC 97.84  ACC 66.80  (3321.7 img/s)
+10:49:14 | INFO | [reneg_tanl/reneg_max_full] openood_v15:textures seed=2  FPR95 9.62  AUROC 97.79  ACC 66.80  (3329.5 img/s)
+10:49:33 | INFO | [reneg_tanl/reneg_max_full] openood_v15:openimage_o seed=0  FPR95 28.86  AUROC 94.51  ACC 66.80  (3319.1 img/s)
+10:49:51 | INFO | [reneg_tanl/reneg_max_full] openood_v15:openimage_o seed=1  FPR95 28.27  AUROC 94.50  ACC 66.80  (3317.5 img/s)
+10:50:10 | INFO | [reneg_tanl/reneg_max_full] openood_v15:openimage_o seed=2  FPR95 28.28  AUROC 94.54  ACC 66.80  (3304.5 img/s)
+reneg_max_full openood_v15: 4.7 min
+10:50:29 | INFO | [reneg_tanl/reneg_max_full] four_ood:inaturalist seed=0  FPR95 0.29  AUROC 99.87  ACC 66.85  (3189.3 img/s)
+10:50:47 | INFO | [reneg_tanl/reneg_max_full] four_ood:inaturalist seed=1  FPR95 0.28  AUROC 99.87  ACC 66.85  (3321.6 img/s)
+10:51:05 | INFO | [reneg_tanl/reneg_max_full] four_ood:inaturalist seed=2  FPR95 0.24  AUROC 99.87  ACC 66.85  (3307.1 img/s)
+10:51:24 | INFO | [reneg_tanl/reneg_max_full] four_ood:sun seed=0  FPR95 4.19  AUROC 98.78  ACC 66.85  (3315.0 img/s)
+10:51:42 | INFO | [reneg_tanl/reneg_max_full] four_ood:sun seed=1  FPR95 3.94  AUROC 98.80  ACC 66.85  (3312.2 img/s)
+10:52:00 | INFO | [reneg_tanl/reneg_max_full] four_ood:sun seed=2  FPR95 3.94  AUROC 98.84  ACC 66.85  (3314.6 img/s)
+10:52:18 | INFO | [reneg_tanl/reneg_max_full] four_ood:places seed=0  FPR95 24.35  AUROC 95.73  ACC 66.85  (3318.4 img/s)
+10:52:36 | INFO | [reneg_tanl/reneg_max_full] four_ood:places seed=1  FPR95 24.20  AUROC 95.79  ACC 66.85  (3321.9 img/s)
+10:52:54 | INFO | [reneg_tanl/reneg_max_full] four_ood:places seed=2  FPR95 25.02  AUROC 95.67  ACC 66.85  (3315.9 img/s)
+10:53:11 | INFO | [reneg_tanl/reneg_max_full] four_ood:textures_all seed=0  FPR95 14.78  AUROC 97.14  ACC 66.85  (3305.8 img/s)
+10:53:28 | INFO | [reneg_tanl/reneg_max_full] four_ood:textures_all seed=1  FPR95 13.88  AUROC 97.21  ACC 66.85  (3321.4 img/s)
+10:53:45 | INFO | [reneg_tanl/reneg_max_full] four_ood:textures_all seed=2  FPR95 12.74  AUROC 97.29  ACC 66.85  (3324.1 img/s)
+reneg_max_full four_ood: 3.6 min
+10:54:15 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:ssb_hard seed=0  FPR95 62.56  AUROC 84.76  ACC 66.80  (3188.6 img/s)
+10:54:44 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:ssb_hard seed=1  FPR95 62.02  AUROC 84.92  ACC 66.80  (3268.7 img/s)
+10:55:13 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:ssb_hard seed=2  FPR95 62.52  AUROC 85.00  ACC 66.80  (3254.1 img/s)
+10:55:29 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:ninco seed=0  FPR95 55.50  AUROC 87.80  ACC 66.80  (3263.4 img/s)
+10:55:44 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:ninco seed=1  FPR95 54.67  AUROC 87.84  ACC 66.80  (3271.5 img/s)
+10:56:00 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:ninco seed=2  FPR95 53.76  AUROC 87.91  ACC 66.80  (3256.5 img/s)
+10:56:17 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:inaturalist seed=0  FPR95 0.26  AUROC 99.87  ACC 66.80  (3279.0 img/s)
+10:56:34 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:inaturalist seed=1  FPR95 0.27  AUROC 99.87  ACC 66.80  (3272.6 img/s)
+10:56:51 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:inaturalist seed=2  FPR95 0.34  AUROC 99.86  ACC 66.80  (3280.3 img/s)
+10:57:06 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:textures seed=0  FPR95 11.47  AUROC 97.65  ACC 66.80  (3284.1 img/s)
+10:57:21 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:textures seed=1  FPR95 11.28  AUROC 97.65  ACC 66.80  (3279.7 img/s)
+10:57:37 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:textures seed=2  FPR95 11.33  AUROC 97.61  ACC 66.80  (3293.2 img/s)
+10:57:55 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:openimage_o seed=0  FPR95 37.60  AUROC 92.61  ACC 66.80  (3278.4 img/s)
+10:58:15 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:openimage_o seed=1  FPR95 37.80  AUROC 92.52  ACC 66.80  (3117.5 img/s)
+10:58:34 | INFO | [reneg_tanl/reneg_safe_blind] openood_v15:openimage_o seed=2  FPR95 37.53  AUROC 92.56  ACC 66.80  (3264.6 img/s)
+reneg_safe_blind openood_v15: 4.8 min
+10:58:53 | INFO | [reneg_tanl/reneg_safe_blind] four_ood:inaturalist seed=0  FPR95 0.33  AUROC 99.86  ACC 66.85  (3171.0 img/s)
+10:59:11 | INFO | [reneg_tanl/reneg_safe_blind] four_ood:inaturalist seed=1  FPR95 0.29  AUROC 99.87  ACC 66.85  (3262.2 img/s)
+10:59:30 | INFO | [reneg_tanl/reneg_safe_blind] four_ood:inaturalist seed=2  FPR95 0.28  AUROC 99.87  ACC 66.85  (3262.2 img/s)
+10:59:48 | INFO | [reneg_tanl/reneg_safe_blind] four_ood:sun seed=0  FPR95 3.47  AUROC 99.07  ACC 66.85  (3269.4 img/s)
+11:00:07 | INFO | [reneg_tanl/reneg_safe_blind] four_ood:sun seed=1  FPR95 3.37  AUROC 99.08  ACC 66.85  (3245.1 img/s)
+11:00:25 | INFO | [reneg_tanl/reneg_safe_blind] four_ood:sun seed=2  FPR95 3.60  AUROC 99.10  ACC 66.85  (3265.6 img/s)
+11:00:44 | INFO | [reneg_tanl/reneg_safe_blind] four_ood:places seed=0  FPR95 20.95  AUROC 95.95  ACC 66.85  (3262.8 img/s)
+11:01:02 | INFO | [reneg_tanl/reneg_safe_blind] four_ood:places seed=1  FPR95 21.55  AUROC 96.00  ACC 66.85  (3266.5 img/s)
+11:01:21 | INFO | [reneg_tanl/reneg_safe_blind] four_ood:places seed=2  FPR95 21.71  AUROC 95.90  ACC 66.85  (3278.7 img/s)
+11:01:38 | INFO | [reneg_tanl/reneg_safe_blind] four_ood:textures_all seed=0  FPR95 15.15  AUROC 96.99  ACC 66.85  (3272.3 img/s)
+11:01:55 | INFO | [reneg_tanl/reneg_safe_blind] four_ood:textures_all seed=1  FPR95 14.34  AUROC 97.11  ACC 66.85  (3279.6 img/s)
+11:02:12 | INFO | [reneg_tanl/reneg_safe_blind] four_ood:textures_all seed=2  FPR95 14.45  AUROC 97.05  ACC 66.85  (3269.8 img/s)
+reneg_safe_blind four_ood: 3.6 min
+
+===== cell 6/8  11:02:12  FEW = [("tanl", None, None, ["four_ood_45k"])] + [(c, c, "blind", ["openood_v15", "four_oo
+shots found in the 50k set: 5002 (expect about 5,000); zero-shot accuracy on them 67.2% (about 70% means the labels line up)
+11:02:29 | INFO | [tanl/tanl] four_ood_45k:inaturalist seed=0  FPR95 0.45  AUROC 99.84  ACC 66.80  (3412.3 img/s)
+11:02:44 | INFO | [tanl/tanl] four_ood_45k:inaturalist seed=1  FPR95 0.47  AUROC 99.83  ACC 66.80  (3643.7 img/s)
+11:02:59 | INFO | [tanl/tanl] four_ood_45k:inaturalist seed=2  FPR95 0.48  AUROC 99.83  ACC 66.80  (3620.9 img/s)
+11:03:14 | INFO | [tanl/tanl] four_ood_45k:sun seed=0  FPR95 3.70  AUROC 99.05  ACC 66.80  (3634.6 img/s)
+11:03:30 | INFO | [tanl/tanl] four_ood_45k:sun seed=1  FPR95 3.67  AUROC 99.04  ACC 66.80  (3638.2 img/s)
+11:03:45 | INFO | [tanl/tanl] four_ood_45k:sun seed=2  FPR95 3.77  AUROC 99.01  ACC 66.80  (3645.1 img/s)
+11:04:00 | INFO | [tanl/tanl] four_ood_45k:places seed=0  FPR95 21.09  AUROC 95.81  ACC 66.80  (3636.2 img/s)
+11:04:15 | INFO | [tanl/tanl] four_ood_45k:places seed=1  FPR95 21.19  AUROC 95.75  ACC 66.80  (3641.2 img/s)
+11:04:30 | INFO | [tanl/tanl] four_ood_45k:places seed=2  FPR95 21.00  AUROC 95.76  ACC 66.80  (3616.1 img/s)
+11:04:44 | INFO | [tanl/tanl] four_ood_45k:textures_all seed=0  FPR95 12.46  AUROC 96.95  ACC 66.80  (3648.3 img/s)
+11:04:58 | INFO | [tanl/tanl] four_ood_45k:textures_all seed=1  FPR95 13.27  AUROC 96.94  ACC 66.80  (3628.6 img/s)
+11:05:12 | INFO | [tanl/tanl] four_ood_45k:textures_all seed=2  FPR95 12.32  AUROC 97.03  ACC 66.80  (3641.5 img/s)
+tanl four_ood_45k: 3.0 min
+11:05:42 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:ssb_hard seed=0  FPR95 57.68  AUROC 86.63  ACC 66.80  (3241.9 img/s)
+11:06:12 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:ssb_hard seed=1  FPR95 57.34  AUROC 86.80  ACC 66.80  (3172.3 img/s)
+11:06:40 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:ssb_hard seed=2  FPR95 56.86  AUROC 86.87  ACC 66.80  (3299.2 img/s)
+11:06:56 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:ninco seed=0  FPR95 43.52  AUROC 91.05  ACC 66.80  (3318.5 img/s)
+11:07:11 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:ninco seed=1  FPR95 43.00  AUROC 91.10  ACC 66.80  (3324.9 img/s)
+11:07:26 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:ninco seed=2  FPR95 41.66  AUROC 91.33  ACC 66.80  (3317.6 img/s)
+11:07:43 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:inaturalist seed=0  FPR95 0.15  AUROC 99.89  ACC 66.80  (3326.1 img/s)
+11:08:00 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:inaturalist seed=1  FPR95 0.15  AUROC 99.89  ACC 66.80  (3333.1 img/s)
+11:08:16 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:inaturalist seed=2  FPR95 0.14  AUROC 99.89  ACC 66.80  (3330.6 img/s)
+11:08:32 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:textures seed=0  FPR95 7.67  AUROC 98.38  ACC 66.80  (3326.0 img/s)
+11:08:47 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:textures seed=1  FPR95 7.35  AUROC 98.40  ACC 66.80  (3328.0 img/s)
+11:09:02 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:textures seed=2  FPR95 7.60  AUROC 98.41  ACC 66.80  (3337.6 img/s)
+11:09:20 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:openimage_o seed=0  FPR95 26.52  AUROC 95.09  ACC 66.80  (3322.1 img/s)
+11:09:39 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:openimage_o seed=1  FPR95 27.01  AUROC 95.05  ACC 66.80  (3321.7 img/s)
+11:09:57 | INFO | [reneg_tanl/reneg_max_blind_5shot] openood_v15:openimage_o seed=2  FPR95 26.71  AUROC 95.09  ACC 66.80  (3323.2 img/s)
+reneg_max_blind_5shot openood_v15: 4.7 min
+11:10:15 | INFO | [reneg_tanl/reneg_max_blind_5shot] four_ood_45k:inaturalist seed=0  FPR95 0.13  AUROC 99.89  ACC 66.80  (3186.5 img/s)
+11:10:31 | INFO | [reneg_tanl/reneg_max_blind_5shot] four_ood_45k:inaturalist seed=1  FPR95 0.16  AUROC 99.88  ACC 66.80  (3322.1 img/s)
+11:10:48 | INFO | [reneg_tanl/reneg_max_blind_5shot] four_ood_45k:inaturalist seed=2  FPR95 0.14  AUROC 99.88  ACC 66.80  (3331.8 img/s)
+11:11:05 | INFO | [reneg_tanl/reneg_max_blind_5shot] four_ood_45k:sun seed=0  FPR95 3.70  AUROC 99.06  ACC 66.80  (3321.6 img/s)
+11:11:21 | INFO | [reneg_tanl/reneg_max_blind_5shot] four_ood_45k:sun seed=1  FPR95 3.76  AUROC 99.03  ACC 66.80  (3314.1 img/s)
+11:11:38 | INFO | [reneg_tanl/reneg_max_blind_5shot] four_ood_45k:sun seed=2  FPR95 3.82  AUROC 98.98  ACC 66.80  (3327.9 img/s)
+11:11:54 | INFO | [reneg_tanl/reneg_max_blind_5shot] four_ood_45k:places seed=0  FPR95 22.31  AUROC 96.22  ACC 66.80  (3329.5 img/s)
+11:12:11 | INFO | [reneg_tanl/reneg_max_blind_5shot] four_ood_45k:places seed=1  FPR95 23.84  AUROC 96.14  ACC 66.80  (3323.4 img/s)
+11:12:28 | INFO | [reneg_tanl/reneg_max_blind_5shot] four_ood_45k:places seed=2  FPR95 23.15  AUROC 96.19  ACC 66.80  (3323.7 img/s)
+11:12:43 | INFO | [reneg_tanl/reneg_max_blind_5shot] four_ood_45k:textures_all seed=0  FPR95 9.33  AUROC 98.00  ACC 66.80  (3327.4 img/s)
+11:12:58 | INFO | [reneg_tanl/reneg_max_blind_5shot] four_ood_45k:textures_all seed=1  FPR95 10.20  AUROC 97.98  ACC 66.80  (3328.8 img/s)
+11:13:14 | INFO | [reneg_tanl/reneg_max_blind_5shot] four_ood_45k:textures_all seed=2  FPR95 10.30  AUROC 97.99  ACC 66.80  (3335.2 img/s)
+reneg_max_blind_5shot four_ood_45k: 3.3 min
+11:13:43 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:ssb_hard seed=0  FPR95 62.08  AUROC 85.69  ACC 66.80  (3276.3 img/s)
+11:14:11 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:ssb_hard seed=1  FPR95 61.74  AUROC 85.86  ACC 66.80  (3308.1 img/s)
+11:14:40 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:ssb_hard seed=2  FPR95 61.93  AUROC 85.95  ACC 66.80  (3298.8 img/s)
+11:14:55 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:ninco seed=0  FPR95 51.24  AUROC 89.90  ACC 66.80  (3319.5 img/s)
+11:15:11 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:ninco seed=1  FPR95 49.57  AUROC 90.07  ACC 66.80  (3315.6 img/s)
+11:15:26 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:ninco seed=2  FPR95 48.58  AUROC 90.27  ACC 66.80  (3314.4 img/s)
+11:15:43 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:inaturalist seed=0  FPR95 0.15  AUROC 99.90  ACC 66.80  (3235.3 img/s)
+11:16:00 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:inaturalist seed=1  FPR95 0.14  AUROC 99.90  ACC 66.80  (3299.5 img/s)
+11:16:17 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:inaturalist seed=2  FPR95 0.14  AUROC 99.90  ACC 66.80  (3322.7 img/s)
+11:16:32 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:textures seed=0  FPR95 8.28  AUROC 98.37  ACC 66.80  (3303.5 img/s)
+11:16:47 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:textures seed=1  FPR95 8.26  AUROC 98.38  ACC 66.80  (3317.1 img/s)
+11:17:02 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:textures seed=2  FPR95 8.47  AUROC 98.41  ACC 66.80  (3327.2 img/s)
+11:17:21 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:openimage_o seed=0  FPR95 34.61  AUROC 93.81  ACC 66.80  (3327.2 img/s)
+11:17:39 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:openimage_o seed=1  FPR95 34.49  AUROC 93.72  ACC 66.80  (3321.6 img/s)
+11:17:58 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] openood_v15:openimage_o seed=2  FPR95 34.70  AUROC 93.79  ACC 66.80  (3321.2 img/s)
+reneg_balanced_blind_5shot openood_v15: 4.7 min
+11:18:15 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] four_ood_45k:inaturalist seed=0  FPR95 0.13  AUROC 99.90  ACC 66.80  (3222.9 img/s)
+11:18:32 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] four_ood_45k:inaturalist seed=1  FPR95 0.15  AUROC 99.89  ACC 66.80  (3312.2 img/s)
+11:18:48 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] four_ood_45k:inaturalist seed=2  FPR95 0.14  AUROC 99.90  ACC 66.80  (3315.8 img/s)
+11:19:05 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] four_ood_45k:sun seed=0  FPR95 3.01  AUROC 99.30  ACC 66.80  (3315.8 img/s)
+11:19:22 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] four_ood_45k:sun seed=1  FPR95 3.18  AUROC 99.28  ACC 66.80  (3315.1 img/s)
+11:19:38 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] four_ood_45k:sun seed=2  FPR95 3.27  AUROC 99.25  ACC 66.80  (3314.3 img/s)
+11:19:55 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] four_ood_45k:places seed=0  FPR95 19.69  AUROC 96.47  ACC 66.80  (3320.7 img/s)
+11:20:12 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] four_ood_45k:places seed=1  FPR95 21.30  AUROC 96.42  ACC 66.80  (3314.2 img/s)
+11:20:29 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] four_ood_45k:places seed=2  FPR95 20.62  AUROC 96.42  ACC 66.80  (3312.7 img/s)
+11:20:44 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] four_ood_45k:textures_all seed=0  FPR95 10.27  AUROC 98.06  ACC 66.80  (3311.7 img/s)
+11:20:59 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] four_ood_45k:textures_all seed=1  FPR95 10.92  AUROC 97.98  ACC 66.80  (3321.6 img/s)
+11:21:15 | INFO | [reneg_tanl/reneg_balanced_blind_5shot] four_ood_45k:textures_all seed=2  FPR95 10.86  AUROC 98.03  ACC 66.80  (3318.9 img/s)
+reneg_balanced_blind_5shot four_ood_45k: 3.3 min
+
+===== cell 7/8  11:21:15  df = pd.read_csv(runs_path)
+ViT-B/16
+                    method  four FPR95  four AUROC  far FPR95  far AUROC  near FPR95  near AUROC  4ood_inaturalist  4ood_places  4ood_sun  4ood_textures_all  inaturalist  openimage_o  textures  ninco  ssb_hard  four45 FPR95  four45 AUROC  4ood45_inaturalist  4ood45_places  4ood45_sun  4ood45_textures_all
+      reneg_balanced_blind        9.61       98.10      14.66      97.19       56.57       87.12              0.23        21.54      3.39              13.30         0.22        34.44      9.34  50.97     62.16           NaN           NaN                 NaN            NaN         NaN                  NaN
+reneg_balanced_blind_5shot         NaN         NaN      14.36      97.36       55.86       87.95               NaN          NaN       NaN                NaN         0.15        34.60      8.33  49.80     61.92          8.63         98.41                0.14          20.54        3.15                10.68
+       reneg_balanced_full        9.68       98.09      14.72      97.19       56.39       87.33              0.23        21.65      3.43              13.41         0.22        34.43      9.50  50.82     61.97           NaN           NaN                 NaN            NaN         NaN                  NaN
+           reneg_max_blind       10.56       97.90      12.73      97.41       52.76       87.26              0.27        24.36      4.00              13.61         0.26        28.38      9.55  46.02     59.51           NaN           NaN                 NaN            NaN         NaN                  NaN
+     reneg_max_blind_5shot         NaN         NaN      11.48      97.79       50.01       88.96               NaN          NaN       NaN                NaN         0.15        26.74      7.54  42.73     57.29          9.24         98.27                0.14          23.10        3.76                 9.95
+            reneg_max_full       10.65       97.90      12.81      97.41       51.18       87.75              0.27        24.52      4.02              13.80         0.27        28.47      9.69  45.44     56.92           NaN           NaN                 NaN            NaN         NaN                  NaN
+          reneg_safe_blind        9.96       97.99      16.43      96.69       58.50       86.37              0.30        21.40      3.48              14.65         0.29        37.65     11.36  54.64     62.37           NaN           NaN                 NaN            NaN         NaN                  NaN
+                      tanl        9.89       97.82      16.98      96.23       60.05       84.53              0.47        21.36      3.74              14.00         0.47        39.09     11.38  57.60     62.51          9.49         97.90                0.47          21.09        3.71                12.68
+
+attach these files to the chat:
+   <project>\ReNeg/transfers/g3_final_b16\g3_runs.csv
+   <project>\ReNeg/transfers/g3_final_b16\g3_summary.csv
+   <project>\ReNeg/transfers/g3_final_b16\g3_check.json
+11:21:15 | INFO | done in 95.8 min - outputs in <project>\local_runs\oodlab_home\working\results\G3_final_eval
+
+===== cell 8/8  11:21:15  try:
+Not on Colab: nothing to flush.
+
+===== ALL CELLS DONE  11:21:15
+exit 0

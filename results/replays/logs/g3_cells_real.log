@@ -1,0 +1,65 @@
+14526 KG names; 13878 in the blind pool; (14526, 512)
+--- cell pool OK in 0s
+[reneg_tanl/check_cpu] openood_v15:ninco seed=0  FPR95 70.40  AUROC 83.11  ACC 83.10  (142.9 img/s)
+cpu {'fpr95': 70.4, 'auroc': 83.106, 'img_per_s': 142.9, 'minutes': 0.2}
+[reneg_tanl/check_cpu] openood_v15:ninco seed=0  FPR95 70.40  AUROC 83.11  ACC 83.10  (146.4 img/s)
+cpu {'fpr95': 70.4, 'auroc': 83.106, 'img_per_s': 146.4, 'minutes': 0.2}
+ReNeg runs on: cpu (GPU and CPU agree)
+estimate: 5 methods x 1 orders x 6,000 images at about 146 img/s = 0.1 hours at most
+--- cell check OK in 28s
+[tanl/tanl] openood_v15:ssb_hard seed=0  FPR95 91.30  AUROC 62.00  ACC 83.10  (168.1 img/s)
+[tanl/tanl] openood_v15:ninco seed=0  FPR95 72.80  AUROC 80.32  ACC 83.10  (185.1 img/s)
+[tanl/tanl] openood_v15:inaturalist seed=0  FPR95 1.20  AUROC 99.66  ACC 83.10  (175.3 img/s)
+[tanl/tanl] openood_v15:textures seed=0  FPR95 1.60  AUROC 99.64  ACC 83.10  (172.8 img/s)
+[tanl/tanl] openood_v15:openimage_o seed=0  FPR95 21.60  AUROC 92.66  ACC 83.10  (176.4 img/s)
+tanl openood_v15: 0.8 min
+[reneg_tanl/reneg_balanced_blind] openood_v15:ssb_hard seed=0  FPR95 91.10  AUROC 63.30  ACC 83.10  (124.5 img/s)
+[reneg_tanl/reneg_balanced_blind] openood_v15:ninco seed=0  FPR95 70.40  AUROC 83.11  ACC 83.10  (125.6 img/s)
+[reneg_tanl/reneg_balanced_blind] openood_v15:inaturalist seed=0  FPR95 1.10  AUROC 99.68  ACC 83.10  (124.1 img/s)
+[reneg_tanl/reneg_balanced_blind] openood_v15:textures seed=0  FPR95 0.80  AUROC 99.80  ACC 83.10  (127.9 img/s)
+[reneg_tanl/reneg_balanced_blind] openood_v15:openimage_o seed=0  FPR95 21.90  AUROC 92.86  ACC 83.10  (125.8 img/s)
+reneg_balanced_blind openood_v15: 1.1 min
+[reneg_tanl/reneg_balanced_full] openood_v15:ssb_hard seed=0  FPR95 91.10  AUROC 63.56  ACC 83.10  (130.9 img/s)
+[reneg_tanl/reneg_balanced_full] openood_v15:ninco seed=0  FPR95 70.40  AUROC 83.11  ACC 83.10  (130.4 img/s)
+[reneg_tanl/reneg_balanced_full] openood_v15:inaturalist seed=0  FPR95 1.00  AUROC 99.69  ACC 83.10  (128.5 img/s)
+[reneg_tanl/reneg_balanced_full] openood_v15:textures seed=0  FPR95 0.80  AUROC 99.80  ACC 83.10  (118.5 img/s)
+[reneg_tanl/reneg_balanced_full] openood_v15:openimage_o seed=0  FPR95 22.10  AUROC 92.90  ACC 83.10  (123.9 img/s)
+reneg_balanced_full openood_v15: 1.1 min
+[reneg_tanl/reneg_max_blind] openood_v15:ssb_hard seed=0  FPR95 89.20  AUROC 63.76  ACC 83.10  (120.1 img/s)
+[reneg_tanl/reneg_max_blind] openood_v15:ninco seed=0  FPR95 67.80  AUROC 83.78  ACC 83.10  (128.0 img/s)
+[reneg_tanl/reneg_max_blind] openood_v15:inaturalist seed=0  FPR95 2.50  AUROC 99.47  ACC 83.10  (122.2 img/s)
+[reneg_tanl/reneg_max_blind] openood_v15:textures seed=0  FPR95 2.00  AUROC 99.67  ACC 83.10  (119.8 img/s)
+[reneg_tanl/reneg_max_blind] openood_v15:openimage_o seed=0  FPR95 13.60  AUROC 95.62  ACC 83.10  (122.1 img/s)
+reneg_max_blind openood_v15: 1.1 min
+[reneg_tanl/reneg_max_full] openood_v15:ssb_hard seed=0  FPR95 88.70  AUROC 64.69  ACC 83.10  (117.1 img/s)
+[reneg_tanl/reneg_max_full] openood_v15:ninco seed=0  FPR95 67.60  AUROC 83.83  ACC 83.10  (114.7 img/s)
+[reneg_tanl/reneg_max_full] openood_v15:inaturalist seed=0  FPR95 2.50  AUROC 99.48  ACC 83.10  (119.0 img/s)
+[reneg_tanl/reneg_max_full] openood_v15:textures seed=0  FPR95 1.90  AUROC 99.67  ACC 83.10  (118.8 img/s)
+[reneg_tanl/reneg_max_full] openood_v15:openimage_o seed=0  FPR95 13.40  AUROC 95.65  ACC 83.10  (118.0 img/s)
+reneg_max_full openood_v15: 1.1 min
+--- cell run OK in 309s
+ViT-B/16
+              method  far FPR95  far AUROC  near FPR95  near AUROC  inaturalist  openimage_o  textures  ninco  ssb_hard
+reneg_balanced_blind       7.93      97.45       80.75       73.21          1.1         21.9       0.8   70.4      91.1
+ reneg_balanced_full       7.97      97.46       80.75       73.33          1.0         22.1       0.8   70.4      91.1
+     reneg_max_blind       6.03      98.25       78.50       73.77          2.5         13.6       2.0   67.8      89.2
+      reneg_max_full       5.93      98.27       78.15       74.26          2.5         13.4       1.9   67.6      88.7
+                tanl       8.13      97.32       82.05       71.16          1.2         21.6       1.6   72.8      91.3
+
+attach these files to the chat:
+   /tmp/tmpzum4otig/transfers/g3/g3_runs.csv
+   /tmp/tmpzum4otig/transfers/g3/g3_summary.csv
+   /tmp/tmpzum4otig/transfers/g3/g3_check.json
+finish: {'runs': 25, 'labels': ['reneg_balanced_blind', 'reneg_balanced_full', 'reneg_max_blind', 'reneg_max_full', 'tanl'], 'reneg_device': 'cpu', 'backbone': 'ViT-B/16'}
+--- cell summary OK in 0s
+{
+ "reneg_device": "cpu",
+ "results": {
+  "cpu": {
+   "fpr95": 70.4,
+   "auroc": 83.106,
+   "img_per_s": 146.4,
+   "minutes": 0.2
+  }
+ }
+}

@@ -1,0 +1,25 @@
+screen 1 (ViT-L/14 space): {
+ "ninco": {
+  "prior": 68.8,
+  "text": 79.7,
+  "realA": 100.0,
+  "cos(prior,real)": 0.826
+ },
+ "ssb_hard": {
+  "prior": 53.3,
+  "text": 66.0,
+  "realA": 93.7,
+  "cos(prior,real)": 0.857
+ },
+ "imagenet": {
+  "prior": 68.0,
+  "text": 96.0,
+  "realA": 100.0,
+  "cos(prior,real)": 0.882
+ },
+ "pass": false
+}
+screen 2 (image map): {'checks': {'imagenet_heldout': 0.9210028052330017, 'ninco': 0.9123935699462891, 'ssb_hard': 0.9139626026153564}, 'pass': True}
+[{'set': 'ninco', 'arm': 'mapped prior prototype (w=4)', 'FPR95': np.float64(45.47)}, {'set': 'ninco', 'arm': 'mapped prior prototype (w=16)', 'FPR95': np.float64(48.65)}, {'set': 'ninco', 'arm': 'top-1 mapped prior -> real B/16 concept (%)', 'FPR95': 62.5}]
+[{'set': 'ssb_hard', 'arm': 'text-seeded evidence', 'FPR95': np.float64(45.86)}, {'set': 'ssb_hard', 'arm': 'mapped prior prototype (w=4)', 'FPR95': np.float64(40.77)}, {'set': 'ssb_hard', 'arm': 'top-1 mapped prior -> real B/16 concept (%)', 'FPR95': 45.7}]
+verdict: {'screen1': False, 'screen2': True, 'stream_gain_w4': -0.56, 'stream_pass': False}

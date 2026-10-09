@@ -1,0 +1,28 @@
+corpus (69554, 512) | ID text from the bank vs pack1: min cos 1.000000
+ninco: TANL FPR95 57.15 AUROC 85.12 (5.5 min)
+ssb_hard: TANL FPR95 62.41 AUROC 84.09 (10.8 min)
+corpus (69554, 512) | ID text from the bank vs pack1: min cos 1.000000
+exists: <analysis>/traces/imagenet_test__ninco__s1.pt
+exists: <analysis>/traces/imagenet_test__ssb_hard__s1.pt
+corpus (69554, 512) | ID text from the bank vs pack1: min cos 1.000000
+exists: <analysis>/traces/imagenet_test__ninco__s1.pt
+exists: <analysis>/traces/imagenet_test__ssb_hard__s1.pt
+inaturalist: TANL FPR95 0.44 AUROC 99.83 (8.4 min)
+textures: TANL FPR95 11.73 AUROC 97.23 (6.7 min)
+openimage_o: TANL FPR95 39.17 AUROC 91.55 (5.1 min)
+corpus (69554, 512) | ID text from the bank vs pack1: min cos 1.000000
+inaturalist: TANL FPR95 0.46 AUROC 99.83 (9.2 min)
+sun: TANL FPR95 3.62 AUROC 99.02 (2.6 min)
+places: TANL FPR95 20.95 AUROC 95.80 (2.4 min)
+textures_all: TANL FPR95 14.14 AUROC 96.73 (2.2 min)
+corpus (69554, 512) | ID text from the bank vs pack1: min cos 1.000000
+ninco: TANL FPR95 58.00 AUROC 84.88 (2.0 min)
+ssb_hard: TANL FPR95 62.75 AUROC 84.11 (3.7 min)
+inaturalist: TANL FPR95 0.48 AUROC 99.83 (2.3 min)
+textures: TANL FPR95 11.49 AUROC 97.22 (2.0 min)
+openimage_o: TANL FPR95 38.80 AUROC 91.59 (2.5 min)
+corpus (69554, 512) | ID text from the bank vs pack1: min cos 1.000000
+inaturalist: TANL FPR95 0.43 AUROC 99.84 (2.2 min)
+sun: TANL FPR95 3.88 AUROC 98.99 (2.5 min)
+places: TANL FPR95 21.65 AUROC 95.65 (2.1 min)
+textures_all: TANL FPR95 14.74 AUROC 96.65 (2.3 min)

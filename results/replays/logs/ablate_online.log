@@ -1,0 +1,8 @@
+ReNeg (NegLabel base), default               full   near  54.62 far  18.26 | ssb_h 63.30 ninco 45.94 inatu  2.20 textu 29.12 openi 23.46
+ReNeg (NegLabel base), default, blind pool   blind  near  60.01 far  18.16 | ssb_h 70.67 ninco 49.35 inatu  2.19 textu 28.90 openi 23.40
+  no visual prototypes                       full   near  71.29 far  20.35 | ssb_h 72.49 ninco 70.09 inatu  4.83 textu 32.71 openi 23.51
+  text only (no image score)                 full   near  60.89 far  22.35 | ssb_h 69.09 ninco 52.68 inatu  2.42 textu 34.63 openi 30.00
+  no KG pool (image score, ID protos only)   none   near  78.19 far  21.49 | ssb_h 78.50 ninco 77.89 inatu  4.15 textu 32.54 openi 27.79
+  ungated (every name pi = 1)                full   near  54.88 far  19.94 | ssb_h 63.63 ninco 46.12 inatu  3.36 textu 32.74 openi 23.72
+  prior 0.05                                 full   near  54.11 far  18.36 | ssb_h 62.54 ninco 45.69 inatu  2.03 textu 28.72 openi 24.32
+  prior 0                                    full   near  54.19 far  18.29 | ssb_h 62.36 ninco 46.02 inatu  1.98 textu 28.09 openi 24.79

@@ -1,0 +1,44 @@
+G1b summary (reneg 0.2.0)
+prep: half A 22500 images, 14563 confident, 947 classes; pseudo-label acc 81.4%; half B 22500
+B' held-out subtrees (image -> names), best tau per row:
+           config  name_top1  catch  steal  pood_auroc  pood_fpr95  pood_tau  t2c_top1  align
+        R0|cent|T      72.95  80.87   9.56       95.60       22.20      75.0     91.55   0.39
+         R0|raw|T      76.43  83.53   8.76       94.04       27.42     150.0     89.12   0.33
+         R1|raw|T      59.18  62.22  23.08       93.94       29.38     150.0     71.38   0.78
+  R2(lam=3)|raw|T      65.70  66.50   8.11       96.64       15.26     100.0     74.97   0.86
+ R2(lam=10)|raw|T      65.15  67.07   9.18       96.61       15.99     100.0     74.87   0.84
+  R2(lam=1)|raw|T      64.92  63.89   7.95       96.42       16.45     100.0     74.87   0.87
+R2(lam=10)|cent|T      71.83  76.14   8.22       96.35       17.66      75.0     89.23   0.53
+  B1(lam=1)|raw|T      61.44  61.92   9.61       96.28       17.16     100.0     76.98   0.83
+ R2(lam=3)|cent|T      69.74  72.21   7.95       96.21       17.55      50.0     88.91   0.58
+H ImageNet val top-1: R0|raw|T 67.26; R0|cent|T 63.40; B2(h=0.2,lam=3)|raw|T 62.30; R2(lam=10)|cent|T 62.10; B2(h=0.2,lam=3)|cent|T 62.06; B2(h=0.1,lam=3)|raw|T 62.00; B2(h=0.1,lam=3)|cent|T 61.82; R2(lam=3)|cent|T 61.48; R0|raw|T 67.26
+D' OpenOOD v1.5 (ID = ImageNet test half B), tau/omega tuned on val:
+          config          role       mode   tau  omega  val_fpr95  near_fpr95  far_fpr95  four_fpr95  near_auroc  far_auroc
+        R0|raw|T      text (Z)      alone 100.0   0.00      35.48       68.15      23.97       25.79       75.26      94.64
+        R0|raw|T NegLabel form      alone 100.0   0.00      35.48       68.15      23.97       25.79       75.26      94.64
+       R0|cent|T      text (Z)      alone  50.0   0.00      34.94       77.05      24.56       30.66       70.95      94.52
+        R1|raw|T           map +R0|cent|T  15.0   0.25      34.80       76.92      24.54       30.50       71.04      94.54
+        R1|raw|T           map      alone 100.0   1.00      53.22       82.98      31.90       40.39       67.69      92.66
+ R2(lam=3)|raw|T           map +R0|cent|T  50.0   0.25      33.96       76.77      23.22       28.50       70.92      94.77
+ R2(lam=3)|raw|T           map      alone  75.0   1.00      41.44       79.78      22.65       28.62       67.57      94.25
+ R2(lam=3)|raw|C           map +R0|cent|T  75.0   0.50      27.14       75.61      16.56       28.86       72.05      96.38
+ R2(lam=3)|raw|C           map      alone  50.0   1.00      32.18       76.10      20.42       33.82       68.99      95.34
+R2(lam=10)|raw|T           map +R0|cent|T  75.0   0.25      34.18       76.94      23.34       29.00       70.89      94.69
+R2(lam=10)|raw|T           map      alone  75.0   1.00      41.14       78.96      23.37       28.14       68.76      93.84
+R2(lam=10)|raw|C           map +R0|cent|T  75.0   0.50      25.82       74.96      16.30       29.10       72.35      96.41
+R2(lam=10)|raw|C           map      alone  50.0   1.00      31.64       76.44      22.84       36.62       68.82      94.50
+ R2(lam=1)|raw|T           map +R0|cent|T  50.0   0.25      33.48       76.62      22.76       28.28       70.85      94.87
+ R2(lam=1)|raw|T           map      alone  75.0   1.00      42.54       79.89      22.18       28.21       66.70      94.53
+ R2(lam=1)|raw|C           map +R0|cent|T  50.0   0.50      27.48       74.62      17.36       26.28       71.84      96.25
+ R2(lam=1)|raw|C           map      alone  50.0   1.00      33.20       76.20      19.15       31.22       68.82      95.66
+O oracle near negatives (diagnostic only):
+             variant  ssb_hard_fpr95  ninco_fpr95  near_fpr95  far_fpr95  ssb_hard_catch  ninco_catch  id_stolen
+                text           83.69        70.08       76.88      24.56             NaN          NaN        NaN
+        text + names           48.14        62.88       55.51      25.77           25.90        32.63      10.41
+                 map           82.25        70.63       76.44      22.84             NaN          NaN        NaN
+         map + names           64.45        69.06       66.76      26.32            2.33         8.57       0.29
+map + true centroids           12.96        20.29       16.63      32.15           44.73        86.35      12.62
+VERDICT: NO-STATIC-GAIN - Neither a map nor centring improves the static score. Keep raw text for scoring; use mapped prototypes only where B' shows they help (screening near negatives), and continue to Seam 2.
+criteria: {"score_gain_vs_text": true, "near_gain": 2.09, "far_gain": 8.26, "does_not_hamper_imagenet": false, "bprime_not_worse": true, "centring_gain": {"near": -8.9, "far": -0.6, "counts": false}}
+PLAN B: justified: the classes' real image centroids beat their mapped names by 50.1 near FPR95 points and their text names by 38.9, so a better map could pay
+SEAM 2 OUTLOOK (near FPR95 gain from oracle near negatives): {"gain_text_names": 21.37, "gain_map_names": 9.69, "gain_true_centroids": 59.81}

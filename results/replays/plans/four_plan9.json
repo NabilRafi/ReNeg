@@ -1,0 +1,4 @@
+[{"mode": "balanced", "variant": "id=softmax+tanl, excl penalised", "opts": {"idadm": "softmax+tanl", "excl": "pen"}, "jobs": "screen"},
+ {"mode": "max", "variant": "id=softmax+tanl, excl penalised", "opts": {"idadm": "softmax+tanl", "excl": "pen"}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "id=softmax+tanl, excl near-caught 0.01", "opts": {"idadm": "softmax+tanl", "excl": "nearcaught", "excl_delta": 0.01}, "jobs": "screen"},
+ {"mode": "max", "variant": "id=softmax+tanl, excl caught", "opts": {"idadm": "softmax+tanl", "excl": "nearcaught", "excl_delta": 0.0}, "jobs": "screen"}]

@@ -1,0 +1,3 @@
+[{"mode": "max", "variant": "id=softmax+tanl, lag 10 excl trusted", "opts": {"idadm": "softmax+tanl", "lag": 10}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "id=softmax+tanl, lag 10 excl trusted", "opts": {"idadm": "softmax+tanl", "lag": 10}, "jobs": "screen"},
+ {"mode": "max", "variant": "id=softmax+tanl, lag 10 excl pi>0.2", "opts": {"idadm": "softmax+tanl", "lag": 10, "lag_pi": 0.2}, "jobs": "screen"}]

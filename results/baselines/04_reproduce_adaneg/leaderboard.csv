@@ -1,0 +1,11 @@
+method,config,four_ood,near_50k,openood_v15,openood_v15,order:id_first,order:ood_first,temporal:I-S-P-T,temporal:P-T-I-S,temporal:S-P-T-I,temporal:T-I-S-P
+,,mean:four,mean:near,mean:far,mean:near,mean:four,mean:four,mean:four,mean:four,mean:four,mean:four
+adaneg,fp16,17.35,67.55,16.51,67.29,,,,,,
+adaneg,fp32,17.56,66.59,16.52,66.55,,,,,,
+mcm,openood_aps_tau3.0,39.8,75.81,35.79,75.85,,,,,,
+mcm,paper_T1,37.68,77.12,34.94,77.15,,,,,,
+neglabel,g100/fp16,24.96,69.28,23.66,69.34,,,,,,
+tanl,official_sh/fp16,10.77,60.51,17.62,60.7,,,,,,
+tanl,official_sh/fp32,10.75,60.46,17.53,60.61,,,,,,
+tanl,paper/fp16,9.88,59.94,17.04,60.07,20.26,17.75,10.43,10.93,10.26,9.99
+tanl,paper/fp32,9.89,59.95,16.98,60.05,,,,,,

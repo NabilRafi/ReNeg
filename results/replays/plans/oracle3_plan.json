@@ -1,0 +1,4 @@
+[{"mode": "max", "variant": "oracle decontam (agreed admission minus OOD)", "prior": false, "oracle": true, "opts": {"oracle_mode": "decontam", "idadm": "softmax+tanl"}, "jobs": "screen"},
+ {"mode": "max", "variant": "oracle coverage (agreed admission plus all ID)", "prior": false, "oracle": true, "opts": {"oracle_mode": "coverage", "idadm": "softmax+tanl"}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "oracle decontam (agreed admission minus OOD)", "prior": false, "oracle": true, "opts": {"oracle_mode": "decontam", "idadm": "softmax+tanl"}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "oracle coverage (agreed admission plus all ID)", "prior": false, "oracle": true, "opts": {"oracle_mode": "coverage", "idadm": "softmax+tanl"}, "jobs": "screen"}]

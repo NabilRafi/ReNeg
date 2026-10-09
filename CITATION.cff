@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "ReNeg: knowledge-graph negative labels grounded in the test stream for test-time OOD detection with CLIP"
+type: software
+version: 0.3.0
+date-released: 2026-10-05
+license: MIT
+repository-code: "https://github.com/NabilRafi/ReNeg"
+authors:
+  - family-names: Ferdous
+    given-names: Mohammad Nabil
+    affiliation: North South University
+keywords:
+  - out-of-distribution detection
+  - CLIP
+  - vision-language models
+  - test-time adaptation
+  - negative labels
+  - knowledge graph

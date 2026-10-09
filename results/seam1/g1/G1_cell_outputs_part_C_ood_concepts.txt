@@ -1,0 +1,205 @@
+ 13:03:03 | INFO | [G1-C] ninco: R0 top-1 75.0% vs R0 75.0%, alignment 0.312 vs 0.312
+13:03:03 | INFO | [G1-C] ssb_hard: R0 top-1 61.7% vs R0 61.7%, alignment 0.324 vs 0.324
+13:03:03 | INFO | [G1-C] textures_all: R0 top-1 68.1% vs R0 68.1%, alignment 0.293 vs 0.293
+{
+ "encoder_matches_bank_cos_min": 0.9999986886978149,
+ "encoder_ok": true,
+ "notes": {},
+ "seconds": 14.4,
+ "datasets": [
+  "ninco",
+  "ssb_hard",
+  "textures_all"
+ ],
+ "chosen": "R0",
+ "wins": [],
+ "align_never_lower": true,
+ "pass": false,
+ "ood_best_candidate": "R0",
+ "selfcheck_vs_ood_spearman": 0.681549307187424,
+ "selfcheck_vs_ood_spearman_align": 0.9705048213272831,
+ "chosen_ood_top1_gap_to_best": 0.0
+}
+ninco: 64 concepts, e.g. Caracal caracal caracal (100), amphiuma means (176), aphanizomenon flosaquae (46), araneus gemma (100), arctocephalus galapagoensis (91), bagpipe (97), batrachoseps attenuatus (100), cable (88)
+textures_all: 47 concepts, e.g. banded (120), blotchy (120), braided (120), bubbly (120), bumpy (120), chequered (120), cobwebbed (120), cracked (120)
+ssb_hard: 980 concepts, e.g. touch football (50), ball (50), no-hit game (50), two-hitter (50), three-hitter (50), four-hitter (50), softball (50), stickball (50)
+
+  
+    
+
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+
+
+  
+    
+      
+      dataset
+      candidate
+      kind
+      top1
+      mrr
+      align
+      own_vs_id
+      n_concepts
+    
+  
+  
+    
+      0
+      ninco
+      R0
+      R0
+      0.7500
+      0.8027
+      0.3117
+      0.6875
+      64
+    
+    
+      1
+      ninco
+      R1
+      R1
+      0.7344
+      0.7838
+      0.7604
+      0.5156
+      64
+    
+    
+      42
+      textures_all
+      R0
+      R0
+      0.6809
+      0.7766
+      0.2934
+      0.4681
+      47
+    
+    
+      43
+      textures_all
+      R1
+      R1
+      0.5106
+      0.6314
+      0.8109
+      0.6383
+      47
+    
+    
+      84
+      ssb_hard
+      R0
+      R0
+      0.6173
+      0.7238
+      0.3239
+      0.7561
+      980
+    
+    
+      85
+      ssb_hard
+      R1
+      R1
+      0.5010
+      0.6151
+      0.7789
+      0.6612
+      980
+    
+  
+
+
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  
+
+    
+      const buttonEl =
+        document.querySelector('#df-c4f4c453-b0d6-49ae-9223-50d88e6110e1 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-c4f4c453-b0d6-49ae-9223-50d88e6110e1');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    
+  
+
+
+    
+  

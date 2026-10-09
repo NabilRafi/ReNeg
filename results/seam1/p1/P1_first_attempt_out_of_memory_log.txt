@@ -1,0 +1,153 @@
+ [transformers] `Siglip2ImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `Siglip2ImageProcessor` instead.
+/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+model_index.json: 100% 685/685 [00:00<00:00, 70.8kB/s]/usr/local/lib/python3.13/dist-packages/diffusers/utils/deprecation_utils.py:23: FutureWarning: `torch_dtype` is deprecated and will be removed in version 1.0.0. Please use `dtype` instead.
+  deprecate("torch_dtype", "1.0.0", _TORCH_DTYPE_DEPRECATION_MESSAGE)
+Download complete: :  6.94GB, 17.6MB/s  Reconstruction complete: 100% 6.94GB / 6.94GB, 75.4MB/s  Fetching 18 files: 100% 18/18 [01:16<00:00,  9.82s/it]Loading pipeline components...: 100% 7/7 [00:03<00:00,  2.96it/s]Loading weights: 100% 517/517 [00:00<00:00, 589.81it/s]Loading weights: 100% 196/196 [00:00<00:00, 3015.03it/s]/usr/local/lib/python3.13/dist-packages/diffusers/pipelines/stable_diffusion_xl/pipeline_stable_diffusion_xl.py:748: FutureWarning: `upcast_vae` is deprecated and will be removed in version 1.0.0. `upcast_vae` is deprecated. Please use `pipe.vae.to(torch.float32)`. For more details, please refer to: https://github.com/huggingface/diffusers/pull/12619#issue-3606633695.
+  deprecate(
+There are modules in AutoencoderKL that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+---------------------------------------------------------------------------
+OutOfMemoryError                          Traceback (most recent call last)
+/tmp/ipykernel_1549/90341928.py in <cell line: 0>()
+     20 probe_ids = [i for i, t in enumerate(tags) if t == "imagenet"][:8]
+     21 t0 = time.time()
+---> 22 ims = gen([PROMPT.format(names[i]) for i in probe_ids], seed=123)
+     23 e = enc(ims)
+     24 pred = (e @ l2n(bank.id_text.float()).T).argmax(1).numpy()
+
+18 frames/content/drive/MyDrive/ReNeg/code/reneg_code/reneg/gen.py in gen(prompts, seed, size, steps)
+     57     def gen(prompts: Sequence[str], seed: int, size: int = 512, steps: int = 1) -> list:
+     58         g = torch.Generator(device=device).manual_seed(int(seed))
+---> 59         out = pipe(prompt=list(prompts), num_inference_steps=steps, guidance_scale=0.0, height=size, width=size,
+     60                    generator=g)
+     61         return out.images
+
+/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py in decorate_context(*args, **kwargs)
+    122         # pyrefly: ignore [bad-context-manager]
+    123         with ctx_factory():
+--> 124             return func(*args, **kwargs)
+    125 
+    126     return decorate_context
+
+/usr/local/lib/python3.13/dist-packages/diffusers/pipelines/stable_diffusion_xl/pipeline_stable_diffusion_xl.py in __call__(self, prompt, prompt_2, height, width, num_inference_steps, timesteps, sigmas, denoising_end, guidance_scale, negative_prompt, negative_prompt_2, num_images_per_prompt, eta, generator, latents, prompt_embeds, negative_prompt_embeds, pooled_prompt_embeds, negative_pooled_prompt_embeds, ip_adapter_image, ip_adapter_image_embeds, output_type, return_dict, cross_attention_kwargs, guidance_rescale, original_size, crops_coords_top_left, target_size, negative_original_size, negative_crops_coords_top_left, negative_target_size, clip_skip, callback_on_step_end, callback_on_step_end_tensor_inputs, **kwargs)
+   1285                 latents = latents / self.vae.config.scaling_factor
+   1286 
+-> 1287             image = self.vae.decode(latents, return_dict=False)[0]
+   1288 
+   1289             # cast back to fp16 if needed
+
+/usr/local/lib/python3.13/dist-packages/diffusers/utils/accelerate_utils.py in wrapper(self, *args, **kwargs)
+     44         if hasattr(self, "_hf_hook") and hasattr(self._hf_hook, "pre_forward"):
+     45             self._hf_hook.pre_forward(self)
+---> 46         return method(self, *args, **kwargs)
+     47 
+     48     return wrapper
+
+/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/autoencoder_kl.py in decode(self, z, return_dict, generator)
+    233             decoded = torch.cat(decoded_slices)
+    234         else:
+--> 235             decoded = self._decode(z).sample
+    236 
+    237         if not return_dict:
+
+/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/autoencoder_kl.py in _decode(self, z, return_dict)
+    204             z = self.post_quant_conv(z)
+    205 
+--> 206         dec = self.decoder(z)
+    207 
+    208         if not return_dict:
+
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py in _wrapped_call_impl(self, *args, **kwargs)
+   1777             return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]
+   1778         else:
+-> 1779             return self._call_impl(*args, **kwargs)
+   1780 
+   1781     # torchrec tests the code consistency with the following code
+
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py in _call_impl(self, *args, **kwargs)
+   1788                 or _global_backward_pre_hooks or _global_backward_hooks
+   1789                 or _global_forward_hooks or _global_forward_pre_hooks):
+-> 1790             return forward_call(*args, **kwargs)
+   1791 
+   1792         result = None
+
+/usr/local/lib/python3.13/dist-packages/diffusers/models/autoencoders/vae.py in forward(self, sample, latent_embeds)
+    299             # up
+    300             for up_block in self.up_blocks:
+--> 301                 sample = up_block(sample, latent_embeds)
+    302 
+    303         # post-process
+
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py in _wrapped_call_impl(self, *args, **kwargs)
+   1777             return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]
+   1778         else:
+-> 1779             return self._call_impl(*args, **kwargs)
+   1780 
+   1781     # torchrec tests the code consistency with the following code
+
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py in _call_impl(self, *args, **kwargs)
+   1788                 or _global_backward_pre_hooks or _global_backward_hooks
+   1789                 or _global_forward_hooks or _global_forward_pre_hooks):
+-> 1790             return forward_call(*args, **kwargs)
+   1791 
+   1792         result = None
+
+/usr/local/lib/python3.13/dist-packages/diffusers/models/unets/unet_2d_blocks.py in forward(self, hidden_states, temb)
+   2641         if self.upsamplers is not None:
+   2642             for upsampler in self.upsamplers:
+-> 2643                 hidden_states = upsampler(hidden_states)
+   2644 
+   2645         return hidden_states
+
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py in _wrapped_call_impl(self, *args, **kwargs)
+   1777             return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]
+   1778         else:
+-> 1779             return self._call_impl(*args, **kwargs)
+   1780 
+   1781     # torchrec tests the code consistency with the following code
+
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py in _call_impl(self, *args, **kwargs)
+   1788                 or _global_backward_pre_hooks or _global_backward_hooks
+   1789                 or _global_forward_hooks or _global_forward_pre_hooks):
+-> 1790             return forward_call(*args, **kwargs)
+   1791 
+   1792         result = None
+
+/usr/local/lib/python3.13/dist-packages/diffusers/models/upsampling.py in forward(self, hidden_states, output_size, *args, **kwargs)
+    184         if self.use_conv:
+    185             if self.name == "conv":
+--> 186                 hidden_states = self.conv(hidden_states)
+    187             else:
+    188                 hidden_states = self.Conv2d_0(hidden_states)
+
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py in _wrapped_call_impl(self, *args, **kwargs)
+   1777             return self._compiled_call_impl(*args, **kwargs)  # type: ignore[misc]
+   1778         else:
+-> 1779             return self._call_impl(*args, **kwargs)
+   1780 
+   1781     # torchrec tests the code consistency with the following code
+
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py in _call_impl(self, *args, **kwargs)
+   1788                 or _global_backward_pre_hooks or _global_backward_hooks
+   1789                 or _global_forward_hooks or _global_forward_pre_hooks):
+-> 1790             return forward_call(*args, **kwargs)
+   1791 
+   1792         result = None
+
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/conv.py in forward(self, input)
+    551 
+    552     def forward(self, input: Tensor) -> Tensor:
+--> 553         return self._conv_forward(input, self.weight, self.bias)
+    554 
+    555 
+
+/usr/local/lib/python3.13/dist-packages/torch/nn/modules/conv.py in _conv_forward(self, input, weight, bias)
+    546             )
+    547 
+--> 548         return F.conv2d(
+    549             input, weight, bias, self.stride, self.padding, self.dilation, self.groups
+    550         )
+
+OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB. GPU 0 has a total capacity of 14.56 GiB of which 313.81 MiB is free. Including non-PyTorch memory, this process has 14.25 GiB memory in use. Of the allocated memory 10.57 GiB is allocated by PyTorch, and 3.56 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

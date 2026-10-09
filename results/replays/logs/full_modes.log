@@ -1,0 +1,24 @@
+kg_clip + vote                           full   near  56.55 far  15.29 (TANL 59.77 / 17.01) | ssb_h 62.10 ninco 51.01 inatu  0.28 textu 11.13 openi 34.47
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+kg_clip + vote [Four-OOD]                full   near    nan far   0.31 (TANL nan / 0.48) | inatu  0.31 sun  3.97 place 21.39 textu 15.57
+kg_clip + vote                           blind  near  56.98 far  15.07 (TANL 59.77 / 17.01) | ssb_h 62.31 ninco 51.66 inatu  0.28 textu 10.59 openi 34.35
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+kg_clip + vote [Four-OOD]                blind  near    nan far   0.31 (TANL nan / 0.48) | inatu  0.31 sun  3.94 place 21.34 textu 15.46
+kg_clip_caught + vote                    full   near  58.59 far  16.50 (TANL 59.77 / 17.01) | ssb_h 62.32 ninco 54.86 inatu  0.27 textu 11.52 openi 37.70
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+kg_clip_caught + vote [Four-OOD]         full   near    nan far   0.33 (TANL nan / 0.48) | inatu  0.33 sun  3.53 place 20.74 textu 15.44
+kg_clip_caught + vote                    blind  near  58.72 far  16.56 (TANL 59.77 / 17.01) | ssb_h 62.37 ninco 55.07 inatu  0.27 textu 11.65 openi 37.75
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+kg_clip_caught + vote [Four-OOD]         blind  near    nan far   0.33 (TANL nan / 0.48) | inatu  0.33 sun  3.54 place 20.67 textu 15.54

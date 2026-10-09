@@ -1,0 +1,6 @@
+  admit all images                                         full   near  55.58 far  20.68 | ssb_h 63.71 ninco 47.44 inatu  3.71 textu 30.87 openi 27.46
+  admit fused score > Otsu                                 full   near  57.02 far  16.96 | ssb_h 63.24 ninco 50.80 inatu  1.14 textu 23.09 openi 26.66
+  admit text score > Otsu                                  full   near  56.44 far  18.72 | ssb_h 63.26 ninco 49.61 inatu  1.20 textu 28.81 openi 26.14
+  admit fused > Otsu - 0.5 sd                              full   near  55.04 far  20.45 | ssb_h 63.00 ninco 47.08 inatu  2.66 textu 31.68 openi 27.00
+  admit fused > Otsu + 0.5 sd                              full   near  68.02 far  21.75 | ssb_h 68.33 ninco 67.70 inatu  2.85 textu 33.24 openi 29.16
+  admit fused > Otsu and softmax                           full   near  58.40 far  18.69 | ssb_h 64.40 ninco 52.41 inatu  2.55 textu 28.09 openi 25.43

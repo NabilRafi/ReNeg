@@ -1,0 +1,1 @@
+{"name": "dual memory (low = text < Otsu)", "near": 56.45, "far": 18.27, "rows": [{"set": "ssb_hard", "FPR95": 63.71, "AUROC": 81.45}, {"set": "ninco", "FPR95": 49.19, "AUROC": 87.02}, {"set": "inaturalist", "FPR95": 2.23, "AUROC": 99.37}, {"set": "textures", "FPR95": 28.8, "AUROC": 93.59}, {"set": "openimage_o", "FPR95": 23.79, "AUROC": 95.6}]}

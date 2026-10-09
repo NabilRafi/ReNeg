@@ -1,0 +1,5 @@
+online ID model, ID = half B                            full   near  55.91 far  20.19 | ssb_h 64.05 ninco 47.77 inatu  4.00 textu 31.28 openi 25.29
+online ID model, ID = half B                            blind  near  61.15 far  20.03 | ssb_h 71.30 ninco 51.00 inatu  4.00 textu 30.90 openi 25.19
+online ID model, ID = all 45k (official)                full   near  55.03 far  19.39 | ssb_h 63.81 ninco 46.24 inatu  3.22 textu 30.54 openi 24.40
+online ID model, ID = all 45k (official)                blind  near  60.36 far  19.27 | ssb_h 71.19 ninco 49.52 inatu  3.20 textu 30.28 openi 24.32
+NegLabel form (static), ID = all 45k                    -      near  68.15 far  23.92 | ssb_h 75.87 ninco 60.43 inatu  2.06 textu 33.99 openi 35.71

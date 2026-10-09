@@ -1,0 +1,6 @@
+kg_clip + vote, omega 0.25, frac 0.0: {'pnear': 86.34, 'pnear_auc': 68.31, 'vfar': 34.27, 'vfar_auc': 91.52, 'objective': 120.61}
+kg_clip + vote, omega 0.25, frac 0.1: {'pnear': 84.98, 'pnear_auc': 69.77, 'vfar': 34.72, 'vfar_auc': 91.72, 'objective': 119.7}
+kg_clip + vote, omega 0.4, frac 0.0: {'pnear': 86.44, 'pnear_auc': 69.19, 'vfar': 34.74, 'vfar_auc': 91.32, 'objective': 121.18}
+kg_clip + vote, omega 0.4, frac 0.1: {'pnear': 85.13, 'pnear_auc': 70.51, 'vfar': 34.79, 'vfar_auc': 91.43, 'objective': 119.92}
+kg_clip + vote, omega 0.6, frac 0.0: {'pnear': 87.1, 'pnear_auc': 69.78, 'vfar': 35.3, 'vfar_auc': 90.61, 'objective': 122.4}
+kg_clip + vote, omega 0.6, frac 0.1: {'pnear': 85.61, 'pnear_auc': 70.93, 'vfar': 35.32, 'vfar_auc': 90.66, 'objective': 120.93}

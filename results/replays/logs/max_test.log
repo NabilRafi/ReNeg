@@ -1,0 +1,6 @@
+kg_clip_max + vote                       full   near  51.35 far  11.65 (TANL 57.01 / 11.35) | ninco 51.35 textu 11.65
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+kg_clip_max + vote [Four-OOD]            full   near    nan far    nan (TANL nan / nan) | sun  4.17 place 21.56

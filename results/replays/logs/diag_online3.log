@@ -1,0 +1,4 @@
+  image side without ID model (OOD-prototype penalty only) full   near  54.56 far  31.34 | ssb_h 66.48 ninco 42.63 inatu 11.55 textu 39.33 openi 43.14
+  soft admission (Otsu, T=0.5 sd)                          full   near  56.66 far  23.25 | ssb_h 63.56 ninco 49.76 inatu  5.74 textu 36.63 openi 27.39
+  soft admission n_min 1                                   full   near  54.27 far  19.31 | ssb_h 62.35 ninco 46.19 inatu  2.70 textu 29.83 openi 25.41
+  soft admission (Otsu, T=1 sd)                            full   near  56.28 far  23.69 | ssb_h 63.94 ninco 48.63 inatu  7.30 textu 35.67 openi 28.10

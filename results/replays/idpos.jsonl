@@ -1,0 +1,174 @@
+{"config": "TANL", "seed": 0, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.484, "fpr95_idpos": 0.47000000000000003, "auroc": 99.827741}
+{"config": "TANL (45k)", "seed": 0, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.4999777787653882, "fpr95_idpos": 0.47000000000000003, "auroc": 99.82552219901338}
+{"config": "balanced agreed blind", "seed": 0, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.232, "fpr95_idpos": 0.38999999999999996, "auroc": 99.88863800000001}
+{"config": "max agreed blind", "seed": 0, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.264, "fpr95_idpos": 0.53, "auroc": 99.8678094}
+{"config": "safe agreed blind", "seed": 0, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.31, "fpr95_idpos": 0.44999999999999996, "auroc": 99.8659246}
+{"config": "max agreed blind, 5-shot", "seed": 0, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.15999288920492422, "fpr95_idpos": 0.5, "auroc": 99.88153437624995}
+{"config": "balanced agreed blind, 5-shot", "seed": 0, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.16888138304964223, "fpr95_idpos": 0.4, "auroc": 99.89761021732367}
+{"config": "TANL", "seed": 0, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.5999999999999996, "fpr95_idpos": 3.47, "auroc": 98.9926351}
+{"config": "TANL (45k)", "seed": 0, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.6198391182614107, "fpr95_idpos": 3.4799999999999995, "auroc": 98.98278687613885}
+{"config": "balanced agreed blind", "seed": 0, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.5340000000000003, "fpr95_idpos": 3.44, "auroc": 99.03371499999999}
+{"config": "max agreed blind", "seed": 0, "id": "imagenet_val_all", "set": "sun", "fpr95": 4.2540000000000004, "fpr95_idpos": 4.35, "auroc": 98.78327660000001}
+{"config": "safe agreed blind", "seed": 0, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.4139999999999997, "fpr95_idpos": 3.37, "auroc": 99.0582687}
+{"config": "max agreed blind, 5-shot", "seed": 0, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.8709390693746943, "fpr95_idpos": 4.07, "auroc": 98.96446169059152}
+{"config": "balanced agreed blind, 5-shot", "seed": 0, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.3554064263810495, "fpr95_idpos": 3.1399999999999997, "auroc": 99.2116103728723}
+{"config": "TANL", "seed": 0, "id": "imagenet_val_all", "set": "places", "fpr95": 20.668, "fpr95_idpos": 17.27, "auroc": 95.7205634}
+{"config": "TANL (45k)", "seed": 0, "id": "imagenet_val_all", "set": "places", "fpr95": 20.71019065819297, "fpr95_idpos": 17.32, "auroc": 95.70063852717657}
+{"config": "balanced agreed blind", "seed": 0, "id": "imagenet_val_all", "set": "places", "fpr95": 21.184, "fpr95_idpos": 15.540000000000001, "auroc": 96.0388915}
+{"config": "max agreed blind", "seed": 0, "id": "imagenet_val_all", "set": "places", "fpr95": 23.948, "fpr95_idpos": 15.93, "auroc": 95.7306554}
+{"config": "safe agreed blind", "seed": 0, "id": "imagenet_val_all", "set": "places", "fpr95": 20.671999999999997, "fpr95_idpos": 16.43, "auroc": 95.98455310000001}
+{"config": "max agreed blind, 5-shot", "seed": 0, "id": "imagenet_val_all", "set": "places", "fpr95": 22.910092884760676, "fpr95_idpos": 14.93, "auroc": 96.15010588418292}
+{"config": "balanced agreed blind, 5-shot", "seed": 0, "id": "imagenet_val_all", "set": "places", "fpr95": 20.80351984356251, "fpr95_idpos": 14.78, "auroc": 96.37401359939558}
+{"config": "TANL", "seed": 0, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 15.132000000000001, "fpr95_idpos": 16.54255319148936, "auroc": 96.63840017730496}
+{"config": "TANL (45k)", "seed": 0, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 15.174881116394829, "fpr95_idpos": 16.54255319148936, "auroc": 96.62391521763729}
+{"config": "balanced agreed blind", "seed": 0, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 14.208000000000002, "fpr95_idpos": 12.127659574468085, "auroc": 97.31897340425532}
+{"config": "max agreed blind", "seed": 0, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 14.549999999999999, "fpr95_idpos": 11.790780141843973, "auroc": 97.14194663120568}
+{"config": "safe agreed blind", "seed": 0, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 15.454, "fpr95_idpos": 15.390070921985815, "auroc": 96.96322287234044}
+{"config": "max agreed blind, 5-shot", "seed": 0, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 11.810586196169059, "fpr95_idpos": 9.76950354609929, "auroc": 97.75386046672159}
+{"config": "balanced agreed blind, 5-shot", "seed": 0, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 13.106084174036708, "fpr95_idpos": 10.76241134751773, "auroc": 97.74622723623631}
+{"config": "TANL", "seed": 0, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 62.522222222222226, "fpr95_idpos": 52.43877551020408, "auroc": 83.96087387755101}
+{"config": "balanced agreed blind", "seed": 0, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 62.306666666666665, "fpr95_idpos": 48.730612244897955, "auroc": 85.04295539682539}
+{"config": "max agreed blind", "seed": 0, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 59.862222222222215, "fpr95_idpos": 50.708163265306126, "auroc": 85.0897234920635}
+{"config": "safe agreed blind", "seed": 0, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 62.35777777777778, "fpr95_idpos": 48.94897959183673, "auroc": 84.74990761904762}
+{"config": "max agreed blind, 5-shot", "seed": 0, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 57.69555555555556, "fpr95_idpos": 45.43877551020408, "auroc": 86.61232031746033}
+{"config": "balanced agreed blind, 5-shot", "seed": 0, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 62.05333333333334, "fpr95_idpos": 45.58979591836735, "auroc": 85.66641340136054}
+{"config": "TANL", "seed": 0, "id": "imagenet_test", "set": "ninco", "fpr95": 57.006666666666675, "fpr95_idpos": 55.026365028065996, "auroc": 84.99075069456256}
+{"config": "balanced agreed blind", "seed": 0, "id": "imagenet_test", "set": "ninco", "fpr95": 51.77333333333334, "fpr95_idpos": 42.660316380336795, "auroc": 88.77433501540322}
+{"config": "max agreed blind", "seed": 0, "id": "imagenet_test", "set": "ninco", "fpr95": 46.46, "fpr95_idpos": 44.973634971934004, "auroc": 89.01918164464855}
+{"config": "safe agreed blind", "seed": 0, "id": "imagenet_test", "set": "ninco", "fpr95": 55.095555555555556, "fpr95_idpos": 44.82054771219595, "auroc": 87.69351458108899}
+{"config": "max agreed blind, 5-shot", "seed": 0, "id": "imagenet_test", "set": "ninco", "fpr95": 43.32888888888889, "fpr95_idpos": 36.31569994897092, "auroc": 90.95957626958479}
+{"config": "balanced agreed blind, 5-shot", "seed": 0, "id": "imagenet_test", "set": "ninco", "fpr95": 50.23111111111112, "fpr95_idpos": 37.04711685660826, "auroc": 89.86640377237248}
+{"config": "TANL", "seed": 0, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.44666666666666666, "fpr95_idpos": 0.42, "auroc": 99.83290588888889}
+{"config": "balanced agreed blind", "seed": 0, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.17777777777777778, "fpr95_idpos": 0.42, "auroc": 99.8940211111111}
+{"config": "max agreed blind", "seed": 0, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.24222222222222223, "fpr95_idpos": 0.44, "auroc": 99.87328844444446}
+{"config": "safe agreed blind", "seed": 0, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.2511111111111111, "fpr95_idpos": 0.41000000000000003, "auroc": 99.86964755555556}
+{"config": "max agreed blind, 5-shot", "seed": 0, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.14666666666666667, "fpr95_idpos": 0.42, "auroc": 99.8917251111111}
+{"config": "balanced agreed blind, 5-shot", "seed": 0, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.15333333333333335, "fpr95_idpos": 0.37, "auroc": 99.900723}
+{"config": "TANL", "seed": 0, "id": "imagenet_test", "set": "textures", "fpr95": 11.353333333333333, "fpr95_idpos": 13.565891472868216, "auroc": 97.23860594315245}
+{"config": "balanced agreed blind", "seed": 0, "id": "imagenet_test", "set": "textures", "fpr95": 9.171111111111111, "fpr95_idpos": 9.45736434108527, "auroc": 97.9907661498708}
+{"config": "max agreed blind", "seed": 0, "id": "imagenet_test", "set": "textures", "fpr95": 9.675555555555555, "fpr95_idpos": 9.45736434108527, "auroc": 97.82785788113695}
+{"config": "safe agreed blind", "seed": 0, "id": "imagenet_test", "set": "textures", "fpr95": 11.375555555555556, "fpr95_idpos": 12.151162790697674, "auroc": 97.60768496985357}
+{"config": "max agreed blind, 5-shot", "seed": 0, "id": "imagenet_test", "set": "textures", "fpr95": 7.784444444444444, "fpr95_idpos": 7.286821705426356, "auroc": 98.35875667527993}
+{"config": "balanced agreed blind, 5-shot", "seed": 0, "id": "imagenet_test", "set": "textures", "fpr95": 8.177777777777779, "fpr95_idpos": 7.848837209302325, "auroc": 98.3543165374677}
+{"config": "TANL", "seed": 0, "id": "imagenet_test", "set": "openimage_o", "fpr95": 39.217777777777776, "fpr95_idpos": 36.7698027600983, "auroc": 91.60630663557879}
+{"config": "balanced agreed blind", "seed": 0, "id": "imagenet_test", "set": "openimage_o", "fpr95": 34.33111111111111, "fpr95_idpos": 26.86369651521835, "auroc": 93.6966576343815}
+{"config": "max agreed blind", "seed": 0, "id": "imagenet_test", "set": "openimage_o", "fpr95": 28.673333333333336, "fpr95_idpos": 26.725061440544458, "auroc": 94.52184678723718}
+{"config": "safe agreed blind", "seed": 0, "id": "imagenet_test", "set": "openimage_o", "fpr95": 37.72666666666667, "fpr95_idpos": 31.394542819333292, "auroc": 92.60955755806219}
+{"config": "max agreed blind, 5-shot", "seed": 0, "id": "imagenet_test", "set": "openimage_o", "fpr95": 26.597777777777775, "fpr95_idpos": 23.435629214191188, "auroc": 95.09861623990868}
+{"config": "balanced agreed blind, 5-shot", "seed": 0, "id": "imagenet_test", "set": "openimage_o", "fpr95": 34.63333333333333, "fpr95_idpos": 25.817631860860796, "auroc": 93.80797459757319}
+{"config": "TANL", "seed": 1, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.462, "fpr95_idpos": 0.47000000000000003, "auroc": 99.8347003}
+{"config": "TANL (45k)", "seed": 1, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.47109017377005463, "fpr95_idpos": 0.47000000000000003, "auroc": 99.83294131371939}
+{"config": "balanced agreed blind", "seed": 1, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.232, "fpr95_idpos": 0.38, "auroc": 99.88698819999999}
+{"config": "max agreed blind", "seed": 1, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.266, "fpr95_idpos": 0.49, "auroc": 99.8658976}
+{"config": "safe agreed blind", "seed": 1, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.29, "fpr95_idpos": 0.38999999999999996, "auroc": 99.8684537}
+{"config": "max agreed blind, 5-shot", "seed": 1, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.14888227189902672, "fpr95_idpos": 0.48, "auroc": 99.8853662059464}
+{"config": "balanced agreed blind, 5-shot", "seed": 1, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.13999377805430868, "fpr95_idpos": 0.38999999999999996, "auroc": 99.89758877383225}
+{"config": "TANL", "seed": 1, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.6159999999999997, "fpr95_idpos": 3.38, "auroc": 99.02430780000002}
+{"config": "TANL (45k)", "seed": 1, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.653170970179103, "fpr95_idpos": 3.39, "auroc": 99.02211868361405}
+{"config": "balanced agreed blind", "seed": 1, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.376, "fpr95_idpos": 3.39, "auroc": 99.07534509999999}
+{"config": "max agreed blind", "seed": 1, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.884, "fpr95_idpos": 4.1000000000000005, "auroc": 98.8374399}
+{"config": "safe agreed blind", "seed": 1, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.404, "fpr95_idpos": 3.27, "auroc": 99.092187}
+{"config": "max agreed blind, 5-shot", "seed": 1, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.879827563219412, "fpr95_idpos": 4.0, "auroc": 98.98693646949025}
+{"config": "balanced agreed blind, 5-shot", "seed": 1, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.3709612906093063, "fpr95_idpos": 3.32, "auroc": 99.23824896671259}
+{"config": "TANL", "seed": 1, "id": "imagenet_val_all", "set": "places", "fpr95": 20.952, "fpr95_idpos": 16.7, "auroc": 95.7955171}
+{"config": "TANL (45k)", "seed": 1, "id": "imagenet_val_all", "set": "places", "fpr95": 20.97240122661215, "fpr95_idpos": 16.76, "auroc": 95.78276421047954}
+{"config": "balanced agreed blind", "seed": 1, "id": "imagenet_val_all", "set": "places", "fpr95": 21.368000000000002, "fpr95_idpos": 15.2, "auroc": 96.1041932}
+{"config": "max agreed blind", "seed": 1, "id": "imagenet_val_all", "set": "places", "fpr95": 24.248, "fpr95_idpos": 15.68, "auroc": 95.79782119999999}
+{"config": "safe agreed blind", "seed": 1, "id": "imagenet_val_all", "set": "places", "fpr95": 21.4, "fpr95_idpos": 15.98, "auroc": 96.0265852}
+{"config": "max agreed blind, 5-shot", "seed": 1, "id": "imagenet_val_all", "set": "places", "fpr95": 23.634505133105197, "fpr95_idpos": 14.760000000000002, "auroc": 96.16823341184836}
+{"config": "balanced agreed blind, 5-shot", "seed": 1, "id": "imagenet_val_all", "set": "places", "fpr95": 20.639082707435225, "fpr95_idpos": 14.75, "auroc": 96.39912381671927}
+{"config": "TANL", "seed": 1, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 14.136000000000001, "fpr95_idpos": 16.170212765957448, "auroc": 96.730754964539}
+{"config": "TANL (45k)", "seed": 1, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 14.150482200791076, "fpr95_idpos": 16.24113475177305, "auroc": 96.71728734830067}
+{"config": "balanced agreed blind", "seed": 1, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 13.366, "fpr95_idpos": 12.092198581560282, "auroc": 97.37577429078014}
+{"config": "max agreed blind", "seed": 1, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 14.41, "fpr95_idpos": 12.517730496453899, "auroc": 97.19592907801417}
+{"config": "safe agreed blind", "seed": 1, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 14.521999999999998, "fpr95_idpos": 15.177304964539006, "auroc": 97.04465531914894}
+{"config": "max agreed blind, 5-shot", "seed": 1, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 11.39949335585085, "fpr95_idpos": 9.787234042553191, "auroc": 97.82818438959843}
+{"config": "balanced agreed blind, 5-shot", "seed": 1, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 12.812763877161014, "fpr95_idpos": 10.407801418439716, "auroc": 97.83858187863045}
+{"config": "TANL", "seed": 1, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 62.413333333333334, "fpr95_idpos": 52.26122448979592, "auroc": 84.09285034013607}
+{"config": "balanced agreed blind", "seed": 1, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 62.260000000000005, "fpr95_idpos": 48.45102040816327, "auroc": 85.15756732426304}
+{"config": "max agreed blind", "seed": 1, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 59.52222222222222, "fpr95_idpos": 50.2061224489796, "auroc": 85.21666129251702}
+{"config": "safe agreed blind", "seed": 1, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 62.34888888888889, "fpr95_idpos": 48.43469387755102, "auroc": 84.88818126984125}
+{"config": "max agreed blind, 5-shot", "seed": 1, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 57.55777777777777, "fpr95_idpos": 44.885714285714286, "auroc": 86.75787394557824}
+{"config": "balanced agreed blind, 5-shot", "seed": 1, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 61.98222222222223, "fpr95_idpos": 45.19591836734694, "auroc": 85.81974428571428}
+{"config": "TANL", "seed": 1, "id": "imagenet_test", "set": "ninco", "fpr95": 57.14888888888889, "fpr95_idpos": 54.8222486817486, "auroc": 85.12455689743153}
+{"config": "balanced agreed blind", "seed": 1, "id": "imagenet_test", "set": "ninco", "fpr95": 51.06, "fpr95_idpos": 40.789249872427284, "auroc": 89.17107671372683}
+{"config": "max agreed blind", "seed": 1, "id": "imagenet_test", "set": "ninco", "fpr95": 46.22, "fpr95_idpos": 43.11957815955094, "auroc": 89.35976091927955}
+{"config": "safe agreed blind", "seed": 1, "id": "imagenet_test", "set": "ninco", "fpr95": 54.32, "fpr95_idpos": 43.561830243238646, "auroc": 87.97817731662605}
+{"config": "max agreed blind, 5-shot", "seed": 1, "id": "imagenet_test", "set": "ninco", "fpr95": 42.52666666666667, "fpr95_idpos": 35.618302432386464, "auroc": 91.19756458959384}
+{"config": "balanced agreed blind, 5-shot", "seed": 1, "id": "imagenet_test", "set": "ninco", "fpr95": 49.68666666666667, "fpr95_idpos": 36.247661166865115, "auroc": 90.15435750600062}
+{"config": "TANL", "seed": 1, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.4444444444444444, "fpr95_idpos": 0.48, "auroc": 99.83458955555557}
+{"config": "balanced agreed blind", "seed": 1, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.17777777777777778, "fpr95_idpos": 0.4, "auroc": 99.89290777777778}
+{"config": "max agreed blind", "seed": 1, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.2488888888888889, "fpr95_idpos": 0.45999999999999996, "auroc": 99.86959066666667}
+{"config": "safe agreed blind", "seed": 1, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.2577777777777778, "fpr95_idpos": 0.44, "auroc": 99.87056466666667}
+{"config": "max agreed blind, 5-shot", "seed": 1, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.14666666666666667, "fpr95_idpos": 0.38, "auroc": 99.89156533333333}
+{"config": "balanced agreed blind, 5-shot", "seed": 1, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.13777777777777778, "fpr95_idpos": 0.36, "auroc": 99.8997448888889}
+{"config": "TANL", "seed": 1, "id": "imagenet_test", "set": "textures", "fpr95": 11.72888888888889, "fpr95_idpos": 13.507751937984496, "auroc": 97.22694659776054}
+{"config": "balanced agreed blind", "seed": 1, "id": "imagenet_test", "set": "textures", "fpr95": 9.311111111111112, "fpr95_idpos": 9.263565891472867, "auroc": 97.90195908699397}
+{"config": "max agreed blind", "seed": 1, "id": "imagenet_test", "set": "textures", "fpr95": 9.491111111111111, "fpr95_idpos": 9.748062015503876, "auroc": 97.77732816537467}
+{"config": "safe agreed blind", "seed": 1, "id": "imagenet_test", "set": "textures", "fpr95": 11.32, "fpr95_idpos": 12.209302325581394, "auroc": 97.5860079672696}
+{"config": "max agreed blind, 5-shot", "seed": 1, "id": "imagenet_test", "set": "textures", "fpr95": 7.764444444444445, "fpr95_idpos": 7.073643410852713, "auroc": 98.36652540913006}
+{"config": "balanced agreed blind, 5-shot", "seed": 1, "id": "imagenet_test", "set": "textures", "fpr95": 8.457777777777778, "fpr95_idpos": 7.829457364341086, "auroc": 98.33243367786389}
+{"config": "TANL", "seed": 1, "id": "imagenet_test", "set": "openimage_o", "fpr95": 39.17111111111111, "fpr95_idpos": 37.223517549940134, "auroc": 91.55409771672234}
+{"config": "balanced agreed blind", "seed": 1, "id": "imagenet_test", "set": "openimage_o", "fpr95": 33.864444444444445, "fpr95_idpos": 27.31110971075682, "auroc": 93.64374377717563}
+{"config": "max agreed blind", "seed": 1, "id": "imagenet_test", "set": "openimage_o", "fpr95": 28.199999999999996, "fpr95_idpos": 27.090553910139263, "auroc": 94.50656696144127}
+{"config": "safe agreed blind", "seed": 1, "id": "imagenet_test", "set": "openimage_o", "fpr95": 37.25555555555555, "fpr95_idpos": 32.16963891864641, "auroc": 92.51631447756282}
+{"config": "max agreed blind, 5-shot", "seed": 1, "id": "imagenet_test", "set": "openimage_o", "fpr95": 27.02, "fpr95_idpos": 23.952359947066608, "auroc": 95.0497060656346}
+{"config": "balanced agreed blind, 5-shot", "seed": 1, "id": "imagenet_test", "set": "openimage_o", "fpr95": 34.03777777777778, "fpr95_idpos": 26.57382317726385, "auroc": 93.72257329104264}
+{"config": "TANL", "seed": 2, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.43, "fpr95_idpos": 0.41000000000000003, "auroc": 99.8387124}
+{"config": "TANL (45k)", "seed": 2, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.44442469223590064, "fpr95_idpos": 0.41000000000000003, "auroc": 99.83561308386295}
+{"config": "balanced agreed blind", "seed": 2, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.16999999999999998, "fpr95_idpos": 0.37, "auroc": 99.8934484}
+{"config": "max agreed blind", "seed": 2, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.22599999999999998, "fpr95_idpos": 0.49, "auroc": 99.87260330000001}
+{"config": "safe agreed blind", "seed": 2, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.252, "fpr95_idpos": 0.4, "auroc": 99.87096559999999}
+{"config": "max agreed blind, 5-shot", "seed": 2, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.16443713612728322, "fpr95_idpos": 0.44999999999999996, "auroc": 99.88521710146216}
+{"config": "balanced agreed blind, 5-shot", "seed": 2, "id": "imagenet_val_all", "set": "inaturalist", "fpr95": 0.1533265188213857, "fpr95_idpos": 0.36, "auroc": 99.89809341807032}
+{"config": "TANL", "seed": 2, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.884, "fpr95_idpos": 3.5999999999999996, "auroc": 98.99201860000001}
+{"config": "TANL (45k)", "seed": 2, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.9087151682147456, "fpr95_idpos": 3.5999999999999996, "auroc": 98.99202724323364}
+{"config": "balanced agreed blind", "seed": 2, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.356, "fpr95_idpos": 3.54, "auroc": 99.1074574}
+{"config": "max agreed blind", "seed": 2, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.92, "fpr95_idpos": 4.04, "auroc": 98.86446300000001}
+{"config": "safe agreed blind", "seed": 2, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.5999999999999996, "fpr95_idpos": 3.51, "auroc": 99.0979666}
+{"config": "max agreed blind, 5-shot", "seed": 2, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.7953868716945913, "fpr95_idpos": 4.06, "auroc": 99.03115905959734}
+{"config": "balanced agreed blind, 5-shot", "seed": 2, "id": "imagenet_val_all", "set": "sun", "fpr95": 3.2665214879338698, "fpr95_idpos": 3.4099999999999997, "auroc": 99.2506441935914}
+{"config": "TANL", "seed": 2, "id": "imagenet_val_all", "set": "places", "fpr95": 21.648, "fpr95_idpos": 17.78, "auroc": 95.6547654}
+{"config": "TANL (45k)", "seed": 2, "id": "imagenet_val_all", "set": "places", "fpr95": 21.64792675881072, "fpr95_idpos": 17.76, "auroc": 95.65139227145461}
+{"config": "balanced agreed blind", "seed": 2, "id": "imagenet_val_all", "set": "places", "fpr95": 21.658, "fpr95_idpos": 15.55, "auroc": 96.02860310000001}
+{"config": "max agreed blind", "seed": 2, "id": "imagenet_val_all", "set": "places", "fpr95": 24.242, "fpr95_idpos": 16.23, "auroc": 95.6750309}
+{"config": "safe agreed blind", "seed": 2, "id": "imagenet_val_all", "set": "places", "fpr95": 21.648, "fpr95_idpos": 16.73, "auroc": 95.9314187}
+{"config": "max agreed blind, 5-shot", "seed": 2, "id": "imagenet_val_all", "set": "places", "fpr95": 23.978934269588017, "fpr95_idpos": 15.079999999999998, "auroc": 96.06170725745523}
+{"config": "balanced agreed blind, 5-shot", "seed": 2, "id": "imagenet_val_all", "set": "places", "fpr95": 20.890182658548508, "fpr95_idpos": 15.110000000000001, "auroc": 96.34988144971335}
+{"config": "TANL", "seed": 2, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 14.741999999999999, "fpr95_idpos": 16.382978723404253, "auroc": 96.64603280141844}
+{"config": "TANL (45k)", "seed": 2, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 14.772676769921336, "fpr95_idpos": 16.382978723404253, "auroc": 96.63667371284681}
+{"config": "balanced agreed blind", "seed": 2, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 12.76, "fpr95_idpos": 11.77304964539007, "auroc": 97.39401968085106}
+{"config": "max agreed blind", "seed": 2, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 13.486, "fpr95_idpos": 11.77304964539007, "auroc": 97.24225957446808}
+{"config": "safe agreed blind", "seed": 2, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 14.548, "fpr95_idpos": 15.265957446808512, "auroc": 96.98393085106383}
+{"config": "max agreed blind, 5-shot", "seed": 2, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 11.486156170836852, "fpr95_idpos": 9.893617021276595, "auroc": 97.81675581952072}
+{"config": "balanced agreed blind, 5-shot", "seed": 2, "id": "imagenet_val_all", "set": "textures_all", "fpr95": 11.910581751922136, "fpr95_idpos": 10.620567375886525, "auroc": 97.80500693271}
+{"config": "TANL", "seed": 2, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 62.75333333333334, "fpr95_idpos": 52.24897959183673, "auroc": 84.10572854875285}
+{"config": "balanced agreed blind", "seed": 2, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 62.39333333333333, "fpr95_idpos": 49.01020408163265, "auroc": 85.19444718820863}
+{"config": "max agreed blind", "seed": 2, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 59.34, "fpr95_idpos": 50.791836734693874, "auroc": 85.2089932653061}
+{"config": "safe agreed blind", "seed": 2, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 62.60444444444444, "fpr95_idpos": 48.44081632653061, "auroc": 84.92625537414965}
+{"config": "max agreed blind, 5-shot", "seed": 2, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 56.79555555555555, "fpr95_idpos": 45.13673469387755, "auroc": 86.8165066213152}
+{"config": "balanced agreed blind, 5-shot", "seed": 2, "id": "imagenet_test", "set": "ssb_hard", "fpr95": 62.19555555555556, "fpr95_idpos": 45.275510204081634, "auroc": 85.87845015873016}
+{"config": "TANL", "seed": 2, "id": "imagenet_test", "set": "ninco", "fpr95": 58.00222222222222, "fpr95_idpos": 55.51964619833305, "auroc": 84.88167356504319}
+{"config": "balanced agreed blind", "seed": 2, "id": "imagenet_test", "set": "ninco", "fpr95": 50.24444444444445, "fpr95_idpos": 41.97992855927879, "auroc": 89.10126665532687}
+{"config": "max agreed blind", "seed": 2, "id": "imagenet_test", "set": "ninco", "fpr95": 46.58888888888889, "fpr95_idpos": 44.3612859329818, "auroc": 89.19373778609362}
+{"config": "safe agreed blind", "seed": 2, "id": "imagenet_test", "set": "ninco", "fpr95": 52.99333333333334, "fpr95_idpos": 44.24221806429665, "auroc": 87.94266882122811}
+{"config": "max agreed blind, 5-shot", "seed": 2, "id": "imagenet_test", "set": "ninco", "fpr95": 42.617777777777775, "fpr95_idpos": 35.83942847423031, "auroc": 91.20685263933775}
+{"config": "balanced agreed blind, 5-shot", "seed": 2, "id": "imagenet_test", "set": "ninco", "fpr95": 48.977777777777774, "fpr95_idpos": 36.519816295288315, "auroc": 90.2345844909376}
+{"config": "TANL", "seed": 2, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.4822222222222223, "fpr95_idpos": 0.5, "auroc": 99.82830244444445}
+{"config": "balanced agreed blind", "seed": 2, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.23777777777777778, "fpr95_idpos": 0.38999999999999996, "auroc": 99.88493755555557}
+{"config": "max agreed blind", "seed": 2, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.27555555555555555, "fpr95_idpos": 0.45999999999999996, "auroc": 99.86131999999999}
+{"config": "safe agreed blind", "seed": 2, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.32222222222222224, "fpr95_idpos": 0.47000000000000003, "auroc": 99.86298555555557}
+{"config": "max agreed blind, 5-shot", "seed": 2, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.13333333333333333, "fpr95_idpos": 0.5, "auroc": 99.88891222222223}
+{"config": "balanced agreed blind, 5-shot", "seed": 2, "id": "imagenet_test", "set": "inaturalist", "fpr95": 0.1288888888888889, "fpr95_idpos": 0.37, "auroc": 99.89879322222224}
+{"config": "TANL", "seed": 2, "id": "imagenet_test", "set": "textures", "fpr95": 11.493333333333332, "fpr95_idpos": 13.75968992248062, "auroc": 97.21626464254952}
+{"config": "balanced agreed blind", "seed": 2, "id": "imagenet_test", "set": "textures", "fpr95": 9.577777777777778, "fpr95_idpos": 9.651162790697674, "auroc": 97.93397136089578}
+{"config": "max agreed blind", "seed": 2, "id": "imagenet_test", "set": "textures", "fpr95": 9.148888888888889, "fpr95_idpos": 9.593023255813954, "auroc": 97.7912235142119}
+{"config": "safe agreed blind", "seed": 2, "id": "imagenet_test", "set": "textures", "fpr95": 11.251111111111111, "fpr95_idpos": 12.46124031007752, "auroc": 97.58434259259259}
+{"config": "max agreed blind, 5-shot", "seed": 2, "id": "imagenet_test", "set": "textures", "fpr95": 7.6288888888888895, "fpr95_idpos": 7.112403100775194, "auroc": 98.37753316106803}
+{"config": "balanced agreed blind, 5-shot", "seed": 2, "id": "imagenet_test", "set": "textures", "fpr95": 8.4, "fpr95_idpos": 7.596899224806202, "auroc": 98.37385400516796}
+{"config": "TANL", "seed": 2, "id": "imagenet_test", "set": "openimage_o", "fpr95": 38.80222222222222, "fpr95_idpos": 37.29283508727708, "auroc": 91.58763053052422}
+{"config": "balanced agreed blind", "seed": 2, "id": "imagenet_test", "set": "openimage_o", "fpr95": 34.202222222222225, "fpr95_idpos": 26.687251874724303, "auroc": 93.7639457082642}
+{"config": "max agreed blind", "seed": 2, "id": "imagenet_test", "set": "openimage_o", "fpr95": 28.21777777777778, "fpr95_idpos": 26.441489696893317, "auroc": 94.57518096078307}
+{"config": "safe agreed blind", "seed": 2, "id": "imagenet_test", "set": "openimage_o", "fpr95": 37.175555555555555, "fpr95_idpos": 31.5457810826139, "auroc": 92.6096629347225}
+{"config": "max agreed blind, 5-shot", "seed": 2, "id": "imagenet_test", "set": "openimage_o", "fpr95": 26.71777777777778, "fpr95_idpos": 23.712899363538973, "auroc": 95.11341238333297}
+{"config": "balanced agreed blind, 5-shot", "seed": 2, "id": "imagenet_test", "set": "openimage_o", "fpr95": 34.486666666666665, "fpr95_idpos": 26.12640998172538, "auroc": 93.82701857569965}

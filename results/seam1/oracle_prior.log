@@ -1,0 +1,30 @@
+{'set': 'ninco', 'mode': 'balanced', 'arm': 'blind pool', 'fpr95': 50.45, 'auroc': 88.9}
+{'set': 'ninco', 'mode': 'balanced', 'arm': '+ concept names, no prior', 'fpr95': 50.33, 'auroc': 89.15}
+{'set': 'ninco', 'mode': 'balanced', 'arm': '+ oracle real prior (half A), w=4', 'fpr95': 46.26, 'auroc': 90.2}
+{'set': 'ninco', 'mode': 'balanced', 'arm': '+ text-embedding prior, w=4', 'fpr95': 52.48, 'auroc': 88.35}
+{'set': 'ninco', 'mode': 'balanced', 'arm': '+ generated prior (probed only), w=4', 'fpr95': 50.02, 'auroc': 89.23}
+{'set': 'ninco', 'mode': 'balanced', 'arm': '+ oracle real prior (half A), w=16', 'fpr95': 45.95, 'auroc': 90.34}
+{'set': 'ninco', 'mode': 'balanced', 'arm': '+ text-embedding prior, w=16', 'fpr95': 53.54, 'auroc': 87.5}
+{'set': 'ninco', 'mode': 'balanced', 'arm': '+ generated prior (probed only), w=16', 'fpr95': 51.24, 'auroc': 88.69}
+{'set': 'ninco', 'arm': 'TANL', 'fpr95': 58.16, 'auroc': 85.0}
+{'set': 'ninco', 'mode': 'max', 'arm': 'blind pool', 'fpr95': 45.78, 'auroc': 89.33}
+{'set': 'ninco', 'mode': 'max', 'arm': '+ concept names, no prior', 'fpr95': 44.33, 'auroc': 89.75}
+{'set': 'ninco', 'mode': 'max', 'arm': '+ oracle real prior (half A), w=4', 'fpr95': 40.5, 'auroc': 90.81}
+{'set': 'ninco', 'mode': 'max', 'arm': '+ text-embedding prior, w=4', 'fpr95': 48.8, 'auroc': 88.65}
+{'set': 'ninco', 'mode': 'max', 'arm': '+ generated prior (probed only), w=4', 'fpr95': 44.93, 'auroc': 89.74}
+{'set': 'ninco', 'arm': 'TANL', 'fpr95': 58.16, 'auroc': 85.0}
+{'set': 'ssb_hard', 'mode': 'balanced', 'arm': 'blind pool', 'fpr95': 63.0, 'auroc': 84.58}
+{'set': 'ssb_hard', 'mode': 'balanced', 'arm': '+ concept names, no prior', 'fpr95': 62.77, 'auroc': 84.95}
+{'set': 'ssb_hard', 'mode': 'balanced', 'arm': '+ oracle real prior (half A), w=4', 'fpr95': 62.34, 'auroc': 85.56}
+{'set': 'ssb_hard', 'mode': 'balanced', 'arm': '+ text-embedding prior, w=4', 'fpr95': 63.32, 'auroc': 84.39}
+{'set': 'ssb_hard', 'mode': 'balanced', 'arm': '+ generated prior (probed only), w=4', 'fpr95': 62.74, 'auroc': 85.01}
+{'set': 'ssb_hard', 'mode': 'balanced', 'arm': '+ oracle real prior (half A), w=16', 'fpr95': 62.1, 'auroc': 85.66}
+{'set': 'ssb_hard', 'mode': 'balanced', 'arm': '+ text-embedding prior, w=16', 'fpr95': 63.48, 'auroc': 84.0}
+{'set': 'ssb_hard', 'mode': 'balanced', 'arm': '+ generated prior (probed only), w=16', 'fpr95': 62.82, 'auroc': 84.79}
+{'set': 'ssb_hard', 'arm': 'TANL', 'fpr95': 63.42, 'auroc': 83.72}
+{'set': 'ssb_hard', 'mode': 'max', 'arm': 'blind pool', 'fpr95': 59.93, 'auroc': 84.71}
+{'set': 'ssb_hard', 'mode': 'max', 'arm': '+ concept names, no prior', 'fpr95': 55.26, 'auroc': 86.0}
+{'set': 'ssb_hard', 'mode': 'max', 'arm': '+ oracle real prior (half A), w=4', 'fpr95': 52.87, 'auroc': 86.91}
+{'set': 'ssb_hard', 'mode': 'max', 'arm': '+ text-embedding prior, w=4', 'fpr95': 58.86, 'auroc': 84.62}
+{'set': 'ssb_hard', 'mode': 'max', 'arm': '+ generated prior (probed only), w=4', 'fpr95': 54.87, 'auroc': 86.07}
+{'set': 'ssb_hard', 'arm': 'TANL', 'fpr95': 63.42, 'auroc': 83.72}

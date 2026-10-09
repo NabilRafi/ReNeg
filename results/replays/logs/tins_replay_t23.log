@@ -1,0 +1,110 @@
+[tier 2] max on tins, 5-shot s0 openood_v15 ssb_hard: ood+ 59.40 | id+ 48.53
+[tier 2] safe on tins, 5-shot s0 openood_v15 ssb_hard: ood+ 64.10 | id+ 50.63
+[tier 2] balanced on tins s0 openood_v15 ssb_hard: ood+ 63.63 | id+ 52.10
+[tier 2] balanced on tins@0.7, 5-shot s0 openood_v15 ssb_hard: ood+ 63.68 | id+ 49.51
+[tier 2] max on tins, 5-shot s0 openood_v15 ninco: ood+ 54.26 | id+ 46.45
+[tier 2] safe on tins, 5-shot s0 openood_v15 ninco: ood+ 67.31 | id+ 50.55
+[tier 2] balanced on tins s0 openood_v15 ninco: ood+ 64.30 | id+ 55.49
+[tier 2] balanced on tins@0.7, 5-shot s0 openood_v15 ninco: ood+ 63.89 | id+ 48.09
+[tier 2] max on tins, 5-shot s0 openood_v15 inaturalist: ood+ 0.14 | id+ 0.22
+[tier 2] safe on tins, 5-shot s0 openood_v15 inaturalist: ood+ 0.16 | id+ 0.19
+[tier 2] balanced on tins s0 openood_v15 inaturalist: ood+ 0.12 | id+ 0.20
+[tier 2] balanced on tins@0.7, 5-shot s0 openood_v15 inaturalist: ood+ 0.15 | id+ 0.21
+[tier 2] max on tins, 5-shot s0 openood_v15 textures: ood+ 7.12 | id+ 6.43
+[tier 2] safe on tins, 5-shot s0 openood_v15 textures: ood+ 8.37 | id+ 6.84
+[tier 2] balanced on tins s0 openood_v15 textures: ood+ 5.95 | id+ 5.64
+[tier 2] balanced on tins@0.7, 5-shot s0 openood_v15 textures: ood+ 8.01 | id+ 6.74
+[tier 2] max on tins, 5-shot s0 openood_v15 openimage_o: ood+ 24.91 | id+ 20.56
+[tier 2] safe on tins, 5-shot s0 openood_v15 openimage_o: ood+ 35.90 | id+ 26.83
+[tier 2] balanced on tins s0 openood_v15 openimage_o: ood+ 33.89 | id+ 23.53
+[tier 2] balanced on tins@0.7, 5-shot s0 openood_v15 openimage_o: ood+ 33.91 | id+ 23.16
+[tier 2] max on tins, 5-shot s0 four_ood inaturalist: ood+ 0.14 | id+ 0.23
+[tier 2] safe on tins, 5-shot s0 four_ood inaturalist: ood+ 0.15 | id+ 0.19
+[tier 2] balanced on tins s0 four_ood inaturalist: ood+ 0.13 | id+ 0.19
+[tier 2] balanced on tins@0.7, 5-shot s0 four_ood inaturalist: ood+ 0.14 | id+ 0.19
+[tier 2] max on tins, 5-shot s0 four_ood sun: ood+ 5.24 | id+ 5.17
+[tier 2] safe on tins, 5-shot s0 four_ood sun: ood+ 4.56 | id+ 4.51
+[tier 2] balanced on tins s0 four_ood sun: ood+ 4.10 | id+ 4.09
+[tier 2] balanced on tins@0.7, 5-shot s0 four_ood sun: ood+ 4.46 | id+ 4.43
+[tier 2] max on tins, 5-shot s0 four_ood places: ood+ 16.97 | id+ 13.59
+[tier 2] safe on tins, 5-shot s0 four_ood places: ood+ 16.03 | id+ 13.78
+[tier 2] balanced on tins s0 four_ood places: ood+ 15.81 | id+ 13.28
+[tier 2] balanced on tins@0.7, 5-shot s0 four_ood places: ood+ 15.86 | id+ 13.48
+[tier 2] max on tins, 5-shot s0 four_ood textures_all: ood+ 7.79 | id+ 7.06
+[tier 2] safe on tins, 5-shot s0 four_ood textures_all: ood+ 7.30 | id+ 7.23
+[tier 2] balanced on tins s0 four_ood textures_all: ood+ 6.90 | id+ 6.86
+[tier 2] balanced on tins@0.7, 5-shot s0 four_ood textures_all: ood+ 7.62 | id+ 7.18
+[tier 2] max on tins, 5-shot s1 openood_v15 ssb_hard: ood+ 60.30 | id+ 49.00
+[tier 2] safe on tins, 5-shot s1 openood_v15 ssb_hard: ood+ 64.96 | id+ 50.50
+[tier 2] balanced on tins s1 openood_v15 ssb_hard: ood+ 64.75 | id+ 52.29
+[tier 2] balanced on tins@0.7, 5-shot s1 openood_v15 ssb_hard: ood+ 64.54 | id+ 49.60
+[tier 2] max on tins, 5-shot s1 openood_v15 ninco: ood+ 55.27 | id+ 49.65
+[tier 2] safe on tins, 5-shot s1 openood_v15 ninco: ood+ 68.68 | id+ 52.88
+[tier 2] balanced on tins s1 openood_v15 ninco: ood+ 65.69 | id+ 57.10
+[tier 2] balanced on tins@0.7, 5-shot s1 openood_v15 ninco: ood+ 64.88 | id+ 50.81
+[tier 2] max on tins, 5-shot s1 openood_v15 inaturalist: ood+ 0.12 | id+ 0.18
+[tier 2] safe on tins, 5-shot s1 openood_v15 inaturalist: ood+ 0.14 | id+ 0.16
+[tier 2] balanced on tins s1 openood_v15 inaturalist: ood+ 0.11 | id+ 0.15
+[tier 2] balanced on tins@0.7, 5-shot s1 openood_v15 inaturalist: ood+ 0.12 | id+ 0.15
+[tier 2] max on tins, 5-shot s1 openood_v15 textures: ood+ 5.67 | id+ 5.50
+[tier 2] safe on tins, 5-shot s1 openood_v15 textures: ood+ 5.88 | id+ 5.68
+[tier 2] balanced on tins s1 openood_v15 textures: ood+ 5.63 | id+ 5.45
+[tier 2] balanced on tins@0.7, 5-shot s1 openood_v15 textures: ood+ 5.70 | id+ 5.64
+[tier 2] max on tins, 5-shot s1 openood_v15 openimage_o: ood+ 25.85 | id+ 21.17
+[tier 2] safe on tins, 5-shot s1 openood_v15 openimage_o: ood+ 37.34 | id+ 27.42
+[tier 2] balanced on tins s1 openood_v15 openimage_o: ood+ 34.86 | id+ 24.02
+[tier 2] balanced on tins@0.7, 5-shot s1 openood_v15 openimage_o: ood+ 34.73 | id+ 23.79
+[tier 2] max on tins, 5-shot s1 four_ood inaturalist: ood+ 0.13 | id+ 0.24
+[tier 2] safe on tins, 5-shot s1 four_ood inaturalist: ood+ 0.15 | id+ 0.17
+[tier 2] balanced on tins s1 four_ood inaturalist: ood+ 0.10 | id+ 0.18
+[tier 2] balanced on tins@0.7, 5-shot s1 four_ood inaturalist: ood+ 0.13 | id+ 0.17
+[tier 2] max on tins, 5-shot s1 four_ood sun: ood+ 5.38 | id+ 5.26
+[tier 2] safe on tins, 5-shot s1 four_ood sun: ood+ 4.61 | id+ 4.59
+[tier 2] balanced on tins s1 four_ood sun: ood+ 3.78 | id+ 3.68
+[tier 2] balanced on tins@0.7, 5-shot s1 four_ood sun: ood+ 4.37 | id+ 4.50
+[tier 2] max on tins, 5-shot s1 four_ood places: ood+ 17.29 | id+ 13.22
+[tier 2] safe on tins, 5-shot s1 four_ood places: ood+ 15.51 | id+ 13.65
+[tier 2] balanced on tins s1 four_ood places: ood+ 15.80 | id+ 13.25
+[tier 2] balanced on tins@0.7, 5-shot s1 four_ood places: ood+ 15.86 | id+ 13.18
+[tier 2] max on tins, 5-shot s1 four_ood textures_all: ood+ 7.39 | id+ 6.74
+[tier 2] safe on tins, 5-shot s1 four_ood textures_all: ood+ 7.71 | id+ 6.79
+[tier 2] balanced on tins s1 four_ood textures_all: ood+ 6.73 | id+ 6.60
+[tier 2] balanced on tins@0.7, 5-shot s1 four_ood textures_all: ood+ 7.51 | id+ 7.16
+[tier 2] max on tins, 5-shot s2 openood_v15 ssb_hard: ood+ 58.62 | id+ 47.16
+[tier 2] safe on tins, 5-shot s2 openood_v15 ssb_hard: ood+ 63.87 | id+ 48.77
+[tier 2] balanced on tins s2 openood_v15 ssb_hard: ood+ 63.43 | id+ 50.68
+[tier 2] balanced on tins@0.7, 5-shot s2 openood_v15 ssb_hard: ood+ 63.45 | id+ 47.80
+[tier 2] max on tins, 5-shot s2 openood_v15 ninco: ood+ 54.12 | id+ 48.92
+[tier 2] safe on tins, 5-shot s2 openood_v15 ninco: ood+ 67.02 | id+ 52.83
+[tier 2] balanced on tins s2 openood_v15 ninco: ood+ 64.71 | id+ 58.28
+[tier 2] balanced on tins@0.7, 5-shot s2 openood_v15 ninco: ood+ 63.57 | id+ 51.69
+[tier 2] max on tins, 5-shot s2 openood_v15 inaturalist: ood+ 0.12 | id+ 0.21
+[tier 2] safe on tins, 5-shot s2 openood_v15 inaturalist: ood+ 0.15 | id+ 0.23
+[tier 2] balanced on tins s2 openood_v15 inaturalist: ood+ 0.12 | id+ 0.22
+[tier 2] balanced on tins@0.7, 5-shot s2 openood_v15 inaturalist: ood+ 0.14 | id+ 0.21
+[tier 2] max on tins, 5-shot s2 openood_v15 textures: ood+ 6.19 | id+ 5.95
+[tier 2] safe on tins, 5-shot s2 openood_v15 textures: ood+ 7.54 | id+ 6.55
+[tier 2] balanced on tins s2 openood_v15 textures: ood+ 5.49 | id+ 5.50
+[tier 2] balanced on tins@0.7, 5-shot s2 openood_v15 textures: ood+ 6.56 | id+ 6.28
+[tier 2] max on tins, 5-shot s2 openood_v15 openimage_o: ood+ 25.69 | id+ 21.14
+[tier 2] safe on tins, 5-shot s2 openood_v15 openimage_o: ood+ 37.13 | id+ 27.25
+[tier 2] balanced on tins s2 openood_v15 openimage_o: ood+ 34.59 | id+ 23.82
+[tier 2] balanced on tins@0.7, 5-shot s2 openood_v15 openimage_o: ood+ 34.37 | id+ 23.57
+[tier 2] max on tins, 5-shot s2 four_ood inaturalist: ood+ 0.12 | id+ 0.24
+[tier 2] safe on tins, 5-shot s2 four_ood inaturalist: ood+ 0.15 | id+ 0.23
+[tier 2] balanced on tins s2 four_ood inaturalist: ood+ 0.11 | id+ 0.20
+[tier 2] balanced on tins@0.7, 5-shot s2 four_ood inaturalist: ood+ 0.13 | id+ 0.19
+[tier 2] max on tins, 5-shot s2 four_ood sun: ood+ 5.19 | id+ 5.08
+[tier 2] safe on tins, 5-shot s2 four_ood sun: ood+ 4.62 | id+ 4.58
+[tier 2] balanced on tins s2 four_ood sun: ood+ 3.46 | id+ 3.61
+[tier 2] balanced on tins@0.7, 5-shot s2 four_ood sun: ood+ 4.43 | id+ 4.36
+[tier 2] max on tins, 5-shot s2 four_ood places: ood+ 17.72 | id+ 13.10
+[tier 2] safe on tins, 5-shot s2 four_ood places: ood+ 16.14 | id+ 13.59
+[tier 2] balanced on tins s2 four_ood places: ood+ 15.85 | id+ 13.06
+[tier 2] balanced on tins@0.7, 5-shot s2 four_ood places: ood+ 16.01 | id+ 13.22
+[tier 2] max on tins, 5-shot s2 four_ood textures_all: ood+ 8.37 | id+ 7.57
+[tier 2] safe on tins, 5-shot s2 four_ood textures_all: ood+ 8.72 | id+ 7.75
+[tier 2] balanced on tins s2 four_ood textures_all: ood+ 7.89 | id+ 7.09
+[tier 2] balanced on tins@0.7, 5-shot s2 four_ood textures_all: ood+ 8.28 | id+ 7.54
+[tier 3] max on tanl+tins, 5-shot s0 openood_v15 ssb_hard: ood+ 54.35 | id+ 42.44
+[tier 3] safe on tanl+tins, 5-shot s0 openood_v15 ssb_hard: ood+ 57.33 | id+ 44.26

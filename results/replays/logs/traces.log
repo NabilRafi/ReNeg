@@ -1,0 +1,11 @@
+corpus (69554, 512) | ID text from the bank vs pack1: min cos 1.000000
+ninco: TANL FPR95 57.01 AUROC 84.99 (1.2 min)
+ssb_hard: TANL FPR95 62.52 AUROC 83.96 (5.9 min)
+inaturalist: TANL FPR95 0.45 AUROC 99.83 (1.3 min)
+textures: TANL FPR95 11.35 AUROC 97.24 (1.2 min)
+openimage_o: TANL FPR95 39.22 AUROC 91.61 (1.5 min)
+corpus (69554, 512) | ID text from the bank vs pack1: min cos 1.000000
+inaturalist: TANL FPR95 0.48 AUROC 99.83 (4.0 min)
+sun: TANL FPR95 3.60 AUROC 98.99 (6.2 min)
+places: TANL FPR95 20.67 AUROC 95.72 (6.1 min)
+textures_all: TANL FPR95 15.13 AUROC 96.64 (6.4 min)

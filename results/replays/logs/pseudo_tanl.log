@@ -1,0 +1,11 @@
+near0: TANL FPR95 87.81 AUROC 63.24 (1.4 min)
+near1: TANL FPR95 88.90 AUROC 63.30 (1.8 min)
+near2: TANL FPR95 82.70 AUROC 70.00 (1.5 min)
+far: TANL FPR95 36.24 AUROC 90.83 (1.6 min)
+TANL: {'pnear': 86.47, 'pnear_auc': 65.51, 'vfar': 36.24, 'vfar_auc': 90.83, 'objective': 122.71} {'near0': (87.81, 63.24), 'near1': (88.9, 63.3), 'near2': (82.7, 70.0), 'far': (36.24, 90.83)}
+frac 0.0 omega 0.15: {'pnear': 82.82, 'pnear_auc': 68.92, 'vfar': 33.12, 'vfar_auc': 92.17, 'objective': 115.94}
+frac 0.0 omega 0.25: {'pnear': 79.79, 'pnear_auc': 70.47, 'vfar': 34.2, 'vfar_auc': 92.23, 'objective': 113.99}
+frac 0.0 omega 0.4: {'pnear': 75.9, 'pnear_auc': 71.87, 'vfar': 34.61, 'vfar_auc': 91.28, 'objective': 110.51}
+frac 0.1 omega 0.15: {'pnear': 73.05, 'pnear_auc': 71.53, 'vfar': 32.32, 'vfar_auc': 92.33, 'objective': 105.37}
+frac 0.1 omega 0.25: {'pnear': 71.35, 'pnear_auc': 72.79, 'vfar': 33.12, 'vfar_auc': 92.2, 'objective': 104.47}
+frac 0.1 omega 0.4: {'pnear': 70.97, 'pnear_auc': 73.56, 'vfar': 35.83, 'vfar_auc': 90.98, 'objective': 106.8}

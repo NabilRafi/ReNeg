@@ -1,0 +1,21 @@
+# Core (also installed by `pip install -e .`)
+torch>=1.13
+torchvision
+numpy
+pandas
+scikit-learn
+Pillow
+matplotlib
+regex
+tqdm
+packaging
+pyyaml
+# CLIP tokenizer helper, dataset downloads, WordNet (KG pool, Seam 1 probes)
+ftfy
+gdown>=4.7
+nltk
+# Tests and notebooks
+pytest
+nbformat
+nbclient
+ipykernel

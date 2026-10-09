@@ -1,0 +1,457 @@
+[
+ {
+  "stage": "baseline",
+  "mode": "balanced",
+  "variant": "baseline (packaged admission)",
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "stage": "baseline",
+  "mode": "max",
+  "variant": "baseline (packaged admission)",
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "stage": "baseline",
+  "mode": "safe",
+  "variant": "baseline (packaged admission)",
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "stage": "baseline",
+  "mode": "balanced",
+  "variant": "baseline (packaged admission), blind",
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "pool": "blind"
+ },
+ {
+  "stage": "baseline",
+  "mode": "max",
+  "variant": "baseline (packaged admission), blind",
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "pool": "blind"
+ },
+ {
+  "stage": "screen-1",
+  "mode": "balanced",
+  "variant": "proto=vote",
+  "opts": {
+   "proto": "vote"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-1",
+  "mode": "balanced",
+  "variant": "proto=vote, id=softmax+tanl",
+  "opts": {
+   "proto": "vote",
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-1",
+  "mode": "balanced",
+  "variant": "center",
+  "opts": {
+   "center": true
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-1",
+  "mode": "balanced",
+  "variant": "softcatch",
+  "opts": {
+   "softcatch": true
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-1",
+  "mode": "max",
+  "variant": "proto=vote",
+  "opts": {
+   "proto": "vote"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-1",
+  "mode": "safe",
+  "variant": "proto=vote",
+  "opts": {
+   "proto": "vote"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-2",
+  "mode": "balanced",
+  "variant": "id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-2",
+  "mode": "balanced",
+  "variant": "id=tanl",
+  "opts": {
+   "id_admit": "base"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-2",
+  "mode": "balanced",
+  "variant": "classcal5",
+  "opts": {
+   "classcal": 5.0
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-2",
+  "mode": "balanced",
+  "variant": "proto=vote, id=softmax+tanl, classcal5",
+  "opts": {
+   "proto": "vote",
+   "idadm": "softmax+tanl",
+   "classcal": 5.0
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-2",
+  "mode": "balanced",
+  "variant": "k_vis8",
+  "opts": {
+   "k_vis": 8
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-2",
+  "mode": "max",
+  "variant": "id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-2",
+  "mode": "max",
+  "variant": "proto=vote, id=softmax+tanl",
+  "opts": {
+   "proto": "vote",
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-2",
+  "mode": "safe",
+  "variant": "id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-2",
+  "mode": "safe",
+  "variant": "proto=vote, id=softmax+tanl",
+  "opts": {
+   "proto": "vote",
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "confirm-1",
+  "mode": "balanced",
+  "variant": "id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "stage": "confirm-1",
+  "mode": "safe",
+  "variant": "id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "stage": "confirm-1",
+  "mode": "max",
+  "variant": "id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "stage": "confirm-1",
+  "mode": "balanced",
+  "variant": "id=tanl",
+  "opts": {
+   "id_admit": "base"
+  },
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "stage": "confirm-1",
+  "mode": "balanced",
+  "variant": "id=softmax+tanl, blind",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "pool": "blind"
+ },
+ {
+  "stage": "screen-3",
+  "mode": "balanced",
+  "variant": "id=softmax+tanl, pool KG+neg10k",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen",
+  "pool": "full+neg"
+ },
+ {
+  "stage": "screen-3",
+  "mode": "max",
+  "variant": "id=softmax+tanl, pool KG+neg10k",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen",
+  "pool": "full+neg"
+ },
+ {
+  "stage": "screen-3",
+  "mode": "safe",
+  "variant": "id=softmax+tanl, pool KG+neg10k",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen",
+  "pool": "full+neg"
+ },
+ {
+  "stage": "screen-4",
+  "mode": "balanced",
+  "variant": "id=softmax+tanl+imgagree",
+  "opts": {
+   "idadm": "softmax+tanl+imgagree"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-4",
+  "mode": "balanced",
+  "variant": "id=softmax+tanl, exclude KG-admitted",
+  "opts": {
+   "idadm": "softmax+tanl",
+   "cfg": {
+    "id_exclude": "admitted"
+   }
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-4",
+  "mode": "balanced",
+  "variant": "id=softmax+tanl, exclude KG-caught",
+  "opts": {
+   "idadm": "softmax+tanl",
+   "cfg": {
+    "id_exclude": "caught"
+   }
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-4",
+  "mode": "balanced",
+  "variant": "id=softmax0.7+tanl",
+  "opts": {
+   "idadm": "softmax+tanl",
+   "cfg": {
+    "p_min": 0.7
+   }
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-4",
+  "mode": "max",
+  "variant": "id=softmax+tanl+imgagree",
+  "opts": {
+   "idadm": "softmax+tanl+imgagree"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-5",
+  "mode": "balanced",
+  "variant": "id=softmax+tanl, excl penalised",
+  "opts": {
+   "idadm": "softmax+tanl",
+   "excl": "pen"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-5",
+  "mode": "max",
+  "variant": "id=softmax+tanl, excl penalised",
+  "opts": {
+   "idadm": "softmax+tanl",
+   "excl": "pen"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-5",
+  "mode": "balanced",
+  "variant": "id=softmax+tanl, excl near-caught 0.01",
+  "opts": {
+   "idadm": "softmax+tanl",
+   "excl": "nearcaught",
+   "excl_delta": 0.01
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-5",
+  "mode": "max",
+  "variant": "id=softmax+tanl, excl caught",
+  "opts": {
+   "idadm": "softmax+tanl",
+   "excl": "nearcaught",
+   "excl_delta": 0.0
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-6",
+  "mode": "max",
+  "variant": "id=softmax+tanl, lag 10 excl trusted",
+  "opts": {
+   "idadm": "softmax+tanl",
+   "lag": 10
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-6",
+  "mode": "balanced",
+  "variant": "id=softmax+tanl, lag 10 excl trusted",
+  "opts": {
+   "idadm": "softmax+tanl",
+   "lag": 10
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "screen-6",
+  "mode": "max",
+  "variant": "id=softmax+tanl, lag 10 excl pi>0.2",
+  "opts": {
+   "idadm": "softmax+tanl",
+   "lag": 10,
+   "lag_pi": 0.2
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "confirm-2",
+  "mode": "max",
+  "variant": "id=softmax+tanl, blind",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "pool": "blind"
+ },
+ {
+  "stage": "confirm-2",
+  "mode": "safe",
+  "variant": "id=softmax+tanl, blind",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "pool": "blind"
+ }
+]

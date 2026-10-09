@@ -1,0 +1,4 @@
+method,four FPR95,four AUROC,far FPR95,far AUROC,near FPR95,near AUROC,4ood_inaturalist,4ood_places,4ood_sun,4ood_textures_all,inaturalist,openimage_o,textures,ninco,ssb_hard
+reneg_balanced_blind,13.5,97.59,14.06,97.31,51.52,89.57,0.19,24.28,3.77,25.77,0.18,28.42,13.57,40.83,62.2
+reneg_balanced_full,13.49,97.58,14.1,97.31,50.96,89.88,0.19,24.25,3.8,25.72,0.18,28.4,13.71,39.84,62.09
+tanl,14.79,97.01,16.87,96.35,54.71,87.27,0.37,25.47,5.67,27.65,0.35,33.07,17.18,46.85,62.58

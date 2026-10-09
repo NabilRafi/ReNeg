@@ -1,0 +1,237 @@
+{
+ "prep": {
+  "n_images": 22500,
+  "n_kept": 14563,
+  "kept_frac": 0.6472444444444444,
+  "p_min": 0.5,
+  "zero_shot_acc_all": 0.6677333333333333,
+  "pseudo_label_acc_kept": 0.8140493030282222,
+  "half_A": 22500,
+  "half_B": 22500,
+  "n_classes_eligible": 947,
+  "image_mean_norm": 0.7199070319661843,
+  "val_images": 5000,
+  "val_ood_images": 1763,
+  "seconds": 12.1
+ },
+ "B": {
+  "group_source": "wordnet",
+  "n_groups": 81,
+  "n_classes": 947,
+  "negatives": 3000,
+  "best_config": "R2(lam=3)|raw|T",
+  "best_map": "R2(lam=3)|raw|T",
+  "r0_raw": {
+   "name_top1": 76.43083421330518,
+   "catch": 83.52692713833157,
+   "steal": 8.763878608438194,
+   "pood_auroc": 94.0378541760164,
+   "pood_fpr95": 27.42046855733662,
+   "t2c_top1": 89.12354804646252
+  },
+  "best_map_row": {
+   "name_top1": 65.70221752903907,
+   "catch": 66.50475184794087,
+   "steal": 8.112509252405625,
+   "pood_auroc": 96.6439723993731,
+   "pood_fpr95": 15.261493964165563,
+   "t2c_top1": 74.97360084477296
+  },
+  "seconds": 36.6
+ },
+ "H": {
+  "r0_raw_top1": 67.25999999999999,
+  "best": "R0|raw|T",
+  "best_top1": 67.25999999999999
+ },
+ "D": {
+  "Z_star": "R0|cent|T",
+  "Z": {
+   "tau": 50.0,
+   "omega": 0.0,
+   "val_fpr95": 34.94,
+   "near_fpr95": 77.04888888888888,
+   "far_fpr95": 24.564444444444444,
+   "four_fpr95": 30.662222222222226,
+   "near_auroc": 70.95308014008506,
+   "far_auroc": 94.52284348461144
+  },
+  "R0_raw": {
+   "tau": 100.0,
+   "omega": 0.0,
+   "val_fpr95": 35.480000000000004,
+   "near_fpr95": 68.15333333333334,
+   "far_fpr95": 23.965925925925927,
+   "four_fpr95": 25.787777777777777,
+   "near_auroc": 75.25711370118631,
+   "far_auroc": 94.63779114777198
+  },
+  "R0_cent": {
+   "tau": 50.0,
+   "omega": 0.0,
+   "val_fpr95": 34.94,
+   "near_fpr95": 77.04888888888888,
+   "far_fpr95": 24.564444444444444,
+   "four_fpr95": 30.662222222222226,
+   "near_auroc": 70.95308014008506,
+   "far_auroc": 94.52284348461144
+  },
+  "T_star": "R2(lam=10)|raw|C",
+  "T": {
+   "tau": 75.0,
+   "omega": 0.5,
+   "val_fpr95": 25.82,
+   "near_fpr95": 74.96222222222224,
+   "far_fpr95": 16.302222222222223,
+   "four_fpr95": 29.099999999999998,
+   "near_auroc": 72.35361222459046,
+   "far_auroc": 96.41489268188532
+  },
+  "T_alone": "R2(lam=10)|raw|C",
+  "T_alone_row": {
+   "tau": 50.0,
+   "omega": 1.0,
+   "val_fpr95": 31.64,
+   "near_fpr95": 76.44444444444446,
+   "far_fpr95": 22.84148148148148,
+   "four_fpr95": 36.620000000000005,
+   "near_auroc": 68.81678122054785,
+   "far_auroc": 94.50022793861143
+  },
+  "seconds": 78.6
+ },
+ "O": {
+  "concepts": {
+   "ssb_hard": 980,
+   "ninco": 64
+  },
+  "text_config": "R0|cent|T",
+  "map_config": "R2(lam=10)|raw|C",
+  "near_fpr95": {
+   "text": 76.88222222222223,
+   "text + names": 55.511111111111106,
+   "map": 76.44222222222223,
+   "map + names": 66.75555555555556,
+   "map + true centroids": 16.628888888888888
+  },
+  "gain_text_names": 21.37111111111112,
+  "gain_map_names": 9.686666666666667,
+  "gain_true_centroids": 59.81333333333334,
+  "transport_headroom": 50.12666666666667,
+  "visual_vs_text": 38.88222222222222,
+  "seconds": 7.4
+ },
+ "decision": {
+  "verdict": "NO-STATIC-GAIN",
+  "action": "Neither a map nor centring improves the static score. Keep raw text for scoring; use mapped prototypes only where B' shows they help (screening near negatives), and continue to Seam 2.",
+  "criteria": {
+   "score_gain_vs_text": true,
+   "near_gain": 2.09,
+   "far_gain": 8.26,
+   "does_not_hamper_imagenet": false,
+   "bprime_not_worse": true,
+   "centring_gain": {
+    "near": -8.9,
+    "far": -0.6,
+    "counts": false
+   }
+  },
+  "plan_b": "justified: the classes' real image centroids beat their mapped names by 50.1 near FPR95 points and their text names by 38.9, so a better map could pay",
+  "seam2_outlook": {
+   "gain_text_names": 21.37,
+   "gain_map_names": 9.69,
+   "gain_true_centroids": 59.81
+  },
+  "created": "2026-09-30 14:26:10"
+ },
+ "E": {
+  "ran": false,
+  "note": "skipped: verdict NO-STATIC-GAIN (E' runs only when a map is kept)"
+ },
+ "config": {
+  "backbone": "ViT-B/16",
+  "id_stream_set": "imagenet_test",
+  "val_set": "imagenet_val",
+  "val_ood_set": "openimage_o_val",
+  "p_min": 0.5,
+  "n_min": 3,
+  "n_cap": 20,
+  "n_folds": 5,
+  "group_max_size": null,
+  "r2_lams": [
+   0.01,
+   0.1,
+   0.3,
+   1.0,
+   3.0,
+   10.0
+  ],
+  "b1_lams": [
+   0.1,
+   1.0
+  ],
+  "b2_hs": [
+   0.1,
+   0.2
+  ],
+  "b2_lams": [
+   0.1,
+   1.0,
+   3.0
+  ],
+  "taus": [
+   10.0,
+   15.0,
+   20.0,
+   30.0,
+   50.0,
+   75.0,
+   100.0,
+   150.0
+  ],
+  "omegas": [
+   0.25,
+   0.5,
+   0.75,
+   1.0
+  ],
+  "bprime_negatives": 3000,
+  "top_maps": 3,
+  "near_sets": [
+   "ssb_hard",
+   "ninco"
+  ],
+  "far_sets": [
+   "inaturalist",
+   "textures",
+   "openimage_o"
+  ],
+  "four_sets": [
+   "inaturalist",
+   "sun",
+   "places",
+   "textures_all"
+  ],
+  "oracle_sets": [
+   "ssb_hard",
+   "ninco"
+  ],
+  "concept_min_images": 6,
+  "prompt": "The nice {}.",
+  "gain": 1.0,
+  "harm": 0.5,
+  "hamper": 1.0,
+  "bprime_margin": 0.5,
+  "planb_margin": 3.0,
+  "cold_ns": [
+   256,
+   1024,
+   4096,
+   16384
+  ],
+  "seed": 0,
+  "device": "cuda",
+  "chunk": 4096,
+  "max_images_per_set": null
+ }
+}

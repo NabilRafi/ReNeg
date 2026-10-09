@@ -1,0 +1,16 @@
+# Ablation ladder of ReNeg on NegLabel's 10,000 static negatives (no memory in the base), OpenOOD v1.5,
+# stream order 0, plain configuration (n_min 1). Shows what each component adds without TANL.
+backbone: ViT-B/16
+protocols: [openood_v15]
+seeds: [0]
+runs:
+  - {label: neglabel_form, method: reneg_neglabel, pool: none, overrides: {use_pool: false, use_image: false}}
+  - {label: image_score_no_kg, method: reneg_neglabel, pool: none, overrides: {use_pool: false}}
+  - {label: kg_text_only, method: reneg_neglabel, pool: full, overrides: {use_image: false}}
+  - {label: kg_no_visual_prototypes, method: reneg_neglabel, pool: full, overrides: {use_vis: false}}
+  - {label: neglabel_words_as_pool, method: reneg_neglabel, pool: neglabel_words}
+  - {label: reneg_full, method: reneg_neglabel, pool: full}
+  - {label: reneg_blind, method: reneg_neglabel, pool: blind}
+  - {label: reneg_ungated, method: reneg_neglabel, pool: full, overrides: {gate: false}}
+  - {label: reneg_prior_0.05, method: reneg_neglabel, pool: full, overrides: {prior: 0.05}}
+  - {label: reneg_prior_0, method: reneg_neglabel, pool: full, overrides: {prior: 0.0}}

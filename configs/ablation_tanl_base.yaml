@@ -1,0 +1,19 @@
+# Ablations of ReNeg on TANL (ViT-B/16, three stream orders). Each row changes one thing against the main
+# configuration (reneg_balanced_blind: clipped KG penalty, TANL's vote, agreed ID admission, blind pool).
+backbone: ViT-B/16
+protocols: [openood_v15, four_ood]
+seeds: [0, 1, 2]
+runs:
+  - {label: tanl, method: tanl}
+  - {label: reneg_balanced_blind, method: reneg_tanl, mode: balanced, pool: blind}
+  # ID admission: CLIP's softmax alone (before the Four-OOD fix), and TANL's confident-ID mask alone
+  - {label: admission_softmax_only, method: reneg_tanl, mode: balanced, pool: blind, overrides: {id_admit: softmax}}
+  - {label: admission_tanl_mask_only, method: reneg_tanl, mode: balanced, pool: blind, overrides: {id_admit: base}}
+  # the base's vote in the KG gate
+  - {label: no_vote, method: reneg_tanl, mode: balanced, pool: blind, overrides: {vote: false}}
+  # KG names also in TANL's text score (every term of the activation-aware average), instead of only images
+  - {label: kg_in_text_score, method: reneg_tanl, mode: balanced, pool: blind, overrides: {pool_in_text: true, pool_frac: 1.0}}
+  # no gate (every KG name trusted)
+  - {label: ungated, method: reneg_tanl, mode: balanced, pool: blind, overrides: {gate: false}}
+  # image score without the KG visual prototypes (ID image prototypes only)
+  - {label: no_kg_pool, method: reneg_tanl, mode: max, pool: none}

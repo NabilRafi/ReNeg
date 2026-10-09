@@ -1,0 +1,11 @@
+# Few-shot table: TINS (re-implemented; 5 labelled images per class, test-time inversion) and ReNeg on top of it.
+# One pass per stream runs TINS and TANL once and nine ReNeg heads (rows: tins, tanl, tanl+tins, balanced on tins,
+# max on tins, safe on tins, balanced on tins full pool, balanced on tins no labelled images, balanced/max/safe on
+# tanl+tins, balanced on tanl). Four-OOD on the 45k ID images that are not the labelled ones.
+# Colab equivalent: notebooks/4_evaluation/G4_reneg_on_tins.ipynb (P4_tins_probe.ipynb for TINS alone).
+# Needs a GPU (TINS runs 30 gradient steps per OOD-looking image): about 2-3 hours on an RTX 4060.
+backbone: ViT-B/16
+protocols: [openood_v15, four_ood]
+seeds: [0, 1, 2]
+runs:
+  - {label: multi, method: multi}

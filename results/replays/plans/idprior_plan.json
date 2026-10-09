@@ -1,0 +1,7 @@
+[{"mode": "balanced", "variant": "no prior", "prior": false, "jobs": "all"},
+ {"mode": "balanced", "variant": "ID-5 prior", "jobs": "all"},
+ {"mode": "balanced", "variant": "ID-5 prior + proto=vote + id=softmax+tanl", "opts": {"proto": "vote", "idadm": "softmax+tanl"}, "jobs": "all"},
+ {"mode": "balanced", "variant": "oracle ID model (true labels)", "prior": false, "oracle": true, "jobs": "all"},
+ {"mode": "max", "variant": "no prior", "prior": false, "jobs": "all"},
+ {"mode": "max", "variant": "ID-5 prior", "jobs": "all"},
+ {"mode": "max", "variant": "oracle ID model (true labels)", "prior": false, "oracle": true, "jobs": "all"}]

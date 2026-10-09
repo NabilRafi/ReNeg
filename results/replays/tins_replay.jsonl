@@ -1,0 +1,312 @@
+{"config": "TINS", "seed": 0, "set": "ssb_hard", "fpr95": 64.38000000000001, "protocol": "openood_v15", "fpr95_idpos": 54.002040816326534, "auroc": 84.13949575963719}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "ssb_hard", "fpr95": 63.593333333333334, "protocol": "openood_v15", "fpr95_idpos": 48.8265306122449, "auroc": 85.36070126984127}
+{"config": "TANL+TINS", "seed": 0, "set": "ssb_hard", "fpr95": 57.45333333333333, "protocol": "openood_v15", "fpr95_idpos": 47.820408163265306, "auroc": 86.71953795918367}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "ssb_hard", "fpr95": 57.108888888888885, "protocol": "openood_v15", "fpr95_idpos": 42.18571428571429, "auroc": 87.70506841269841}
+{"config": "TINS", "seed": 0, "set": "ninco", "fpr95": 68.36444444444444, "protocol": "openood_v15", "fpr95_idpos": 58.13913930940636, "auroc": 80.96178677401676}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "ninco", "fpr95": 63.897777777777776, "protocol": "openood_v15", "fpr95_idpos": 46.19833304983841, "auroc": 85.94916935986846}
+{"config": "TANL+TINS", "seed": 0, "set": "ninco", "fpr95": 61.806666666666665, "protocol": "openood_v15", "fpr95_idpos": 51.96461983330498, "auroc": 84.97909357222507}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "ninco", "fpr95": 56.16888888888889, "protocol": "openood_v15", "fpr95_idpos": 35.65232182343936, "auroc": 89.51252934172479}
+{"config": "TINS", "seed": 0, "set": "inaturalist", "fpr95": 0.2, "protocol": "openood_v15", "fpr95_idpos": 0.19, "auroc": 99.92265266666666}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.14222222222222222, "protocol": "openood_v15", "fpr95_idpos": 0.2, "auroc": 99.93387177777778}
+{"config": "TANL+TINS", "seed": 0, "set": "inaturalist", "fpr95": 0.1911111111111111, "protocol": "openood_v15", "fpr95_idpos": 0.22999999999999998, "auroc": 99.91803622222223}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.12444444444444445, "protocol": "openood_v15", "fpr95_idpos": 0.2, "auroc": 99.93110577777779}
+{"config": "TINS", "seed": 0, "set": "textures", "fpr95": 9.98, "protocol": "openood_v15", "fpr95_idpos": 7.383720930232558, "auroc": 98.2422700258398}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "textures", "fpr95": 7.222222222222221, "protocol": "openood_v15", "fpr95_idpos": 6.395348837209303, "auroc": 98.52946037898363}
+{"config": "TANL+TINS", "seed": 0, "set": "textures", "fpr95": 5.655555555555555, "protocol": "openood_v15", "fpr95_idpos": 5.678294573643411, "auroc": 98.84128983634797}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "textures", "fpr95": 5.624444444444444, "protocol": "openood_v15", "fpr95_idpos": 5.736434108527131, "auroc": 98.91758354866492}
+{"config": "TINS", "seed": 0, "set": "openimage_o", "fpr95": 36.23777777777778, "protocol": "openood_v15", "fpr95_idpos": 27.947570735396056, "auroc": 93.37418684927286}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "openimage_o", "fpr95": 33.90222222222222, "protocol": "openood_v15", "fpr95_idpos": 23.385216459764322, "auroc": 94.3666184244614}
+{"config": "TANL+TINS", "seed": 0, "set": "openimage_o", "fpr95": 32.54222222222222, "protocol": "openood_v15", "fpr95_idpos": 28.653349297372234, "auroc": 93.75709426484902}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "openimage_o", "fpr95": 30.099999999999998, "protocol": "openood_v15", "fpr95_idpos": 22.830676161068748, "auroc": 94.84048347231848}
+{"config": "TINS", "seed": 0, "set": "inaturalist", "fpr95": 0.188, "protocol": "four_ood", "fpr95_idpos": 0.19, "auroc": 99.92086820000002}
+{"config": "TINS", "seed": 0, "set": "inaturalist", "fpr95": 0.19110261766143727, "protocol": "four_ood_45k", "fpr95_idpos": 0.19, "auroc": 99.91964712679437}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.128, "protocol": "four_ood", "fpr95_idpos": 0.19, "auroc": 99.93090830000001}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.1311052842095907, "protocol": "four_ood_45k", "fpr95_idpos": 0.19, "auroc": 99.92969745789075}
+{"config": "TANL+TINS", "seed": 0, "set": "inaturalist", "fpr95": 0.194, "protocol": "four_ood", "fpr95_idpos": 0.22, "auroc": 99.91683019999998}
+{"config": "TANL+TINS", "seed": 0, "set": "inaturalist", "fpr95": 0.19776898804497578, "protocol": "four_ood_45k", "fpr95_idpos": 0.22, "auroc": 99.91544664681568}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.116, "protocol": "four_ood", "fpr95_idpos": 0.21, "auroc": 99.92960740000001}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.12221679036487268, "protocol": "four_ood_45k", "fpr95_idpos": 0.21, "auroc": 99.92825741078174}
+{"config": "TINS", "seed": 0, "set": "sun", "fpr95": 4.934, "protocol": "four_ood", "fpr95_idpos": 4.89, "auroc": 99.04312990000001}
+{"config": "TINS", "seed": 0, "set": "sun", "fpr95": 4.973112306119728, "protocol": "four_ood_45k", "fpr95_idpos": 4.9399999999999995, "auroc": 99.03438124972223}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "sun", "fpr95": 4.298, "protocol": "four_ood", "fpr95_idpos": 4.34, "auroc": 99.21266949999999}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "sun", "fpr95": 4.350917736989468, "protocol": "four_ood_45k", "fpr95_idpos": 4.36, "auroc": 99.20058608506288}
+{"config": "TANL+TINS", "seed": 0, "set": "sun", "fpr95": 3.108, "protocol": "four_ood", "fpr95_idpos": 2.79, "auroc": 99.35622420000001}
+{"config": "TANL+TINS", "seed": 0, "set": "sun", "fpr95": 3.1243055864183815, "protocol": "four_ood_45k", "fpr95_idpos": 2.82, "auroc": 99.34897360117327}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "sun", "fpr95": 3.068, "protocol": "four_ood", "fpr95_idpos": 2.79, "auroc": 99.4070835}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "sun", "fpr95": 3.1531931914137146, "protocol": "four_ood_45k", "fpr95_idpos": 2.85, "auroc": 99.39370105773077}
+{"config": "TINS", "seed": 0, "set": "places", "fpr95": 16.11, "protocol": "four_ood", "fpr95_idpos": 14.56, "auroc": 96.89035539999999}
+{"config": "TINS", "seed": 0, "set": "places", "fpr95": 16.13928269854673, "protocol": "four_ood_45k", "fpr95_idpos": 14.62, "auroc": 96.8796395715746}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "places", "fpr95": 15.748000000000001, "protocol": "four_ood", "fpr95_idpos": 13.020000000000001, "auroc": 97.1322657}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "places", "fpr95": 15.823741167059241, "protocol": "four_ood_45k", "fpr95_idpos": 13.34, "auroc": 97.10941169281367}
+{"config": "TANL+TINS", "seed": 0, "set": "places", "fpr95": 15.64, "protocol": "four_ood", "fpr95_idpos": 13.089999999999998, "auroc": 97.04690839999999}
+{"config": "TANL+TINS", "seed": 0, "set": "places", "fpr95": 15.690413759388472, "protocol": "four_ood_45k", "fpr95_idpos": 13.100000000000001, "auroc": 97.03482845206882}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "places", "fpr95": 15.902, "protocol": "four_ood", "fpr95_idpos": 12.18, "auroc": 97.20283930000001}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "places", "fpr95": 16.037065019332474, "protocol": "four_ood_45k", "fpr95_idpos": 12.27, "auroc": 97.17256777476557}
+{"config": "TINS", "seed": 0, "set": "textures_all", "fpr95": 7.5920000000000005, "protocol": "four_ood", "fpr95_idpos": 7.5, "auroc": 98.54944361702127}
+{"config": "TINS", "seed": 0, "set": "textures_all", "fpr95": 7.644104706457491, "protocol": "four_ood_45k", "fpr95_idpos": 7.535460992907801, "auroc": 98.53904976169696}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "textures_all", "fpr95": 7.376, "protocol": "four_ood", "fpr95_idpos": 6.968085106382979, "auroc": 98.67466382978724}
+{"config": "balanced on tins, 5-shot", "seed": 0, "set": "textures_all", "fpr95": 7.455224212257233, "protocol": "four_ood_45k", "fpr95_idpos": 7.039007092198582, "auroc": 98.65950579501431}
+{"config": "TANL+TINS", "seed": 0, "set": "textures_all", "fpr95": 7.095999999999999, "protocol": "four_ood", "fpr95_idpos": 6.631205673758865, "auroc": 98.76523014184396}
+{"config": "TANL+TINS", "seed": 0, "set": "textures_all", "fpr95": 7.11079507577441, "protocol": "four_ood_45k", "fpr95_idpos": 6.684397163120567, "auroc": 98.75588232327578}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "textures_all", "fpr95": 7.072000000000001, "protocol": "four_ood", "fpr95_idpos": 6.648936170212766, "auroc": 98.80608882978723}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 0, "set": "textures_all", "fpr95": 7.230789742678104, "protocol": "four_ood_45k", "fpr95_idpos": 6.719858156028369, "auroc": 98.782360854884}
+{"config": "TINS", "seed": 1, "set": "ssb_hard", "fpr95": 65.42, "protocol": "openood_v15", "fpr95_idpos": 53.96326530612245, "auroc": 83.79489122448979}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "ssb_hard", "fpr95": 64.47333333333334, "protocol": "openood_v15", "fpr95_idpos": 48.8734693877551, "auroc": 85.15220342403629}
+{"config": "TANL+TINS", "seed": 1, "set": "ssb_hard", "fpr95": 57.48888888888889, "protocol": "openood_v15", "fpr95_idpos": 47.744897959183675, "auroc": 86.65484058956916}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "ssb_hard", "fpr95": 56.99111111111112, "protocol": "openood_v15", "fpr95_idpos": 42.21224489795918, "auroc": 87.76526503401362}
+{"config": "TINS", "seed": 1, "set": "ninco", "fpr95": 69.62, "protocol": "openood_v15", "fpr95_idpos": 59.67001190678687, "auroc": 79.90320273667102}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "ninco", "fpr95": 64.7311111111111, "protocol": "openood_v15", "fpr95_idpos": 49.36213641775812, "auroc": 84.87988735801628}
+{"config": "TANL+TINS", "seed": 1, "set": "ninco", "fpr95": 62.01777777777778, "protocol": "openood_v15", "fpr95_idpos": 53.971763905426094, "auroc": 84.69480788493885}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "ninco", "fpr95": 55.46444444444445, "protocol": "openood_v15", "fpr95_idpos": 36.94505868344957, "auroc": 89.43590085237474}
+{"config": "TINS", "seed": 1, "set": "inaturalist", "fpr95": 0.1977777777777778, "protocol": "openood_v15", "fpr95_idpos": 0.16, "auroc": 99.92262833333334}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.11555555555555555, "protocol": "openood_v15", "fpr95_idpos": 0.15, "auroc": 99.93494033333333}
+{"config": "TANL+TINS", "seed": 1, "set": "inaturalist", "fpr95": 0.20888888888888887, "protocol": "openood_v15", "fpr95_idpos": 0.2, "auroc": 99.91734466666666}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.10222222222222223, "protocol": "openood_v15", "fpr95_idpos": 0.19, "auroc": 99.932646}
+{"config": "TINS", "seed": 1, "set": "textures", "fpr95": 6.466666666666667, "protocol": "openood_v15", "fpr95_idpos": 6.25968992248062, "auroc": 98.59574117140394}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "textures", "fpr95": 5.635555555555555, "protocol": "openood_v15", "fpr95_idpos": 5.465116279069767, "auroc": 98.75955211024979}
+{"config": "TANL+TINS", "seed": 1, "set": "textures", "fpr95": 5.493333333333333, "protocol": "openood_v15", "fpr95_idpos": 5.426356589147287, "auroc": 98.96731266149871}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "textures", "fpr95": 5.422222222222222, "protocol": "openood_v15", "fpr95_idpos": 5.465116279069767, "auroc": 98.99072286821703}
+{"config": "TINS", "seed": 1, "set": "openimage_o", "fpr95": 37.77777777777778, "protocol": "openood_v15", "fpr95_idpos": 28.256348856260633, "auroc": 93.16526813283761}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "openimage_o", "fpr95": 34.84444444444444, "protocol": "openood_v15", "fpr95_idpos": 24.009074295796836, "auroc": 94.18131773338655}
+{"config": "TANL+TINS", "seed": 1, "set": "openimage_o", "fpr95": 33.09777777777778, "protocol": "openood_v15", "fpr95_idpos": 28.82979393786628, "auroc": 93.55321402314786}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "openimage_o", "fpr95": 30.08222222222222, "protocol": "openood_v15", "fpr95_idpos": 23.259184573697144, "auroc": 94.65750057764613}
+{"config": "TINS", "seed": 1, "set": "inaturalist", "fpr95": 0.178, "protocol": "four_ood", "fpr95_idpos": 0.16999999999999998, "auroc": 99.92087040000001}
+{"config": "TINS", "seed": 1, "set": "inaturalist", "fpr95": 0.18665837073907826, "protocol": "four_ood_45k", "fpr95_idpos": 0.16999999999999998, "auroc": 99.91942846984577}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.12, "protocol": "four_ood", "fpr95_idpos": 0.18, "auroc": 99.93088240000002}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.12221679036487268, "protocol": "four_ood_45k", "fpr95_idpos": 0.18, "auroc": 99.92953557619661}
+{"config": "TANL+TINS", "seed": 1, "set": "inaturalist", "fpr95": 0.184, "protocol": "four_ood", "fpr95_idpos": 0.22999999999999998, "auroc": 99.9165052}
+{"config": "TANL+TINS", "seed": 1, "set": "inaturalist", "fpr95": 0.18888049420025776, "protocol": "four_ood_45k", "fpr95_idpos": 0.22999999999999998, "auroc": 99.91498711168394}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.098, "protocol": "four_ood", "fpr95_idpos": 0.22999999999999998, "auroc": 99.92934740000001}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.10443980267543665, "protocol": "four_ood_45k", "fpr95_idpos": 0.22999999999999998, "auroc": 99.92798275632194}
+{"config": "TINS", "seed": 1, "set": "sun", "fpr95": 5.0360000000000005, "protocol": "four_ood", "fpr95_idpos": 5.06, "auroc": 99.0568304}
+{"config": "TINS", "seed": 1, "set": "sun", "fpr95": 5.084218479178703, "protocol": "four_ood_45k", "fpr95_idpos": 5.13, "auroc": 99.04620461312832}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "sun", "fpr95": 4.26, "protocol": "four_ood", "fpr95_idpos": 4.38, "auroc": 99.22511329999999}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "sun", "fpr95": 4.310919514688236, "protocol": "four_ood_45k", "fpr95_idpos": 4.42, "auroc": 99.21170736856139}
+{"config": "TANL+TINS", "seed": 1, "set": "sun", "fpr95": 3.068, "protocol": "four_ood", "fpr95_idpos": 2.71, "auroc": 99.3746902}
+{"config": "TANL+TINS", "seed": 1, "set": "sun", "fpr95": 3.0709746233500734, "protocol": "four_ood_45k", "fpr95_idpos": 2.71, "auroc": 99.36614350473312}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "sun", "fpr95": 3.004, "protocol": "four_ood", "fpr95_idpos": 2.85, "auroc": 99.43033439999999}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "sun", "fpr95": 3.0843073641171506, "protocol": "four_ood_45k", "fpr95_idpos": 2.87, "auroc": 99.41699546686814}
+{"config": "TINS", "seed": 1, "set": "places", "fpr95": 15.834000000000001, "protocol": "four_ood", "fpr95_idpos": 14.05, "auroc": 96.9953036}
+{"config": "TINS", "seed": 1, "set": "places", "fpr95": 15.908181858584063, "protocol": "four_ood_45k", "fpr95_idpos": 14.180000000000001, "auroc": 96.97896715701523}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "places", "fpr95": 15.65, "protocol": "four_ood", "fpr95_idpos": 12.83, "auroc": 97.2191604}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "places", "fpr95": 15.765965957068575, "protocol": "four_ood_45k", "fpr95_idpos": 13.0, "auroc": 97.1923766721479}
+{"config": "TANL+TINS", "seed": 1, "set": "places", "fpr95": 14.452000000000002, "protocol": "four_ood", "fpr95_idpos": 12.770000000000001, "auroc": 97.14011839999999}
+{"config": "TANL+TINS", "seed": 1, "set": "places", "fpr95": 14.459357361895025, "protocol": "four_ood_45k", "fpr95_idpos": 12.839999999999998, "auroc": 97.12570552419893}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "places", "fpr95": 14.698, "protocol": "four_ood", "fpr95_idpos": 12.35, "auroc": 97.2675232}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "places", "fpr95": 14.834896226834363, "protocol": "four_ood_45k", "fpr95_idpos": 12.47, "auroc": 97.23548531176392}
+{"config": "TINS", "seed": 1, "set": "textures_all", "fpr95": 7.986, "protocol": "four_ood", "fpr95_idpos": 7.145390070921986, "auroc": 98.30340088652481}
+{"config": "TINS", "seed": 1, "set": "textures_all", "fpr95": 8.046309052930981, "protocol": "four_ood_45k", "fpr95_idpos": 7.216312056737588, "auroc": 98.28899468140266}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "textures_all", "fpr95": 7.144, "protocol": "four_ood", "fpr95_idpos": 6.666666666666667, "auroc": 98.49285443262411}
+{"config": "balanced on tins, 5-shot", "seed": 1, "set": "textures_all", "fpr95": 7.266343718056975, "protocol": "four_ood_45k", "fpr95_idpos": 6.843971631205674, "auroc": 98.47452386670916}
+{"config": "TANL+TINS", "seed": 1, "set": "textures_all", "fpr95": 6.378, "protocol": "four_ood", "fpr95_idpos": 6.595744680851063, "auroc": 98.6874}
+{"config": "TANL+TINS", "seed": 1, "set": "textures_all", "fpr95": 6.457490778187635, "protocol": "four_ood_45k", "fpr95_idpos": 6.702127659574468, "auroc": 98.67521490770625}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "textures_all", "fpr95": 6.704000000000001, "protocol": "four_ood", "fpr95_idpos": 6.418439716312056, "auroc": 98.76046028368795}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 1, "set": "textures_all", "fpr95": 6.884138482734101, "protocol": "four_ood_45k", "fpr95_idpos": 6.542553191489361, "auroc": 98.73633354672022}
+{"config": "TINS", "seed": 2, "set": "ssb_hard", "fpr95": 64.22888888888889, "protocol": "openood_v15", "fpr95_idpos": 52.487755102040815, "auroc": 84.56943503401361}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "ssb_hard", "fpr95": 63.135555555555555, "protocol": "openood_v15", "fpr95_idpos": 47.36938775510204, "auroc": 85.83729040816326}
+{"config": "TANL+TINS", "seed": 2, "set": "ssb_hard", "fpr95": 57.220000000000006, "protocol": "openood_v15", "fpr95_idpos": 46.86734693877551, "auroc": 86.96328430839002}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "ssb_hard", "fpr95": 56.71111111111111, "protocol": "openood_v15", "fpr95_idpos": 41.36938775510204, "auroc": 88.02173433106576}
+{"config": "TINS", "seed": 2, "set": "ninco", "fpr95": 67.81777777777778, "protocol": "openood_v15", "fpr95_idpos": 61.524068719169925, "auroc": 79.80993593014685}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "ninco", "fpr95": 63.33777777777778, "protocol": "openood_v15", "fpr95_idpos": 49.20904915802007, "auroc": 85.1400391222997}
+{"config": "TANL+TINS", "seed": 2, "set": "ninco", "fpr95": 60.07555555555556, "protocol": "openood_v15", "fpr95_idpos": 56.131995237285246, "auroc": 84.509474022415}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "ninco", "fpr95": 52.971111111111114, "protocol": "openood_v15", "fpr95_idpos": 37.55740772240177, "auroc": 89.72042826633403}
+{"config": "TINS", "seed": 2, "set": "inaturalist", "fpr95": 0.20888888888888887, "protocol": "openood_v15", "fpr95_idpos": 0.22999999999999998, "auroc": 99.9100358888889}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.12444444444444445, "protocol": "openood_v15", "fpr95_idpos": 0.21, "auroc": 99.92300833333334}
+{"config": "TANL+TINS", "seed": 2, "set": "inaturalist", "fpr95": 0.2, "protocol": "openood_v15", "fpr95_idpos": 0.26, "auroc": 99.90881777777778}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.1111111111111111, "protocol": "openood_v15", "fpr95_idpos": 0.25, "auroc": 99.92393044444445}
+{"config": "TINS", "seed": 2, "set": "textures", "fpr95": 8.26888888888889, "protocol": "openood_v15", "fpr95_idpos": 7.209302325581396, "auroc": 98.41117204995693}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "textures", "fpr95": 6.257777777777777, "protocol": "openood_v15", "fpr95_idpos": 5.891472868217054, "auroc": 98.6481632213609}
+{"config": "TANL+TINS", "seed": 2, "set": "textures", "fpr95": 5.5088888888888885, "protocol": "openood_v15", "fpr95_idpos": 5.678294573643411, "auroc": 98.93819250645996}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "textures", "fpr95": 5.406666666666666, "protocol": "openood_v15", "fpr95_idpos": 5.348837209302325, "auroc": 98.99076830318691}
+{"config": "TINS", "seed": 2, "set": "openimage_o", "fpr95": 37.43111111111111, "protocol": "openood_v15", "fpr95_idpos": 28.48320625118155, "auroc": 93.20438233873169}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "openimage_o", "fpr95": 34.504444444444445, "protocol": "openood_v15", "fpr95_idpos": 23.832629655302792, "auroc": 94.2336010110558}
+{"config": "TANL+TINS", "seed": 2, "set": "openimage_o", "fpr95": 32.526666666666664, "protocol": "openood_v15", "fpr95_idpos": 29.138572058730862, "auroc": 93.65209415982243}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "openimage_o", "fpr95": 30.188888888888886, "protocol": "openood_v15", "fpr95_idpos": 23.16466065914676, "auroc": 94.76193598980542}
+{"config": "TINS", "seed": 2, "set": "inaturalist", "fpr95": 0.198, "protocol": "four_ood", "fpr95_idpos": 0.22999999999999998, "auroc": 99.91667580000001}
+{"config": "TINS", "seed": 2, "set": "inaturalist", "fpr95": 0.2044353584285143, "protocol": "four_ood_45k", "fpr95_idpos": 0.22999999999999998, "auroc": 99.91564841562598}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.12, "protocol": "four_ood", "fpr95_idpos": 0.2, "auroc": 99.9269846}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.11999466690369316, "protocol": "four_ood_45k", "fpr95_idpos": 0.2, "auroc": 99.92581840807075}
+{"config": "TANL+TINS", "seed": 2, "set": "inaturalist", "fpr95": 0.196, "protocol": "four_ood", "fpr95_idpos": 0.21, "auroc": 99.91440659999998}
+{"config": "TANL+TINS", "seed": 2, "set": "inaturalist", "fpr95": 0.2022132349673348, "protocol": "four_ood_45k", "fpr95_idpos": 0.21, "auroc": 99.91316785920625}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.11, "protocol": "four_ood", "fpr95_idpos": 0.21, "auroc": 99.9262904}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.11332829652015465, "protocol": "four_ood_45k", "fpr95_idpos": 0.21, "auroc": 99.92493578063197}
+{"config": "TINS", "seed": 2, "set": "sun", "fpr95": 5.148, "protocol": "four_ood", "fpr95_idpos": 5.11, "auroc": 99.01746899999999}
+{"config": "TINS", "seed": 2, "set": "sun", "fpr95": 5.148660059552909, "protocol": "four_ood_45k", "fpr95_idpos": 5.11, "auroc": 99.00868072530112}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "sun", "fpr95": 4.322, "protocol": "four_ood", "fpr95_idpos": 4.279999999999999, "auroc": 99.2039288}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "sun", "fpr95": 4.373138971601262, "protocol": "four_ood_45k", "fpr95_idpos": 4.32, "auroc": 99.1928265410426}
+{"config": "TANL+TINS", "seed": 2, "set": "sun", "fpr95": 3.2239999999999998, "protocol": "four_ood", "fpr95_idpos": 2.83, "auroc": 99.3556554}
+{"config": "TANL+TINS", "seed": 2, "set": "sun", "fpr95": 3.2487445002444333, "protocol": "four_ood_45k", "fpr95_idpos": 2.8400000000000003, "auroc": 99.34964801564374}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "sun", "fpr95": 2.928, "protocol": "four_ood", "fpr95_idpos": 2.76, "auroc": 99.43143659999998}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "sun", "fpr95": 3.004310919514688, "protocol": "four_ood_45k", "fpr95_idpos": 2.82, "auroc": 99.41914159370695}
+{"config": "TINS", "seed": 2, "set": "places", "fpr95": 16.18, "protocol": "four_ood", "fpr95_idpos": 14.12, "auroc": 96.8945501}
+{"config": "TINS", "seed": 2, "set": "places", "fpr95": 16.210390649304475, "protocol": "four_ood_45k", "fpr95_idpos": 14.21, "auroc": 96.88032698546732}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "places", "fpr95": 15.97, "protocol": "four_ood", "fpr95_idpos": 12.93, "auroc": 97.1241997}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "places", "fpr95": 16.074841118172525, "protocol": "four_ood_45k", "fpr95_idpos": 13.07, "auroc": 97.09796575707745}
+{"config": "TANL+TINS", "seed": 2, "set": "places", "fpr95": 15.24, "protocol": "four_ood", "fpr95_idpos": 12.770000000000001, "auroc": 97.04888100000001}
+{"config": "TANL+TINS", "seed": 2, "set": "places", "fpr95": 15.265988178303186, "protocol": "four_ood_45k", "fpr95_idpos": 12.790000000000001, "auroc": 97.03777654326475}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "places", "fpr95": 15.232000000000001, "protocol": "four_ood", "fpr95_idpos": 12.29, "auroc": 97.19876950000001}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "places", "fpr95": 15.38820496866806, "protocol": "four_ood_45k", "fpr95_idpos": 12.42, "auroc": 97.16732023021198}
+{"config": "TINS", "seed": 2, "set": "textures_all", "fpr95": 9.642000000000001, "protocol": "four_ood", "fpr95_idpos": 8.47517730496454, "auroc": 98.23056347517732}
+{"config": "TINS", "seed": 2, "set": "textures_all", "fpr95": 9.639571574596685, "protocol": "four_ood_45k", "fpr95_idpos": 8.47517730496454, "auroc": 98.22240012343029}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "textures_all", "fpr95": 8.037999999999998, "protocol": "four_ood", "fpr95_idpos": 7.287234042553191, "auroc": 98.44430319148935}
+{"config": "balanced on tins, 5-shot", "seed": 2, "set": "textures_all", "fpr95": 8.13963823830052, "protocol": "four_ood_45k", "fpr95_idpos": 7.411347517730496, "auroc": 98.43022067419541}
+{"config": "TANL+TINS", "seed": 2, "set": "textures_all", "fpr95": 7.342, "protocol": "four_ood", "fpr95_idpos": 7.180851063829788, "auroc": 98.66172765957447}
+{"config": "TANL+TINS", "seed": 2, "set": "textures_all", "fpr95": 7.3752277676547715, "protocol": "four_ood_45k", "fpr95_idpos": 7.251773049645389, "auroc": 98.65370286143312}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "textures_all", "fpr95": 7.470000000000001, "protocol": "four_ood", "fpr95_idpos": 6.8971631205673765, "auroc": 98.74655886524822}
+{"config": "balanced on tanl+tins, 5-shot", "seed": 2, "set": "textures_all", "fpr95": 7.628549842229234, "protocol": "four_ood_45k", "fpr95_idpos": 7.00354609929078, "auroc": 98.72414653911362}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "ssb_hard", "fpr95": 59.4, "protocol": "openood_v15", "fpr95_idpos": 48.528571428571425, "auroc": 86.24173090702948}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "ssb_hard", "fpr95": 64.10444444444444, "protocol": "openood_v15", "fpr95_idpos": 50.634693877551015, "auroc": 84.84357294784579}
+{"config": "balanced on tins", "seed": 0, "set": "ssb_hard", "fpr95": 63.62888888888889, "protocol": "openood_v15", "fpr95_idpos": 52.1, "auroc": 84.84851691609978}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "ssb_hard", "fpr95": 63.675555555555555, "protocol": "openood_v15", "fpr95_idpos": 49.50816326530612, "auroc": 85.21624884353741}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "ninco", "fpr95": 54.25555555555556, "protocol": "openood_v15", "fpr95_idpos": 46.453478482735164, "auroc": 87.66351344710931}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "ninco", "fpr95": 67.31333333333333, "protocol": "openood_v15", "fpr95_idpos": 50.55281510460963, "auroc": 83.78948630719509}
+{"config": "balanced on tins", "seed": 0, "set": "ninco", "fpr95": 64.3, "protocol": "openood_v15", "fpr95_idpos": 55.485626807280156, "auroc": 84.57595225945455}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "ninco", "fpr95": 63.888888888888886, "protocol": "openood_v15", "fpr95_idpos": 48.08640925327437, "auroc": 85.37814651017747}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.13777777777777778, "protocol": "openood_v15", "fpr95_idpos": 0.22, "auroc": 99.92896066666668}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.15777777777777777, "protocol": "openood_v15", "fpr95_idpos": 0.19, "auroc": 99.93009088888888}
+{"config": "balanced on tins", "seed": 0, "set": "inaturalist", "fpr95": 0.11555555555555555, "protocol": "openood_v15", "fpr95_idpos": 0.2, "auroc": 99.93504466666666}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.14666666666666667, "protocol": "openood_v15", "fpr95_idpos": 0.21, "auroc": 99.93346888888888}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "textures", "fpr95": 7.12, "protocol": "openood_v15", "fpr95_idpos": 6.434108527131784, "auroc": 98.62978596037898}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "textures", "fpr95": 8.366666666666667, "protocol": "openood_v15", "fpr95_idpos": 6.841085271317829, "auroc": 98.3947581826012}
+{"config": "balanced on tins", "seed": 0, "set": "textures", "fpr95": 5.948888888888889, "protocol": "openood_v15", "fpr95_idpos": 5.63953488372093, "auroc": 98.68800452196382}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "textures", "fpr95": 8.013333333333334, "protocol": "openood_v15", "fpr95_idpos": 6.744186046511628, "auroc": 98.44347028423773}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "openimage_o", "fpr95": 24.906666666666666, "protocol": "openood_v15", "fpr95_idpos": 20.55580061755624, "auroc": 95.54856092591426}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "openimage_o", "fpr95": 35.90222222222222, "protocol": "openood_v15", "fpr95_idpos": 26.825886949398196, "auroc": 93.61259919759699}
+{"config": "balanced on tins", "seed": 0, "set": "openimage_o", "fpr95": 33.89111111111111, "protocol": "openood_v15", "fpr95_idpos": 23.53015312874157, "auroc": 94.32870845323868}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "openimage_o", "fpr95": 33.913333333333334, "protocol": "openood_v15", "fpr95_idpos": 23.16466065914676, "auroc": 94.39772890541308}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.136, "protocol": "four_ood", "fpr95_idpos": 0.22999999999999998, "auroc": 99.9248352}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.13999377805430868, "protocol": "four_ood_45k", "fpr95_idpos": 0.22999999999999998, "auroc": 99.92272965645972}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.148, "protocol": "four_ood", "fpr95_idpos": 0.19, "auroc": 99.9279822}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.15110439536020623, "protocol": "four_ood_45k", "fpr95_idpos": 0.19, "auroc": 99.92693058086307}
+{"config": "balanced on tins", "seed": 0, "set": "inaturalist", "fpr95": 0.126, "protocol": "four_ood", "fpr95_idpos": 0.19, "auroc": 99.9311834}
+{"config": "balanced on tins", "seed": 0, "set": "inaturalist", "fpr95": 0.1288831607484112, "protocol": "four_ood_45k", "fpr95_idpos": 0.19, "auroc": 99.93034131816363}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.132, "protocol": "four_ood", "fpr95_idpos": 0.19, "auroc": 99.9304476}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "inaturalist", "fpr95": 0.13554953113194967, "protocol": "four_ood_45k", "fpr95_idpos": 0.19, "auroc": 99.92916137060575}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "sun", "fpr95": 5.112, "protocol": "four_ood", "fpr95_idpos": 5.09, "auroc": 98.99681729999999}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "sun", "fpr95": 5.237544998000089, "protocol": "four_ood_45k", "fpr95_idpos": 5.17, "auroc": 98.97123450068887}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "sun", "fpr95": 4.537999999999999, "protocol": "four_ood", "fpr95_idpos": 4.4799999999999995, "auroc": 99.1752115}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "sun", "fpr95": 4.564241589262699, "protocol": "four_ood_45k", "fpr95_idpos": 4.51, "auroc": 99.16545809075153}
+{"config": "balanced on tins", "seed": 0, "set": "sun", "fpr95": 4.077999999999999, "protocol": "four_ood", "fpr95_idpos": 4.06, "auroc": 99.2406511}
+{"config": "balanced on tins", "seed": 0, "set": "sun", "fpr95": 4.104262032798543, "protocol": "four_ood_45k", "fpr95_idpos": 4.09, "auroc": 99.23445324652238}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "sun", "fpr95": 4.398, "protocol": "four_ood", "fpr95_idpos": 4.41, "auroc": 99.19795230000001}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "sun", "fpr95": 4.462023910048442, "protocol": "four_ood_45k", "fpr95_idpos": 4.43, "auroc": 99.1842023687836}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "places", "fpr95": 16.566, "protocol": "four_ood", "fpr95_idpos": 13.350000000000001, "auroc": 96.97099860000002}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "places", "fpr95": 16.965912626105506, "protocol": "four_ood_45k", "fpr95_idpos": 13.59, "auroc": 96.90818674725567}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "places", "fpr95": 15.998000000000001, "protocol": "four_ood", "fpr95_idpos": 13.69, "auroc": 97.0301316}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "places", "fpr95": 16.030398648948935, "protocol": "four_ood_45k", "fpr95_idpos": 13.780000000000001, "auroc": 97.0151344384694}
+{"config": "balanced on tins", "seed": 0, "set": "places", "fpr95": 15.802, "protocol": "four_ood", "fpr95_idpos": 13.22, "auroc": 97.03787299999999}
+{"config": "balanced on tins", "seed": 0, "set": "places", "fpr95": 15.810408426292163, "protocol": "four_ood_45k", "fpr95_idpos": 13.28, "auroc": 97.02971890138214}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "places", "fpr95": 15.774, "protocol": "four_ood", "fpr95_idpos": 13.200000000000001, "auroc": 97.11576239999998}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "places", "fpr95": 15.857073018976934, "protocol": "four_ood_45k", "fpr95_idpos": 13.48, "auroc": 97.09297542331453}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "textures_all", "fpr95": 7.55, "protocol": "four_ood", "fpr95_idpos": 6.8971631205673765, "auroc": 98.72632553191487}
+{"config": "max on tins, 5-shot", "seed": 0, "set": "textures_all", "fpr95": 7.786320607972979, "protocol": "four_ood_45k", "fpr95_idpos": 7.056737588652482, "auroc": 98.69261405560856}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "textures_all", "fpr95": 7.242, "protocol": "four_ood", "fpr95_idpos": 7.109929078014185, "auroc": 98.6267929078014}
+{"config": "safe on tins, 5-shot", "seed": 0, "set": "textures_all", "fpr95": 7.299675569974667, "protocol": "four_ood_45k", "fpr95_idpos": 7.234042553191489, "auroc": 98.61471739947885}
+{"config": "balanced on tins", "seed": 0, "set": "textures_all", "fpr95": 6.864000000000001, "protocol": "four_ood", "fpr95_idpos": 6.843971631205674, "auroc": 98.75269787234042}
+{"config": "balanced on tins", "seed": 0, "set": "textures_all", "fpr95": 6.899693346962358, "protocol": "four_ood_45k", "fpr95_idpos": 6.861702127659575, "auroc": 98.74619362858893}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "textures_all", "fpr95": 7.521999999999999, "protocol": "four_ood", "fpr95_idpos": 7.092198581560284, "auroc": 98.64322872340425}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 0, "set": "textures_all", "fpr95": 7.619661348384517, "protocol": "four_ood_45k", "fpr95_idpos": 7.180851063829788, "auroc": 98.62766225362402}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "ssb_hard", "fpr95": 60.297777777777775, "protocol": "openood_v15", "fpr95_idpos": 48.997959183673466, "auroc": 86.0761821995465}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "ssb_hard", "fpr95": 64.96444444444445, "protocol": "openood_v15", "fpr95_idpos": 50.49591836734694, "auroc": 84.61339333333333}
+{"config": "balanced on tins", "seed": 1, "set": "ssb_hard", "fpr95": 64.75333333333333, "protocol": "openood_v15", "fpr95_idpos": 52.28571428571429, "auroc": 84.58484424036281}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "ssb_hard", "fpr95": 64.54222222222222, "protocol": "openood_v15", "fpr95_idpos": 49.6, "auroc": 85.00163621315193}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "ninco", "fpr95": 55.266666666666666, "protocol": "openood_v15", "fpr95_idpos": 49.65130124170777, "auroc": 86.77859197520364}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "ninco", "fpr95": 68.68444444444445, "protocol": "openood_v15", "fpr95_idpos": 52.88314339173329, "auroc": 82.6840339437924}
+{"config": "balanced on tins", "seed": 1, "set": "ninco", "fpr95": 65.68666666666667, "protocol": "openood_v15", "fpr95_idpos": 57.101547882292905, "auroc": 83.46883048893426}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "ninco", "fpr95": 64.88222222222223, "protocol": "openood_v15", "fpr95_idpos": 50.80796053750638, "auroc": 84.43207480486099}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.11555555555555555, "protocol": "openood_v15", "fpr95_idpos": 0.18, "auroc": 99.92903644444444}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.14444444444444443, "protocol": "openood_v15", "fpr95_idpos": 0.16, "auroc": 99.931253}
+{"config": "balanced on tins", "seed": 1, "set": "inaturalist", "fpr95": 0.10666666666666667, "protocol": "openood_v15", "fpr95_idpos": 0.15, "auroc": 99.934819}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.12, "protocol": "openood_v15", "fpr95_idpos": 0.15, "auroc": 99.93413722222222}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "textures", "fpr95": 5.673333333333333, "protocol": "openood_v15", "fpr95_idpos": 5.503875968992248, "auroc": 98.82969207579673}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "textures", "fpr95": 5.88, "protocol": "openood_v15", "fpr95_idpos": 5.678294573643411, "auroc": 98.69714944013782}
+{"config": "balanced on tins", "seed": 1, "set": "textures", "fpr95": 5.631111111111111, "protocol": "openood_v15", "fpr95_idpos": 5.445736434108527, "auroc": 98.8391108957795}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "textures", "fpr95": 5.702222222222223, "protocol": "openood_v15", "fpr95_idpos": 5.63953488372093, "auroc": 98.74468432385875}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "openimage_o", "fpr95": 25.853333333333335, "protocol": "openood_v15", "fpr95_idpos": 21.16705526498204, "auroc": 95.43874087144049}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "openimage_o", "fpr95": 37.34444444444445, "protocol": "openood_v15", "fpr95_idpos": 27.41823681391392, "auroc": 93.39954229420043}
+{"config": "balanced on tins", "seed": 1, "set": "openimage_o", "fpr95": 34.85777777777778, "protocol": "openood_v15", "fpr95_idpos": 24.015375890100195, "auroc": 94.15913430097814}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "openimage_o", "fpr95": 34.733333333333334, "protocol": "openood_v15", "fpr95_idpos": 23.794820089482638, "auroc": 94.21686831768437}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.126, "protocol": "four_ood", "fpr95_idpos": 0.24, "auroc": 99.9279252}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.1311052842095907, "protocol": "four_ood_45k", "fpr95_idpos": 0.24, "auroc": 99.9256273054531}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.14200000000000002, "protocol": "four_ood", "fpr95_idpos": 0.16999999999999998, "auroc": 99.9279134}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.14666014843784722, "protocol": "four_ood_45k", "fpr95_idpos": 0.16999999999999998, "auroc": 99.92678592062575}
+{"config": "balanced on tins", "seed": 1, "set": "inaturalist", "fpr95": 0.104, "protocol": "four_ood", "fpr95_idpos": 0.18, "auroc": 99.93178950000001}
+{"config": "balanced on tins", "seed": 1, "set": "inaturalist", "fpr95": 0.10443980267543665, "protocol": "four_ood_45k", "fpr95_idpos": 0.18, "auroc": 99.93059030709746}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.126, "protocol": "four_ood", "fpr95_idpos": 0.16999999999999998, "auroc": 99.9308724}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "inaturalist", "fpr95": 0.1311052842095907, "protocol": "four_ood_45k", "fpr95_idpos": 0.16999999999999998, "auroc": 99.9294358028532}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "sun", "fpr95": 5.232, "protocol": "four_ood", "fpr95_idpos": 5.18, "auroc": 98.9945188}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "sun", "fpr95": 5.377538776054398, "protocol": "four_ood_45k", "fpr95_idpos": 5.26, "auroc": 98.96707346340162}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "sun", "fpr95": 4.564, "protocol": "four_ood", "fpr95_idpos": 4.54, "auroc": 99.1821897}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "sun", "fpr95": 4.613128305408649, "protocol": "four_ood_45k", "fpr95_idpos": 4.590000000000001, "auroc": 99.17112983867385}
+{"config": "balanced on tins", "seed": 1, "set": "sun", "fpr95": 3.7699999999999996, "protocol": "four_ood", "fpr95_idpos": 3.6700000000000004, "auroc": 99.28878710000001}
+{"config": "balanced on tins", "seed": 1, "set": "sun", "fpr95": 3.779832007466335, "protocol": "four_ood_45k", "fpr95_idpos": 3.6799999999999997, "auroc": 99.28094229145373}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "sun", "fpr95": 4.3020000000000005, "protocol": "four_ood", "fpr95_idpos": 4.38, "auroc": 99.2134206}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "sun", "fpr95": 4.3664726012177235, "protocol": "four_ood_45k", "fpr95_idpos": 4.5, "auroc": 99.19862339451579}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "places", "fpr95": 16.858, "protocol": "four_ood", "fpr95_idpos": 13.03, "auroc": 97.049244}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "places", "fpr95": 17.288120527976535, "protocol": "four_ood_45k", "fpr95_idpos": 13.22, "auroc": 96.98234389582684}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "places", "fpr95": 15.454, "protocol": "four_ood", "fpr95_idpos": 13.530000000000001, "auroc": 97.1354841}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "places", "fpr95": 15.508199635571751, "protocol": "four_ood_45k", "fpr95_idpos": 13.65, "auroc": 97.11579340918182}
+{"config": "balanced on tins", "seed": 1, "set": "places", "fpr95": 15.726, "protocol": "four_ood", "fpr95_idpos": 13.200000000000001, "auroc": 97.16638089999998}
+{"config": "balanced on tins", "seed": 1, "set": "places", "fpr95": 15.803742055908627, "protocol": "four_ood_45k", "fpr95_idpos": 13.25, "auroc": 97.15189769343586}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "places", "fpr95": 15.751999999999999, "protocol": "four_ood", "fpr95_idpos": 12.959999999999999, "auroc": 97.20239640000001}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "places", "fpr95": 15.859295142438116, "protocol": "four_ood_45k", "fpr95_idpos": 13.18, "auroc": 97.17531143060307}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "textures_all", "fpr95": 7.146, "protocol": "four_ood", "fpr95_idpos": 6.684397163120567, "auroc": 98.55105780141844}
+{"config": "max on tins, 5-shot", "seed": 1, "set": "textures_all", "fpr95": 7.386338384960668, "protocol": "four_ood_45k", "fpr95_idpos": 6.73758865248227, "auroc": 98.5134029504126}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "textures_all", "fpr95": 7.6499999999999995, "protocol": "four_ood", "fpr95_idpos": 6.73758865248227, "auroc": 98.41967039007093}
+{"config": "safe on tins, 5-shot", "seed": 1, "set": "textures_all", "fpr95": 7.712990533754055, "protocol": "four_ood_45k", "fpr95_idpos": 6.790780141843972, "auroc": 98.40420902491016}
+{"config": "balanced on tins", "seed": 1, "set": "textures_all", "fpr95": 6.6659999999999995, "protocol": "four_ood", "fpr95_idpos": 6.542553191489361, "auroc": 98.60611702127659}
+{"config": "balanced on tins", "seed": 1, "set": "textures_all", "fpr95": 6.733034087373895, "protocol": "four_ood_45k", "fpr95_idpos": 6.595744680851063, "auroc": 98.59598438650954}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "textures_all", "fpr95": 7.396, "protocol": "four_ood", "fpr95_idpos": 6.950354609929079, "auroc": 98.43419539007094}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 1, "set": "textures_all", "fpr95": 7.506333051864361, "protocol": "four_ood_45k", "fpr95_idpos": 7.163120567375887, "auroc": 98.41579026747748}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "ssb_hard", "fpr95": 58.61555555555555, "protocol": "openood_v15", "fpr95_idpos": 47.16326530612245, "auroc": 86.66426598639455}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "ssb_hard", "fpr95": 63.87111111111111, "protocol": "openood_v15", "fpr95_idpos": 48.7734693877551, "auroc": 85.31743866213151}
+{"config": "balanced on tins", "seed": 2, "set": "ssb_hard", "fpr95": 63.42666666666666, "protocol": "openood_v15", "fpr95_idpos": 50.679591836734694, "auroc": 85.34677587301587}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "ssb_hard", "fpr95": 63.446666666666665, "protocol": "openood_v15", "fpr95_idpos": 47.8, "auroc": 85.7156185260771}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "ninco", "fpr95": 54.12444444444444, "protocol": "openood_v15", "fpr95_idpos": 48.91988433407042, "auroc": 86.96657273534802}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "ninco", "fpr95": 67.02444444444444, "protocol": "openood_v15", "fpr95_idpos": 52.832114305153944, "auroc": 82.94340193910527}
+{"config": "balanced on tins", "seed": 2, "set": "ninco", "fpr95": 64.71111111111111, "protocol": "openood_v15", "fpr95_idpos": 58.275216873617964, "auroc": 83.60819999622007}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "ninco", "fpr95": 63.56666666666667, "protocol": "openood_v15", "fpr95_idpos": 51.69246470488178, "auroc": 84.52722666364272}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.12222222222222222, "protocol": "openood_v15", "fpr95_idpos": 0.21, "auroc": 99.92247066666667}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.1511111111111111, "protocol": "openood_v15", "fpr95_idpos": 0.22999999999999998, "auroc": 99.91857077777779}
+{"config": "balanced on tins", "seed": 2, "set": "inaturalist", "fpr95": 0.11555555555555555, "protocol": "openood_v15", "fpr95_idpos": 0.22, "auroc": 99.924881}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.14444444444444443, "protocol": "openood_v15", "fpr95_idpos": 0.21, "auroc": 99.92239366666668}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "textures", "fpr95": 6.1866666666666665, "protocol": "openood_v15", "fpr95_idpos": 5.949612403100775, "auroc": 98.74545391903531}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "textures", "fpr95": 7.542222222222223, "protocol": "openood_v15", "fpr95_idpos": 6.550387596899225, "auroc": 98.54022523686477}
+{"config": "balanced on tins", "seed": 2, "set": "textures", "fpr95": 5.493333333333333, "protocol": "openood_v15", "fpr95_idpos": 5.503875968992248, "auroc": 98.7492459086994}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "textures", "fpr95": 6.562222222222222, "protocol": "openood_v15", "fpr95_idpos": 6.279069767441861, "auroc": 98.58796877691644}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "openimage_o", "fpr95": 25.69111111111111, "protocol": "openood_v15", "fpr95_idpos": 21.141848887768607, "auroc": 95.46887558552314}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "openimage_o", "fpr95": 37.12888888888889, "protocol": "openood_v15", "fpr95_idpos": 27.248093767723237, "auroc": 93.44501809957919}
+{"config": "balanced on tins", "seed": 2, "set": "openimage_o", "fpr95": 34.58888888888889, "protocol": "openood_v15", "fpr95_idpos": 23.820026466696074, "auroc": 94.21424104298387}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "openimage_o", "fpr95": 34.36666666666667, "protocol": "openood_v15", "fpr95_idpos": 23.57426428886508, "auroc": 94.26996058002675}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.122, "protocol": "four_ood", "fpr95_idpos": 0.22999999999999998, "auroc": 99.92334399999999}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.11999466690369316, "protocol": "four_ood_45k", "fpr95_idpos": 0.24, "auroc": 99.92125794409137}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.146, "protocol": "four_ood", "fpr95_idpos": 0.22999999999999998, "auroc": 99.9233334}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.14666014843784722, "protocol": "four_ood_45k", "fpr95_idpos": 0.22999999999999998, "auroc": 99.92242944758011}
+{"config": "balanced on tins", "seed": 2, "set": "inaturalist", "fpr95": 0.11, "protocol": "four_ood", "fpr95_idpos": 0.2, "auroc": 99.9285266}
+{"config": "balanced on tins", "seed": 2, "set": "inaturalist", "fpr95": 0.10888404959779566, "protocol": "four_ood_45k", "fpr95_idpos": 0.2, "auroc": 99.92762632771878}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.126, "protocol": "four_ood", "fpr95_idpos": 0.19, "auroc": 99.926394}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "inaturalist", "fpr95": 0.1266610372872317, "protocol": "four_ood_45k", "fpr95_idpos": 0.19, "auroc": 99.92508066308164}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "sun", "fpr95": 5.042, "protocol": "four_ood", "fpr95_idpos": 5.029999999999999, "auroc": 99.01911999999999}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "sun", "fpr95": 5.188658281854139, "protocol": "four_ood_45k", "fpr95_idpos": 5.08, "auroc": 98.99293609172926}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "sun", "fpr95": 4.590000000000001, "protocol": "four_ood", "fpr95_idpos": 4.569999999999999, "auroc": 99.1524244}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "sun", "fpr95": 4.615350428869828, "protocol": "four_ood_45k", "fpr95_idpos": 4.58, "auroc": 99.14355628638727}
+{"config": "balanced on tins", "seed": 2, "set": "sun", "fpr95": 3.4320000000000004, "protocol": "four_ood", "fpr95_idpos": 3.5999999999999996, "auroc": 99.31642240000001}
+{"config": "balanced on tins", "seed": 2, "set": "sun", "fpr95": 3.4576241055953068, "protocol": "four_ood_45k", "fpr95_idpos": 3.61, "auroc": 99.30947713434959}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "sun", "fpr95": 4.378, "protocol": "four_ood", "fpr95_idpos": 4.29, "auroc": 99.1885369}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "sun", "fpr95": 4.4309141815919295, "protocol": "four_ood_45k", "fpr95_idpos": 4.36, "auroc": 99.17553964268255}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "places", "fpr95": 17.326, "protocol": "four_ood", "fpr95_idpos": 12.790000000000001, "auroc": 96.92283319999999}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "places", "fpr95": 17.721434602906537, "protocol": "four_ood_45k", "fpr95_idpos": 13.100000000000001, "auroc": 96.85497066797032}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "places", "fpr95": 16.088, "protocol": "four_ood", "fpr95_idpos": 13.5, "auroc": 97.0283673}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "places", "fpr95": 16.13928269854673, "protocol": "four_ood_45k", "fpr95_idpos": 13.59, "auroc": 97.00968501399939}
+{"config": "balanced on tins", "seed": 2, "set": "places", "fpr95": 15.806000000000001, "protocol": "four_ood", "fpr95_idpos": 13.059999999999999, "auroc": 97.046776}
+{"config": "balanced on tins", "seed": 2, "set": "places", "fpr95": 15.850406648593395, "protocol": "four_ood_45k", "fpr95_idpos": 13.059999999999999, "auroc": 97.03335829518687}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "places", "fpr95": 15.916, "protocol": "four_ood", "fpr95_idpos": 13.059999999999999, "auroc": 97.10860059999999}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "places", "fpr95": 16.01039953779832, "protocol": "four_ood_45k", "fpr95_idpos": 13.22, "auroc": 97.08296631260833}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "textures_all", "fpr95": 8.136000000000001, "protocol": "four_ood", "fpr95_idpos": 7.411347517730496, "auroc": 98.51301914893617}
+{"config": "max on tins, 5-shot", "seed": 2, "set": "textures_all", "fpr95": 8.36851695480201, "protocol": "four_ood_45k", "fpr95_idpos": 7.570921985815603, "auroc": 98.47808891708831}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "textures_all", "fpr95": 8.688, "protocol": "four_ood", "fpr95_idpos": 7.695035460992908, "auroc": 98.35281755319149}
+{"config": "safe on tins, 5-shot", "seed": 2, "set": "textures_all", "fpr95": 8.715168214746011, "protocol": "four_ood_45k", "fpr95_idpos": 7.74822695035461, "auroc": 98.34264990113914}
+{"config": "balanced on tins", "seed": 2, "set": "textures_all", "fpr95": 7.878, "protocol": "four_ood", "fpr95_idpos": 7.056737588652482, "auroc": 98.58233758865249}
+{"config": "balanced on tins", "seed": 2, "set": "textures_all", "fpr95": 7.888538287187235, "protocol": "four_ood_45k", "fpr95_idpos": 7.092198581560284, "auroc": 98.57687215477578}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "textures_all", "fpr95": 8.176, "protocol": "four_ood", "fpr95_idpos": 7.446808510638298, "auroc": 98.41854237588652}
+{"config": "balanced on tins@0.7, 5-shot", "seed": 2, "set": "textures_all", "fpr95": 8.281854139816009, "protocol": "four_ood_45k", "fpr95_idpos": 7.535460992907801, "auroc": 98.40425945608091}

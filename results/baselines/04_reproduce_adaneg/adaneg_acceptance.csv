@@ -1,0 +1,5 @@
+method,config,protocol,key,ours_fpr95,target,tolerance,delta,status
+adaneg,fp16,four_ood,mean:four,17.35,18.92,1.0,-1.57,CHECK
+adaneg,fp32,four_ood,mean:four,17.56,18.92,1.0,-1.36,CHECK
+adaneg,fp16,openood_v15,mean:near,67.29,67.51,1.5,-0.22,PASS
+adaneg,fp32,openood_v15,mean:near,66.55,67.51,1.5,-0.96,PASS

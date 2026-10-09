@@ -1,0 +1,5 @@
+reneg 0.2.10 <repo>/src/reneg/__init__.py
+balanced prior=False: max |diff| 4.95e-03, mean 1.99e-04, rank corr 1.000000
+balanced prior=True : max |diff| 4.95e-03, mean 1.96e-04, rank corr 1.000000
+max      prior=False: max |diff| 4.95e-03, mean 2.01e-04, rank corr 1.000000
+max      prior=True : max |diff| 4.95e-03, mean 2.00e-04, rank corr 1.000000

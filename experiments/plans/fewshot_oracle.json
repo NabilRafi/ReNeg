@@ -1,0 +1,228 @@
+[
+ {
+  "stage": "prior-1",
+  "mode": "balanced",
+  "variant": "no prior",
+  "prior": false,
+  "jobs": "all"
+ },
+ {
+  "stage": "prior-1",
+  "mode": "balanced",
+  "variant": "ID-5 prior",
+  "jobs": "all"
+ },
+ {
+  "stage": "prior-1",
+  "mode": "balanced",
+  "variant": "ID-5 prior + proto=vote + id=softmax+tanl",
+  "opts": {
+   "proto": "vote",
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all"
+ },
+ {
+  "stage": "prior-1",
+  "mode": "balanced",
+  "variant": "oracle ID model (true labels)",
+  "prior": false,
+  "oracle": true,
+  "jobs": "all"
+ },
+ {
+  "stage": "prior-1",
+  "mode": "max",
+  "variant": "no prior",
+  "prior": false,
+  "jobs": "all"
+ },
+ {
+  "stage": "prior-1",
+  "mode": "max",
+  "variant": "ID-5 prior",
+  "jobs": "all"
+ },
+ {
+  "stage": "prior-1",
+  "mode": "max",
+  "variant": "oracle ID model (true labels)",
+  "prior": false,
+  "oracle": true,
+  "jobs": "all"
+ },
+ {
+  "stage": "oracle-1",
+  "mode": "max",
+  "variant": "oracle purity (true ID only, CLIP label)",
+  "prior": false,
+  "oracle": true,
+  "opts": {
+   "oracle_mode": "purity"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "oracle-1",
+  "mode": "max",
+  "variant": "oracle label (realistic admission, true label)",
+  "prior": false,
+  "oracle": true,
+  "opts": {
+   "oracle_mode": "label"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "oracle-1",
+  "mode": "balanced",
+  "variant": "oracle purity (true ID only, CLIP label)",
+  "prior": false,
+  "oracle": true,
+  "opts": {
+   "oracle_mode": "purity"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "oracle-1",
+  "mode": "balanced",
+  "variant": "oracle label (realistic admission, true label)",
+  "prior": false,
+  "oracle": true,
+  "opts": {
+   "oracle_mode": "label"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "oracle-1",
+  "mode": "max",
+  "variant": "ID-5 prior + id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all"
+ },
+ {
+  "stage": "oracle-1",
+  "mode": "balanced",
+  "variant": "ID-5 prior + id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all"
+ },
+ {
+  "stage": "oracle-1",
+  "mode": "safe",
+  "variant": "ID-5 prior + id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all"
+ },
+ {
+  "stage": "oracle-2",
+  "mode": "max",
+  "variant": "oracle decontam (agreed admission minus OOD)",
+  "prior": false,
+  "oracle": true,
+  "opts": {
+   "oracle_mode": "decontam",
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "oracle-2",
+  "mode": "max",
+  "variant": "oracle coverage (agreed admission plus all ID)",
+  "prior": false,
+  "oracle": true,
+  "opts": {
+   "oracle_mode": "coverage",
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "oracle-2",
+  "mode": "balanced",
+  "variant": "oracle decontam (agreed admission minus OOD)",
+  "prior": false,
+  "oracle": true,
+  "opts": {
+   "oracle_mode": "decontam",
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "oracle-2",
+  "mode": "balanced",
+  "variant": "oracle coverage (agreed admission plus all ID)",
+  "prior": false,
+  "oracle": true,
+  "opts": {
+   "oracle_mode": "coverage",
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "screen"
+ },
+ {
+  "stage": "confirm",
+  "mode": "max",
+  "variant": "ID-5 prior + id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "stage": "confirm",
+  "mode": "balanced",
+  "variant": "ID-5 prior + id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ },
+ {
+  "stage": "confirm",
+  "mode": "max",
+  "variant": "ID-5 prior + id=softmax+tanl, blind",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "pool": "blind"
+ },
+ {
+  "stage": "confirm",
+  "mode": "balanced",
+  "variant": "no prior",
+  "prior": false,
+  "jobs": "all",
+  "seeds": [
+   0,
+   1,
+   2
+  ]
+ }
+]

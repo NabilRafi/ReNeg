@@ -1,0 +1,7 @@
+[{"mode": "balanced", "variant": "baseline", "jobs": "screen"},
+ {"mode": "balanced", "variant": "proto=vote", "opts": {"proto": "vote"}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "proto=vote, id=softmax+tanl", "opts": {"proto": "vote", "idadm": "softmax+tanl"}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "center", "opts": {"center": true}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "softcatch", "opts": {"softcatch": true}, "jobs": "screen"},
+ {"mode": "max", "variant": "proto=vote", "opts": {"proto": "vote"}, "jobs": "screen"},
+ {"mode": "safe", "variant": "proto=vote", "opts": {"proto": "vote"}, "jobs": "screen"}]

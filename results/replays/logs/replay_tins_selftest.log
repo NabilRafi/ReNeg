@@ -1,0 +1,2 @@
+selftest balanced prior=False: max |difference| 0.00e+00
+selftest max prior=True: max |difference| 0.00e+00

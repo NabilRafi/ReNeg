@@ -1,0 +1,5 @@
+[{"mode": "balanced", "variant": "id=softmax+tanl+imgagree", "opts": {"idadm": "softmax+tanl+imgagree"}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "id=softmax+tanl, exclude KG-admitted", "opts": {"idadm": "softmax+tanl", "cfg": {"id_exclude": "admitted"}}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "id=softmax+tanl, exclude KG-caught", "opts": {"idadm": "softmax+tanl", "cfg": {"id_exclude": "caught"}}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "id=softmax0.7+tanl", "opts": {"idadm": "softmax+tanl", "cfg": {"p_min": 0.7}}, "jobs": "screen"},
+ {"mode": "max", "variant": "id=softmax+tanl+imgagree", "opts": {"idadm": "softmax+tanl+imgagree"}, "jobs": "screen"}]

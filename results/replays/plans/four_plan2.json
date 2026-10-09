@@ -1,0 +1,9 @@
+[{"mode": "balanced", "variant": "id=softmax+tanl", "opts": {"idadm": "softmax+tanl"}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "id=tanl", "opts": {"id_admit": "base"}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "classcal5", "opts": {"classcal": 5.0}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "proto=vote, id=softmax+tanl, classcal5", "opts": {"proto": "vote", "idadm": "softmax+tanl", "classcal": 5.0}, "jobs": "screen"},
+ {"mode": "balanced", "variant": "k_vis8", "opts": {"k_vis": 8}, "jobs": "screen"},
+ {"mode": "max", "variant": "id=softmax+tanl", "opts": {"idadm": "softmax+tanl"}, "jobs": "screen"},
+ {"mode": "max", "variant": "proto=vote, id=softmax+tanl", "opts": {"proto": "vote", "idadm": "softmax+tanl"}, "jobs": "screen"},
+ {"mode": "safe", "variant": "id=softmax+tanl", "opts": {"idadm": "softmax+tanl"}, "jobs": "screen"},
+ {"mode": "safe", "variant": "proto=vote, id=softmax+tanl", "opts": {"proto": "vote", "idadm": "softmax+tanl"}, "jobs": "screen"}]

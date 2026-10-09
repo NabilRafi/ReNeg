@@ -1,0 +1,18 @@
+kg_clip + vote rho 0.65                  full   near  52.22 far  10.97 (TANL 57.01 / 11.35) | ninco 52.22 textu 10.97
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+kg_clip + vote rho 0.65 [Four-OOD]       full   near    nan far    nan (TANL nan / nan) | sun  3.85 place 21.23
+kg_clip_caught + vote                    full   near  54.86 far  11.52 (TANL 57.01 / 11.35) | ninco 54.86 textu 11.52
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+kg_clip_caught + vote [Four-OOD]         full   near    nan far    nan (TANL nan / nan) | sun  3.53 place 20.74
+kg_clip_caught, no vote                  full   near  52.81 far  11.63 (TANL 57.01 / 11.35) | ninco 52.81 textu 11.63
+/usr/local/lib/python3.11/dist-packages/numpy/_core/fromnumeric.py:3824: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/usr/local/lib/python3.11/dist-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+kg_clip_caught, no vote [Four-OOD]       full   near    nan far    nan (TANL nan / nan) | sun  3.66 place 21.03

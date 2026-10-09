@@ -1,0 +1,10 @@
+# Baselines on ViT-B/16 (oodlab reproductions). NegLabel and MCM are memoryless: one stream order is enough.
+# Published (Four-OOD FPR95, ID positive): NegLabel 25.40, MCM 42.74; TANL 9.81 (OOD positive).
+backbone: ViT-B/16
+protocols: [openood_v15, four_ood]
+seeds: [0, 1, 2]
+runs:
+  - {label: mcm, method: mcm}
+  - {label: neglabel, method: neglabel}
+  - {label: tanl, method: tanl}
+  - {label: tanl_official_sh, method: tanl_official_sh}

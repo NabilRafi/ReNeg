@@ -1,0 +1,4 @@
+[{"mode": "max", "variant": "ID-5 prior + id=softmax+tanl", "opts": {"idadm": "softmax+tanl"}, "jobs": "all", "seeds": [0, 1, 2]},
+ {"mode": "balanced", "variant": "ID-5 prior + id=softmax+tanl", "opts": {"idadm": "softmax+tanl"}, "jobs": "all", "seeds": [0, 1, 2]},
+ {"mode": "max", "variant": "ID-5 prior + id=softmax+tanl, blind", "opts": {"idadm": "softmax+tanl"}, "jobs": "all", "seeds": [0, 1, 2], "pool": "blind"},
+ {"mode": "balanced", "variant": "no prior (eval set)", "prior": false, "jobs": "all", "seeds": [1, 2]}]

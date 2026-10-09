@@ -1,0 +1,66 @@
+[
+ {
+  "mode": "max",
+  "variant": "oracle purity (true ID only, CLIP label)",
+  "prior": false,
+  "oracle": true,
+  "opts": {
+   "oracle_mode": "purity"
+  },
+  "jobs": "screen"
+ },
+ {
+  "mode": "max",
+  "variant": "oracle label (realistic admission, true label)",
+  "prior": false,
+  "oracle": true,
+  "opts": {
+   "oracle_mode": "label"
+  },
+  "jobs": "screen"
+ },
+ {
+  "mode": "balanced",
+  "variant": "oracle purity (true ID only, CLIP label)",
+  "prior": false,
+  "oracle": true,
+  "opts": {
+   "oracle_mode": "purity"
+  },
+  "jobs": "screen"
+ },
+ {
+  "mode": "balanced",
+  "variant": "oracle label (realistic admission, true label)",
+  "prior": false,
+  "oracle": true,
+  "opts": {
+   "oracle_mode": "label"
+  },
+  "jobs": "screen"
+ },
+ {
+  "mode": "max",
+  "variant": "ID-5 prior + id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all"
+ },
+ {
+  "mode": "balanced",
+  "variant": "ID-5 prior + id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all"
+ },
+ {
+  "mode": "safe",
+  "variant": "ID-5 prior + id=softmax+tanl",
+  "opts": {
+   "idadm": "softmax+tanl"
+  },
+  "jobs": "all"
+ }
+]

@@ -1,0 +1,108 @@
+[tier 1] TINS s0 openood_v15 ssb_hard: ood+ 64.38 | id+ 54.00
+[tier 1] balanced on tins, 5-shot s0 openood_v15 ssb_hard: ood+ 63.59 | id+ 48.83
+[tier 1] TANL+TINS s0 openood_v15 ssb_hard: ood+ 57.45 | id+ 47.82
+[tier 1] balanced on tanl+tins, 5-shot s0 openood_v15 ssb_hard: ood+ 57.11 | id+ 42.19
+[tier 1] TINS s0 openood_v15 ninco: ood+ 68.36 | id+ 58.14
+[tier 1] balanced on tins, 5-shot s0 openood_v15 ninco: ood+ 63.90 | id+ 46.20
+[tier 1] TANL+TINS s0 openood_v15 ninco: ood+ 61.81 | id+ 51.96
+[tier 1] balanced on tanl+tins, 5-shot s0 openood_v15 ninco: ood+ 56.17 | id+ 35.65
+[tier 1] TINS s0 openood_v15 inaturalist: ood+ 0.20 | id+ 0.19
+[tier 1] balanced on tins, 5-shot s0 openood_v15 inaturalist: ood+ 0.14 | id+ 0.20
+[tier 1] TANL+TINS s0 openood_v15 inaturalist: ood+ 0.19 | id+ 0.23
+[tier 1] balanced on tanl+tins, 5-shot s0 openood_v15 inaturalist: ood+ 0.12 | id+ 0.20
+[tier 1] TINS s0 openood_v15 textures: ood+ 9.98 | id+ 7.38
+[tier 1] balanced on tins, 5-shot s0 openood_v15 textures: ood+ 7.22 | id+ 6.40
+[tier 1] TANL+TINS s0 openood_v15 textures: ood+ 5.66 | id+ 5.68
+[tier 1] balanced on tanl+tins, 5-shot s0 openood_v15 textures: ood+ 5.62 | id+ 5.74
+[tier 1] TINS s0 openood_v15 openimage_o: ood+ 36.24 | id+ 27.95
+[tier 1] balanced on tins, 5-shot s0 openood_v15 openimage_o: ood+ 33.90 | id+ 23.39
+[tier 1] TANL+TINS s0 openood_v15 openimage_o: ood+ 32.54 | id+ 28.65
+[tier 1] balanced on tanl+tins, 5-shot s0 openood_v15 openimage_o: ood+ 30.10 | id+ 22.83
+[tier 1] TINS s0 four_ood inaturalist: ood+ 0.19 | id+ 0.19
+[tier 1] balanced on tins, 5-shot s0 four_ood inaturalist: ood+ 0.13 | id+ 0.19
+[tier 1] TANL+TINS s0 four_ood inaturalist: ood+ 0.20 | id+ 0.22
+[tier 1] balanced on tanl+tins, 5-shot s0 four_ood inaturalist: ood+ 0.12 | id+ 0.21
+[tier 1] TINS s0 four_ood sun: ood+ 4.97 | id+ 4.94
+[tier 1] balanced on tins, 5-shot s0 four_ood sun: ood+ 4.35 | id+ 4.36
+[tier 1] TANL+TINS s0 four_ood sun: ood+ 3.12 | id+ 2.82
+[tier 1] balanced on tanl+tins, 5-shot s0 four_ood sun: ood+ 3.15 | id+ 2.85
+[tier 1] TINS s0 four_ood places: ood+ 16.14 | id+ 14.62
+[tier 1] balanced on tins, 5-shot s0 four_ood places: ood+ 15.82 | id+ 13.34
+[tier 1] TANL+TINS s0 four_ood places: ood+ 15.69 | id+ 13.10
+[tier 1] balanced on tanl+tins, 5-shot s0 four_ood places: ood+ 16.04 | id+ 12.27
+[tier 1] TINS s0 four_ood textures_all: ood+ 7.64 | id+ 7.54
+[tier 1] balanced on tins, 5-shot s0 four_ood textures_all: ood+ 7.46 | id+ 7.04
+[tier 1] TANL+TINS s0 four_ood textures_all: ood+ 7.11 | id+ 6.68
+[tier 1] balanced on tanl+tins, 5-shot s0 four_ood textures_all: ood+ 7.23 | id+ 6.72
+[tier 1] TINS s1 openood_v15 ssb_hard: ood+ 65.42 | id+ 53.96
+[tier 1] balanced on tins, 5-shot s1 openood_v15 ssb_hard: ood+ 64.47 | id+ 48.87
+[tier 1] TANL+TINS s1 openood_v15 ssb_hard: ood+ 57.49 | id+ 47.74
+[tier 1] balanced on tanl+tins, 5-shot s1 openood_v15 ssb_hard: ood+ 56.99 | id+ 42.21
+[tier 1] TINS s1 openood_v15 ninco: ood+ 69.62 | id+ 59.67
+[tier 1] balanced on tins, 5-shot s1 openood_v15 ninco: ood+ 64.73 | id+ 49.36
+[tier 1] TANL+TINS s1 openood_v15 ninco: ood+ 62.02 | id+ 53.97
+[tier 1] balanced on tanl+tins, 5-shot s1 openood_v15 ninco: ood+ 55.46 | id+ 36.95
+[tier 1] TINS s1 openood_v15 inaturalist: ood+ 0.20 | id+ 0.16
+[tier 1] balanced on tins, 5-shot s1 openood_v15 inaturalist: ood+ 0.12 | id+ 0.15
+[tier 1] TANL+TINS s1 openood_v15 inaturalist: ood+ 0.21 | id+ 0.20
+[tier 1] balanced on tanl+tins, 5-shot s1 openood_v15 inaturalist: ood+ 0.10 | id+ 0.19
+[tier 1] TINS s1 openood_v15 textures: ood+ 6.47 | id+ 6.26
+[tier 1] balanced on tins, 5-shot s1 openood_v15 textures: ood+ 5.64 | id+ 5.47
+[tier 1] TANL+TINS s1 openood_v15 textures: ood+ 5.49 | id+ 5.43
+[tier 1] balanced on tanl+tins, 5-shot s1 openood_v15 textures: ood+ 5.42 | id+ 5.47
+[tier 1] TINS s1 openood_v15 openimage_o: ood+ 37.78 | id+ 28.26
+[tier 1] balanced on tins, 5-shot s1 openood_v15 openimage_o: ood+ 34.84 | id+ 24.01
+[tier 1] TANL+TINS s1 openood_v15 openimage_o: ood+ 33.10 | id+ 28.83
+[tier 1] balanced on tanl+tins, 5-shot s1 openood_v15 openimage_o: ood+ 30.08 | id+ 23.26
+[tier 1] TINS s1 four_ood inaturalist: ood+ 0.19 | id+ 0.17
+[tier 1] balanced on tins, 5-shot s1 four_ood inaturalist: ood+ 0.12 | id+ 0.18
+[tier 1] TANL+TINS s1 four_ood inaturalist: ood+ 0.19 | id+ 0.23
+[tier 1] balanced on tanl+tins, 5-shot s1 four_ood inaturalist: ood+ 0.10 | id+ 0.23
+[tier 1] TINS s1 four_ood sun: ood+ 5.08 | id+ 5.13
+[tier 1] balanced on tins, 5-shot s1 four_ood sun: ood+ 4.31 | id+ 4.42
+[tier 1] TANL+TINS s1 four_ood sun: ood+ 3.07 | id+ 2.71
+[tier 1] balanced on tanl+tins, 5-shot s1 four_ood sun: ood+ 3.08 | id+ 2.87
+[tier 1] TINS s1 four_ood places: ood+ 15.91 | id+ 14.18
+[tier 1] balanced on tins, 5-shot s1 four_ood places: ood+ 15.77 | id+ 13.00
+[tier 1] TANL+TINS s1 four_ood places: ood+ 14.46 | id+ 12.84
+[tier 1] balanced on tanl+tins, 5-shot s1 four_ood places: ood+ 14.83 | id+ 12.47
+[tier 1] TINS s1 four_ood textures_all: ood+ 8.05 | id+ 7.22
+[tier 1] balanced on tins, 5-shot s1 four_ood textures_all: ood+ 7.27 | id+ 6.84
+[tier 1] TANL+TINS s1 four_ood textures_all: ood+ 6.46 | id+ 6.70
+[tier 1] balanced on tanl+tins, 5-shot s1 four_ood textures_all: ood+ 6.88 | id+ 6.54
+[tier 1] TINS s2 openood_v15 ssb_hard: ood+ 64.23 | id+ 52.49
+[tier 1] balanced on tins, 5-shot s2 openood_v15 ssb_hard: ood+ 63.14 | id+ 47.37
+[tier 1] TANL+TINS s2 openood_v15 ssb_hard: ood+ 57.22 | id+ 46.87
+[tier 1] balanced on tanl+tins, 5-shot s2 openood_v15 ssb_hard: ood+ 56.71 | id+ 41.37
+[tier 1] TINS s2 openood_v15 ninco: ood+ 67.82 | id+ 61.52
+[tier 1] balanced on tins, 5-shot s2 openood_v15 ninco: ood+ 63.34 | id+ 49.21
+[tier 1] TANL+TINS s2 openood_v15 ninco: ood+ 60.08 | id+ 56.13
+[tier 1] balanced on tanl+tins, 5-shot s2 openood_v15 ninco: ood+ 52.97 | id+ 37.56
+[tier 1] TINS s2 openood_v15 inaturalist: ood+ 0.21 | id+ 0.23
+[tier 1] balanced on tins, 5-shot s2 openood_v15 inaturalist: ood+ 0.12 | id+ 0.21
+[tier 1] TANL+TINS s2 openood_v15 inaturalist: ood+ 0.20 | id+ 0.26
+[tier 1] balanced on tanl+tins, 5-shot s2 openood_v15 inaturalist: ood+ 0.11 | id+ 0.25
+[tier 1] TINS s2 openood_v15 textures: ood+ 8.27 | id+ 7.21
+[tier 1] balanced on tins, 5-shot s2 openood_v15 textures: ood+ 6.26 | id+ 5.89
+[tier 1] TANL+TINS s2 openood_v15 textures: ood+ 5.51 | id+ 5.68
+[tier 1] balanced on tanl+tins, 5-shot s2 openood_v15 textures: ood+ 5.41 | id+ 5.35
+[tier 1] TINS s2 openood_v15 openimage_o: ood+ 37.43 | id+ 28.48
+[tier 1] balanced on tins, 5-shot s2 openood_v15 openimage_o: ood+ 34.50 | id+ 23.83
+[tier 1] TANL+TINS s2 openood_v15 openimage_o: ood+ 32.53 | id+ 29.14
+[tier 1] balanced on tanl+tins, 5-shot s2 openood_v15 openimage_o: ood+ 30.19 | id+ 23.16
+[tier 1] TINS s2 four_ood inaturalist: ood+ 0.20 | id+ 0.23
+[tier 1] balanced on tins, 5-shot s2 four_ood inaturalist: ood+ 0.12 | id+ 0.20
+[tier 1] TANL+TINS s2 four_ood inaturalist: ood+ 0.20 | id+ 0.21
+[tier 1] balanced on tanl+tins, 5-shot s2 four_ood inaturalist: ood+ 0.11 | id+ 0.21
+[tier 1] TINS s2 four_ood sun: ood+ 5.15 | id+ 5.11
+[tier 1] balanced on tins, 5-shot s2 four_ood sun: ood+ 4.37 | id+ 4.32
+[tier 1] TANL+TINS s2 four_ood sun: ood+ 3.25 | id+ 2.84
+[tier 1] balanced on tanl+tins, 5-shot s2 four_ood sun: ood+ 3.00 | id+ 2.82
+[tier 1] TINS s2 four_ood places: ood+ 16.21 | id+ 14.21
+[tier 1] balanced on tins, 5-shot s2 four_ood places: ood+ 16.07 | id+ 13.07
+[tier 1] TANL+TINS s2 four_ood places: ood+ 15.27 | id+ 12.79
+[tier 1] balanced on tanl+tins, 5-shot s2 four_ood places: ood+ 15.39 | id+ 12.42
+[tier 1] TINS s2 four_ood textures_all: ood+ 9.64 | id+ 8.48
+[tier 1] balanced on tins, 5-shot s2 four_ood textures_all: ood+ 8.14 | id+ 7.41
+[tier 1] TANL+TINS s2 four_ood textures_all: ood+ 7.38 | id+ 7.25
+[tier 1] balanced on tanl+tins, 5-shot s2 four_ood textures_all: ood+ 7.63 | id+ 7.00

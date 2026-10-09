@@ -1,0 +1,34 @@
+{
+ "ninco": {
+  "text": 78.1,
+  "gen": 59.4,
+  "gen rc": 59.4,
+  "gen filt": 57.8,
+  "gen filt rc": 59.4,
+  "text+gen rc": 67.2,
+  "text+gen filt rc": 67.2,
+  "text gap": 71.9,
+  "text rel": 14.1,
+  "gen rel": 54.7,
+  "text dir+rel": 67.2,
+  "gen sig": 67.2,
+  "gen rc sig": 68.8,
+  "real A": 100.0
+ },
+ "ssb_hard": {
+  "text": 60.0,
+  "gen": 44.3,
+  "gen rc": 49.0,
+  "gen filt": 45.0,
+  "gen filt rc": 48.7,
+  "text+gen rc": 60.0,
+  "text+gen filt rc": 60.3,
+  "text gap": 43.7,
+  "text rel": 7.0,
+  "gen rel": 34.7,
+  "text dir+rel": 55.0,
+  "gen sig": 48.7,
+  "gen rc sig": 48.7,
+  "real A": 91.7
+ }
+}

@@ -1,0 +1,12 @@
+TANL: {'pnear': 86.47, 'pnear_auc': 65.51, 'vfar': 36.24, 'vfar_auc': 90.83, 'objective': 122.71}
+max | softmax 0.5: {'pnear': 79.79, 'pnear_auc': 70.47, 'vfar': 34.2, 'vfar_auc': 92.23, 'objective': 113.99}
+max | softmax 0.7: {'pnear': 79.18, 'pnear_auc': 70.25, 'vfar': 35.61, 'vfar_auc': 91.68, 'objective': 114.79}
+max | softmax 0.5, no KG-admitted: {'pnear': 79.47, 'pnear_auc': 70.92, 'vfar': 34.38, 'vfar_auc': 92.08, 'objective': 113.85}
+max | TANL ID mask: {'pnear': 80.77, 'pnear_auc': 69.14, 'vfar': 33.69, 'vfar_auc': 91.94, 'objective': 114.46}
+max | TANL ID mask, no KG-admitted: {'pnear': 80.43, 'pnear_auc': 69.75, 'vfar': 33.5, 'vfar_auc': 91.84, 'objective': 113.93}
+balanced | softmax 0.5: {'pnear': 86.34, 'pnear_auc': 68.31, 'vfar': 34.27, 'vfar_auc': 91.52, 'objective': 120.61}
+balanced | softmax 0.7: {'pnear': 86.35, 'pnear_auc': 68.42, 'vfar': 35.38, 'vfar_auc': 91.18, 'objective': 121.73}
+balanced | softmax 0.5, no KG-admitted: {'pnear': 86.35, 'pnear_auc': 68.57, 'vfar': 34.38, 'vfar_auc': 91.43, 'objective': 120.73}
+balanced | TANL ID mask: {'pnear': 86.37, 'pnear_auc': 67.59, 'vfar': 36.04, 'vfar_auc': 91.33, 'objective': 122.41}
+balanced | TANL ID mask, no KG-admitted: {'pnear': 86.38, 'pnear_auc': 67.95, 'vfar': 36.22, 'vfar_auc': 91.25, 'objective': 122.6}
+ADMIT_DONE
