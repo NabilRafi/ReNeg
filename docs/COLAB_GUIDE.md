@@ -1,12 +1,12 @@
 # Running the notebooks (Google Colab or a local GPU)
 
-The paper's GPU results were produced by the notebooks in `notebooks/` (G3, G3b, P4; G4 and D1 are the next
-runs), on top of a CLIP feature cache built once on Kaggle (`notebooks/0_baselines_kaggle/`, docs/KAGGLE_GUIDE.md).
+The paper's GPU results were produced by the notebooks in `notebooks/` (G3, G3b, P4, G4 and D1), on top of a CLIP
+feature cache built once on Kaggle (`notebooks/0_baselines_kaggle/`, docs/KAGGLE_GUIDE.md).
 The command-line pipeline (`scripts/`, docs/REPRODUCE.md) runs the same code without notebooks; this guide is for
 re-running the notebooks exactly as they were run.
 
-The notebooks run on Colab, or on any machine with a GPU through their non-Colab path (G3, G3b and P4 were run that
-way on an RTX 4060 under Windows): set `RENEG_DRIVE_ROOT` (the project folder) and `RENEG_OODLAB_HOME` (a local
+The notebooks run on Colab, or on any machine with a GPU through their non-Colab path (G3, G3b, P4, G4 and D1 were
+run that way on an RTX 4060 under Windows): set `RENEG_DRIVE_ROOT` (the project folder) and `RENEG_OODLAB_HOME` (a local
 working folder) before starting Jupyter, and lay out `RENEG_DRIVE_ROOT` as below.
 
 ## 0 · What you need
@@ -104,8 +104,8 @@ parts after a dropped session; every notebook ends with a cell that flushes Driv
 | 13 | `G3_final_eval` | **Main table**: ReNeg on TANL, ViT-B/16, three stream orders, plus 5-shot rows | GPU, 2-4 h | `transfers/g3_final_b16/` | `results/g3_vitb16/` |
 | 13b | `G3b_final_eval_vitl14` | The same on ViT-L/14 | GPU, 1-2 h | `transfers/g3_final_l14/` | `results/g3b_vitl14/` |
 | 14 | `P4_tins_probe` | TINS on our features; per-image traces for ReNeg on top of TINS | GPU, about 2 h | `transfers/p4_tins/` | `results/p4_tins/` |
-| 15 | `D1_vitl14_check` | Is the ViT-L/14 set-up right? NegLabel and MCM against their published L/14 numbers | about 10 min | `transfers/d1_vitl14_check/` | `results/g4_d1/` (pending) |
-| 16 | `G4_reneg_on_tins` | **Few-shot table**: ReNeg on TINS and on TANL+TINS (one pass: TINS + TANL + 9 ReNeg heads) | GPU, 2-3 h | `transfers/g4_tins/` | `results/g4_d1/` (pending) |
+| 15 | `D1_vitl14_check` | Is the ViT-L/14 set-up right? NegLabel and MCM against their published L/14 numbers | about 2 min | `transfers/d1_vitl14_check/` | `results/d1_vitl14/` |
+| 16 | `G4_reneg_on_tins` | **Few-shot table**: ReNeg on TINS and on TANL+TINS (one pass: TINS + TANL + 9 ReNeg heads) | GPU, about 2 h | `transfers/g4_tins/` | `results/g4_tins/` |
 
 Notes:
 

@@ -1,4 +1,4 @@
-# ReNeg: Knowledge-Graph Negative Labels Grounded in the Test Stream
+# ReNeg: Relative Negative Labels Grounded in the Test Stream for Training-Free OOD Detection
 
 [![tests](https://github.com/NabilRafi/ReNeg/actions/workflows/tests.yml/badge.svg)](https://github.com/NabilRafi/ReNeg/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -9,8 +9,9 @@ out-of-distribution (OOD) detection with CLIP.
 
 Negative-label detectors (NegLabel, AdaNeg, TANL) flag an image as OOD when it looks more like a word far from the
 in-distribution (ID) classes than like an ID class. Near-OOD images are close relatives of the ID classes, whose
-names those word lists largely miss. ReNeg adds **14,526 near-OOD names from WordNet** around the 1,000 ImageNet
-classes, trusts a name only after a **confidence gate** (a lower confidence bound on its text margins, plus the base
+names those word lists largely miss. ReNeg adds **relative negative labels**: 14,526 WordNet names that are
+relatives of the 1,000 ImageNet classes (siblings, cousins and their children). It trusts a name only after a
+**confidence gate** (a lower confidence bound on its text margins, plus the base
 detector's own vote), and **grounds each trusted name in the test stream**: the images it catches become its visual
 prototype. Images that CLIP and the base detector both trust as ID form online **ID image prototypes**. The image
 score that compares an image with both sets of prototypes is fused with the base score. ReNeg never changes the base
@@ -35,20 +36,26 @@ mean over three stream orders. Every number below comes from a file in [`results
 ReNeg-balanced is better than TANL on all three benchmarks in each of the three stream orders (paired differences
 -3.49 [-4.36, -2.83], -2.31 [-2.47, -2.11], -0.28 [-0.51, -0.11]). The *blind* pool excludes the class names of the
 near-OOD benchmarks; with them (*full* pool) balanced gives 56.39 / 14.72 / 9.68. On ViT-L/14
-([`results/g3b_vitl14/`](results/g3b_vitl14/)) balanced improves our TANL by -3.20 / -2.81 / -1.29.
+([`results/g3b_vitl14/`](results/g3b_vitl14/)) balanced improves our TANL by -3.20 / -2.81 / -1.29. Our ViT-L/14 TANL
+is 5 points worse on Four-OOD than TANL's paper (14.79 vs 9.52) while NegLabel and MCM reproduce their published
+ViT-L/14 numbers on the same features ([`results/d1_vitl14/`](results/d1_vitl14/)), so that gap is specific to TANL.
 
-**Few-shot (5 labelled ImageNet images per class): ReNeg on TINS and on TANL + TINS** (FPR95 in TINS's convention,
-ID positive; Four-OOD on the 45k non-labelled ID images; replays on TINS scores from
-[`results/p4_tins/`](results/p4_tins/), the official run [G4](results/g4_d1/) is pending)
+**Few-shot (5 labelled ImageNet images per class): ReNeg on TINS and on TANL + TINS**
+([`results/g4_tins/`](results/g4_tins/), `configs/fewshot_tins.yaml`). FPR95 in TINS's convention (ID positive) /
+OpenOOD's (OOD positive); Four-OOD on the 44,998 ID images that are not labelled images.
 
 | Method | near | far | Four-OOD |
 | --- | --- | --- | --- |
-| TANL (no labels) | 53.72 | 17.06 | 9.40 |
-| ReNeg-balanced on TANL | 40.98 | 11.43 | 7.29 |
-| TINS (our re-implementation; paper with 16 shots: 57.88 / 12.99 / 6.72) | 56.63 | 11.79 | 6.83 |
-| ReNeg-balanced on TINS | 48.31 | 9.95 | 6.20 |
-| TANL + TINS (mean log-odds) | 50.75 | 11.57 | 5.70 |
-| **ReNeg-balanced on TANL + TINS** | **39.32** | **9.60** | **5.55** |
+| TANL (no labels) | 53.47 / 60.05 | 16.98 / 16.98 | 8.78 / 9.49 |
+| ReNeg-balanced on TANL | 41.00 / 55.86 | 11.44 / 14.36 | 6.90 / 8.63 |
+| TINS (our re-implementation; paper with 16 shots: 57.88 / 12.99 / 6.72, ID+) | 56.63 / 66.64 | 11.79 / 15.20 | 6.80 / 7.63 |
+| ReNeg-balanced on TINS | 48.34 / 63.85 | 9.95 / 13.62 | 6.03 / 7.05 |
+| TANL + TINS (mean log-odds) | 50.62 / 59.50 | 11.55 / 12.79 | 5.57 / 6.34 |
+| **ReNeg-balanced on TANL + TINS** | **39.32** / **56.00** | **9.58** / **11.89** | **5.32** / **6.24** |
+
+ReNeg-balanced improves TINS on all three benchmarks in every stream order, in both conventions (pre-registered
+rule, ID positive: -8.29 / -1.84 / -0.77). The near-OOD gain is much larger in the ID-positive convention than in
+OpenOOD's (-8.29 vs -2.79 on TINS).
 
 Why two FPR95 conventions appear: [docs/FPR95_CONVENTIONS.md](docs/FPR95_CONVENTIONS.md).
 
@@ -110,9 +117,9 @@ python scripts/summarize.py runs/main/runs.csv --ref tanl
 | --- | --- | --- | --- |
 | Main table (ViT-B/16) + few-shot rows on TANL | `configs/main_vitb16.yaml` | 1.6 h | `results/g3_vitb16/` |
 | Second backbone (ViT-L/14) | `configs/vitl14.yaml` | 45 min | `results/g3b_vitl14/` |
-| Few-shot table (TINS, ReNeg on TINS, on TANL + TINS) | `configs/fewshot_tins.yaml` | 2-3 h | `results/p4_tins/` (G4 pending) |
+| Few-shot table (TINS, ReNeg on TINS, on TANL + TINS) | `configs/fewshot_tins.yaml` | 2 h | `results/g4_tins/` |
 | Baselines (MCM, NegLabel, TANL) | `configs/baselines_vitb16.yaml` | 1 h | `results/baselines/` |
-| ViT-L/14 set-up check | `configs/baselines_vitl14.yaml` | 10 min | pending |
+| ViT-L/14 set-up check | `configs/baselines_vitl14.yaml` | 2 min | `results/d1_vitl14/` |
 | Ablations on TANL | `configs/ablation_tanl_base.yaml` | 2 h | `results/replays/` |
 | Ablation ladder on NegLabel's negatives | `configs/ablation_neglabel_base.yaml` | 30 min | `results/replays/` |
 
@@ -156,7 +163,7 @@ If you use this code, please cite it (see [`CITATION.cff`](CITATION.cff)):
 ```bibtex
 @software{ferdous2026reneg,
   author  = {Ferdous, Mohammad Nabil},
-  title   = {{ReNeg}: Knowledge-Graph Negative Labels Grounded in the Test Stream for Test-Time {OOD} Detection with {CLIP}},
+  title   = {{ReNeg}: Relative Negative Labels Grounded in the Test Stream for Training-Free {OOD} Detection},
   year    = {2026},
   url     = {https://github.com/NabilRafi/ReNeg},
   version = {0.3.0}

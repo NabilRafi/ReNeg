@@ -27,7 +27,7 @@ GPU). Both families have a smoke test on fake data: `python tools/smoke_kaggle_n
 | `4_evaluation/` | `G3_final_eval` | **Table 1**: ReNeg on TANL, ViT-B/16, 3 orders, + 5-shot rows | `results/g3_vitb16/` |
 | | `G3b_final_eval_vitl14` | the same on ViT-L/14 | `results/g3b_vitl14/` |
 | | `P4_tins_probe` | TINS on our features, per-image traces | `results/p4_tins/` |
-| | `D1_vitl14_check` | NegLabel / MCM vs their published ViT-L/14 numbers | pending |
-| | `G4_reneg_on_tins` | **few-shot table**: TINS + TANL + nine ReNeg heads | pending |
+| | `D1_vitl14_check` | NegLabel / MCM vs their published ViT-L/14 numbers | `results/d1_vitl14/` |
+| | `G4_reneg_on_tins` | **few-shot table**: TINS + TANL + nine ReNeg heads | `results/g4_tins/` |
 
 The notebooks are stored without outputs; the outputs of each run are in `results/` (logs included).

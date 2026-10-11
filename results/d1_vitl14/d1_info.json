@@ -1,0 +1,22 @@
+{
+ "ViT-B/16": {
+  "zero_shot_top1_val5k": 67.26,
+  "dim": 512,
+  "corpus": 69554,
+  "n_selected": 10000,
+  "backbone": "ViT-B/16",
+  "mining_backbone": "ViT-B/16",
+  "prompt": "nice",
+  "noise_seed": 0
+ },
+ "ViT-L/14": {
+  "zero_shot_top1_val5k": 73.86,
+  "dim": 768,
+  "corpus": 69554,
+  "n_selected": 10000,
+  "backbone": "ViT-L/14",
+  "mining_backbone": "ViT-B/16",
+  "prompt": "nice",
+  "noise_seed": 0
+ }
+}

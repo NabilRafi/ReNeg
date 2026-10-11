@@ -40,6 +40,7 @@ python tools/colab_smoke/run_smoke.py runs/fake_drive        # optional: every C
 python scripts/summarize.py results/g3_vitb16/g3_runs.csv --ref tanl          # Table 1, ViT-B/16 (+ few-shot rows)
 python scripts/summarize.py results/g3b_vitl14/g3_runs.csv --ref tanl         # ViT-L/14
 python scripts/summarize.py results/p4_tins/tins_runs.csv                     # TINS on our features
+python scripts/summarize.py results/g4_tins/g4_runs.csv --ref tins            # few-shot table (ReNeg on TINS)
 python scripts/summarize.py results/g3_vitb16/g3_runs.csv --sets              # per-set tables
 
 # CPU replays (results/replays)
@@ -72,9 +73,9 @@ where it stopped; `scripts/summarize.py` prints the tables. Times are for an RTX
 | --- | --- | --- | --- |
 | Table 1 (zero-shot, ViT-B/16) + few-shot rows on TANL | `python scripts/evaluate.py --config configs/main_vitb16.yaml --cache oodlab_work/working/cache --out runs/main_vitb16` | 1.6 h | `results/g3_vitb16/` |
 | Second backbone (ViT-L/14) | `... --config configs/vitl14.yaml --out runs/vitl14` | 45 min | `results/g3b_vitl14/` |
-| Few-shot table: TINS, ReNeg on TINS and on TANL+TINS | `... --config configs/fewshot_tins.yaml --out runs/fewshot_tins` | 2-3 h | replays in `results/p4_tins/`, `results/replays/tins_replay.jsonl` (G4 pending) |
+| Few-shot table: TINS, ReNeg on TINS and on TANL+TINS | `... --config configs/fewshot_tins.yaml --out runs/fewshot_tins` | 2 h | `results/g4_tins/` |
 | Baselines (MCM, NegLabel, TANL, TANL with the released script) | `... --config configs/baselines_vitb16.yaml --out runs/baselines` | 1 h | `results/baselines/` (Kaggle 02-04) |
-| ViT-L/14 set-up check (D1) | `... --config configs/baselines_vitl14.yaml --out runs/d1` | 10 min | pending |
+| ViT-L/14 set-up check (D1) | `... --config configs/baselines_vitl14.yaml --out runs/d1` | 2 min | `results/d1_vitl14/` |
 | Ablations on TANL | `... --config configs/ablation_tanl_base.yaml --out runs/ablation_tanl` | 2 h | replays in `results/replays/` |
 | Ablation ladder on NegLabel's negatives | `... --config configs/ablation_neglabel_base.yaml --out runs/ablation_neglabel` | 30 min | `results/replays/s2full_*.jsonl` |
 
@@ -96,11 +97,13 @@ ReNeg-balanced 55.86 / 14.36 / 8.63; ReNeg-max 50.01 / 11.48 / 9.24.
 
 **ViT-L/14 (`results/g3b_vitl14/`):** TANL 54.71 / 16.87 / 14.79; ReNeg-balanced, blind 51.52 / 14.06 / 13.50
 (-3.20 / -2.81 / -1.29). TANL's paper reports 9.52 on Four-OOD with ViT-L/14; our ViT-L/14 TANL is 5 points
-worse while the same code reproduces ViT-B/16, which D1 (`configs/baselines_vitl14.yaml`) checks.
+worse while the same code reproduces ViT-B/16. D1 (`configs/baselines_vitl14.yaml`, `results/d1_vitl14/`): NegLabel
+(25.50 vs 24.81 published) and MCM (37.80 vs 38.17) reproduce their ViT-L/14 numbers, so the gap is specific to TANL.
 
-**ReNeg on TINS (replays on P4's TINS scores, ID+; Four-OOD 45k):** TINS 56.63 / 11.79 / 6.83; ReNeg-balanced on
-TINS 48.31 / 9.95 / 6.20 (pre-registered pass rule: PASS); TANL+TINS 50.75 / 11.57 / 5.70; ReNeg-balanced on
-TANL+TINS 39.32 / 9.60 / 5.55. `configs/fewshot_tins.yaml` (notebook G4) gives the official numbers.
+**Few-shot table (`results/g4_tins/`; ID+ / OOD+; Four-OOD on the 45k streams):** TINS 56.63 / 66.64, 11.79 / 15.20,
+6.80 / 7.63; ReNeg-balanced on TINS 48.34 / 63.85, 9.95 / 13.62, 6.03 / 7.05 (pre-registered pass rule: PASS);
+TANL+TINS 50.62 / 59.50, 11.55 / 12.79, 5.57 / 6.34; ReNeg-balanced on TANL+TINS 39.32 / 56.00, 9.58 / 11.89,
+5.32 / 6.24. The replays on P4's TINS scores (`experiments/07_reneg_on_tins.py`) agree to 0.06-0.08 per stream.
 
 GPU and CPU give identical metrics (checked at the start of G3). Runs on the 8-bit exports (experiments below)
 differ from the GPU runs by about 0.2 FPR95 per set (mean absolute difference 0.17-0.20).

@@ -7,9 +7,10 @@ experiment.
 | Folder | Produced by | Paper | Status |
 | --- | --- | --- | --- |
 | `g3_vitb16/` | notebook G3 (`configs/main_vitb16.yaml`), GPU, exact fp16 features | Table 1 (zero-shot, ViT-B/16), few-shot rows on TANL | final |
-| `g3b_vitl14/` | notebook G3b (`configs/vitl14.yaml`) | second backbone (ViT-L/14) | final; D1 checks the L/14 TANL baseline |
-| `p4_tins/` | notebook P4 (TINS on our features) + `experiments/07_reneg_on_tins.py` | few-shot table (preview) | TINS final; ReNeg-on-TINS rows are replays until G4 |
-| `g4_d1/` | notebooks G4 (`configs/fewshot_tins.yaml`) and D1 (`configs/baselines_vitl14.yaml`) | few-shot table; L/14 check | not run yet |
+| `g3b_vitl14/` | notebook G3b (`configs/vitl14.yaml`) | second backbone (ViT-L/14) | final; its TANL gap checked by D1 (`d1_vitl14/`) |
+| `p4_tins/` | notebook P4 (TINS on our features) + `experiments/07_reneg_on_tins.py` | TINS reproduction; the replays that preceded G4 | final |
+| `g4_tins/` | notebook G4 (`configs/fewshot_tins.yaml`): TINS, TANL and nine ReNeg heads per stream | few-shot table | final |
+| `d1_vitl14/` | notebook D1 (`configs/baselines_vitl14.yaml`): NegLabel and MCM vs their published ViT-L/14 numbers | ViT-L/14 set-up check | final |
 | `baselines/` | Kaggle notebooks 02-04 (oodlab) | baselines: TANL, AdaNeg, NegLabel, MCM reproductions | final |
 | `replays/` | the CPU replays (`experiments/`), on 8-bit features | ablations, analyses, supplementary | final |
 | `seam1/` | notebooks G1, G1b, P1, P2 + `experiments/08`-`11` | negative results (Seam 1) | closed |
@@ -39,9 +40,16 @@ experiment.
 * `p4_report.txt`: the pre-registered pass rule (PASS) and the tables; `fpr95_conventions_vs_tins.txt`: TANL,
   ReNeg and TINS side by side in both conventions. `NOTES.md`, `P4_run.log`: run notes and log.
 
-## `g4_d1/`
+## `g4_tins/`
 
-Empty until notebooks G4 and D1 run (their code is in `notebooks/4_evaluation/` and `configs/`).
+`g4_runs.csv` (every head, protocol, OOD set and order, both conventions), `g4_summary.csv`, `G4_run.log`,
+`NOTES.md`; `README.md` has the table and the reading. The labelled-image mask is the one in `p4_tins/`. The
+per-image scores of every head (73 MB) are not in the repository.
+
+## `d1_vitl14/`
+
+`d1_runs.csv` (NegLabel and MCM on both backbones, TANL with the released script's settings on ViT-L/14),
+`d1_info.json` (text banks, zero-shot accuracy), logs and notes; `README.md` has the table and the reading.
 
 ## `baselines/`
 

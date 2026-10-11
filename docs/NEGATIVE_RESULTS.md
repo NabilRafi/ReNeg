@@ -67,6 +67,12 @@ agreed admission was therefore chosen on the benchmark streams after the mechani
 ## 6 · Our ViT-L/14 TANL baseline
 
 The same code reproduces TANL on ViT-B/16 (Four-OOD 9.89 vs 9.81) but gives 14.79 on ViT-L/14 against 9.52 in
-TANL's paper (worst on SUN, Places and Textures). D1 (`configs/baselines_vitl14.yaml`) compares NegLabel and MCM
-with their published ViT-L/14 numbers to tell a feature or text-bank problem from a TANL-specific one. ReNeg's
-gain over our TANL holds on ViT-L/14 either way (-3.20 / -2.81 / -1.29).
+TANL's paper (worst on SUN, Places and Textures). D1 (`configs/baselines_vitl14.yaml`, `results/d1_vitl14/`)
+compared NegLabel and MCM with their published ViT-L/14 numbers to tell a feature or text-bank problem from a
+TANL-specific one. Both land on their papers (Four-OOD, ID positive: NegLabel 25.50 vs 24.81, MCM 37.80 vs 38.17), so
+the ViT-L/14 features and text bank are right and the gap is TANL's own. It does not depend on TANL's two sets of
+settings either (the released script's settings give 14.52). Not tested yet: negatives mined with ViT-L/14. Our text
+bank mines them with ViT-B/16 for both backbones, as NegLabel's code does, and NegLabel still matches its paper with
+them; TANL re-selects negatives from the corpus at every batch and may depend more on the mining backbone. ReNeg's
+gain over our TANL holds on ViT-L/14 either way (-3.20 / -2.81 / -1.29); the paper reports our reproduction and the
+gap.

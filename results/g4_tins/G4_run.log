@@ -1,0 +1,123 @@
+
+===== cell 1/7  19:22:25  # ── Colab set-up (the same cell in every ReNeg notebook) ─────────────────────────────
+oodlab 0.2.1 | reneg 0.2.12 | project folder <project>\ReNeg
+
+===== cell 2/7  19:22:25  from oodlab.session import start, finish, ensure_packages
+19:22:27 | INFO |       notebook: G4_reneg_on_tins
+19:22:27 | INFO |         oodlab: 0.2.1
+19:22:27 | INFO |      code_hash: 9bb078512088
+19:22:27 | INFO |         device: cuda
+19:22:27 | INFO |          smoke: False
+19:22:27 | INFO |      on_kaggle: False
+19:22:27 | INFO |        started: 2026-10-06 19:22:27
+19:22:27 | INFO |         python: 3.12.10
+19:22:27 | INFO |       platform: Windows-11-10.0.26200-SP0
+19:22:27 | INFO |      cpu_count: 6
+19:22:27 | INFO |          torch: 2.5.1+cu121
+19:22:27 | INFO | cuda_available: True
+19:22:27 | INFO |            gpu: NVIDIA GeForce RTX 4060
+19:22:27 | INFO |     gpu_mem_GB: 8.6
+19:22:27 | INFO |          regex: True
+19:22:29 | INFO | [cache] using <project>\local_runs\oodlab_home\working\cache\vit-b-16: ['imagenet_test', 'imagenet_val', 'imagenet_val_all', 'inaturalist', 'ninco', 'openimage_o', 'openimage_o_val', 'places', 'ssb_hard', 'sun', 'textures', 'textures_all']
+device: cuda | real oodlab and CLIP text encoder: True
+
+===== cell 3/7  19:22:40  if REAL:
+static negatives: 58101 nouns / 11453 adjectives -> 46508 / 4057 pass the separation test -> 1840 nouns + 160 adjectives
+2000 TINS static negatives; 5000 labelled ID images
+labelled images found in the 50k Four-OOD ID set: 5002
+14526 KG names, 13878 in the blind pool; 9 ReNeg heads
+
+===== cell 4/7  19:23:26  def make_multi():
+19:27:32 | INFO | [multi/g4] openood_v15:ninco seed=0  FPR95 63.76  AUROC 85.97  ACC 66.80  (208.3 img/s)
+openood_v15 ninco s0: TINS 58.14 | ReNeg-balanced on TINS 46.28 | on TANL+TINS 35.55 (FPR95, ID positive); 4.1 min
+rough estimate: 2.1 hours for everything (a lower bound: NINCO has few OOD images; P4, TINS alone, took 1 h 48 min on the RTX 4060)
+
+===== cell 5/7  19:27:33  if REAL:
+19:34:59 | INFO | [multi/g4] openood_v15:ssb_hard seed=0  FPR95 63.56  AUROC 85.36  ACC 66.80  (211.3 img/s)
+openood_v15 ssb_hard s0: TINS 54.00 | ReNeg-balanced on TINS 48.84 | on TANL+TINS 42.15 (FPR95, ID positive); 7.4 min
+19:39:24 | INFO | [multi/g4] openood_v15:inaturalist seed=0  FPR95 0.14  AUROC 99.93  ACC 66.80  (208.7 img/s)
+openood_v15 inaturalist s0: TINS 0.19 | ReNeg-balanced on TINS 0.20 | on TANL+TINS 0.21 (FPR95, ID positive); 4.4 min
+19:43:27 | INFO | [multi/g4] openood_v15:textures seed=0  FPR95 7.23  AUROC 98.53  ACC 66.80  (207.4 img/s)
+openood_v15 textures s0: TINS 7.38 | ReNeg-balanced on TINS 6.43 | on TANL+TINS 5.58 (FPR95, ID positive); 4.1 min
+19:48:20 | INFO | [multi/g4] openood_v15:openimage_o seed=0  FPR95 33.80  AUROC 94.37  ACC 66.80  (209.1 img/s)
+openood_v15 openimage_o s0: TINS 27.95 | ReNeg-balanced on TINS 23.35 | on TANL+TINS 22.86 (FPR95, ID positive); 4.9 min
+19:52:21 | INFO | [multi/g4] four_ood_45k:inaturalist seed=0  FPR95 0.11  AUROC 99.93  ACC 66.80  (229.8 img/s)
+four_ood_45k inaturalist s0: TINS 0.18 | ReNeg-balanced on TINS 0.19 | on TANL+TINS 0.23 (FPR95, ID positive); 4.0 min
+19:56:42 | INFO | [multi/g4] four_ood_45k:sun seed=0  FPR95 4.28  AUROC 99.23  ACC 66.80  (211.3 img/s)
+four_ood_45k sun s0: TINS 4.79 | ReNeg-balanced on TINS 4.39 | on TANL+TINS 2.61 (FPR95, ID positive); 4.4 min
+20:01:05 | INFO | [multi/g4] four_ood_45k:places seed=0  FPR95 17.15  AUROC 97.06  ACC 66.80  (210.5 img/s)
+four_ood_45k places s0: TINS 14.64 | ReNeg-balanced on TINS 13.41 | on TANL+TINS 12.26 (FPR95, ID positive); 4.4 min
+20:04:48 | INFO | [multi/g4] four_ood_45k:textures_all seed=0  FPR95 6.23  AUROC 98.66  ACC 66.80  (228.3 img/s)
+four_ood_45k textures_all s0: TINS 7.13 | ReNeg-balanced on TINS 6.10 | on TANL+TINS 5.74 (FPR95, ID positive); 3.7 min
+20:11:35 | INFO | [multi/g4] openood_v15:ssb_hard seed=1  FPR95 64.46  AUROC 85.15  ACC 66.80  (232.1 img/s)
+openood_v15 ssb_hard s1: TINS 53.96 | ReNeg-balanced on TINS 48.88 | on TANL+TINS 41.99 (FPR95, ID positive); 6.8 min
+20:15:19 | INFO | [multi/g4] openood_v15:ninco seed=1  FPR95 64.86  AUROC 84.89  ACC 66.80  (228.5 img/s)
+openood_v15 ninco s1: TINS 59.67 | ReNeg-balanced on TINS 49.41 | on TANL+TINS 37.13 (FPR95, ID positive); 3.7 min
+20:19:18 | INFO | [multi/g4] openood_v15:inaturalist seed=1  FPR95 0.12  AUROC 99.93  ACC 66.80  (231.1 img/s)
+openood_v15 inaturalist s1: TINS 0.16 | ReNeg-balanced on TINS 0.15 | on TANL+TINS 0.19 (FPR95, ID positive); 4.0 min
+20:23:00 | INFO | [multi/g4] openood_v15:textures seed=1  FPR95 5.74  AUROC 98.75  ACC 66.80  (227.7 img/s)
+openood_v15 textures s1: TINS 6.26 | ReNeg-balanced on TINS 5.52 | on TANL+TINS 5.23 (FPR95, ID positive); 3.7 min
+20:27:25 | INFO | [multi/g4] openood_v15:openimage_o seed=1  FPR95 34.74  AUROC 94.19  ACC 66.80  (231.1 img/s)
+openood_v15 openimage_o s1: TINS 28.26 | ReNeg-balanced on TINS 24.00 | on TANL+TINS 23.41 (FPR95, ID positive); 4.4 min
+20:31:25 | INFO | [multi/g4] four_ood_45k:inaturalist seed=1  FPR95 0.13  AUROC 99.93  ACC 66.80  (229.8 img/s)
+four_ood_45k inaturalist s1: TINS 0.21 | ReNeg-balanced on TINS 0.20 | on TANL+TINS 0.25 (FPR95, ID positive); 4.0 min
+20:35:23 | INFO | [multi/g4] four_ood_45k:sun seed=1  FPR95 4.16  AUROC 99.23  ACC 66.80  (232.3 img/s)
+four_ood_45k sun s1: TINS 5.09 | ReNeg-balanced on TINS 4.22 | on TANL+TINS 2.65 (FPR95, ID positive); 4.0 min
+20:39:23 | INFO | [multi/g4] four_ood_45k:places seed=1  FPR95 15.76  AUROC 97.23  ACC 66.80  (230.9 img/s)
+four_ood_45k places s1: TINS 13.86 | ReNeg-balanced on TINS 12.43 | on TANL+TINS 12.12 (FPR95, ID positive); 4.0 min
+20:43:09 | INFO | [multi/g4] four_ood_45k:textures_all seed=1  FPR95 8.90  AUROC 98.26  ACC 66.80  (225.2 img/s)
+four_ood_45k textures_all s1: TINS 8.72 | ReNeg-balanced on TINS 7.59 | on TANL+TINS 6.93 (FPR95, ID positive); 3.8 min
+20:49:48 | INFO | [multi/g4] openood_v15:ssb_hard seed=2  FPR95 63.14  AUROC 85.84  ACC 66.80  (236.5 img/s)
+openood_v15 ssb_hard s2: TINS 52.49 | ReNeg-balanced on TINS 47.34 | on TANL+TINS 41.21 (FPR95, ID positive); 6.7 min
+20:53:30 | INFO | [multi/g4] openood_v15:ninco seed=2  FPR95 63.31  AUROC 85.15  ACC 66.80  (230.3 img/s)
+openood_v15 ninco s2: TINS 61.52 | ReNeg-balanced on TINS 49.28 | on TANL+TINS 37.88 (FPR95, ID positive); 3.7 min
+20:57:27 | INFO | [multi/g4] openood_v15:inaturalist seed=2  FPR95 0.12  AUROC 99.92  ACC 66.80  (234.3 img/s)
+openood_v15 inaturalist s2: TINS 0.23 | ReNeg-balanced on TINS 0.21 | on TANL+TINS 0.25 (FPR95, ID positive); 3.9 min
+21:01:03 | INFO | [multi/g4] openood_v15:textures seed=2  FPR95 6.18  AUROC 98.65  ACC 66.80  (233.3 img/s)
+openood_v15 textures s2: TINS 7.21 | ReNeg-balanced on TINS 5.85 | on TANL+TINS 5.29 (FPR95, ID positive); 3.6 min
+21:05:24 | INFO | [multi/g4] openood_v15:openimage_o seed=2  FPR95 34.51  AUROC 94.23  ACC 66.80  (234.8 img/s)
+openood_v15 openimage_o s2: TINS 28.48 | ReNeg-balanced on TINS 23.79 | on TANL+TINS 23.22 (FPR95, ID positive); 4.3 min
+21:09:19 | INFO | [multi/g4] four_ood_45k:inaturalist seed=2  FPR95 0.12  AUROC 99.92  ACC 66.80  (234.6 img/s)
+four_ood_45k inaturalist s2: TINS 0.19 | ReNeg-balanced on TINS 0.19 | on TANL+TINS 0.21 (FPR95, ID positive); 3.9 min
+21:13:14 | INFO | [multi/g4] four_ood_45k:sun seed=2  FPR95 4.51  AUROC 99.18  ACC 66.80  (235.4 img/s)
+four_ood_45k sun s2: TINS 5.40 | ReNeg-balanced on TINS 4.46 | on TANL+TINS 2.86 (FPR95, ID positive); 3.9 min
+21:17:10 | INFO | [multi/g4] four_ood_45k:places seed=2  FPR95 16.76  AUROC 97.06  ACC 66.80  (234.6 img/s)
+four_ood_45k places s2: TINS 14.39 | ReNeg-balanced on TINS 13.07 | on TANL+TINS 12.12 (FPR95, ID positive); 3.9 min
+21:20:49 | INFO | [multi/g4] four_ood_45k:textures_all seed=2  FPR95 6.53  AUROC 98.64  ACC 66.80  (232.7 img/s)
+four_ood_45k textures_all s2: TINS 7.04 | ReNeg-balanced on TINS 6.12 | on TANL+TINS 5.82 (FPR95, ID positive); 3.6 min
+
+===== cell 6/7  21:20:49  def TRACES():
+                              method  near FPR95 ID+  near FPR95 OOD+  near AUROC  far FPR95 ID+  far FPR95 OOD+  far AUROC  Four-OOD 45k FPR95 ID+  Four-OOD 45k FPR95 OOD+  Four-OOD 45k AUROC
+                                tins           56.63            66.64       82.20          11.79           15.20      97.19                    6.80                     7.63               98.53
+                                tanl           53.47            60.05       84.53          16.98           16.98      96.23                    8.78                     9.49               97.90
+                           tanl+tins           50.62            59.50       85.74          11.55           12.79      97.50                    5.57                     6.34               98.77
+                    balanced on tins           48.34            63.85       85.39           9.95           13.62      97.61                    6.03                     7.05               98.69
+                         max on tins           48.30            56.78       86.76           9.03           10.67      98.05                    6.32                     7.62               98.59
+                        safe on tins           51.05            66.01       84.04          11.25           14.75      97.32                    6.35                     7.25               98.63
+         balanced on tins, full pool           47.75            63.76       85.59           9.94           13.58      97.62                    6.04                     7.05               98.69
+balanced on tins, no labelled images           54.32            64.43       84.42           9.85           13.40      97.64                    5.87                     6.71               98.72
+               balanced on tanl+tins           39.32            56.00       88.69           9.58           11.89      97.89                    5.32                     6.24               98.85
+                    max on tanl+tins           39.57            50.43       89.36           8.68            9.60      98.23                    5.61                     6.99               98.69
+                   safe on tanl+tins           42.60            58.23       87.60          11.09           12.67      97.60                    5.46                     6.24               98.81
+                    balanced on tanl           41.00            55.86       87.96          11.44           14.36      97.36                    6.90                     8.63               98.41
+
+pass rule (ID-positive FPR95, ReNeg-balanced on TINS minus TINS, per order):
+  near: mean -8.29, per order [-8.51, -7.67, -8.7] -> PASS
+  far: mean -1.84, per order [-1.84, -1.67, -2.02] -> PASS
+  Four-OOD 45k: mean -0.77, per order [-0.66, -0.86, -0.8] -> PASS
+  overall: PASS
+
+attach these files to the chat:
+   <project>\ReNeg/transfers/g4_tins\g4_runs.csv (0.0 MB)
+   <project>\ReNeg/transfers/g4_tins\g4_summary.csv (0.0 MB)
+   <project>\ReNeg/transfers/g4_tins\g4_scores_1.zip (20.2 MB)
+   <project>\ReNeg/transfers/g4_tins\g4_scores_2.zip (21.8 MB)
+   <project>\ReNeg/transfers/g4_tins\g4_scores_3.zip (19.6 MB)
+   <project>\ReNeg/transfers/g4_tins\g4_scores_4.zip (11.4 MB)
+21:21:04 | INFO | done in 118.6 min - outputs in <project>\local_runs\oodlab_home\working\results\G4_reneg_on_tins
+
+===== cell 7/7  21:21:04  try:
+Not on Colab: nothing to flush.
+
+===== ALL CELLS DONE  21:21:04
+exit 0

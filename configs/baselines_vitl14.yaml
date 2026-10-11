@@ -1,5 +1,6 @@
 # ViT-L/14 set-up check (notebook D1): NegLabel and MCM against their published ViT-L/14 numbers
 # (Four-OOD FPR95, ID positive: NegLabel 24.81, MCM 38.17), and TANL with the released script's settings.
+# Result of the notebook run (Oct 6, 2026): results/d1_vitl14/ (NegLabel 25.50, MCM 37.80: the set-up is right).
 backbone: ViT-L/14
 protocols: [four_ood]
 seeds: [0]

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "reneg"
 version = "0.3.0"
-description = "ReNeg: knowledge-graph negative labels grounded in the test stream for test-time OOD detection with CLIP, with oodlab (TANL, AdaNeg, NegLabel, MCM) and a TINS re-implementation on cached features"
+description = "ReNeg: relative negative labels grounded in the test stream for training-free OOD detection with CLIP, with oodlab (TANL, AdaNeg, NegLabel, MCM) and a TINS re-implementation on cached features"
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }

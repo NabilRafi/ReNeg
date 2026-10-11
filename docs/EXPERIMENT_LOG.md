@@ -1,4 +1,4 @@
-# Experiment log (Sep 27 to Oct 5, 2026)
+# Experiment log (Sep 27 to Oct 6, 2026)
 
 Every step in the order it was run, with the pass rule fixed **before** the run and the decision taken. Failed steps
 are kept: they are the negative results the paper reports (docs/NEGATIVE_RESULTS.md).
@@ -38,12 +38,13 @@ OpenOOD's convention (OOD positive) unless marked ID+ (docs/FPR95_CONVENTIONS.md
 | Oct 4 | G3b | Same on ViT-L/14 | Same | Balanced beats TANL (-3.20 / -2.81 / -1.29) | Our TANL L/14 gives 14.79 on Four-OOD vs 9.52 in TANL's paper: D1 built to check | `configs/vitl14.yaml`, `results/g3b_vitl14/` |
 | Oct 4 | local | TINS's reporting convention | - | TINS reports ID+ FPR95. In ID+, balanced (no labels) 45.27 / 12.27 / 7.82 vs TINS's paper 57.88 / 12.99 / 6.72 | Compare with TINS in its own convention | `results/replays/idpos.jsonl` |
 | Oct 4-5 | P4 | Does ReNeg on top of TINS (labelled images + test-time backprop) beat TINS? | ReNeg-balanced on TINS better than our TINS run on near, far and Four-OOD 45k (ID+, mean of 3 orders), near and far in every order | **PASS**: -8.32 / -1.84 / -0.64, every order; TINS reproduced at its paper's level with 5 labelled images (Four-OOD 6.79 vs 6.72) | G4 (official few-shot run) and D1 built (v0.2.12) | `notebooks/4_evaluation/P4*`, `experiments/07_reneg_on_tins.py`, `results/p4_tins/` |
-| Oct 5 | G4, D1 | Official few-shot table (TINS + TANL + nine ReNeg heads per pass); ViT-L/14 set-up check | - | Built and tested (smoke run, real-cell tests); not run yet | Run on the GPU | `notebooks/4_evaluation/G4*`, `D1*`, `configs/fewshot_tins.yaml`, `configs/baselines_vitl14.yaml` |
+| Oct 6 | G4 | Official few-shot table on the exact features: TINS (5 labelled images per class), TANL and nine ReNeg heads in one pass per stream, 3 orders, labelled images removed from the Four-OOD stream (44,998 ID) | P4's rule: ReNeg-balanced on TINS better than TINS on near, far and Four-OOD 45k (ID+, mean of 3 orders), near and far in every order | **PASS**: -8.29 / -1.84 / -0.77 (ID+), every order; -2.79 / -1.58 / -0.57 in OpenOOD's convention. Balanced on TANL+TINS: 39.32 / 9.58 / 5.32 (ID+), best on near and Four-OOD. Heads match the replays to 0.06-0.08 FPR95 per stream | Few-shot table done; report both conventions and the TANL+TINS base | `notebooks/4_evaluation/G4*`, `configs/fewshot_tins.yaml`, `results/g4_tins/` |
+| Oct 6 | D1 | Is our ViT-L/14 set-up right? NegLabel and MCM (memoryless, published L/14 numbers) on both backbones, plus TANL with its released script's settings | NegLabel and MCM near their published L/14 numbers: features and text bank right, the gap is TANL's own; far off on L/14 only: the L/14 cache or text bank is wrong | **Set-up right**: NegLabel 25.50 vs 24.81, MCM 37.80 vs 38.17 (ID+). TANL L/14 14.52 with the released script's settings, 14.79 with the paper's, vs 9.52 (mostly Textures and Places) | Report our TANL L/14 reproduction and the gap; open: TANL with negatives mined by ViT-L/14 | `notebooks/4_evaluation/D1*`, `configs/baselines_vitl14.yaml`, `results/d1_vitl14/` |
 
 ## Code versions
 
 The package version of each run is printed at the top of its log. G1 ran reneg 0.1.0, G1b 0.2.0, G3 / G3b 0.2.10,
-P4 0.2.11; G4 and D1 were built with 0.2.12. This repository is 0.3.0: the same method code, plus the
+P4 0.2.11, G4 and D1 0.2.12. This repository is 0.3.0: the same method code, plus the
 command-line pipeline (`reneg/pipeline.py`, `scripts/`) and the cleaned local analysis (`experiments/`). Each
 change of method code was checked against the previous version's scores (bit-identical on the CPU, or
 equal to float rounding).
