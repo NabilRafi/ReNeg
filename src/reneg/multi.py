@@ -15,6 +15,9 @@ Bases used by MultiBase (notebook G4):
     tins       lt = logit(S_TINS); base ID mask = not voted OOD
     tanl       lt = logit(S_TANL); base ID mask = TANL's own confident-ID mask (as ReNegTANL)
     tanl+tins  lt = (logit(S_TANL) + logit(S_TINS)) / 2; base ID mask = TANL's ID mask and not voted OOD
+
+HeadsOnBase puts the heads on any other detector that returns one ID-ness score per image (NegLabel, AdaNeg, DDE,
+MCM): lt = logit(score); base ID mask = not voted OOD, as for TINS. Nothing else is read from the base.
 """
 from __future__ import annotations
 
@@ -155,3 +158,38 @@ class MultiBase(StreamMethod):
         main = scores[self.primary].to(out_s.score.device)
         info = {"scores": scores, "tins": out_s.info}
         return StepOutput(pred=out_s.pred, score=main, info=info)
+
+
+class HeadsOnBase(StreamMethod):
+    """Any detector plus ReNeg heads on its score. ``base.step(feats)`` must return a StepOutput whose score is
+    higher for ID images and lies in (0, score_max]; the heads see lt = logit(score / score_max), a monotone map,
+    so the base's own ranking is unchanged. ``info["scores"]`` holds the base's score under ``base_name`` and each
+    head's fused score under "<mode> on <base_name>"; the returned score is ``primary`` (default: the first head)."""
+    name = "heads_on"
+
+    def __init__(self, base, base_name: str, id_text: torch.Tensor, pool_text: torch.Tensor, pool_cluster,
+                 modes: Dict[str, ReNegConfig], device="cpu", score_max: float = 1.0, primary: Optional[str] = None):
+        self.base, self.base_name, self.score_max = base, base_name, float(score_max)
+        self.heads = {f"{m} on {base_name}": ReNegHead(id_text, pool_text, pool_cluster, rc, device=device)
+                      for m, rc in modes.items()}
+        self.score_names = [base_name] + list(self.heads)
+        self.primary = primary or self.score_names[min(1, len(self.score_names) - 1)]
+        if self.primary not in self.score_names:
+            raise ValueError(f"unknown primary score {self.primary!r}")
+        self.reset()
+
+    def reset(self) -> None:
+        self.base.reset()
+        for h in getattr(self, "heads", {}).values():
+            h.reset()
+
+    @torch.no_grad()
+    def step(self, feats: torch.Tensor):
+        out = self.base.step(feats)
+        X = l2n(feats.float())
+        lt = logit64(out.score / self.score_max)
+        scores = {self.base_name: out.score.float().cpu()}
+        for name, h in self.heads.items():
+            scores[name] = h.step(X, lt).float().cpu()
+        return StepOutput(pred=out.pred, score=scores[self.primary].to(out.score.device),
+                          info={"scores": scores, "base": out.info})

@@ -78,6 +78,7 @@ where it stopped; `scripts/summarize.py` prints the tables. Times are for an RTX
 | ViT-L/14 set-up check (D1) | `... --config configs/baselines_vitl14.yaml --out runs/d1` | 2 min | `results/d1_vitl14/` |
 | Ablations on TANL | `... --config configs/ablation_tanl_base.yaml --out runs/ablation_tanl` | 2 h | replays in `results/replays/` |
 | Ablation ladder on NegLabel's negatives | `... --config configs/ablation_neglabel_base.yaml --out runs/ablation_neglabel` | 30 min | `results/replays/s2full_*.jsonl` |
+| ReNeg on other base detectors (NegLabel, AdaNeg, DDE; tables: `python scripts/check_other_bases.py runs/other_bases/runs.csv`) | `... --config configs/other_bases.yaml --out runs/other_bases` | 2-3 h | CPU replays in `results/p5_other_bases/` |
 
 Then, for example: `python scripts/summarize.py runs/main_vitb16/runs.csv --ref tanl`.
 

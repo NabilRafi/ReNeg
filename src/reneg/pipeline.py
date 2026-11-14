@@ -35,7 +35,12 @@ OPERATING_POINTS = {
 # ReNeg on NegLabel's 10,000 static negatives (the ablation base): the plain configuration.
 NEGLABEL_BASE = dict(n_min=1)
 
-METHODS = ("tanl", "tanl_official_sh", "neglabel", "mcm", "reneg_tanl", "reneg_neglabel", "tins", "multi")
+METHODS = ("tanl", "tanl_official_sh", "neglabel", "mcm", "adaneg", "dde", "reneg_tanl", "reneg_neglabel", "tins",
+           "multi", "heads_on")
+# detectors that ``heads_on`` can put ReNeg's heads on. The head reads the base's score as log-odds, so the base is
+# evaluated in single precision; ``*_fp16`` are the same detectors in the official half-precision arithmetic
+# (Table 1's rows), where confident scores round to exactly 1 and carry no ranking (reported, not recommended).
+BASES = ("neglabel", "adaneg", "dde", "mcm", "neglabel_fp16", "adaneg_fp16")
 POOLS = ("blind", "full", "none", "neglabel_words")
 FOUR_OOD_SETS = ["inaturalist", "sun", "places", "textures_all"]
 
@@ -59,14 +64,18 @@ class RunSpec:
     mode: Optional[str] = None                    # balanced | max | safe (reneg_tanl); None = plain (reneg_neglabel)
     pool: str = "blind"                           # blind | full | none | neglabel_words
     few_shot: bool = False                        # labelled ID images enter ReNeg's ID image prototypes
-    overrides: Dict = field(default_factory=dict) # ReNegConfig fields (reneg_*) or TINSConfig fields (tins, multi)
+    overrides: Dict = field(default_factory=dict) # ReNegConfig fields (reneg_*, heads_on) or TINSConfig fields
     protocols: Optional[List[str]] = None         # overrides the file's protocols for this row
+    base: Optional[str] = None                    # heads_on: neglabel | adaneg | dde | mcm
+    modes: Optional[List[str]] = None             # heads_on: operating points (default: balanced, max, safe)
 
     def __post_init__(self):
         if self.method not in METHODS:
             raise ValueError(f"{self.label}: unknown method {self.method!r}; choose from {METHODS}")
         if self.pool not in POOLS:
             raise ValueError(f"{self.label}: unknown pool {self.pool!r}; choose from {POOLS}")
+        if self.method == "heads_on" and self.base not in BASES:
+            raise ValueError(f"{self.label}: heads_on needs base from {BASES}, got {self.base!r}")
 
     @property
     def uses_labels(self) -> bool:
@@ -234,8 +243,44 @@ class Factory:
         return TINSFeat(self.model(), self.bank.id_text.float(), st["proto"], st["neg"], st["cands"],
                         TINSConfig().with_(**overrides))
 
+    def _base(self, name: str):
+        """(detector, largest possible score) for a base that ReNeg's heads can sit on."""
+        b = self.bank
+        neg = b.corpus_text[: int(b.n_selected)]
+        fp16 = name.endswith("_fp16")              # the official half-precision arithmetic (Table 1's rows)
+        name = name[: -len("_fp16")] if fp16 else name
+        if name == "neglabel":
+            from oodlab.methods import NegLabel, NegLabelConfig
+
+            return NegLabel(b.id_text, neg, NegLabelConfig(emulate_fp16=fp16), device=self.device), 1.0
+        if name == "adaneg":                       # official settings
+            from oodlab.methods.adaneg import AdaNeg, AdaNegConfig
+
+            cfg = AdaNegConfig.official().with_(emulate_fp16=fp16)
+            if fp16 and str(self.device) == "cpu":
+                cfg = cfg.with_(proxy_chunk=1024)  # same numbers, less memory
+            return AdaNeg(b.id_text, neg, cfg, device=self.device), 1.0 + cfg.lambda_
+        if name == "dde" and not fp16:             # the paper's settings, selection bank = the whole corpus
+            from .dde import DDEConfig, DDEFeat
+
+            return DDEFeat(b.id_text, b.corpus_text, b.noise_feats, DDEConfig.paper(), device=self.device), 1.0
+        if name == "mcm" and not fp16:
+            from oodlab.methods import MCM, MCMConfig
+
+            return MCM(b.id_text_simple, MCMConfig.paper(), device=self.device), 1.0
+        raise ValueError(name)
+
     def make(self, spec: RunSpec):
         b, m = self.bank, spec.method
+        if m in ("adaneg", "dde"):
+            return self._base(m)[0]
+        if m == "heads_on":
+            from .multi import HeadsOnBase
+
+            base, score_max = self._base(spec.base)
+            pt, pc = self.pools()[spec.pool]
+            modes = {k: reneg_config(k, "tanl", **spec.overrides) for k in (spec.modes or list(OPERATING_POINTS))}
+            return HeadsOnBase(base, spec.base, b.id_text, pt, pc, modes, device=self.device, score_max=score_max)
         if m == "tanl":
             return self._tanl()
         if m == "tanl_official_sh":
@@ -282,3 +327,12 @@ class Factory:
 
 def multi_labels() -> List[str]:
     return ["tins", "tanl", "tanl+tins"] + [h[0] for h in DEFAULT_HEADS]
+
+
+def score_names(spec: RunSpec) -> Optional[List[str]]:
+    """Names of the scores a multi-score run reports (one result row each); None for single-score methods."""
+    if spec.method == "multi":
+        return multi_labels()
+    if spec.method == "heads_on":
+        return [spec.base] + [f"{m} on {spec.base}" for m in (spec.modes or list(OPERATING_POINTS))]
+    return None

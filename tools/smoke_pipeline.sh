@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # End-to-end check of the command-line pipeline on a tiny fake dataset with a random CLIP (CPU, ~3 minutes):
-#   build_cache -> evaluate (main, few-shot TINS, ablations) -> summarize -> export_features -> experiments.
+#   build_cache -> evaluate (main, few-shot TINS, ablations, other bases) -> summarize -> export_features -> experiments.
 # The numbers are meaningless; the point is that every step runs and writes what the next one reads.
 #
 #   bash tools/smoke_pipeline.sh [work_dir]          (default: runs/smoke)
@@ -20,17 +20,22 @@ step "2/7 evaluate: main table (TANL + ReNeg operating points + few-shot rows), 
 "$PY" "$ROOT/scripts/evaluate.py" --config "$ROOT/configs/main_vitb16.yaml" --cache "$CACHE" --out "$W/runs/main" \
     --random-clip --seeds 0 | tail -4
 
-step "3/7 evaluate: few-shot table (TINS + TANL + nine ReNeg heads) and the ablations"
+step "3/7 evaluate: few-shot table (TINS + TANL + nine ReNeg heads), the ablations and the other base detectors"
 "$PY" "$ROOT/scripts/evaluate.py" --config "$ROOT/configs/fewshot_tins.yaml" --cache "$CACHE" --out "$W/runs/fewshot" \
     --random-clip --seeds 0 --datasets ninco places | tail -3
 "$PY" "$ROOT/scripts/evaluate.py" --config "$ROOT/configs/ablation_tanl_base.yaml" --cache "$CACHE" --out "$W/runs/abl" \
     --random-clip --seeds 0 --datasets ninco | tail -2
 "$PY" "$ROOT/scripts/evaluate.py" --config "$ROOT/configs/ablation_neglabel_base.yaml" --cache "$CACHE" \
     --out "$W/runs/abl_nl" --random-clip --seeds 0 --datasets ninco | tail -2
+"$PY" "$ROOT/scripts/evaluate.py" --config "$ROOT/configs/other_bases.yaml" --cache "$CACHE" --out "$W/runs/bases" \
+    --random-clip --seeds 0 --datasets ninco places | tail -2
 
 step "4/7 summarize"
 "$PY" "$ROOT/scripts/summarize.py" "$W/runs/main/runs.csv" --ref tanl > "$W/summary.txt"
 head -12 "$W/summary.txt"
+# other base detectors: the check exits 1 on an incomplete run (one order, two sets here); it must still print tables
+"$PY" "$ROOT/scripts/check_other_bases.py" "$W/runs/bases/runs.csv" > "$W/bases_check.txt" || true
+grep -c "pass rule" "$W/bases_check.txt"
 
 step "5/7 export 8-bit features for the CPU experiments"
 "$PY" "$ROOT/scripts/export_features.py" --cache "$CACHE" --out "$W/exports" --random-clip \
