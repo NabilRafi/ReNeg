@@ -8,9 +8,10 @@ Prints, per base, the FPR95 group means (near = SSB-hard + NINCO, far = iNatural
 Four-OOD = iNaturalist + SUN + Places + Textures-all; mean over the stream orders) in both conventions (OOD+ =
 OpenOOD's, ID+ = TINS's), AUROC, the paired change of each head against its base [min, max over orders], and the
 pre-registered pass rule: balanced on <base> is better than <base> on all three group means, on near and far in
-every order (the three single-precision bases; the half-precision bases neglabel_fp16 and adaneg_fp16 are printed
-beside them as exploratory rows). Also checks that the run is complete, that the AdaNeg and half-precision rows
-agree with the shipped baseline runs (Table 1), and that the DDE row is close to the numbers in its paper.
+every order. The rule covers the single-precision bases; a DDE that is outside its reproduction tolerance is not
+under it (its rows are exploratory), and the half-precision bases neglabel_fp16 and adaneg_fp16 are printed beside
+them as exploratory rows. Also checks that the run is complete, that the AdaNeg and half-precision rows agree with
+the shipped baseline runs (Table 1), and that the DDE row is close to the numbers in its paper.
 """
 import argparse
 import sys
@@ -58,6 +59,11 @@ def main():
             print(f"  {lab:<26} {c:3d}  {'OK' if c == 27 else 'MISSING ' + str(27 - c)}")
             ok &= c == 27
 
+    dde_ok = None                                   # does our DDE reproduce its paper? (decides whether it is under the rule)
+    if (df.label == "dde").any():
+        p0 = per_order(df, "dde")
+        dde_ok = all(len(p0[g]) > 0 and abs(p0[g].fpr95.mean() - DDE_PAPER[g]) <= DDE_TOL[g] for g in GROUPS)
+
     passed = {}
     for b in BASES + EXTRA:
         if not (df.label == b).any():
@@ -89,9 +95,13 @@ def main():
                         rec[f"{g}_d_{tag.lower()}_min"], rec[f"{g}_d_{tag.lower()}_max"] = d.min(), d.max()
             print("    " + "; ".join(txt[:3]))
             print("    " + "; ".join(txt[3:]))
-            print(f"    pass rule: OOD+ {'PASS' if verdict['OOD+'] else 'FAIL'}, ID+ {'PASS' if verdict['ID+'] else 'FAIL'}"
-                  + ("   <- the pre-registered row" if m == "balanced" and b in BASES else ""))
+            off_rule = b == "dde" and dde_ok is False
+            note = "   <- the pre-registered row" if m == "balanced" and b in BASES else ""
+            if off_rule:
+                note = "   (not counted: this DDE is outside its reproduction tolerance, so the row is exploratory)"
+            print(f"    pass rule: OOD+ {'PASS' if verdict['OOD+'] else 'FAIL'}, ID+ {'PASS' if verdict['ID+'] else 'FAIL'}" + note)
             rec["pass_ood+"], rec["pass_id+"] = verdict["OOD+"], verdict["ID+"]
+            rec["under_rule"] = bool(m == "balanced" and b in BASES and not off_rule)
             rows.append(rec)
             if m == "balanced" and b in BASES:
                 passed[b] = verdict
@@ -122,7 +132,11 @@ def main():
                 print(f"  {b} vs the shipped baseline run ({len(m)} set x order pairs): max |FPR95 difference| "
                       f"{dif.max():.3f}, mean {dif.mean():.3f}  {'OK' if good else 'NOTE: differs'}")
     for b, v in passed.items():
-        print(f"  pass rule, balanced on {b}: OOD+ {'PASS' if v['OOD+'] else 'FAIL'}, ID+ {'PASS' if v['ID+'] else 'FAIL'}")
+        if b == "dde" and dde_ok is False:
+            print(f"  balanced on dde: exploratory, not a pass (the base does not reproduce its paper); lower than the base "
+                  f"on every group, near and far in every order: OOD+ {'yes' if v['OOD+'] else 'no'}, ID+ {'yes' if v['ID+'] else 'no'}")
+        else:
+            print(f"  pass rule, balanced on {b}: OOD+ {'PASS' if v['OOD+'] else 'FAIL'}, ID+ {'PASS' if v['ID+'] else 'FAIL'}")
     if a.out:
         pd.DataFrame(rows).round(3).to_csv(a.out, index=False)
         print("\nwrote", a.out)

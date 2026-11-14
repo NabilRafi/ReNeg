@@ -138,6 +138,13 @@ def report(path, modes=("balanced", "max", "safe"), log=print):
         log(f"{'FPR95 OOD+ (ID+), AUROC':<26}" + "".join(f"{g:>26}" for g in GROUPS))
         fmt = lambda h: "".join(f"{h['fpr95'][g].mean():>11.2f} ({h['fpr95_idpos'][g].mean():5.2f}) {h['auroc'][g].mean():6.2f}" for g in GROUPS)  # noqa: E731
         log(f"{base:<26}" + fmt(b))
+        tol = dict(zip(GROUPS, (1.5, 1.5, 1.0)))                 # reproduction tolerance of a re-implemented base
+        off_rule = base in ("dde", "hu", "hu_union") and not all(
+            len(b["fpr95"][g]) and abs(b["fpr95"][g].mean() - pub) <= tol[g]
+            for g, pub in zip(GROUPS, PUBLISHED["hu" if base.startswith("hu") else base]))
+        if base in ("dde", "hu", "hu_union"):
+            log("    reproduction of the paper (1.5 / 1.5 / 1.0 FPR95): " + ("outside the tolerance: rows below are "
+                "exploratory, not under the pass rule" if off_rule else "inside the tolerance"))
         for m in modes:
             lab = f"{m} on {base}"
             if not (df.label == lab).any():
@@ -156,7 +163,8 @@ def report(path, modes=("balanced", "max", "safe"), log=print):
             log("    " + "; ".join(parts[:3]))
             log("    " + "; ".join(parts[3:]))
             log(f"    pass rule: OOD+ {'PASS' if ok['OOD+'] else 'FAIL'}, ID+ {'PASS' if ok['ID+'] else 'FAIL'}"
-                + ("   <- the pre-registered row" if m == "balanced" else ""))
+                + ("   (not counted: the base does not reproduce its paper)" if off_rule else
+                   "   <- the pre-registered row" if m == "balanced" and base in ("neglabel", "adaneg", "dde") else ""))
             verdicts[(base, m)] = ok
     return verdicts
 
