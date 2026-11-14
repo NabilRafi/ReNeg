@@ -1,0 +1,21 @@
+# ReNeg on base detectors other than TANL and TINS (probe P5): the same head and the same settings on each, reading
+# only the base's score (log-odds, running Otsu vote, "not voted OOD" as the base's ID mask). Each run scores the
+# base once per batch and writes one row for the base and one per operating point ("balanced on <base>", ...).
+#   neglabel       NegLabel, 10,000 mined negatives, 100 groups, single precision
+#   adaneg         AdaNeg, official settings, single precision
+#   dde            DDE's OOD score, re-implemented from the official postprocessor with the paper's settings
+#                  (reneg/dde.py), single precision
+#   neglabel_fp16  the same detectors in the official half-precision arithmetic (Table 1's rows). Exploratory:
+#   adaneg_fp16    confident scores round to exactly 1 there, so their log-odds carry no ranking.
+# Pass rule fixed before the first number (results/p5_other_bases/PREREGISTRATION_P5.md), for the three
+# single-precision bases: balanced on <base> beats <base> on near, far and Four-OOD FPR95 (mean of three orders),
+# near and far in every order. About 2-3 hours on a Colab GPU.
+backbone: ViT-B/16
+protocols: [openood_v15, four_ood]
+seeds: [0, 1, 2]
+runs:
+  - {label: heads on neglabel, method: heads_on, base: neglabel, pool: blind}
+  - {label: heads on adaneg, method: heads_on, base: adaneg, pool: blind}
+  - {label: heads on dde, method: heads_on, base: dde, pool: blind}
+  - {label: heads on neglabel_fp16, method: heads_on, base: neglabel_fp16, pool: blind}
+  - {label: heads on adaneg_fp16, method: heads_on, base: adaneg_fp16, pool: blind}

@@ -122,6 +122,7 @@ python scripts/summarize.py runs/main/runs.csv --ref tanl
 | ViT-L/14 set-up check | `configs/baselines_vitl14.yaml` | 2 min | `results/d1_vitl14/` |
 | Ablations on TANL | `configs/ablation_tanl_base.yaml` | 2 h | `results/replays/` |
 | Ablation ladder on NegLabel's negatives | `configs/ablation_neglabel_base.yaml` | 30 min | `results/replays/` |
+| ReNeg on other base detectors (NegLabel, AdaNeg, DDE) | `configs/other_bases.yaml` | 2-3 h | `results/p5_other_bases/` (CPU replays) |
 
 [docs/REPRODUCE.md](docs/REPRODUCE.md) has the expected numbers, run times and the three levels of checking (smoke
 test, tables from the shipped results, full re-run). [docs/DATA.md](docs/DATA.md) says where every dataset comes
@@ -139,6 +140,7 @@ trace on a CPU ([`experiments/`](experiments/); the replay equals the packaged m
 | `05_fewshot_and_oracle.py` | labelled ID images; oracle ID models (purity of the ID prototypes is the main lever) |
 | `06_pseudo_ood_tuning.py` | settings chosen on held-out ImageNet classes, without benchmark OOD data |
 | `07_reneg_on_tins.py` | ReNeg on TINS and on TANL + TINS, with the pre-registered pass rule |
+| `12_other_bases.py` | the same head on NegLabel, AdaNeg and DDE (re-implemented), with the pre-registered pass rule |
 | `08`-`11` | Seam 1: translating names into image space (generated images, a diffusion prior, six bridges, the ceiling of a perfect bridge) |
 
 Every step was run with a pass rule fixed before the run; the [experiment log](docs/EXPERIMENT_LOG.md) lists them

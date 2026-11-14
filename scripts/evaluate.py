@@ -22,9 +22,11 @@ Configuration file (see configs/)::
       - {label: reneg_balanced_blind, method: reneg_tanl, mode: balanced, pool: blind}
       - {label: reneg_balanced_blind_5shot, method: reneg_tanl, mode: balanced, pool: blind, few_shot: true}
 
-Methods: tanl, tanl_official_sh, neglabel, mcm, reneg_tanl (ReNeg on TANL), reneg_neglabel (ReNeg on NegLabel's
-negatives, the ablation base), tins (TINS re-implementation, 5 labelled images per class) and multi (TINS and TANL
-once per batch with nine ReNeg heads; writes one row per head). Runs that use labelled images are scored on
+Methods: tanl, tanl_official_sh, neglabel, mcm, adaneg, dde (DDE's OOD score re-implemented from its official
+code), reneg_tanl (ReNeg on TANL), reneg_neglabel (ReNeg on NegLabel's negatives, the ablation base), tins (TINS
+re-implementation, 5 labelled images per class), multi (TINS and TANL once per batch with nine ReNeg heads; writes
+one row per head) and heads_on (base: neglabel | adaneg | dde | mcm; the detector once per batch with ReNeg's
+balanced / max / safe heads on its score; one row for the base and one per head). Runs that use labelled images are scored on
 Four-OOD's 45k ID images that are not those images (protocol four_ood_45k).
 """
 from __future__ import annotations
@@ -46,7 +48,7 @@ import yaml  # noqa: E402
 from oodlab.cache import FeatureCache  # noqa: E402
 from oodlab.metrics import openood_metrics  # noqa: E402
 from oodlab.runner import PROTOCOLS, Runner  # noqa: E402
-from reneg.pipeline import Factory, RunSpec, multi_labels  # noqa: E402
+from reneg.pipeline import Factory, RunSpec, score_names  # noqa: E402
 
 COLUMNS = ["label", "method", "protocol", "group", "dataset", "seed", "fpr95", "fpr95_idpos", "auroc", "aupr_in",
            "aupr_out", "acc", "n_id", "n_ood", "seconds", "backbone"]
@@ -147,7 +149,8 @@ def main(argv=None) -> int:
     for spec in cfg["runs"]:
         if a.runs and spec.label not in a.runs:
             continue
-        labels = multi_labels() if spec.method == "multi" else [spec.label]
+        keys = score_names(spec)                     # multi-score runs: one row per score
+        labels = [spec.label] if keys is None else list(keys)
         if spec.method == "multi" and spec.label != "multi":
             labels = [f"{spec.label}/{x}" for x in labels]
         for pname in spec.protocols or cfg["protocols"]:
@@ -165,7 +168,7 @@ def main(argv=None) -> int:
                         continue
                     t0 = time.time()
                     method = factory.make(spec)
-                    hook = ScoreHook() if spec.method == "multi" else None
+                    hook = ScoreHook() if keys is not None else None
                     df = runner.evaluate(method, proto, seeds=[seed], datasets=[ds], config=spec.label,
                                          hooks_factory=(lambda n, s: [hook]) if hook else None)
                     sec = round(time.time() - t0, 1)
@@ -174,18 +177,19 @@ def main(argv=None) -> int:
                         rows = rows.reindex(columns=COLUMNS)
                     else:
                         recs = []
-                        for lab, key in zip(labels, multi_labels()):
+                        for lab, key in zip(labels, keys):
                             m = openood_metrics(hook.scores[key], hook.labels)
-                            recs.append({"label": lab, "method": "multi", "protocol": ptag, "group": group,
+                            recs.append({"label": lab, "method": spec.method, "protocol": ptag, "group": group,
                                          "dataset": ds, "seed": seed, "seconds": sec, "backbone": cfg["backbone"],
                                          **{k: m[k] for k in ("fpr95", "fpr95_idpos", "auroc", "aupr_in", "aupr_out",
                                                               "acc", "n_id", "n_ood")}})
                             if a.save_scores:
                                 sd = os.path.join(a.out, "scores")
                                 os.makedirs(sd, exist_ok=True)
-                                np.savez_compressed(os.path.join(sd, f"{ptag}__{ds}__s{seed}.npz"),
-                                                    labels=hook.labels, names=np.asarray(multi_labels()),
-                                                    scores=np.stack([hook.scores[k] for k in multi_labels()]))
+                                tag = "" if spec.method == "multi" else f"{spec.base}__"
+                                np.savez_compressed(os.path.join(sd, f"{tag}{ptag}__{ds}__s{seed}.npz"),
+                                                    labels=hook.labels, names=np.asarray(keys),
+                                                    scores=np.stack([hook.scores[k] for k in keys]))
                         rows = pd.DataFrame(recs, columns=COLUMNS)
                     done = pd.concat([done, rows], ignore_index=True) if len(done) else rows
                     done.to_csv(runs_path, index=False)

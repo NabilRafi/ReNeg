@@ -76,3 +76,20 @@ bank mines them with ViT-B/16 for both backbones, as NegLabel's code does, and N
 them; TANL re-selects negatives from the corpus at every batch and may depend more on the mining backbone. ReNeg's
 gain over our TANL holds on ViT-L/14 either way (-3.20 / -2.81 / -1.29); the paper reports our reproduction and the
 gap.
+
+## 7 · Other base detectors: what did not work (P5, Nov 14)
+
+The same head improves NegLabel and AdaNeg under a rule fixed beforehand (`results/p5_other_bases/NOTES.md`). Three
+things around that result are negative and are reported with it:
+
+* **Half-precision base scores.** The head reads the base's score as log-odds. In the half-precision arithmetic of
+  the official NegLabel and AdaNeg code a confident score rounds to exactly 1, so its log-odds carry no ranking. One
+  exploratory stream (NINCO, order 0): half-precision NegLabel 60.87 -> 61.47 with ReNeg-balanced, against
+  60.12 -> 57.06 in float32. The base must be evaluated in single precision; `configs/other_bases.yaml` runs both.
+* **DDE is not reproduced on far-OOD.** Our re-implementation of DDE's score with the paper's settings matches the
+  paper on five of seven sets (near 59.28 vs 58.64, Four-OOD 9.57 vs 9.80) but gives 40.93 on OpenImage-O against
+  31.84 (far 17.35 vs 15.58, outside the 1.5 tolerance fixed beforehand), in every configuration tried. ReNeg lowers
+  this DDE's FPR95 on every group in every order, but the row is our re-implementation, not DDE's paper.
+* **Hu et al. (ICML 2026) could not be re-implemented from the paper.** No code is public; two readings of the
+  method give NINCO 73.79 and 76.43 against 50.60 published (`experiments/replaylab/hu.py`). ReNeg was not put on it.
+

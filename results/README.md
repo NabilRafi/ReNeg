@@ -13,6 +13,7 @@ experiment.
 | `d1_vitl14/` | notebook D1 (`configs/baselines_vitl14.yaml`): NegLabel and MCM vs their published ViT-L/14 numbers | ViT-L/14 set-up check | final |
 | `baselines/` | Kaggle notebooks 02-04 (oodlab) | baselines: TANL, AdaNeg, NegLabel, MCM reproductions | final |
 | `replays/` | the CPU replays (`experiments/`), on 8-bit features | ablations, analyses, supplementary | final |
+| `p5_other_bases/` | `experiments/12_other_bases.py` (CPU replays, 8-bit features) | ReNeg on NegLabel, AdaNeg and DDE | replays; the exact-feature run is `configs/other_bases.yaml` |
 | `seam1/` | notebooks G1, G1b, P1, P2 + `experiments/08`-`11` | negative results (Seam 1) | closed |
 
 ## `g3_vitb16/`, `g3b_vitl14/`
@@ -75,6 +76,14 @@ Rows written by the original analysis scripts (Oct 1-5), read by the `report` / 
 | `val5k_mask.npy` | the labelled-image mask used by the replays (4,998 rows: no match among the 45k test images) | numpy |
 | `plans/` | the original per-stage plan files (merged into `experiments/plans/`) | |
 | `logs/` | the printed output of every replay run | |
+
+## `p5_other_bases/`
+
+* `NOTES.md`: the question, the rules fixed beforehand, the tables in both conventions, the DDE reproduction check,
+  the half-precision note and the Hu et al. attempt. `PREREGISTRATION_P5.md`: the rules as written before the runs.
+* `other_bases.jsonl`: one row per (label, protocol, OOD set, stream order) for `neglabel`, `adaneg`, `dde` and
+  `balanced|max|safe on <base>`; `p5_summary.csv`: group means, paired changes, pass rule; `exploratory.jsonl`: rows
+  that are not under the rule. CPU replays on the 8-bit features (float32).
 
 ## `seam1/`
 
