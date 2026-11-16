@@ -16,7 +16,7 @@ orders) in OpenOOD's convention, with the same sign in every order for near and 
 Bases: neglabel (10,000 negatives, 100 groups), adaneg (official settings), both in float32; dde (official score
 with the paper's settings and the whole corpus as the selection bank, which reproduces the paper);
 dde_release_settings and dde_released (the release's settings; the release as it is); neglabel_fp16 and adaneg_fp16
-(the official half-precision arithmetic, exploratory: confident scores round to 1); mcm (exploratory). Rows: <RENEG_EXP_OUT>/other_bases.jsonl; shipped rows:
+(the official half-precision arithmetic, exploratory: confident scores round to 1, smaller gain on NegLabel); mcm (exploratory). Rows: <RENEG_EXP_OUT>/other_bases.jsonl; shipped rows:
 results/p5_other_bases/other_bases.jsonl (``report --file``).
 """
 from __future__ import annotations

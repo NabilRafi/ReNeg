@@ -37,9 +37,9 @@ NEGLABEL_BASE = dict(n_min=1)
 
 METHODS = ("tanl", "tanl_official_sh", "neglabel", "mcm", "adaneg", "dde", "reneg_tanl", "reneg_neglabel", "tins",
            "multi", "heads_on")
-# detectors that ``heads_on`` can put ReNeg's heads on. The head reads the base's score as log-odds, so the base is
-# evaluated in single precision; ``*_fp16`` are the same detectors in the official half-precision arithmetic
-# (Table 1's rows), where confident scores round to exactly 1 and carry no ranking (reported, not recommended).
+# detectors that ``heads_on`` can put ReNeg's heads on, evaluated in single precision; ``*_fp16`` are the same
+# detectors in the official half-precision arithmetic (Table 1's rows). The head reads the base's score as log-odds and
+# confident half-precision scores round to exactly 1, so the gain is smaller there on NegLabel (results/p5_other_bases).
 BASES = ("neglabel", "adaneg", "dde", "mcm", "neglabel_fp16", "adaneg_fp16")
 POOLS = ("blind", "full", "none", "neglabel_words")
 FOUR_OOD_SETS = ["inaturalist", "sun", "places", "textures_all"]

@@ -1,0 +1,116 @@
+rows per label (expect 27 = 9 sets x 3 orders):
+  neglabel                    27  OK
+  balanced on neglabel        27  OK
+  max on neglabel             27  OK
+  safe on neglabel            27  OK
+  adaneg                      27  OK
+  balanced on adaneg          27  OK
+  max on adaneg               27  OK
+  safe on adaneg              27  OK
+  dde                         27  OK
+  balanced on dde             27  OK
+  max on dde                  27  OK
+  safe on dde                 27  OK
+  neglabel_fp16               27  OK
+  balanced on neglabel_fp16   27  OK
+  max on neglabel_fp16        27  OK
+  safe on neglabel_fp16       27  OK
+  adaneg_fp16                 27  OK
+  balanced on adaneg_fp16     27  OK
+  max on adaneg_fp16          27  OK
+  safe on adaneg_fp16         27  OK
+
+=== neglabel
+FPR95 OOD+ (ID+)  AUROC                     near                     far                    four
+neglabel                    67.99 (75.78)  75.31    23.48 (24.16)  94.93    24.83 (24.23)  94.55
++ balanced                  66.42 (67.88)  78.70    17.43 (16.89)  96.40    20.78 (17.31)  95.86
+    near OOD+ -1.58 [-1.63, -1.48]; far OOD+ -6.05 [-6.33, -5.62]; four OOD+ -4.05 [-4.14, -3.90]
+    near ID+ -7.89 [-8.21, -7.35]; far ID+ -7.27 [-7.70, -6.67]; four ID+ -6.92 [-7.46, -6.51]
+    pass rule: OOD+ PASS, ID+ PASS   <- the pre-registered row
++ max                       61.64 (69.59)  78.91    17.09 (17.97)  96.36    21.99 (18.62)  95.51
+    near OOD+ -6.36 [-6.69, -6.12]; far OOD+ -6.39 [-6.64, -6.00]; four OOD+ -2.85 [-3.05, -2.74]
+    near ID+ -6.18 [-6.41, -5.83]; far ID+ -6.19 [-6.61, -5.40]; four ID+ -5.61 [-6.17, -5.31]
+    pass rule: OOD+ PASS, ID+ PASS
++ safe                      67.19 (64.58)  78.77    20.52 (17.23)  96.14    23.17 (17.57)  95.72
+    near OOD+ -0.81 [-0.85, -0.72]; far OOD+ -2.96 [-3.05, -2.87]; four OOD+ -1.67 [-1.75, -1.59]
+    near ID+ -11.20 [-11.31, -11.01]; far ID+ -6.93 [-7.01, -6.86]; four ID+ -6.66 [-6.91, -6.50]
+    pass rule: OOD+ PASS, ID+ PASS
+
+=== adaneg
+FPR95 OOD+ (ID+)  AUROC                     near                     far                    four
+adaneg                      66.55 (73.13)  77.27    16.52 (15.83)  96.59    17.56 (12.96)  96.69
++ balanced                  66.16 (67.66)  79.21    15.53 (14.05)  96.94    16.93 (11.84)  96.88
+    near OOD+ -0.39 [-0.52, -0.30]; far OOD+ -0.99 [-1.07, -0.95]; four OOD+ -0.62 [-0.84, -0.41]
+    near ID+ -5.47 [-5.93, -5.08]; far ID+ -1.78 [-1.94, -1.68]; four ID+ -1.13 [-1.24, -0.95]
+    pass rule: OOD+ PASS, ID+ PASS   <- the pre-registered row
++ max                       59.78 (68.80)  80.29    15.19 (14.20)  96.98    18.56 (12.42)  96.58
+    near OOD+ -6.77 [-7.01, -6.53]; far OOD+ -1.33 [-1.41, -1.25]; four OOD+ +1.00 [+0.67, +1.39]
+    near ID+ -4.34 [-4.65, -3.86]; far ID+ -1.62 [-1.83, -1.47]; four ID+ -0.54 [-0.66, -0.45]
+    pass rule: OOD+ FAIL, ID+ PASS
++ safe                      66.50 (66.59)  78.62    16.11 (14.62)  96.80    17.04 (11.70)  96.91
+    near OOD+ -0.05 [-0.08, +0.00]; far OOD+ -0.41 [-0.45, -0.35]; four OOD+ -0.52 [-0.56, -0.46]
+    near ID+ -6.55 [-6.78, -6.32]; far ID+ -1.21 [-1.37, -1.08]; four ID+ -1.27 [-1.30, -1.21]
+    pass rule: OOD+ FAIL, ID+ PASS
+
+=== dde
+FPR95 OOD+ (ID+)  AUROC                     near                     far                    four
+dde                         58.88 (53.40)  84.56    17.19 (16.84)  96.16     9.76 ( 8.61)  97.89
++ balanced                  56.08 (46.39)  86.83    15.63 (13.27)  96.91     9.35 ( 7.40)  98.16
+    near OOD+ -2.80 [-3.22, -2.27]; far OOD+ -1.57 [-1.70, -1.48]; four OOD+ -0.41 [-0.53, -0.22]
+    near ID+ -7.00 [-7.83, -6.36]; far ID+ -3.57 [-3.72, -3.48]; four ID+ -1.20 [-1.37, -1.08]
+    pass rule: OOD+ PASS, ID+ PASS   (not counted: this DDE is outside its reproduction tolerance, so the row is exploratory)
++ max                       52.25 (48.19)  87.08    12.81 (12.56)  97.34    10.27 ( 7.84)  97.98
+    near OOD+ -6.63 [-6.86, -6.18]; far OOD+ -4.38 [-4.70, -4.14]; four OOD+ +0.51 [+0.29, +0.79]
+    near ID+ -5.21 [-5.94, -4.35]; far ID+ -4.28 [-4.37, -4.23]; four ID+ -0.76 [-0.97, -0.61]
+    pass rule: OOD+ FAIL, ID+ PASS   (not counted: this DDE is outside its reproduction tolerance, so the row is exploratory)
++ safe                      58.06 (47.87)  85.97    17.06 (16.19)  96.38     9.79 ( 8.35)  98.05
+    near OOD+ -0.82 [-1.01, -0.53]; far OOD+ -0.14 [-0.16, -0.13]; four OOD+ +0.02 [-0.02, +0.04]
+    near ID+ -5.53 [-6.06, -5.08]; far ID+ -0.65 [-0.76, -0.52]; four ID+ -0.26 [-0.34, -0.14]
+    pass rule: OOD+ FAIL, ID+ PASS   (not counted: this DDE is outside its reproduction tolerance, so the row is exploratory)
+
+=== neglabel_fp16   (half precision: exploratory, not under the pass rule)
+FPR95 OOD+ (ID+)  AUROC                     near                     far                    four
+neglabel_fp16               69.34 (75.77)  75.31    23.66 (24.16)  94.93    24.96 (24.25)  94.55
++ balanced                  68.51 (71.51)  77.32    19.67 (20.56)  95.76    23.28 (22.04)  95.07
+    near OOD+ -0.82 [-1.10, -0.48]; far OOD+ -3.99 [-4.57, -3.37]; four OOD+ -1.68 [-1.98, -1.24]
+    near ID+ -4.26 [-4.52, -3.83]; far ID+ -3.60 [-4.01, -3.20]; four ID+ -2.21 [-2.97, -1.31]
+    pass rule: OOD+ PASS, ID+ PASS
++ max                       67.61 (72.43)  76.56    19.71 (21.57)  95.69    23.83 (22.35)  94.97
+    near OOD+ -1.73 [-2.28, -1.40]; far OOD+ -3.95 [-4.37, -3.74]; four OOD+ -1.13 [-1.54, -0.66]
+    near ID+ -3.35 [-3.74, -2.80]; far ID+ -2.59 [-2.99, -2.31]; four ID+ -1.90 [-2.49, -1.18]
+    pass rule: OOD+ PASS, ID+ PASS
++ safe                      67.14 (62.79)  80.19    21.51 (18.06)  95.91    24.62 (20.45)  95.22
+    near OOD+ -2.19 [-2.94, -1.81]; far OOD+ -2.15 [-2.37, -2.04]; four OOD+ -0.34 [-0.51, -0.25]
+    near ID+ -12.98 [-13.27, -12.80]; far ID+ -6.10 [-6.17, -5.98]; four ID+ -3.79 [-3.94, -3.71]
+    pass rule: OOD+ PASS, ID+ PASS
+
+=== adaneg_fp16   (half precision: exploratory, not under the pass rule)
+FPR95 OOD+ (ID+)  AUROC                     near                     far                    four
+adaneg_fp16                 67.29 (74.22)  76.64    16.51 (15.70)  96.63    17.35 (12.65)  96.75
++ balanced                  66.85 (68.43)  78.65    15.44 (13.99)  96.97    16.74 (11.58)  96.93
+    near OOD+ -0.44 [-0.54, -0.38]; far OOD+ -1.07 [-1.22, -0.95]; four OOD+ -0.61 [-0.75, -0.38]
+    near ID+ -5.80 [-6.25, -5.32]; far ID+ -1.71 [-1.85, -1.62]; four ID+ -1.07 [-1.14, -1.04]
+    pass rule: OOD+ PASS, ID+ PASS
++ max                       59.90 (69.65)  79.92    15.06 (14.17)  97.01    18.24 (12.18)  96.63
+    near OOD+ -7.39 [-7.89, -6.89]; far OOD+ -1.44 [-1.51, -1.41]; four OOD+ +0.89 [+0.75, +0.98]
+    near ID+ -4.57 [-4.93, -4.04]; far ID+ -1.53 [-1.72, -1.35]; four ID+ -0.47 [-0.50, -0.45]
+    pass rule: OOD+ FAIL, ID+ PASS
++ safe                      67.38 (67.55)  77.96    16.04 (14.60)  96.83    16.85 (11.42)  96.97
+    near OOD+ +0.09 [-0.06, +0.38]; far OOD+ -0.47 [-0.63, -0.36]; four OOD+ -0.50 [-0.64, -0.35]
+    near ID+ -6.67 [-6.91, -6.35]; far ID+ -1.10 [-1.26, -0.92]; four ID+ -1.23 [-1.32, -1.19]
+    pass rule: OOD+ FAIL, ID+ PASS
+
+checks:
+  DDE near: ours 58.88, paper 58.64 (+0.24) OK
+  DDE far: ours 17.19, paper 15.58 (+1.61) CHECK: outside +-1.5
+  DDE four: ours 9.76, paper 9.80 (-0.04) OK
+  neglabel_fp16 vs the shipped baseline run (27 set x order pairs): max |FPR95 difference| 0.000, mean 0.000  OK
+  adaneg_fp16 vs the shipped baseline run (27 set x order pairs): max |FPR95 difference| 0.000, mean 0.000  OK
+  adaneg vs the shipped baseline run (27 set x order pairs): max |FPR95 difference| 0.000, mean 0.000  OK
+  pass rule, balanced on neglabel: OOD+ PASS, ID+ PASS
+  pass rule, balanced on adaneg: OOD+ PASS, ID+ PASS
+  balanced on dde: exploratory, not a pass (the base does not reproduce its paper); lower than the base on every group, near and far in every order: OOD+ yes, ID+ yes
+
+wrote p5_summary.csv
+
+NOT COMPLETE OR A CHECK NEEDS A LOOK (see above)

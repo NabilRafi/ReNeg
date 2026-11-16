@@ -122,7 +122,7 @@ python scripts/summarize.py runs/main/runs.csv --ref tanl
 | ViT-L/14 set-up check | `configs/baselines_vitl14.yaml` | 2 min | `results/d1_vitl14/` |
 | Ablations on TANL | `configs/ablation_tanl_base.yaml` | 2 h | `results/replays/` |
 | Ablation ladder on NegLabel's negatives | `configs/ablation_neglabel_base.yaml` | 30 min | `results/replays/` |
-| ReNeg on other base detectors (NegLabel, AdaNeg, DDE) | `configs/other_bases.yaml` | 2-3 h | `results/p5_other_bases/` (CPU replays) |
+| ReNeg on other base detectors (NegLabel, AdaNeg, DDE) | `configs/other_bases.yaml` | 3-4 h (Colab T4) | `results/p5_other_bases/colab/` |
 
 [docs/REPRODUCE.md](docs/REPRODUCE.md) has the expected numbers, run times and the three levels of checking (smoke
 test, tables from the shipped results, full re-run). [docs/DATA.md](docs/DATA.md) says where every dataset comes

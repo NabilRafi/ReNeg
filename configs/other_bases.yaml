@@ -5,8 +5,8 @@
 #   adaneg         AdaNeg, official settings, single precision
 #   dde            DDE's OOD score, re-implemented from the official postprocessor with the paper's settings
 #                  (reneg/dde.py), single precision
-#   neglabel_fp16  the same detectors in the official half-precision arithmetic (Table 1's rows). Exploratory:
-#   adaneg_fp16    confident scores round to exactly 1 there, so their log-odds carry no ranking.
+#   neglabel_fp16  the same detectors in the official half-precision arithmetic (Table 1's rows; exploratory). Confident
+#   adaneg_fp16    scores round to exactly 1 there, which makes the gain smaller on NegLabel.
 # Pass rule fixed before the first number (results/p5_other_bases/PREREGISTRATION_P5.md), for the three
 # single-precision bases: balanced on <base> beats <base> on near, far and Four-OOD FPR95 (mean of three orders),
 # near and far in every order. About 2-3 hours on a Colab GPU.

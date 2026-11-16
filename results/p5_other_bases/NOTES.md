@@ -3,10 +3,33 @@
 Question: the method reads only a detector's score, but the paper showed it on TANL and TINS only. Does the same
 head, unchanged, improve other detectors?
 
-Everything here is a **CPU replay on the 8-bit feature exports** (`experiments/12_other_bases.py`), float32, three
-stream orders. The run on the exact features is `configs/other_bases.yaml` (`scripts/check_other_bases.py` prints
-these tables from its `runs.csv`). TANL and TINS rows are the shipped GPU runs (`../g3_vitb16/`, `../g4_tins/`),
-shown for comparison.
+**Final numbers: the exact-feature GPU run in `colab/`** (`configs/other_bases.yaml` on Colab, Nov 16, 2026;
+`colab/p5_report.txt` is `scripts/check_other_bases.py colab/runs.csv`). Everything after the next section is the
+**CPU replay on the 8-bit feature exports** (`experiments/12_other_bases.py`, float32, Nov 14) that preceded it; the
+replay reached the same verdict on every row. TANL and TINS rows are the shipped GPU runs (`../g3_vitb16/`,
+`../g4_tins/`), shown for comparison.
+
+## Exact-feature run (Colab GPU, Nov 16, 2026)
+
+FPR95, OOD positive (ID positive in brackets), mean of three stream orders; change against the base alone
+[min, max over the orders].
+
+| Base | near | far | Four-OOD | rule |
+|---|---|---|---|---|
+| NegLabel | 67.99 (75.78) | 23.48 (24.16) | 24.83 (24.23) | |
+| + ReNeg-balanced | 66.42 (67.88), -1.58 [-1.63, -1.48] | 17.43 (16.89), -6.05 [-6.33, -5.62] | 20.78 (17.31), -4.05 [-4.14, -3.90] | **PASS** (OOD+ and ID+) |
+| AdaNeg | 66.55 (73.13) | 16.52 (15.83) | 17.56 (12.96) | |
+| + ReNeg-balanced | 66.16 (67.66), -0.39 [-0.52, -0.30] | 15.53 (14.05), -0.99 [-1.07, -0.95] | 16.93 (11.84), -0.62 [-0.84, -0.41] | **PASS** (OOD+ and ID+) |
+| DDE, our re-implementation | 58.88 (53.40) | 17.19 (16.84) | 9.76 (8.61) | paper 58.64 / 15.58 / 9.80: far outside 1.5 |
+| + ReNeg-balanced | 56.08 (46.39), -2.80 [-3.22, -2.27] | 15.63 (13.27), -1.57 [-1.70, -1.48] | 9.35 (7.40), -0.41 [-0.53, -0.22] | exploratory (lower in every order, both conventions) |
+| NegLabel, half precision (= Table 1's run) | 69.34 (75.77) | 23.66 (24.16) | 24.96 (24.25) | |
+| + ReNeg-balanced | 68.51 (71.51), -0.82 [-1.10, -0.48] | 19.67 (20.56), -3.99 [-4.57, -3.37] | 23.28 (22.04), -1.68 [-1.98, -1.24] | exploratory (lower in every order, both conventions) |
+| AdaNeg, half precision (= Table 1's run) | 67.29 (74.22) | 16.51 (15.70) | 17.35 (12.65) | |
+| + ReNeg-balanced | 66.85 (68.43), -0.44 [-0.54, -0.38] | 15.44 (13.99), -1.07 [-1.22, -0.95] | 16.74 (11.58), -0.61 [-0.75, -0.38] | exploratory (lower in every order, both conventions) |
+
+max and safe on every base, AUROC and the checks: `colab/p5_report.txt`. Set-up checks: the half-precision NegLabel
+and AdaNeg rows equal Table 1's runs (`../baselines/04_reproduce_adaneg/`) exactly on all 27 set x order pairs,
+and float32 AdaNeg equals its shipped float32 run exactly. The replay's group means are within 0.4 FPR95 of these.
 
 ## Fixed before the first number (`PREREGISTRATION_P5.md`)
 
@@ -159,15 +182,17 @@ ReNeg-balanced on this DDE: near -2.96 [-3.47, -2.46], far
 Seen before the choice (exploratory, configuration B, order 0, four sets): balanced lowered FPR95 on all four
 (SSB-hard 65.68 -> 65.36, NINCO 56.74 -> 54.17, iNaturalist 0.42 -> 0.18, Textures 9.79 -> 8.41).
 
-## The base's score must be in single precision
+## Precision of the base's score (corrected after the exact-feature run)
 
 The head reads log-odds. The official NegLabel and AdaNeg code runs in half precision, where a confident score
-rounds to exactly 1 and its log-odds say nothing about the ranking among confident images. One exploratory stream
-(NINCO, order 0), NegLabel in half precision: base 60.87, + balanced 61.47 (ID positive 68.80 -> 65.69), against
-60.12 -> 57.06 in float32. The rule above was fixed for float32 and stays; `configs/other_bases.yaml` runs the
-half-precision bases beside the float32 ones (`neglabel_fp16`, `adaneg_fp16`) so that the exact-feature run reports
-both. Table 1's NegLabel and AdaNeg rows are the half-precision reproductions; the float32 rows here differ from them
-by at most 1.3 FPR95 (NegLabel near 68.04 vs 69.34).
+rounds to exactly 1, so part of the ranking among confident images is lost. One replay stream (NINCO, order 0)
+suggested this removes the gain (half-precision NegLabel 60.87 -> 61.47 with balanced, against 60.12 -> 57.06 in
+float32), and the Nov 14 notes called single precision a requirement. **The exact-feature run shows that was too
+strong:** on Table 1's own half-precision runs ReNeg-balanced lowers FPR95 on every group, near and far in every
+order, in both conventions (table above). On NegLabel the gain is smaller than in float32 (-0.82 / -3.99 / -1.68
+against -1.58 / -6.05 / -4.05); on AdaNeg it is the same. The pass rule was fixed for float32 and is reported for
+float32; the float32 rows differ from Table 1's half-precision rows by at most 1.35 FPR95 (NegLabel near 67.99 vs
+69.34).
 
 ## Hu et al. (ICML 2026): not reproduced, so not used as a base
 
@@ -183,6 +208,9 @@ numbers under both readings of its label space (order 0, OOD positive / ID posit
 Stopped after two readings (the rule: a re-implementation must reproduce its paper before ReNeg is put on it).
 
 ## Files
+
+* `colab/`: the exact-feature run: `runs.csv` (540 rows: 20 labels x 9 sets x 3 orders; FPR95 both conventions,
+  AUROC, AUPR), `p5_summary.csv`, `p5_report.txt`. These are the final numbers.
 
 * `PREREGISTRATION_P5.md`: the rules, with the two addenda (DDE and Hu et al.; the DDE configuration and the
   precision of the base), each written before the numbers it refers to.

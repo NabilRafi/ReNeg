@@ -13,7 +13,7 @@ experiment.
 | `d1_vitl14/` | notebook D1 (`configs/baselines_vitl14.yaml`): NegLabel and MCM vs their published ViT-L/14 numbers | ViT-L/14 set-up check | final |
 | `baselines/` | Kaggle notebooks 02-04 (oodlab) | baselines: TANL, AdaNeg, NegLabel, MCM reproductions | final |
 | `replays/` | the CPU replays (`experiments/`), on 8-bit features | ablations, analyses, supplementary | final |
-| `p5_other_bases/` | `experiments/12_other_bases.py` (CPU replays, 8-bit features) | ReNeg on NegLabel, AdaNeg and DDE | replays; the exact-feature run is `configs/other_bases.yaml` |
+| `p5_other_bases/` | `configs/other_bases.yaml` on Colab (`colab/`), after the CPU replays of `experiments/12_other_bases.py` | ReNeg on NegLabel, AdaNeg and DDE | final |
 | `seam1/` | notebooks G1, G1b, P1, P2 + `experiments/08`-`11` | negative results (Seam 1) | closed |
 
 ## `g3_vitb16/`, `g3b_vitl14/`
@@ -84,6 +84,7 @@ Rows written by the original analysis scripts (Oct 1-5), read by the `report` / 
 * `other_bases.jsonl`: one row per (label, protocol, OOD set, stream order) for `neglabel`, `adaneg`, `dde` and
   `balanced|max|safe on <base>`; `p5_summary.csv`: group means, paired changes, pass rule; `exploratory.jsonl`: rows
   that are not under the rule. CPU replays on the 8-bit features (float32).
+* `colab/`: the exact-feature GPU run (`runs.csv`, `p5_summary.csv`, `p5_report.txt`): the final numbers.
 
 ## `seam1/`
 
